@@ -246,9 +246,9 @@ image:
   lqip: /path/to/lqip-file # or base64 URI
 ---
 ```
-
-> You can observe LQIP in the preview image of post \"[Text and Typography](../text-and-typography/)\".
-
+```
+> You can observe LQIP in the preview image of post
+```
 For normal images:
 
 ```markdown

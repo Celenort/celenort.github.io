@@ -61,8 +61,3 @@ This work is published under [MIT][mit] License.
 [mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
 
 
-to clone repo : 
-
-```bash
-git clone https://Celenort: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@github.com/Celenort/celenort.github.io
-```

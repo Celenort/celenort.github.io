@@ -59,3 +59,10 @@ This work is published under [MIT][mit] License.
 [use-template]: https://github.com/cotes2020/chirpy-starter/generate
 [CD]: https://en.wikipedia.org/wiki/Continuous_deployment
 [mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+
+
+to clone repo : 
+
+```bash
+git clone https://Celenort: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@github.com/Celenort/celenort.github.io
+```

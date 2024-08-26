@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: Celenort # the main title
 
-tagline: Logger of celenort # it will display as the sub-title
+tagline: Logger of Celenort # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   Celenort의 Github blog입니다.

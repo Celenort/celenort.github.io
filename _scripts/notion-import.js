@@ -123,10 +123,16 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
       }
       fmcats += "]";
     }
+    const ftitle = `${date}-${title.replaceAll(" ", "-")}.md`;
+    const mediadir = path.join("assets/img", ftitle);
     const fm = `---
 layout: post
 date: ${date}
 title: "${title}"${fmtags}${fmcats}
+media_subpath: ${mediadir}
+image:
+  path: 0.png
+  alt: If there's no image on the post, nothing will be displayed.
 ---
 
 `;
@@ -138,7 +144,6 @@ title: "${title}"${fmtags}${fmcats}
     md = escapeCodeBlock(md);
     md = replaceTitleOutsideRawBlocks(md);
 
-    const ftitle = `${date}-${title.replaceAll(" ", "-")}.md`;
 
     let index = 0;
     let edited_md = md.replace(
@@ -167,7 +172,7 @@ title: "${title}"${fmtags}${fmcats}
         if (p1 === "") res = "";
         else res = `_${p1}_`;
 
-        return `![${index++}](/${filename})${res}`;
+        return `![${index++}](/${filename})${res}`; // here is the place that we must edit.
       }
     );
 

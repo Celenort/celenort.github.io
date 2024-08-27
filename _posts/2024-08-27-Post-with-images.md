@@ -17,7 +17,7 @@ $$
 
 
 {% raw %}
-```notion formula
+```verilog
 Hi!
 ```
 {% endraw %}
@@ -25,4 +25,16 @@ Hi!
 
 
 ![0](/assets/img/2024-08-27-Post-with-images.md/0.png)
+
+
+$$ E=mc^2 $$
+
+
+
+{% raw %}
+```python
+print("hi")
+```
+{% endraw %}
+
 

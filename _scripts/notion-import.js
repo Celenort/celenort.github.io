@@ -167,12 +167,13 @@ image:
           .catch(function (error) {
             console.log(error);
           });
+        const imgname = `${index}.png`;
 
         let res;
         if (p1 === "") res = "";
         else res = `_${p1}_`;
 
-        return `![${index++}](/${filename})${res}`; // here is the place that we must edit.
+        return `![${index++}](/${imgname})${res}`; // here is the place that we must edit.
       }
     );
 

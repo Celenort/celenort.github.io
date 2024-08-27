@@ -45,6 +45,9 @@ image:
 
 
 {: data-toc-skip='' .mt-4 }
+
+
+
 <!-- markdownlint-restore -->
 
 
@@ -295,10 +298,12 @@ _Full screen width and center alignment_
 #### Float to left
 
 
+{: width="972" height="589" .w-50 .left}
+
+
 ![2](/2.png)
 
 
-{: width="972" height="589" .w-50 .left}
 Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.
 
 
@@ -306,10 +311,13 @@ Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecena
 #### Float to right
 
 
+{: width="972" height="589" .w-50 .right}
+
+
 ![3](/3.png)
 
 
-{: width="972" height="589" .w-50 .right}
+
 Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.
 
 
@@ -320,6 +328,9 @@ Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecena
 The image below will toggle dark/light mode based on theme preference, notice it has shadows.
 
 
+{: .dark .w-75 .shadow .rounded-10 w='1212' h='668' }
+
+
 ![4](/4.png)
 
 
@@ -327,9 +338,6 @@ The image below will toggle dark/light mode based on theme preference, notice it
 
 
 ![5](/5.png)
-
-
-{: .dark .w-75 .shadow .rounded-10 w='1212' h='668' }
 
 
 

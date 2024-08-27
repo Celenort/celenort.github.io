@@ -111,12 +111,13 @@ Moon
 <!-- markdownlint-disable -->
 
 
-> An example showing the tip type prompt.  
-> {: .prompt-tip }
+> {: .prompt-tip}
 
 
-> An example showing the info type prompt.  
-> {: .prompt-info }
+> An example showing the tip type prompt.
+
+
+> An example showing the info type prompt. {: .prompt-info }
 
 
 > An example showing the warning type prompt.  
@@ -206,6 +207,9 @@ fi;
 #### Specific filename
 
 
+{: file='_sass/jekyll-theme-chirpy.scss'}
+
+
 
 {% raw %}
 ```sass
@@ -215,9 +219,6 @@ fi;
 ```
 {% endraw %}
 
-
-
-{: file='_sass/jekyll-theme-chirpy.scss'}
 
 
 
@@ -275,10 +276,10 @@ $$
 #### Default (with caption)
 
 
-![0](/0.png)
-
-
 {: width="972" height="589" }
+
+
+![0](/0.png)
 
 
 _Full screen width and center alignment_
@@ -288,10 +289,10 @@ _Full screen width and center alignment_
 #### Left aligned
 
 
-![1](/1.png)
-
-
 {: width="972" height="589" .w-75 .normal}
+
+
+![1](/1.png)
 
 
 

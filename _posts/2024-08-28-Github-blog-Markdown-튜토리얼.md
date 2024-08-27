@@ -111,21 +111,28 @@ Moon
 <!-- markdownlint-disable -->
 
 
-> {: .prompt-tip}
+{: .prompt-tip}
 
 
 > An example showing the tip type prompt.
 
 
-> An example showing the info type prompt. {: .prompt-info }
+{: .prompt-info }
 
 
-> An example showing the warning type prompt.  
-> {: .prompt-warning }
+> An example showing the info type prompt. 
 
 
-> An example showing the danger type prompt.  
-> {: .prompt-danger }
+{: .prompt-warning }
+
+
+> An example showing the warning type prompt.
+
+
+{: .prompt-danger }
+
+
+> An example showing the danger type prompt.
 
 
 <!-- markdownlint-restore -->
@@ -329,13 +336,13 @@ Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecena
 The image below will toggle dark/light mode based on theme preference, notice it has shadows.
 
 
-{: .dark .w-75 .shadow .rounded-10 w='1212' h='668' }
+{: .light .w-75 .shadow .rounded-10 w='1212' h='668' }
 
 
 ![4](/4.png)
 
 
-{: .light .w-75 .shadow .rounded-10 w='1212' h='668' }
+{: .dark .w-75 .shadow .rounded-10 w='1212' h='668' }
 
 
 ![5](/5.png)

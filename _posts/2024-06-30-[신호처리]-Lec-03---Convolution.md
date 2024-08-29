@@ -20,15 +20,17 @@ pin: false
 > 본 게시글은 서울대학교 이종호 B 교수님의 SNU FastMRI Challange의 2021 Signal Processing을 바탕으로 제작되었습니다.
 
 
+{% raw %}
 
-#### Convolution
+
+### Convolution
 
 - 1D convolution : for LTI system, if impulse response at index $n$ is $h(n)$,
 
-	> $$\begin{aligned}  
+	> $\begin{aligned}  
 	> x(n)& \rightarrow \lbrack h(n)\rbrack \rightarrow y(n)\\  
 	> y(n) &= \sum x(k) h(n-k)\\  
-	> &=x(n) * h(n)\end{aligned} $$
+	> &=x(n) * h(n)\end{aligned} $
 
 
 	신기한 점은, System에 대한 Transfer function을 정의하지 않고, Dirac's Delta의 정의를 이용한 Impulse response만으로 convolution 관계를 얻어낼 수 있다는 것이다.
@@ -69,4 +71,7 @@ pin: false
 
 
 		![6](/6.png)
+
+
+{% endraw %}
 

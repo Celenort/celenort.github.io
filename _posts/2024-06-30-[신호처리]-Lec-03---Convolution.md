@@ -2,7 +2,7 @@
 layout: post
 date: 2024-06-30
 title: "[신호처리] Lec 03 - Convolution"
-tags: [lecture-note, signal processing, fastmri, ]
+tags: [lecture-note, signal processing, fastmri, from_velog, ]
 categories: [FASTMRI, signal processing, ]
 media_subpath: assets/img/2024-06-30-[신호처리]-Lec-03---Convolution.md
 image:

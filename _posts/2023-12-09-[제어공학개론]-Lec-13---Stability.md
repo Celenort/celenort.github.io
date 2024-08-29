@@ -2,7 +2,7 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 13 - Stability"
-tags: [control, lecture-note, linear algebra, system, ]
+tags: [control, lecture-note, linear algebra, system, from_velog, ]
 categories: [Electrical Engineering, control theory, ]
 media_subpath: assets/img/2023-12-09-[제어공학개론]-Lec-13---Stability.md
 image:

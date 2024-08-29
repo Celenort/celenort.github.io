@@ -2,7 +2,7 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 09 - Canonical form"
-tags: [control, lecture-note, linear algebra, system, ]
+tags: [control, lecture-note, system, from_velog, linear algebra, ]
 categories: [Electrical Engineering, control theory, ]
 media_subpath: assets/img/2023-12-09-[제어공학개론]-Lec-09---Canonical-form.md
 image:

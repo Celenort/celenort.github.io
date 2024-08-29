@@ -87,6 +87,24 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
     if (ptitle?.length > 0) {
       title = ptitle[0]?.["plain_text"];
     }
+    //desc
+    let desc = id;
+    let pdesc = r.properties?.["description"]?.["title"];
+    if (pdesc?.length > 0) {
+      desc = pdesc[0]?.["plain_text"];
+    }
+    // alt
+    let alt = id;
+    let palt = r.properties?.["alt text"]?.["title"];
+    if (palt?.length > 0) {
+      alt = palt[0]?.["plain_text"];
+    }
+    //pin
+    let pin = "false";
+    let ppin = r.properties?.["pin"]?.["checkbox"];
+    if(ppin) {
+      pin = "true";
+    }
     // tags
     let tags = [];
     let ptags = r.properties?.["태그"]?.["multi_select"];
@@ -132,7 +150,9 @@ title: "${title}"${fmtags}${fmcats}
 media_subpath: ${mediadir}
 image:
   path: 0.png
-  alt: If there's no image on the post, nothing will be displayed.
+  alt: ${alt}
+description: ${desc}
+pin: ${pin}
 ---
 
 `;

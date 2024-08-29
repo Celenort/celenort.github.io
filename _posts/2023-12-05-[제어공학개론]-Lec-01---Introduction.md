@@ -2,7 +2,7 @@
 layout: post
 date: 2023-12-05
 title: "[제어공학개론] Lec 01 - Introduction"
-tags: [control, lecture-note, system, ]
+tags: [control, lecture-note, system, from_velog, ]
 categories: [Electrical Engineering, control theory, ]
 media_subpath: assets/img/2023-12-05-[제어공학개론]-Lec-01---Introduction.md
 image:

@@ -7,7 +7,9 @@ categories: [Blogging, tutorial, ]
 media_subpath: assets/img/2024-08-28-Github-blog-Markdown-튜토리얼.md
 image:
   path: 0.png
-  alt: If there's no image on the post, nothing will be displayed.
+  alt: fffca610-d234-80c1-9764-e86d916fecf3
+description: fffca610-d234-80c1-9764-e86d916fecf3
+pin: false
 ---
 
 

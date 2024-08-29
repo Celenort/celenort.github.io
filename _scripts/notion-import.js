@@ -89,13 +89,13 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
     }
     //desc
     let desc = id;
-    let pdesc = r.properties?.["description"]?.["title"];
+    let pdesc = r.properties?.["description"]?.["rich_text"];
     if (pdesc?.length > 0) {
       desc = pdesc[0]?.["plain_text"];
     }
     // alt
     let alt = id;
-    let palt = r.properties?.["alt text"]?.["title"];
+    let palt = r.properties?.["alt text"]?.["rich_text"];
     if (palt?.length > 0) {
       alt = palt[0]?.["plain_text"];
     }

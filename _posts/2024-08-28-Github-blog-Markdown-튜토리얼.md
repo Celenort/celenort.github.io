@@ -8,7 +8,7 @@ media_subpath: assets/img/2024-08-28-Github-blog-Markdown-튜토리얼.md
 image:
   path: 0.png
   alt: alt2
-description: fffca610-d234-80c1-9764-e86d916fecf3
+description:  
 pin: false
 ---
 

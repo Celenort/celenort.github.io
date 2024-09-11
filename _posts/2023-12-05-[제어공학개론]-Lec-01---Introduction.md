@@ -16,8 +16,7 @@ pin: false
 ![0](/0.png)
 
 
-
-## 📢Precaution
+# 📢Precaution
 
 
 > 본 게시글은 서울대학교 심형보 교수님의 제어공학개론 수업 내용을 바탕으로 작성되었습니다.
@@ -70,8 +69,8 @@ Flow chart와 같이 제어를 block diagram으로 추상화하여 나타낼 수
 
 
 > (1)  
-> $  
-> u(t)-mg = m\ddot y(t)$
+> $$  
+> u(t)-mg = m\ddot y(t)$$
 
 
 입력변수 $u(t)$에 따라 출력변수 $y(t)$의 2번 미분된 값이 달라지죠? 이 과정이 바로 Modeling이라고 할 수 있습니다. 위 미분방정식을 풀기 위해 어떤 과정이 필요할까요?
@@ -122,24 +121,24 @@ $y(t)$라는 높이를 Sensor를 통해 측정하여 이 정보를 알고 있다
 
 
 > (1)  
-> $  
-> m\ddot y = u-mg$
+> $$  
+> m\ddot y = u-mg$$
 
 
 여기서 정확한 질량 $m$, (더하여 중력가속도 $g$)를 알지 못하기 때문에, 대략적인 Approximation 값인 $\bar{mg}$를 이용할 수 있습니다. 다만, 이제는 $y(t)$를 알기 때문에 $y(t)$, 그리고 이를 미분한 $\dot y(t)$도 사용할 수 있겠습니다. 이를 이용해서 $u(t)$를 만드는 것도 가능합니다.
 
 
 > (2)  
-> $  
-> u(t) = -c\dot y(t) -ky(t)+\overline{mg}$
+> $$  
+> u(t) = -c\dot y(t) -ky(t)+\overline{mg}$$
 
 
 다음과 같이 sensor로부터 얻어낸 신호를 이용해서 다음과 같이 $u(t)$를 만들어 볼 수 있겠습니다. (2) 식을 (1)에 다시 대입해보면,
 
 
 > (3)  
-> $  
-> m\ddot y + c\dot y + ky = \overline{mg} - mg$
+> $$  
+> m\ddot y + c\dot y + ky = \overline{mg} - mg$$
 
 
 다음과 같은 Mass-Spring-Damper의 2차 미분방정식으로 system의 지배방정식이 바뀐 것을 알 수 있습니다. 이 미분방정식은 공학수학 시간의 ODE에서도 많이 다루죠. 중요한 것은 그게 아니라 단지 $F=ma$에서 비롯되었던 식이 Feedback을 통해 (3)과 같이 그 Dynamics 자체가 바뀌었다는 것입니다.

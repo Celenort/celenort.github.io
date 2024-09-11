@@ -13,37 +13,32 @@ pin: false
 ---
 
 
-
-### Headings
+## Headings
 
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
 
-
-## H1 — heading
+# H1 — heading
 
 
 {: .mt-4 .mb-0 }
 
 
-
-### H2 — heading
-
-
-{: data-toc-skip='' .mt-4 .mb-0 }
-
-
-
-#### H3 — heading
+## H2 — heading
 
 
 {: data-toc-skip='' .mt-4 .mb-0 }
 
 
+### H3 — heading
 
-#### H4 — heading
+
+{: data-toc-skip='' .mt-4 .mb-0 }
+
+
+### H4 — heading
 
 
 {: data-toc-skip='' .mt-4 }
@@ -53,41 +48,35 @@ pin: false
 <!-- markdownlint-restore -->
 
 
-
-### Paragraph
+## Paragraph
 
 
 Quisque egestas convallis ipsum, ut sollicitudin risus tincidunt a. Maecenas interdum malesuada egestas. Duis consectetur porta risus, sit amet vulputate urna facilisis ac. Phasellus semper dui non purus ultrices sodales. Aliquam ante lorem, ornare a feugiat ac, finibus nec mauris. Vivamus ut tristique nisi. Sed vel leo vulputate, efficitur risus non, posuere mi. Nullam tincidunt bibendum rutrum. Proin commodo ornare sapien. Vivamus interdum diam sed sapien blandit, sit amet aliquam risus mattis. Nullam arcu turpis, mollis quis laoreet at, placerat id nibh. Suspendisse venenatis eros eros.
 
 
-
-### Lists
-
+## Lists
 
 
-#### Ordered list
+### Ordered list
 
 1. Firstly
 2. Secondly
 3. Thirdly
 
-
-#### Unordered list
+### Unordered list
 
 - Chapter
 	- Section
 		- Paragraph
 
-
-#### ToDo list
+### ToDo list
 
 - [ ] Job
 	- [x] Step 1
 	- [x] Step 2
 	- [ ] Step 3
 
-
-#### Description list
+### Description list
 
 
 Sun
@@ -98,15 +87,13 @@ Moon
 : the natural satellite of the earth, visible by reflected light from the sun
 
 
-
-### Block Quote
+## Block Quote
 
 
 > This line shows the block quote.
 
 
-
-### Prompts
+## Prompts
 
 
 <!-- markdownlint-capture -->
@@ -140,8 +127,7 @@ Moon
 <!-- markdownlint-restore -->
 
 
-
-### Tables
+## Tables
 
 
 | Company                      | Contact          | Country |
@@ -151,40 +137,34 @@ Moon
 | Magazzini Alimentari Riuniti | Giovanni Rovelli | Italy   |
 
 undefined
-
-### Links
+## Links
 
 
 [http://127.0.0.1:4000](http://127.0.0.1:4000/)
 
 
-
-### Footnote
+## Footnote
 
 
 Click the hook will locate the footnote[^footnote], and here is another footnote[^fn-nth-2].
 
 
-
-### Inline code
+## Inline code
 
 
 This is an example of `Inline Code`.
 
 
-
-### Filepath
+## Filepath
 
 
 Here is the `/path/to/the/file.extend`{: .filepath}.
 
 
-
-### Code blocks
-
+## Code blocks
 
 
-#### Common
+### Common
 
 
 
@@ -196,8 +176,7 @@ This is a common code snippet, without syntax highlight and line number.
 
 
 
-
-#### Specific Language
+### Specific Language
 
 
 
@@ -212,8 +191,7 @@ fi;
 
 
 
-
-#### Specific filename
+### Specific filename
 
 
 {: file='_sass/jekyll-theme-chirpy.scss'}
@@ -230,8 +208,7 @@ fi;
 
 
 
-
-### Mathematics
+## Mathematics
 
 
 The mathematics powered by [**MathJax**](https://www.mathjax.org/):
@@ -260,8 +237,7 @@ x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}
 $$
 
 
-
-### Mermaid SVG
+## Mermaid SVG
 
 
 
@@ -277,12 +253,10 @@ $$
 
 
 
-
-### Images
-
+## Images
 
 
-#### Default (with caption)
+### Default (with caption)
 
 
 {: width="972" height="589" }
@@ -294,8 +268,7 @@ $$
 _Full screen width and center alignment_
 
 
-
-#### Left aligned
+### Left aligned
 
 
 {: width="972" height="589" .w-75 .normal}
@@ -304,8 +277,7 @@ _Full screen width and center alignment_
 ![1](/1.png)
 
 
-
-#### Float to left
+### Float to left
 
 
 {: width="972" height="589" .w-50 .left}
@@ -317,8 +289,7 @@ _Full screen width and center alignment_
 Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.
 
 
-
-#### Float to right
+### Float to right
 
 
 {: width="972" height="589" .w-50 .right}
@@ -331,8 +302,7 @@ Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecena
 Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.
 
 
-
-#### Dark/Light mode & Shadow
+### Dark/Light mode & Shadow
 
 
 The image below will toggle dark/light mode based on theme preference, notice it has shadows.
@@ -350,15 +320,13 @@ The image below will toggle dark/light mode based on theme preference, notice it
 ![5](/5.png)
 
 
-
-### Video
+## Video
 
 
 {% include embed/youtube.html id='Balreaj8Yqs' %}
 
 
-
-### Reverse Footnote
+## Reverse Footnote
 
 
 [^footnote]: The footnote source

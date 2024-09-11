@@ -30,27 +30,27 @@ pin: false
 - ZOH (Zero-order holder) :
 
 > Converter :  
-> $u(t) = u_d[K] \text{ for }KT_s\geq t \geq (K+1)T_s$
+> $$u(t) = u_d[K] \text{ for }KT_s\geq t \geq (K+1)T_s$$
 
 
 ### State-space representation of discrete system
 
 - Differential이 아닌 Difference(차분) equation이라고 불림
 
-> $\bar x[K+1] = \bar A \bar x[K] + \bar B \bar u[K] + W[K]$  
-> $\bar y[K] = \bar C \bar x[K] + \bar D \bar u[K]$
+> $$\bar x[K+1] = \bar A \bar x[K] + \bar B \bar u[K] + W[K]$$  
+> $$\bar y[K] = \bar C \bar x[K] + \bar D \bar u[K]$$
 
 - 일종의 MDP(Markov decision process)
 - stocastic하게 만들기 위해 $W[K]$라는 랜덤확률변수를 도입하기도 함. (ML에서)
 - 물리적 실체인 원래의 A, B, C, D 시스템으로부터 Sampling한 것이라고 볼 수 있음. (물론 컴퓨터에서 만들어진 system일 경우 애초에 실체가 discrete일수도)
 - recall the Variation of Constant Formula
 
-> $x(t) = x(0)e^{At} + \int_0^t e^{A(t-\tau)}Bu(\tau) d\tau$  
-> $\bar x[1] = x(T_s) = e^{AT_s}x[0]+\int_0^{T_s}e^{A(T_s-s)}Bu(s)ds$  
+> $$x(t) = x(0)e^{At} + \int_0^t e^{A(t-\tau)}Bu(\tau) d\tau$$  
+> $$\bar x[1] = x(T_s) = e^{AT_s}x[0]+\int_0^{T_s}e^{A(T_s-s)}Bu(s)ds$$  
 > when using ZOH, $u(s)$ is constant for one period.  
-> $\bar x[1] = e^{AT_s}x[0] + \int_0^{T_s}e^{A(T_s-s)}ds \bar u[0]$  
-> $\bar A = e^{ATs}, \bar B = \int_0^{T_s}e^{A(T_s-s)}ds$  
-> $\bar C = C, \bar D = D$  
+> $$\bar x[1] = e^{AT_s}x[0] + \int_0^{T_s}e^{A(T_s-s)}ds \bar u[0]$$  
+> $$\bar A = e^{ATs}, \bar B = \int_0^{T_s}e^{A(T_s-s)}ds$$  
+> $$\bar C = C, \bar D = D$$  
 > (단순히 sampling하는 것은 값을 바꾸지 않으므로.)
 
 
@@ -60,8 +60,8 @@ pin: false
 - Discrete에서는 $\bar A=e^{AT_s}$에서, $x[K] = \bar A^k x[0]$이므로, 이가 안정하기 위해서는 $\bar A$의 eigenvalue들이 모두 Unit circle 내부에 존재해야만 함.
 - 일반적인 continous time domain에서는 그냥 simularity transform 만을 통해서 계산되므로, 단순히 eigenvalue들이 좌반평면에 있으면 되지만, discrete time에서는 transform을 거친 후 이를 k번 곱했을 때 $\lim\limits_{k\rightarrow \infty} \bar A^k$ 값이 수렴해야 하므로, 모든 eigenvalue들이 unit circle 안에 존재해야 값이 커지지 않음.
 
-> $\bar x[K] = \bar A^K \bar x[0]$  
-> $A^K = (TJT^{-1})^K  = TJ^KT^{-1}$
+> $$\bar x[K] = \bar A^K \bar x[0]$$  
+> $$A^K = (TJT^{-1})^K  = TJ^KT^{-1}$$
 
 
 {% endraw %}

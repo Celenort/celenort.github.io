@@ -13,8 +13,7 @@ pin: false
 ---
 
 
-
-#### 📢Precaution
+### 📢Precaution
 
 
 > 본 게시글은 서울대학교 이종호 B 교수님의 SNU FastMRI Challange의 2021 Signal Processing을 바탕으로 제작되었습니다.
@@ -27,59 +26,59 @@ pin: false
 
 - Transformation to frequency domain
 
-	> $  
-	> x(t) \stackrel{\mathcal{F}}{\rightarrow}X(f)$
+	> $$  
+	> x(t) \stackrel{\mathcal{F}}{\rightarrow}X(f)$$
 
 
 	> 2D Fourier Transform  
-	> $  
-	> a(x,y) \rightarrow A(k_x, k_y)$
+	> $$  
+	> a(x,y) \rightarrow A(k_x, k_y)$$
 
 - Mathematical Definition (1D)
 
 	> Fourier Transform  
-	> $  
-	> X(f) = \int_{-\infty}^\infty x(t) e^{-j\cdot 2\pi f t}dt = \mathcal{F}(x(t))$
+	> $$  
+	> X(f) = \int_{-\infty}^\infty x(t) e^{-j\cdot 2\pi f t}dt = \mathcal{F}(x(t))$$
 
 
 	> Inverse Fourier Transform  
-	> $  
+	> $$  
 	> x(t) = \int_{-\infty}^\infty X(f) e^{+  
-	> j\cdot 2\pi f t}dt = \mathcal{F}^{-1}(X(f))$
+	> j\cdot 2\pi f t}dt = \mathcal{F}^{-1}(X(f))$$
 
 - Mathematical Definition (2D)
 
 	> Fourier Transform  
-	> $  
-	> A(k_x, k_y) = \int_{-\infty}^\infty\int_{-\infty}^\infty a(x,y) e^{-j\cdot 2\pi (k_x x + k_y y)}dxdy$
+	> $$  
+	> A(k_x, k_y) = \int_{-\infty}^\infty\int_{-\infty}^\infty a(x,y) e^{-j\cdot 2\pi (k_x x + k_y y)}dxdy$$
 
 
 	> Inverse Fourier Transform  
-	> $  
-	> a(x,y) = \int_{-\infty}^\infty\int_{-\infty}^\infty A(k_x,k_y) e^{+j\cdot 2\pi (k_x x + k_y y)}dk_xdk_y$
+	> $$  
+	> a(x,y) = \int_{-\infty}^\infty\int_{-\infty}^\infty A(k_x,k_y) e^{+j\cdot 2\pi (k_x x + k_y y)}dk_xdk_y$$
 
 - Useful Formulas
 
-	> $  
+	> $$  
 	> \begin{aligned}  
 	> \delta(t) \ &\xleftrightarrow{\mathcal{F}} \ 1 \\  
 	> \delta(at) \ &\xleftrightarrow{\mathcal{F}} \ \frac{1}{|a|} \\  
 	> \delta(t-t_0) \ &\xleftrightarrow{\mathcal{F}} \  e^{-j 2\pi f t_0} \\  
 	> \delta(x-x_0, y) \ &\xleftrightarrow{\mathcal{F}} \  e^{-j 2\pi k_x x_0}  
-	> \end{aligned}$  
+	> \end{aligned}$$  
 	> i.e. time delay / image shift  
 	> transformed expotential : Linear phase
 
 	- Quarter-pixel shift : 1/4 픽셀만큼 shift하는 것은 복잡함. 이 때 영상을 F.T. 한다음 Linear phase를 곱하고 다시 IFT 하면 쉽게 shift할 수 있음.
 
-> $  
+> $$  
 > \begin{aligned}  
 > 1 \ &\xleftrightarrow{\mathcal{F}} \ \delta(f) \\  
 > \text{rect}(t) \ &\xleftrightarrow{\mathcal{F}} \ \text{sinc}(f) \\  
 > \land (t) = \text{rect}(t) * \text{rect}(t) \ &\xleftrightarrow{\mathcal{F}} \  \text{sinc}^2 (f) \\  
 > \cos{(2\pi f_0 t)}=\frac{e^{j 2\pi f_0 t}+e^{-j 2\pi f_0 t}}{2} \ &\xleftrightarrow{\mathcal{F}} \  \frac{\delta(f-f_0) + \delta (f+f_0)}{2} \\  
 > e^{-at}u(t) \ &\xleftrightarrow{\mathcal{F}} \  \frac{1}{a+j\cdot 2\pi f}  
-> \end{aligned}$  
+> \end{aligned}$$  
 > $u(t)$ : unit step function, a: real positive number  
 > F.T. of exponential function is so-called Lorentzian
 
@@ -100,11 +99,11 @@ Lorentzian function
 
 - Shah (or III) function and its F.T.
 
-	> $\begin{aligned}  
+	> $$\begin{aligned}  
 	> III(t) = \sum_{k=-\infty}^\infty \delta(t-k) &\xleftrightarrow{\mathcal{F}} III(f) \\  
 	> f(at) &\xleftrightarrow{\mathcal{F}} \frac{1}{|a|} \mathcal{F}(\frac{f}{a}) \\  
 	> \frac{1}{T} III(\frac{t}{T}) &\xleftrightarrow{\mathcal{F}} III(Tf)  
-	> \end{aligned}$  
+	> \end{aligned}$$  
 	> i.e. Sampling function.
 
 
@@ -115,16 +114,16 @@ Lorentzian function
 
 - 가장 큰 이점 : convolution 계산을 단순 곱연산으로 바꾸어 준다.
 
-	> $\begin{aligned}  
+	> $$\begin{aligned}  
 	> y(t) &= x(t) * h(t) \\  
 	> Y(f) &= X(f) \cdot H(f)\\  
 	> y(t) &= \mathcal{F}^{-1}\big( \mathcal{F}(x(t)) \cdot \mathcal{F}(h(t))\big) \end{aligned}  
-	> $
+	> $$
 
 - Modulation property
 
-	> $  
-	> y(t) = s(t) \cdot p(t) \xleftrightarrow{\mathcal{F}} Y(f) = S(f) * P(f)$
+	> $$  
+	> y(t) = s(t) \cdot p(t) \xleftrightarrow{\mathcal{F}} Y(f) = S(f) * P(f)$$
 
 
 {% endraw %}

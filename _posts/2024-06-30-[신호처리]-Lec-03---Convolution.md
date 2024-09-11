@@ -13,8 +13,7 @@ pin: false
 ---
 
 
-
-#### 📢Precaution
+### 📢Precaution
 
 
 > 본 게시글은 서울대학교 이종호 B 교수님의 SNU FastMRI Challange의 2021 Signal Processing을 바탕으로 제작되었습니다.
@@ -27,10 +26,10 @@ pin: false
 
 - 1D convolution : for LTI system, if impulse response at index $n$ is $h(n)$,
 
-	> $\begin{aligned}  
+	> $$\begin{aligned}  
 	> x(n)& \rightarrow \lbrack h(n)\rbrack \rightarrow y(n)\\  
 	> y(n) &= \sum x(k) h(n-k)\\  
-	> &=x(n) * h(n)\end{aligned} $
+	> &=x(n) * h(n)\end{aligned} $$
 
 
 	{% endraw %}

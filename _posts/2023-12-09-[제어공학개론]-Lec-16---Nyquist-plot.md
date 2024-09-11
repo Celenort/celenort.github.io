@@ -27,15 +27,15 @@ pin: false
 
 ### Cauchy's Argument Principle
 
-- eg)$F(s) = (s-a)$
+- eg)$$F(s) = (s-a)$$
 
 > F(s)에 어떤 contour를 넣게 되면, Translation이 됨. a라는 점이 contour 내부에 존재할 경우
 
-- eg)$F(s) = (s-a)(s-b)$
+- eg)$$F(s) = (s-a)(s-b)$$
 
 > 원점 주위를 2바퀴 도는 모양이 그려짐
 
-- eg)$F(s) = (s-a)(s-b)(s-c)$
+- eg)$$F(s) = (s-a)(s-b)(s-c)$$
 
 > c는 contour 밖에 있을 때 2바퀴만 돌게 됨
 
@@ -43,7 +43,7 @@ pin: false
 - contour 밖의 점 c에 대해서는 각도의 변화가 한바퀴가 아니라 변화가 다시 원점으로 돌아오게 되므로 encirclement와는 관련이 없음
 - Therefore, # of root of F(s) is inside the contour -> # of rotation(s)
 - clockwise로 돌면 clockwise방향으로 감싸게 됨
-- eg)$F(s) = \frac{1}{(s-a)}$
+- eg)$$F(s) = \frac{1}{(s-a)}$$
 
 > 이 때는 반시계 방향으로 감쌈
 
@@ -52,8 +52,8 @@ pin: false
 
 - Considering Transfer function of closed loop, $\text{Denominator } = 1+G(s)$
 
-> $G(s) = \frac{N(s)}{D(s)}$  
-> $1+G(s) = \frac{D(s)+N(s)}{D(s)}$
+> $$G(s) = \frac{N(s)}{D(s)}$$  
+> $$1+G(s) = \frac{D(s)+N(s)}{D(s)}$$
 
 - Let's Draw Nyquist plot of $1+G(s)$
 - 위의 Cauchy's Argument principle을 여기다 적용해 보면,
@@ -61,7 +61,7 @@ pin: false
 > of encirclement of zero in counterclockwise = # of unstable pole of 1+G(s) - # of unstable zero in 1+G(s)
 
 
-	$1+G(s) = \frac{D(s)+N(s)}{D(s)}$
+	$$1+G(s) = \frac{D(s)+N(s)}{D(s)}$$
 	Denominator of $1+G(s)$ is open loop pole
 	Numerator of $1+G(s)$ is closed loop pole
 
@@ -73,9 +73,7 @@ pin: false
 
 > \# of counter-clockwise encirclements of "-1" = P-Z  
 > P := $1+G(s)$ 's # of pole in ORHP (open-right half plane)  
-> Z := $1+G(s)
-
-s  # of zero in ORHP
+> Z := $1+G(s)$'s  # of zero in ORHP
 
 - 왜 "-1"만 쓰는가? (unity feedback에 대해서만 Nyquist Theorem이 작동하냐) : 복잡한 system도 unity feedback 형태로 (모든 T.F를 곱해서 )나타낼 수 있으므로 이렇게 고려하는 것.
 
@@ -136,8 +134,8 @@ s  # of zero in ORHP
 - 일반적으로 $L(s)$는, low frequency에서는 매우 큰 값을 가지고, high frequency에서는 작은 값을 가지는 것이 좋은데 이는, $G(s) = \frac{L(s)}{1+L(s)}$에서 small frequency를 가지는 경우 $L(s) \rightarrow \infty$로 가게 되면 $G(s) \rightarrow 1$이기 때문에 좋은것.
 - G(s)로부터 L(s) 찾기 :
 
-> $G(s) = \frac{L(s)}{1+L(s)},$  
-> $L(s) = \frac{G(s)}{1-G(s)}$
+> $$G(s) = \frac{L(s)}{1+L(s)},$$  
+> $$L(s) = \frac{G(s)}{1-G(s)}$$
 
 - 위의 좋은 L(s)의 조건으로부터, L(s)에 Integrator가 존재할 경우, 즉 $1/s$가 존재하면 Bode plot 상에서 왼쪽으로 갈 때 계속 위로 치솟으므로, 이것이 좋은 G(s), Closed loop tranfrer function의 조건이라 할 수 있음.
 
@@ -147,7 +145,7 @@ s  # of zero in ORHP
 - 우리가 목표로 하는 L(s) = C(s)P(s)에서 L(s)의 Bode plot의 Magnitude plot은 감소하는 형태, 즉 low freq에서 높은 magnitude를, 낮은 freq에서 작은 magnitude를 갖는 것.
 - 출력 Y값에 reference, disturbance, noise 각각을 입력처럼 간주하여 각각의 Transfer function 형태로 나타내게 되면,
 
-> $Y(s) = \frac{L}{1+L} R(s) + \frac{-L}{1+L}N(s) + \frac{P}{1+L} D(s)$
+> $$Y(s) = \frac{L}{1+L} R(s) + \frac{-L}{1+L}N(s) + \frac{P}{1+L} D(s)$$
 
 - 이로부터 알 수 있는 사실 : C(s)를 키우게 되면, L(s)도 C(s)가 포함되어 같이 커지므로, Noise에 의한 효과를 줄일수는 없음.
 - 한편, noise, disturbance의 일반적인 특징은, noise는 frequency가 높고, disturbance는 frequency가 작다는 것이다. (예를 들면 바람의 방향이 한번에 바뀌지 않고, two-cart system에서 중력에 의해 생기는 힘 등은 거의 상수에 가까움.)
@@ -157,11 +155,11 @@ s  # of zero in ORHP
 1. Root Locus (적절한 gain K값이나 그 범위를 Complex plane에서의 pole의 위치를 통해 조절)
 2. Lead-lag compansator
 
-> $\frac{s+b}{s+a}$
+> $$\frac{s+b}{s+a}$$
 
 1. PID control
 
-> $k_p + k_i \int e(t)dt + k_d \frac{d(e)}{dt}$
+> $$k_p + k_i \int e(t)dt + k_d \frac{d(e)}{dt}$$
 
 
 ## Dominent Pole
@@ -175,13 +173,13 @@ s  # of zero in ORHP
 
 - Consider following Transfer function
 
-> $G(s) = \frac{w_n^2}{s(s+2\xi w_n)}$  
-> $T(s) = \frac{G(s)}{1+G(s)}$  
-> $=\frac{w_n^2}{(s^2+2\xi w_n s +w_n^2)}$
+> $$G(s) = \frac{w_n^2}{s(s+2\xi w_n)}$$  
+> $$T(s) = \frac{G(s)}{1+G(s)}$$  
+> $$=\frac{w_n^2}{(s^2+2\xi w_n s +w_n^2)}$$
 
 - 입력은 unit step function이라 하자.
 
-> $Y(s) = U(s)T(s)$  
+> $$Y(s) = U(s)T(s)$$  
 > by PFE, $y(t)= \cdots$로 풀수 있음.
 
 - Performing Loot locus on $1+\xi\left(\cdot \right) = 0$

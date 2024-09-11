@@ -19,12 +19,10 @@ pin: false
 {: .prompt-info }
 
 
-
-## Chap 4. Decision tree
-
+# Chap 4. Decision tree
 
 
-### 4.1 Basic process
+## 4.1 Basic process
 
 - Decision Tree Learning algorithm
 - Input : Testing set D, Feature set A
@@ -40,12 +38,10 @@ pin: false
 
 - Output : Decision tree with root node i
 
-
-### 4.2 Split selection
-
+## 4.2 Split selection
 
 
-#### Split by information entropy
+### Split by information entropy
 
 - Information Entropy (or simply entropy)
 
@@ -59,8 +55,7 @@ pin: false
 
 - 모든 남아있는 feature에 대한 information gain을 계산하여 가장 gain이 높은 (엔트로피를 효과적으로 줄일 수 있는) feature를 택하여 분할을 진행
 
-
-#### Split by gain ratio
+### Split by gain ratio
 
 - Gain ratio : Gain 자체가 커지게 하려면 attribute의 수가 많은 feature가 유리하게 작동함. 즉 이에 대한 보정을 하는 것이 gain ratio 보정(?)
 
@@ -69,8 +64,7 @@ pin: false
 
 - Gain ratio is biased towards features with fewer possible values : possible values 수가 많은 경우 (like case of ID) 저평가함.
 
-
-#### Split by GINI Index
+### Split by GINI Index
 
 - Gini(D) : 임의의 2개 sample이 서로 다른 클래스일 확률. (Gini(D)가 클 수록 D의 purity는 높음)
 
@@ -82,15 +76,13 @@ pin: false
 > $$\text{Gini\index(D,a)} = \sum{v=1}^V \frac{\vert D^v\vert}{\vert D \vert} Gini(D^v)$$
 
 
-
-### 4.3 Pruning
+## 4.3 Pruning
 
 - Deal with overfitting.
 - General strategies : pre/post-pruning
 - First, using hold-out method, split dataset into training and validation set
 
-
-#### Pre-pruning
+### Pre-pruning
 
 
 ![0](/0.png)
@@ -101,8 +93,7 @@ pin: false
 - Advantages : Reduce the risk of overfitting, computational cost of training and testing
 - Disadvantages : Risk of underfitting
 
-
-#### Post-pruning
+### Post-pruning
 
 - 이미 만들어진 decision tree에 대한 'post' pruning
 - 먼저 total tree에 대한 accruacy를 계산.
@@ -110,12 +101,10 @@ pin: false
 - Advantages : less prone to underfitting -> better generalization ability
 - Disadvantages : training time of post-pruning is much longer (하위노드부터 하나씩 전부 따져봐야 하므로)
 
-
-### 4.4 Continuous values & missing values
-
+## 4.4 Continuous values & missing values
 
 
-#### Continuous values
+### Continuous values
 
 - Discetization Stretagy (Bi-partition) : Dataset D에서 feature a에 대해 t를 기준으로 2개의 group으로 나눔.
 - 이 때 Split point의 후보 분할점이 되는 점
@@ -128,8 +117,7 @@ pin: false
 
 - a라는 property를 이용해 D를 분리할 때 t라는 새로운 변수까지 고려해서 gain이 최대화되는 t를 선택하겠다는 뜻.
 
-
-#### Missing Values
+### Missing Values
 
 - To solve problems :
 1. feature의 선택
@@ -160,8 +148,7 @@ pin: false
 
 - 만약 feature a로 분할 했는데 특정 sample x의 feature a가 결측값이라면, x를 모든 하위 node에 동일하게 귀속시키는 대신 그 가중치(weight)을 $w_x$에서 $\tilde r_v w_x$로 update한다.
 
-
-### 4.5 Multivariate Decision Trees
+## 4.5 Multivariate Decision Trees
 
 - Feature axis에 data point를 plot 하였을 때 Decision tree가 하는 일은 axis에 parallel한 경계선을 긋는 행위.
 - Parallel하지 않은 대각선 line을 그릴 수 있다면?

@@ -20,7 +20,7 @@ function escapeCodeBlock(body) {
 function convertInlineEquationToBlock(body) {
   const regex = /\n\$\n([\s\S]*?)\n\$\n/g;
   return body.replace(regex, function (match, equation) {
-    return "\n{% raw %}\n$$" + equation.trim() + "$$\n{% endraw %}\n";
+    return "\n{% raw %}\n$$\n" + equation.trim() + "\n$$\n{% endraw %}\n";
   });
 }
 

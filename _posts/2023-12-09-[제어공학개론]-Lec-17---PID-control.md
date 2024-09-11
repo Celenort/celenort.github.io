@@ -28,13 +28,13 @@ pin: false
 - Example
 
 > consider following system  
-> $\dot x = -x+1$  
-> $r = 0$  
-> $u = -k_p x$  
+> $$\dot x = -x+1$$  
+> $$r = 0$$  
+> $$u = -k_p x$$  
 > 대입하면,  
-> $\dot x = -(1+k_p)x+1$  
+> $$\dot x = -(1+k_p)x+1$$  
 > 원래의 x=1에서 converge한다면, feedback 후에는  
-> $x^T = \frac{1}{1+k_p}$에서 수렴하므로 $k_p$가 커짐에 따라 steady-state error는 줄게 됨.
+> $$x^T = \frac{1}{1+k_p}$$에서 수렴하므로 $k_p$가 커짐에 따라 steady-state error는 줄게 됨.
 
 - Effect on 2nd order response parameters
 
@@ -44,14 +44,14 @@ pin: false
 
 - Differential Equation적 접근
 
-> $\ddot y  + 2\xi w_n \dot y + (w_n^2+k_p) y = k_p r$  
+> $$\ddot y  + 2\xi w_n \dot y + (w_n^2+k_p) y = k_p r$$  
 > 2차 시스템 + P controller를 설치한 경우  
 > Steady state라고 하면, dotted 항은 모두 0이 되므로,  
-> $(w_n ^2 + k_p)y = k_p r$  
+> $$(w_n ^2 + k_p)y = k_p r$$  
 > $k_p$가 커질 수록 r, y의 차이는 작아지며 s.s.e는 작아짐을 알 수 있음.  
-> $r-\frac{r}{w_n^2}>r-\frac{k_p r}{w_n^2+k_p}$  
+> $$r-\frac{r}{w_n^2}>r-\frac{k_p r}{w_n^2+k_p}$$  
 > 한편 Feedback system의 새로운 Natural freq $w_n^*$  
-> $w_n^{*2}=w_n^2+k_p$  
+> $$w_n^{*2}=w_n^2+k_p$$  
 > 이므로 Natural Frequency도 소폭 커짐을 알 수 있음. 즉 Pole이 살짝 더 negative real part 값이 커지므로 system의 응답속도가 빨라지는(rise time이 줄어드는) 것도 설명 가능.
 
 
@@ -59,14 +59,14 @@ pin: false
 
 - Formula
 
-> $u(t) = K_d e(t)$  
+> $$u(t) = K_d e(t)$$  
 > 현재 값의 변화율을 바탕으로 앞으로의 error의 변화율을 추측해 대응.  
 > 그래프 상에서 기울기가 가장 큰 점에서의 negative error 값이 가장 크므로, 가장 크게 break가 걸리게 됨 -> overshoot을 줄일 수 있음. (Compared to P control)  
 > S.S. Error에서는 error값이 상수로 변하지 않으므로, steady state error에는 차이를 주지 않음.
 
 - Differential Equation적 접근
 
-> $\ddot y + (2\xi w_n+ k_d)\dot y + (w_n^2 + k_p) y = k_p r$  
+> $$\ddot y + (2\xi w_n+ k_d)\dot y + (w_n^2 + k_p) y = k_p r$$  
 > for 2nd order system. $k_d, k_p$만으로 2nd order system의 pole의 eigenvealue를 바꿀 수 있음.  
 > 고전 제어에서는 black box의 문제였으므로(pole placement 등의 method를 알지 못하였으므로,) 경향성만을 이용하여 parameter를 tuning함.
 
@@ -79,9 +79,9 @@ pin: false
 - 실제 미분 제어의 적용
 
 > by laplace transform,  
-> $U(s) = k_d s E(s)$  
+> $$U(s) = k_d s E(s)$$  
 > 미분기에 해당하는 $s$를 실제 소자들로 구현하기 어렵기 때문에  
-> $\frac{Bs}{s+B}$로 대치하여 사용하게 됨. (Band-Limited Differentiatior)  
+> $$\frac{Bs}{s+B}$$로 대치하여 사용하게 됨. (Band-Limited Differentiatior)  
 > B : command의 영역으로, B값 이상의 frequency에 대해서는 증폭하지 않고, 그 이하의 frequency에 대해서는 $s$의 직선으로 bode plot이 나타나게 됨. phase plot 또한 B 이전에는 +90도, 이후에는 phase 변화가 없게 되어, low frequency 영역에서는 미분기의 기능을 하고, high frequency(특히 noise가 많은 영역)은 작동하지 작동하지 않도록 구현.  
 > 이런식으로 모델링할 경우 passive 소자만으로 만들어낼 수있.
 
@@ -90,7 +90,7 @@ pin: false
 
 - Formula
 
-> $u(t) = \int_0^t (r-y(\tau))d\tau$  
+> $$u(t) = \int_0^t (r-y(\tau))d\tau$$  
 > 아무리 현재의 error의 값이 커도 적분하여 계산되므로 천천히 반응함.
 
 - 사용하는 유일한 이유 : steady state error를 제거하기 위함.
@@ -105,17 +105,17 @@ pin: false
 - Differential Equation
 
 > Integration이 포함되었으므로 한번 더 미분해서 나타내면,  
-> $y^{(3)} + 2\xi w_n \ddot y + w_n^2 \dot y + k_I y = k_I r$
+> $$y^{(3)} + 2\xi w_n \ddot y + w_n^2 \dot y + k_I y = k_I r$$
 
 - Example
 
-> $y = x_1$  
-> $\dot x_1 = d+u = d -k_I z$  
-> $\dot z = r-y = r-x_1$  
+> $$y = x_1$$  
+> $$\dot x_1 = d+u = d -k_I z$$  
+> $$\dot z = r-y = r-x_1$$  
 > Equibrilium point  
-> $x_1^* = r, z^* = \frac{d}{k_I}$  
-> $x_1 \rightarrow r, r-y=r-x_1 =e\rightarrow 0$  
-> $\text{when } z=z^*=\frac{d}{k_I}, \dot x_1 = 0$
+> $$x_1^* = r, z^* = \frac{d}{k_I}$$  
+> $$x_1 \rightarrow r, r-y=r-x_1 =e\rightarrow 0$$  
+> $$\text{when } z=z^*=\frac{d}{k_I}, \dot x_1 = 0$$
 
 
 ### Physical, Cyber system의 경계는 어디인가
@@ -136,7 +136,7 @@ pin: false
 
 - windup problem을 해결하기 위해, Actuator를 거친 입력을 sensing하여 바로 integrator에 입력시켜 피드백을 한 번 더 거침
 
-> $u(t) = k_I \int_0^t \bigg(e(s) + k_a \left(u(s)-u_c(s)\right)\bigg)ds$  
+> $$u(t) = k_I \int_0^t \bigg(e(s) + k_a \left(u(s)-u_c(s)\right)\bigg)ds$$  
 > $u_c(s)$ : command (Integrator, 다른 제어기들을 거쳐 나온 출력)  
 > $u(s)$ : 실제 Plant에 입력되는 입력(Saturation이 생긴 경우 saturated)  
 > 만약 unsaturated situation이라면 원래대로 Integration이 됨.  

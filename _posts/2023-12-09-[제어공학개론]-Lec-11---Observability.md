@@ -24,16 +24,16 @@ pin: false
 
 - Examples of unobservable cases
 
-> 1.$\dot x_1 = -x_1$  
-> $\dot x_2 = x_1+x_2$  
-> $y = x_1$
+> 1.$$\dot x_1 = -x_1$$  
+> $$\dot x_2 = x_1+x_2$$  
+> $$y = x_1$$
 
 	- $x_2$ is not observable state
-	2.$\dot x_1 = x_1$
-	$\dot x_2 = x_2$
-	$y = x_1+x_2$
+	2.$$\dot x_1 = x_1$$
+	$$\dot x_2 = x_2$$
+	$$y = x_1+x_2$$
 	- Applying Solution of (2) at y
-	$y = e^t x_1(0) + e^T x_2(0)$
+	$$y = e^t x_1(0) + e^T x_2(0)$$
 	- Unable to distinguish $x_1, x_2$
 
 ## Observability matrix
@@ -41,25 +41,25 @@ pin: false
 - Derivation (naive)
 
 > let B=0 , D=0  
-> $\dot x = Ax$  
-> $y = Cx$differenating output y (1 time to (n-1) times)  
-> $\dot y = CAx$  
-> $\ddot y = CA^2x$  
-> $y^{(n-1)} = CA^{n-1}x$LHS is measurable (output을 미분하는 것은 그다지 권장되지 않으나 수학적으로는 계산가능)  
-> $\begin{bmatrix}y \\ \dot y \\ \ddot y \\ \vdots \\ y^{(n-1)}\end{bmatrix} = \begin{bmatrix}C \\ CA \\ CA^2 \\ \vdots \\ CA^{n-1}\end{bmatrix} x$우변의 x와 곱해진 matrix가 invertible하다면, x를 알 수 있음.
+> $$\dot x = Ax$$  
+> $$y = Cx$$differenating output y (1 time to (n-1) times)  
+> $$\dot y = CAx$$  
+> $$\ddot y = CA^2x$$  
+> $$y^{(n-1)} = CA^{n-1}x$$LHS is measurable (output을 미분하는 것은 그다지 권장되지 않으나 수학적으로는 계산가능)  
+> $$\begin{bmatrix}y \\ \dot y \\ \ddot y \\ \vdots \\ y^{(n-1)}\end{bmatrix} = \begin{bmatrix}C \\ CA \\ CA^2 \\ \vdots \\ CA^{n-1}\end{bmatrix} x$$우변의 x와 곱해진 matrix가 invertible하다면, x를 알 수 있음.
 
 - Observability matrix $O$
 
-> $\text{system or A, C is observable if }\begin{bmatrix}C \\ CA \\ CA^2\\ \vdots \\ CA^{n-1}\end{bmatrix} \text{ has full column rank}$
+> $$\text{system or A, C is observable if }\begin{bmatrix}C \\ CA \\ CA^2\\ \vdots \\ CA^{n-1}\end{bmatrix} \text{ has full column rank}$$
 
 - Controllability 와 duality를 확인할 수 있음.
 - Derivation (exact)
 
-> $\dot x = Ax+Bu$  
-> $y =Cx+Du$  
-> $y-Du\text{(known)} = Cx$  
-> $\dot y - D\dot u = C\dot x = C(Ax+Bu)$  
-> $\dot y - D\dot u - CBu = CAx$
+> $$\dot x = Ax+Bu$$  
+> $$y =Cx+Du$$  
+> $$y-Du\text{(known)} = Cx$$  
+> $$\dot y - D\dot u = C\dot x = C(Ax+Bu)$$  
+> $$\dot y - D\dot u - CBu = CAx$$
 
 	- with same method, LHS is always measurable while RHS has form $=C^{k}x, k=0,\cdots,n-1$
 	- if observability matrix $O$ has full column rank, x is measurable w/ using pseudo-inverse of $O$
@@ -68,20 +68,20 @@ pin: false
 
 - Consider the solution of y
 
-> $y(t) = Ce^{At}x(0) + C\int_0^T e^{A(t-\tau)}Bu(\tau) d\tau + Du(t)$
+> $$y(t) = Ce^{At}x(0) + C\int_0^T e^{A(t-\tau)}Bu(\tau) d\tau + Du(t)$$
 
 	- while y, C, D, u are known,
-	$\bar y(t) Ce^{At}x(0) \text{ if } \bar y(t) = y(t)-C\int_0^T e^{A(t-\tau)}Bu(\tau) d\tau - Du(t)$
-	$\int_0^T e^{A^Tt}C^T\bar y(t)dt = \int_0^T e^{A^Tt}C^TCe^{At}dt\cdot x(0)$
-	$\text{Observability Gramian : } \int_0^T e^{A^Tt}C^TCe^{At}dt$
-	$\text{if } G(T)>0, \text{system is observable}$
+	$$\bar y(t) Ce^{At}x(0) \text{ if } \bar y(t) = y(t)-C\int_0^T e^{A(t-\tau)}Bu(\tau) d\tau - Du(t)$$
+	$$\int_0^T e^{A^Tt}C^T\bar y(t)dt = \int_0^T e^{A^Tt}C^TCe^{At}dt\cdot x(0)$$
+	$$\text{Observability Gramian : } \int_0^T e^{A^Tt}C^TCe^{At}dt$$
+	$$\text{if } G(T)>0, \text{system is observable}$$
 
 ## PBH test of observability
 
 - Definition of PBH test in observability
 
-> $rank \begin{bmatrix}\lambda I - A \\ C\end{bmatrix} = n, \forall \lambda \in \text{e.v. of }A$  
-> $\nexists v\in \Re^n-\{ {\bf 0}\} \text{ s.t. } \lambda v=Av, Cv = {\bf 0}$
+> $$rank \begin{bmatrix}\lambda I - A \\ C\end{bmatrix} = n, \forall \lambda \in \text{e.v. of }A$$  
+> $$\nexists v\in \Re^n-\{ {\bf 0}\} \text{ s.t. } \lambda v=Av, Cv = {\bf 0}$$
 
 	- if $x(0) = v$, $\dot x = Ax$, $y=Cx \equiv = 0$
 	- 즉 sensing은 안되는데 v방향으로 내부 값은 계속 변하는 unobservable state가 생김

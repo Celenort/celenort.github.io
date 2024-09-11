@@ -25,39 +25,51 @@ pin: false
 
 
 $A = \begin{bmatrix}0 & 1 & 0 & \cdots & 0 \\ 0 & 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & 0 & \cdots & 1 \\ -a_0 & -a_1 & -a_2 & \cdots & -a_{n-1} \end{bmatrix}$
-$B = [0, 0, 0, \cdots, 1]^T$
-$C = [b_0, b_1, b_2, \cdots, b_{n-1}]$
-$D = [D]$
+{% raw %} 
+$
+${equation.trim()}
+$
+{% endraw %}
+$C = [b_0, b_1, b_2, \cdots, b_{n-1}]$$
+$$D = [D]$$
 
 - it represents transfer function
 
-> $T(s) = \frac{b_{n-1}s^{n-1}+\cdots + b_1s+b_0}{s^n+a_{n-1}s^{n-1}+\cdots+a_1s + a_0}+D$
+> $$T(s) = \frac{b_{n-1}s^{n-1}+\cdots + b_1s+b_0}{s^n+a_{n-1}s^{n-1}+\cdots+a_1s + a_0}+D$$
 
 
-### another book...'s controllability canonical form
+
+#### another book...'s controllability canonical form
 
 - original canonical form
 ![[../../../3. Resources/Attachments/Lec 08 Canonical form_image_1.png]]
 - also called as companion form
 ![[../../../3. Resources/Attachments/Lec 08 Canonical form_image_2.png]]
 
-### Observability canonical form
+
+#### Observability canonical form
 
 
-$A = \begin{bmatrix}0 & 0 & 0 & \cdots& 0 & -a_0 \\ 1 & 0 & 0 & \cdots & 0 & -a_1 \\ 0 & 1 & 0 & \cdots& 0 & -a_2 \\ \vdots & \vdots & \vdots &\vdots & \ddots & \vdots \\ 0 & 0 & 0 & \cdots &1 & -a_{n-1}  \end{bmatrix}$
-$B = [b_0, b_1, b_2, \cdots, b_{n-1}]^T$
-$C = [0, 0, 0, \cdots, 1]$
-$D = [D]$
+$$A = \begin{bmatrix}0 & 0 & 0 & \cdots& 0 & -a_0 \\ 1 & 0 & 0 & \cdots & 0 & -a_1 \\ 0 & 1 & 0 & \cdots& 0 & -a_2 \\ \vdots & \vdots & \vdots &\vdots & \ddots & \vdots \\ 0 & 0 & 0 & \cdots &1 & -a_{n-1}  \end{bmatrix}$
+{% raw %} 
+$
+${equation.trim()}
+$
+{% endraw %}
+$C = [0, 0, 0, \cdots, 1]$$
+$$D = [D]$$
 
 
-### another book...'s observability canonical form
+
+#### another book...'s observability canonical form
 
 - original canonical form
 ![[../../../3. Resources/Attachments/Lec 08 Canonical form_image_3.png]]
 - companion canonical form
 ![[../../../3. Resources/Attachments/Lec 08 Canonical form_image_4.png]]
 
-#Todo Stability 부분은 시험에 안나오므로, 다음에 정리.
+
+##Todo Stability 부분은 시험에 안나오므로, 다음에 정리.
 
 
 {% endraw %}

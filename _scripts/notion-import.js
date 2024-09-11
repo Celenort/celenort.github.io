@@ -17,6 +17,12 @@ function escapeCodeBlock(body) {
     return "\n{% raw %}\n```" + htmlBlock.trim() + "\n```\n{% endraw %}\n";
   });
 }
+function convertInlineEquationToBlock(body) {
+  const regex = /\$\n(.*?)\n\$/g;
+  return body.replace(regex, function (match, equation) {
+    return \n{% raw %} \n$$\n${equation.trim()}\n$$\n{% endraw %}\n;
+  });
+}
 
 function replaceTitleOutsideRawBlocks(body) {
   const rawBlocks = [];
@@ -162,6 +168,7 @@ pin: ${pin}
       continue;
     }
     md = escapeCodeBlock(md);
+    md = convertInlineEquationToBlock(md);
     md = replaceTitleOutsideRawBlocks(md);
 
 

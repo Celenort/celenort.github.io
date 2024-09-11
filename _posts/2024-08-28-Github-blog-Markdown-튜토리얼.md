@@ -214,45 +214,13 @@ fi;
 The mathematics powered by [**MathJax**](https://www.mathjax.org/):
 
 
-
-
-\begin{equation}
-\sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}
-\label{eq:series}
-\end{equation}
-
 {% raw %}
-
-
-\begin{equation}
-\sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}
-\label{eq:series}
-\end{equation}
-
 $$
-
-
 \begin{equation}
 \sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}
 \label{eq:series}
 \end{equation}
-
-2875
-
-
-\begin{equation}
-\sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}
-\label{eq:series}
-\end{equation}
-
 $$
-
-
-\begin{equation}
-\sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}
-\label{eq:series}
-\end{equation}
-
 {% endraw %}
 
 
@@ -262,11 +230,11 @@ We can reference the equation as \eqref{eq:series}.
 When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
 
 
-x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}{% raw %}
-x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}$$
-x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}3111
-x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}$$
-x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}{% endraw %}
+{% raw %}
+$$
+x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}
+$$
+{% endraw %}
 
 
 ## Mermaid SVG

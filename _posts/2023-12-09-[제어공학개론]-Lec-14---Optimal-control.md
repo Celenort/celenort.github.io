@@ -21,54 +21,54 @@ pin: false
 - State Feedback을 이용하여.
 - Consider system with no output
 
-> $$\dot x = Ax+Bu$$
+> $\dot x = Ax+Bu$
 
 - Also consider Optimization problem
 
-> $$\text{Goal : Find } x^* = \arg\min_x f(x)$$  
-> $$f : \Re^n \rightarrow \Re$$  
+> $\text{Goal : Find } x^* = \arg\min_x f(x)$  
+> $f : \Re^n \rightarrow \Re$  
 > $x^$ : optimal point, $x$ : decision variable, $f(x^)$ : optimal value
 
 - Let's claim that
 
-> $$u^(\cdot) = \arg\min_{u(\cdot)} J\big(x(0), u(\cdot)\big) = \int_0^\infty \bigg(x^T(\tau)Qx(\tau) + u^T(\tau)Ru(\tau)\bigg)d\tau$$  
+> $u^(\cdot) = \arg\min_{u(\cdot)} J\big(x(0), u(\cdot)\big) = \int_0^\infty \bigg(x^T(\tau)Qx(\tau) + u^T(\tau)Ru(\tau)\bigg)d\tau$  
 > $u^$ : optimal control, 이 input이 stable input임이 보장됨.  
 > Q, R은 state, u(t)에 대한 상대적 cost를 나타냄
 
 - Theorem :
 
 > If (A, B) controllable,  
-> $$\exists P >0 \text{ s.t. } A^TP+PA+Q-PBR^{-1}B^TP=0$$  
+> $\exists P >0 \text{ s.t. } A^TP+PA+Q-PBR^{-1}B^TP=0$  
 > (Algebraic Riccati Equation, ARE about P)  
-> $$u^(t) = -R^{-1} B^TPx(t)$$  
+> $u^(t) = -R^{-1} B^TPx(t)$  
 > LQR(Linear Quadratic Regulator)  
 > 원래의 $u^(t)$는 open loop control로 x(0)만의 function  
 > thanks to the theorem, the solution transformed into feedback control  
-> $$u = -Kx(t)$$
+> $u = -Kx(t)$
 
 - 보조 정리
 
-> $$\text{if } x(t)\rightarrow 0 \text{ on } t\rightarrow \infty \text{ by some } u(t)$$  
-> $$\text{then for any }P>0$$  
+> $\text{if } x(t)\rightarrow 0 \text{ on } t\rightarrow \infty \text{ by some } u(t)$  
+> $\text{then for any }P>0$  
 > (any PD matrix P가 가능하지만 Riccati Eqn의 P를 사용)  
-> $$\int_0^\infty x^T(t)(A^TP+PA)x(t)+2x^T(t)PBu(t)dt = -x^T(0)Px(0)$$  
+> $\int_0^\infty x^T(t)(A^TP+PA)x(t)+2x^T(t)PBu(t)dt = -x^T(0)Px(0)$  
 > 위 수식의 이해 : x(t), A, B, u를 집어넣으면, Initial value만으로 해당 적분을 표현할 수 있음  
 > pf)  
-> $$\int_0^\infty \dot x^T(t) Px(t) + x^T(t)P\dot x(t) dt = \int \frac{d}{dt} (x^T(t)Px(t))dt$$  
-> $$\dot x(t) = Ax+Bu$$임을 대입하면,  
+> $\int_0^\infty \dot x^T(t) Px(t) + x^T(t)P\dot x(t) dt = \int \frac{d}{dt} (x^T(t)Px(t))dt$  
+> $\dot x(t) = Ax+Bu$임을 대입하면,  
 > 좌변은 위 integral이 되고, 우변은  
-> $$\bigg[x^T(t)Px(t)\bigg]_0^\infty= -x^T(0)Px(0)$$
+> $\bigg[x^T(t)Px(t)\bigg]_0^\infty= -x^T(0)Px(0)$
 
 
 ### Proof of LQR
 
 - Pf
 
-> $$J = \int_0^\infty (x^TQx+u^TRu)dt = x^T(0)Px(0)-x^T(0)Px(0)+\int_0^\infty (x^TQx+u^TRu)dt$$  
-> $$=x^T(0)Px(0) \int_0^\infty (x^T(A^TP+PA)x+2x^TPBu)dt+ \int_0^\infty (x^TQx+u^TRu)dt$$  
-> $$=x^T(0)Px(0)+\int_0^\infty (u+R^{-1}B^TPx)^TR(u+R^{-1}B^TPx)dt + \int_0^\infty x^T(A^TP+PA-PBR^{-1}B^TP +Q)dt$$  
-> $$= x^T(0)Px(0) + 0(\text{ if } u=u^) + 0\text{ (by Riccati Eqn)}$$  
-> $$u^=-R^{-1}B^TPx$$is Optimal solution while$$J(x(0), u^*(\cdot))=x^T(0)Px(0)$$is optimal value
+> $J = \int_0^\infty (x^TQx+u^TRu)dt = x^T(0)Px(0)-x^T(0)Px(0)+\int_0^\infty (x^TQx+u^TRu)dt$  
+> $=x^T(0)Px(0) \int_0^\infty (x^T(A^TP+PA)x+2x^TPBu)dt+ \int_0^\infty (x^TQx+u^TRu)dt$  
+> $=x^T(0)Px(0)+\int_0^\infty (u+R^{-1}B^TPx)^TR(u+R^{-1}B^TPx)dt + \int_0^\infty x^T(A^TP+PA-PBR^{-1}B^TP +Q)dt$  
+> $= x^T(0)Px(0) + 0(\text{ if } u=u^) + 0\text{ (by Riccati Eqn)}$  
+> $u^=-R^{-1}B^TPx$is Optimal solution while$J(x(0), u^*(\cdot))=x^T(0)Px(0)$is optimal value
 
 
 ### Physical Meaning of Q, R
@@ -81,7 +81,7 @@ pin: false
 
 - V(x)을 학습
 
-> $$J(x(0), u^*) = V(x(0))$$학습 : by figuring Analytic form  
+> $J(x(0), u^*) = V(x(0))$학습 : by figuring Analytic form  
 > Table을 만들어서 Q-Q learning, Neural network
 
 

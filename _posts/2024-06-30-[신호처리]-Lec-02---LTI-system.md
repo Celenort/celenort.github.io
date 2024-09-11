@@ -13,7 +13,8 @@ pin: false
 ---
 
 
-### 📢Precaution
+
+#### 📢Precaution
 
 
 > 본 게시글은 서울대학교 이종호 B 교수님의 SNU FastMRI Challange의 2021 Signal Processing을 바탕으로 제작되었습니다.
@@ -30,45 +31,45 @@ pin: false
 	- We call system linear if the system satisfies two properties : Scaling property, Superposition.
 
 	> 한줄요약  
-	> $$\begin{aligned}  
+	> $\begin{aligned}  
 	> &x(t) \rightarrow p(t), \ y(t) \rightarrow q(t) \\  
-	> &ax(t)+by(t) \rightarrow ap(t) +bq(t)\end{aligned} $$
+	> &ax(t)+by(t) \rightarrow ap(t) +bq(t)\end{aligned} $
 
 - Time Invariance
 	- image 에서는 Shift(or space) invariance
 
-		> $$\begin{aligned}  
+		> $\begin{aligned}  
 		> x(t) &\rightarrow y(t), \\  
-		> x(t-t_0) &\rightarrow y(t-t_0)\end{aligned} $$
+		> x(t-t_0) &\rightarrow y(t-t_0)\end{aligned} $
 
 - Using Dirac's Delta property,
 
-> $$\begin{aligned}  
+> $\begin{aligned}  
 > &x(n) = \sum_{k=-\infty}^\infty x(k) \delta(n-k) \text{ at D.T}\\  
 > &x(t) = \int_{-\infty}^\infty x(k) \delta(t-k) dt  
-> \end{aligned} $$
+> \end{aligned} $
 
 - 동일한 방법으로 Output signal에 대해서도 이를 적용할 수 있다.
 System이 signal에 가하는 transform을 $y(n) = \mathbf{H}(x(n))$이라 하자.
 
-	> $$\begin{aligned}  
+	> $\begin{aligned}  
 	> y(n) &= \mathbf{H}(x(n)) \\  
 	> &=\mathbf{H} \{\sum_{k=-\infty}^\infty x(k) \delta(n-k) \} \\  
 	> &=\sum_{k=-\infty}^\infty x(k) \mathbf{H} \{\delta(n-k)\} \text{(by Linearity)}  
-	> \end{aligned} $$
+	> \end{aligned} $
 
 	- Impulse response
 
-	> $$  
-	> h(n) :=\mathbf{H} \{\delta (n) \}$$  
+	> $  
+	> h(n) :=\mathbf{H} \{\delta (n) \}$  
 	> Impulse response : output of system when input is impulse.
 
 - Time Invariant하다는 성질을 이용해 output signal을 impulse response와 input signal로 표현할 수 있다.
 
-> $$\begin{aligned}  
+> $\begin{aligned}  
 > y(n) &= \sum_{k=-\infty}^\infty x(k) h(n-k) \\  
 > &=x(n) \ * \ h(n) \ \text{(Convolution)}  
-> \end{aligned} $$
+> \end{aligned} $
 
 - 유사하게 CT에서의 convolution 또한 정의할 수 있다.
 

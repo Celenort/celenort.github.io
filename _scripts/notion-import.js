@@ -168,7 +168,7 @@ pin: ${pin}
       continue;
     }
     md = escapeCodeBlock(md);
-    md = convertInlineEquationToBlock(md);
+    //md = convertInlineEquationToBlock(md);
 
     //md = replaceTitleOutsideRawBlocks(md);
 
@@ -205,6 +205,8 @@ pin: ${pin}
         return `![${index++}](/${imgname})${res}`; // here is the place that we must edit.
       }
     );
+    edited_md = convertInlineEquationToBlock(edited_md);
+
     //writing to file
     fs.writeFile(path.join(root, ftitle), fm + edited_md, (err) => {
       if (err) {

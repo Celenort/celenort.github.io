@@ -33,6 +33,9 @@ pin: false
 	> &=x(n) * h(n)\end{aligned} $
 
 
+	{% endraw %}
+
+
 	신기한 점은, System에 대한 Transfer function을 정의하지 않고, Dirac's Delta의 정의를 이용한 Impulse response만으로 convolution 관계를 얻어낼 수 있다는 것이다.
 
 	- What convolution actually do ?
@@ -71,7 +74,4 @@ pin: false
 
 
 		![6](/6.png)
-
-
-{% endraw %}
 

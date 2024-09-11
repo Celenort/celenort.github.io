@@ -18,7 +18,7 @@ function escapeCodeBlock(body) {
   });
 }
 function convertInlineEquationToBlock(body) {
-  const regex = /\$\n(.*?)\n\$/g;
+  const regex = /\$\n([\s\S]*?)\n\$/g;
   return body.replace(regex, function (match, equation) {
     return "\n{% raw %}\n\\$\\$\n" + equation.trim() + "\n\\$\\$\n{% endraw %}\n";
   });

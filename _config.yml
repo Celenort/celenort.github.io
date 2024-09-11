@@ -182,6 +182,7 @@ defaults:
       permalink: /:categories/:title/
       math: true #
       mermaid: true #
+      excerpt_seperator: <!--break-->
   - scope:
       path: _drafts
     values:

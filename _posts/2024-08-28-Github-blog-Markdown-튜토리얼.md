@@ -168,11 +168,11 @@ Here is the `/path/to/the/file.extend`{: .filepath}.
 
 
 
-{% raw %}
+{% raw %}didi
 ```text
 This is a common code snippet, without syntax highlight and line number.
 ```
-{% endraw %}
+idid{% endraw %}
 
 
 
@@ -180,14 +180,14 @@ This is a common code snippet, without syntax highlight and line number.
 
 
 
-{% raw %}
+{% raw %}didi
 ```shell
 if [ $? -ne 0 ]; then
   echo "The command was not successful.";
   #do the needful / exit
 fi;
 ```
-{% endraw %}
+idid{% endraw %}
 
 
 
@@ -198,13 +198,13 @@ fi;
 
 
 
-{% raw %}
+{% raw %}didi
 ```sass
 @import
   "colors/light-typography",
   "colors/dark-typography";
 ```
-{% endraw %}
+idid{% endraw %}
 
 
 
@@ -241,7 +241,7 @@ $$
 
 
 
-{% raw %}
+{% raw %}didi
 ```mermaid
  gantt
   title  Adding GANTT diagram functionality to mermaid
@@ -249,7 +249,7 @@ $$
   banana :crit, b, 2017-07-23, 1d
   cherry :active, c, after b a, 1d
 ```
-{% endraw %}
+idid{% endraw %}
 
 
 

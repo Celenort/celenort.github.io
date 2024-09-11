@@ -25,9 +25,9 @@ pin: false
 
 
 $A = \begin{bmatrix}0 & 1 & 0 & \cdots & 0 \\ 0 & 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & 0 & \cdots & 1 \\ -a_0 & -a_1 & -a_2 & \cdots & -a_{n-1} \end{bmatrix}$
-{% raw %} 
+{% raw %}
 $
-${equation.trim()}
+$B = [0, 0, 0, \cdots, 1]^T$
 $
 {% endraw %}
 $C = [b_0, b_1, b_2, \cdots, b_{n-1}]$$
@@ -51,9 +51,9 @@ $$D = [D]$$
 
 
 $$A = \begin{bmatrix}0 & 0 & 0 & \cdots& 0 & -a_0 \\ 1 & 0 & 0 & \cdots & 0 & -a_1 \\ 0 & 1 & 0 & \cdots& 0 & -a_2 \\ \vdots & \vdots & \vdots &\vdots & \ddots & \vdots \\ 0 & 0 & 0 & \cdots &1 & -a_{n-1}  \end{bmatrix}$
-{% raw %} 
+{% raw %}
 $
-${equation.trim()}
+$B = [b_0, b_1, b_2, \cdots, b_{n-1}]^T$
 $
 {% endraw %}
 $C = [0, 0, 0, \cdots, 1]$$

@@ -14,7 +14,7 @@ const notion = new Client({
 function escapeCodeBlock(body) {
   const regex = /```([\s\S]*?)```/g;
   return body.replace(regex, function (match, htmlBlock) {
-    return "\n{% raw %}didi\n```" + htmlBlock.trim() + "\n```\nidid{% endraw %}\n";
+    return "\n{% raw %}\n```" + htmlBlock.trim() + "\n```\n{% endraw %}\n";
   });
 }
 function convertInlineEquationToBlock(body) {
@@ -204,7 +204,7 @@ pin: ${pin}
         return `![${index++}](/${imgname})${res}`; // here is the place that we must edit.
       }
     );
-    edited_md = convertInlineEquationToBlock(edited_md);
+    //edited_md = convertInlineEquationToBlock(edited_md);
 
     //writing to file
     fs.writeFile(path.join(root, ftitle), fm + edited_md, (err) => {

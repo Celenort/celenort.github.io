@@ -13,7 +13,8 @@ pin: false
 ---
 
 
-### 📢Precaution
+
+#### 📢Precaution
 
 
 > 본 게시글은 서울대학교 이종호 B 교수님의 SNU FastMRI Challange의 2021 Signal Processing을 바탕으로 제작되었습니다.
@@ -26,8 +27,8 @@ pin: false
 
 - Continuous function과 sampling function 곱하는 과정.
 
-	> $$  
-	> x(t) \text{(continuous)} \cdot \frac{1}{T} III(\frac{t}{T}) $$  
+	> $  
+	> x(t) \text{(continuous)} \cdot \frac{1}{T} III(\frac{t}{T}) $  
 	> sampled function
 
 - Sampling function : Shah function, 각 Area가 1이며, 간격 T인 Dirac's delta function의 합
@@ -43,8 +44,8 @@ pin: false
 	1. orig. function과 sampling function을 곱하는 것은 Freq. domain에서 convolution하는 것과 같음. (modulation property)
 	2. Shah function은 F.T.를 거쳐도 shah function임.
 
-	> $$  
-	> \mathcal{F} \bigg(x(t) \cdot \frac{1}{T} III(\frac{t}{T})\bigg) = X(f) * III(f/f_s)$$  
+	> $  
+	> \mathcal{F} \bigg(x(t) \cdot \frac{1}{T} III(\frac{t}{T})\bigg) = X(f) * III(f/f_s)$  
 	> $f_s$ denotes sampling freq.
 
 

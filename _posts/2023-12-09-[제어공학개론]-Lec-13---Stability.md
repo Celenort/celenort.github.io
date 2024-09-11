@@ -21,8 +21,8 @@ pin: false
 - Lyapnov Stability (for autonomus stability) $\dot x = Ax$
 - Input/Output Stability
 
-> $$\dot x = Ax + Bu$$  
-> $$y = Cx+Du$$  
+> $\dot x = Ax + Bu$  
+> $y = Cx+Du$  
 > or G(s) (Input, output이 defined 된)
 
 
@@ -34,13 +34,13 @@ pin: false
 - but multiple equiv point가 존재할 수 있는 non-linear system에서는 각 point에 대한 stability를 의미.
 - Definition of Lyapnov Stability Criterion
 
-> $$x^* \text{ is stable if }$$  
-> $$\text{for any }\epsilon>0, \text{there exists } \delta >0$$  
-> $$\text{such that } ||x(0)-x^|| <\delta, ||x(t)-x^||<\epsilon, \forall t>0$$
+> $x^* \text{ is stable if }$  
+> $\text{for any }\epsilon>0, \text{there exists } \delta >0$  
+> $\text{such that } ||x(0)-x^|| <\delta, ||x(t)-x^||<\epsilon, \forall t>0$
 
 - Definition of Attractive Point
 
-> $$x^* \text{is attractive if } \lim\limits_{t\rightarrow \infty } x(t) = x^*$$
+> $x^* \text{is attractive if } \lim\limits_{t\rightarrow \infty } x(t) = x^*$
 
 - Stable + Attractive Equiv Point : Asymptotically Stable
 - Q. Stable하지 않으나, Attractive한 Point가 존재하는가? (O)
@@ -49,7 +49,7 @@ pin: false
 - stable, not attractive는 존재. 계속 round 주위를 도는 것
 - Asymptotically Stable
 
-> $$\leftrightarrow A \text { Hurwitz}$$  
+> $\leftrightarrow A \text { Hurwitz}$  
 > eigenvalue들이 모두 음수에 있다는 것은 결국 0으로 죽어나간다는 것을 의미하므로 attractivity는 쉬움  
 > stability 또한 norm을 취하여 보이면 점점 그 크기가 줄어 원점으로 수렴한다는 것을 알 수 있음.
 
@@ -58,8 +58,8 @@ pin: false
 
 - Lyapnov Equation을 만족하는 A는 asymptotically stable
 
-> $$\forall Q>0, \exists P > 0 \text{s.t.}$$  
-> $$A^T P + PA = -Q$$  
+> $\forall Q>0, \exists P > 0 \text{s.t.}$  
+> $A^T P + PA = -Q$  
 > Linear equation이며, P는 symmetric(positive definite이려면) 하므로 미지수는 3개.
 
 - A의 C.P를 풀어서 Pole의 real part를 직접 계산하는 것 보다 Lyapnov Equation을 계산하는 것이 컴퓨터가 더 쉬워함.
@@ -68,18 +68,18 @@ pin: false
 
 - Lyapnov Function
 
-> $$V(x) := x^TPx, P>0$$  
-> $$V(0) = 0$$  
-> $$V(x)>0, x\neq 0$$  
+> $V(x) := x^TPx, P>0$  
+> $V(0) = 0$  
+> $V(x)>0, x\neq 0$  
 > state transition matrix V (orthonormal matrix)를 고려  
-> $$Vz = x$$  
-> $$x^TPx = z^Td^T P Vz  = z^T D z = \sum_{i=1}^n \lambda_i z_i^2$$  
+> $Vz = x$  
+> $x^TPx = z^Td^T P Vz  = z^T D z = \sum_{i=1}^n \lambda_i z_i^2$  
 > 이를 평면에 그려보면 ellipse 형태를 띄게 됨.  
-> $$\frac{d}{dt} V(x(t))<0$$  
-> $$= \dot x^T P x + x^T P \dot x$$  
-> $$= x^T A^T P x + x^T P A x$$  
-> $$= x^T (A^T P + PA) x= -x^T Q x < 0$$  
-> $$\because Q > 0$$
+> $\frac{d}{dt} V(x(t))<0$  
+> $= \dot x^T P x + x^T P \dot x$  
+> $= x^T A^T P x + x^T P A x$  
+> $= x^T (A^T P + PA) x= -x^T Q x < 0$  
+> $\because Q > 0$
 
 - 즉 V(x)는 결국 0이 됨.
 
@@ -87,12 +87,12 @@ pin: false
 
 - $P = \displaystyle\int_0^\infty e^{A^T s} Q e^{As}ds$
 
-> $$A^T P + PA = \int_0^\infty A^T e^{A^Ts}Q e^{As} + e^{A^T s} Q e^{As}A ds$$  
-> $$= \int_0^\infty \frac{d}{ds}(e^{A^T s}Q e^{As})ds = \bigg[e^{A^Ts}Qe^{As}\bigg]_0^\infty = -Q$$  
-> $$s\rightarrow \infty, \text{value}\rightarrow 0 \because \text{Hurwitz}$$  
-> $$s \rightarrow 0, e^{A\cdot 0} = I$$  
+> $A^T P + PA = \int_0^\infty A^T e^{A^Ts}Q e^{As} + e^{A^T s} Q e^{As}A ds$  
+> $= \int_0^\infty \frac{d}{ds}(e^{A^T s}Q e^{As})ds = \bigg[e^{A^Ts}Qe^{As}\bigg]_0^\infty = -Q$  
+> $s\rightarrow \infty, \text{value}\rightarrow 0 \because \text{Hurwitz}$  
+> $s \rightarrow 0, e^{A\cdot 0} = I$  
 > 어차피 Arbitary Q>0에 대한 것이므로 Q를 지우고 다음과 같이 표현가능  
-> $$A^T P + PA <0$$  
+> $A^T P + PA <0$  
 > (Negative Definite)
 
 
@@ -100,17 +100,17 @@ pin: false
 
 - 입력 $u(t)$가 Bounded일 때 출력 $y(t)$가 항상 Bounded이면 이를 "BIBO Stable"이라 한다.
 
-> $$\leftrightarrow \text{A is Hurwitz}$$  
+> $\leftrightarrow \text{A is Hurwitz}$  
 > pf)  
-> $$||y(t)|| = ||Ce^{At}x_0+C\int_0^t e^{A(t-s)}Bu(s)ds||$$  
-> $$\leq ||Ce^{At}x(0)|| + ||C||\int_0^t ke^{\lambda_\text{max}(t-s)}||B||ds \cdot \max_t ||u(t)||$$  
-> $$=\text{(Converge) + (Converge) + Bounded Input}$$
+> $||y(t)|| = ||Ce^{At}x_0+C\int_0^t e^{A(t-s)}Bu(s)ds||$  
+> $\leq ||Ce^{At}x(0)|| + ||C||\int_0^t ke^{\lambda_\text{max}(t-s)}||B||ds \cdot \max_t ||u(t)||$  
+> $=\text{(Converge) + (Converge) + Bounded Input}$
 
 - Principle eigenvalue at matrix exponent
 
-> $$||e^{At}|| \leq ke^{\lambda_\text{max} t}$$  
-> $$k\neq 1$$  
-> $$\lambda_\text{max} = \max \text{Re}(\lambda_i(A))$$
+> $||e^{At}|| \leq ke^{\lambda_\text{max} t}$  
+> $k\neq 1$  
+> $\lambda_\text{max} = \max \text{Re}(\lambda_i(A))$
 
 
 {% endraw %}

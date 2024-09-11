@@ -72,8 +72,8 @@ Flow chart와 같이 제어를 block diagram으로 추상화하여 나타낼 수
 > (1)  
 > $  
 > u(t)-mg = m\ddot y(t)$
-{% raw %}
-$
+
+
 입력변수 $u(t)$에 따라 출력변수 $y(t)$의 2번 미분된 값이 달라지죠? 이 과정이 바로 Modeling이라고 할 수 있습니다. 위 미분방정식을 풀기 위해 어떤 과정이 필요할까요?
 
 
@@ -117,30 +117,29 @@ Feedback을 위해서는 Sensor를 통해서 현재 높이인 $y(t)$값을 알�
 
 1. System의 Robustness(강인성)을 증가시켜줍니다. 위 제어의 필요성과 일맥상통하는 부분으로, 작은 purturbation이나 외부로부터 오는 disturbance에도 system이 빠르게 Desired $y^* (t)$로 복귀할 수 있도록 하는 것이 피드백입니다
 2. 둘째로, System 자체의 Dynamics를 바꿔줍니다. 앞의 드론을 예시로 어떻게 System 자체의 Dynamics에 Feedback이 관여할 수 있는지를 알아봅시다.
-$
-{% endraw %}
-y(t)$라는 높이를 Sensor를 통해 측정하여 이 정보를 알고 있다고 가정하고 원래의 지배방정식을 다시 써보면,
+
+$y(t)$라는 높이를 Sensor를 통해 측정하여 이 정보를 알고 있다고 가정하고 원래의 지배방정식을 다시 써보면,
 
 
 > (1)  
-> $$  
-> m\ddot y = u-mg$$
+> $  
+> m\ddot y = u-mg$
 
 
 여기서 정확한 질량 $m$, (더하여 중력가속도 $g$)를 알지 못하기 때문에, 대략적인 Approximation 값인 $\bar{mg}$를 이용할 수 있습니다. 다만, 이제는 $y(t)$를 알기 때문에 $y(t)$, 그리고 이를 미분한 $\dot y(t)$도 사용할 수 있겠습니다. 이를 이용해서 $u(t)$를 만드는 것도 가능합니다.
 
 
 > (2)  
-> $$  
-> u(t) = -c\dot y(t) -ky(t)+\overline{mg}$$
+> $  
+> u(t) = -c\dot y(t) -ky(t)+\overline{mg}$
 
 
 다음과 같이 sensor로부터 얻어낸 신호를 이용해서 다음과 같이 $u(t)$를 만들어 볼 수 있겠습니다. (2) 식을 (1)에 다시 대입해보면,
 
 
 > (3)  
-> $$  
-> m\ddot y + c\dot y + ky = \overline{mg} - mg$$
+> $  
+> m\ddot y + c\dot y + ky = \overline{mg} - mg$
 
 
 다음과 같은 Mass-Spring-Damper의 2차 미분방정식으로 system의 지배방정식이 바뀐 것을 알 수 있습니다. 이 미분방정식은 공학수학 시간의 ODE에서도 많이 다루죠. 중요한 것은 그게 아니라 단지 $F=ma$에서 비롯되었던 식이 Feedback을 통해 (3)과 같이 그 Dynamics 자체가 바뀌었다는 것입니다.
@@ -149,8 +148,7 @@ y(t)$라는 높이를 Sensor를 통해 측정하여 이 정보를 알고 있다�
 System의 Dynamics를 건드린다는 것은, 그 system의 stability(안정도)를 검토해 봐야한다는 뜻이기도 합니다. 자꾸 다루지 않은 단어를 언급하는 것이 불편하지만, 여기서의 안정도는, 드론의 예시에서 드론이 갑자기 바닥으로 고꾸라지거나, 저 하늘 위로 날아가버리는, 우리가 원하지 않는 파국으로 치닿는 것을 의미합니다. 미분방정식의 입장에서는 해가 발산하는 경우입니다.
 
 
-
-#### Dynamic vs Static System
+### Dynamic vs Static System
 
 
 위에서 Dynamic이라는, 단어가 나왔죠. 이름 그대로 역학 시스템이라고 해석해도 무방하기는 하나, 정확히는 자연계로부터 모델링되는 이 Dynamic system은 Static system과 대치되는 단어입니다.
@@ -159,15 +157,13 @@ System의 Dynamics를 건드린다는 것은, 그 system의 stability(안정도)
 Dynamic system과 Static system은 간단히 설명하자면 Memory의 여부에 따라 결정됩니다. 위 시스템에서는 2개의 $\ddot y(t)$가 등장하므로 적분기가 존재하는 것으로 볼 수 있고 적분기라는 것은 초기상태로부터 지금까지의 정보를 담는 Memory라고 볼 수 있겠지요. 이는 정보의 저장 없이 단순히 입력으로부터 출력을 내는 Static system의 차이점입니다. 예를 들어 $u(t)$의 값을 3배 하여 $y(t)$로 출력하는 System이 있다면, 이는 Static system입니다. 값을 바로 도출해내므로 메모리가 필요 없고 입력받은 즉시 출력하는 (instant response) 시스템입니다.
 
 
-
-## ❗ 결론
+# ❗ 결론
 
 
 제어공학개론의 첫 수업 시간 내용을 요약하며, '제어'의 정의가 무엇이고 어떤 문제를 해결하는데 사용되는지 간략하게 알아봤습니다. 다음 Post는 Modeling을 다루면서, 다양한 Modeling 방법에 대해 다루도록 하겠습니다.
 
 
-
-#### 🍪Comment
+### 🍪Comment
 
 
 수업 내용을 정리하는 차원에서 쓰고 있기 때문에, 수업 진도를 웬만해서는 그대로 따라가되 일종의 재편집 및 수정을 거쳐 순서가 뒤섞일 수도 있습니다.

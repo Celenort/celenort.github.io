@@ -18,9 +18,9 @@ function escapeCodeBlock(body) {
   });
 }
 function convertInlineEquationToBlock(body) {
-  const regex = /\n\$\$\n([\s\S]*?)\n\$\$\n/g;
-  return body.replace(regex, function (match, equation) {
-    return "\n{% raw %}\n$$\n" + equation.trim() + "\n$$\n{% endraw %}\n";
+  const regex = /\n^[ \t]*\$\$\n([\s\S]*?)\n[ \t]*\$\$\n/gm;
+  return body.replace(regex, function (match, equation, leadingWhitespace) {
+    return "\n${leadingWhitespace}{% raw %}\n${leadingWhitespace}$$\n${leadingWhitespace}" + equation.trim() + "\n${leadingWhitespace}$$\n${leadingWhitespace}{% endraw %}\n";
   });
 }
 

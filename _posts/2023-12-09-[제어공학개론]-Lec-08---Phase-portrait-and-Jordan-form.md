@@ -27,7 +27,8 @@ pin: false
 > $(v_j^T A) v_i = (Av_j) v_i = \lambda_jv_j^T v_i$  
 > $\text{for } \lambda_iv_j^T v_i = \lambda_j v_j^T v_i$  
 > $\therefore v_j^T v_i = 0 \rightarrow v_j \perp v_i$
-
+{% raw %}
+$
 - 즉 $A^T=A$인데, geometric mulitplicity>1이면, a.m=g.m이며, 해당 $\lambda_i$에 대한 $dim(N(\lambda_i I -A))=a.m$으로 악의적이지 않다면, orthogonal한 basis를 잡을 수 있음.
 - 결론적으로 symmetric matrix에서는 multiplicity에 관계없이 n개의 eigenvector를 모두 orthogonal하게 뽑을 수 있음.
 - orthogonal하게 뽑을 수 있다는 뜻은, orthonormal하게 뽑을 수 있다는 뜻. ($\Vert v_i\Vert_2 = 1$)
@@ -102,24 +103,24 @@ eg)
 > $\dot z_3 = \lambda_2 z_3$  
 > $\text{also,}$  
 > $(A-\lambda_2 I) v_3 = v_2$
-
-
-$v_3$ : generalized eigenvector
+$
+{% endraw %}
+v_3$ : generalized eigenvector
 
 - solve for $z_2$
 
-> $\dot z_2 = \lambda_2 z_2 + z_3$  
+> $$\dot z_2 = \lambda_2 z_2 + z_3$$  
 > consider $z_3$ as input of system  
-> $z_2 = e^{\lambda_2 t} z_2(0) + \int_0^t e^{\lambda_2(t-\tau)} \cdot 1 \cdot z_3(\tau)d\tau$  
-> $\text{also,} z_3 = z_3(0)e^{\lambda_2 t}$  
-> $z_2 =  e^{\lambda_2 t} z_2(0) + \int_0^t e^{\lambda_2(t-\tau)}z_3(0)e^{\lambda_2 \tau}d\tau$  
-> $=  e^{\lambda_2 t} z_2(0) + \int_0^t  e^{\lambda_2 t} z_3(0) d\tau$  
-> $=  e^{\lambda_2 t} z_2(0)  + te^{\lambda_2 t}z_3(0)$  
-> $= [z_2(0)+tz_3(0)]e^{\lambda_2t}$
+> $$z_2 = e^{\lambda_2 t} z_2(0) + \int_0^t e^{\lambda_2(t-\tau)} \cdot 1 \cdot z_3(\tau)d\tau$$  
+> $$\text{also,} z_3 = z_3(0)e^{\lambda_2 t}$$  
+> $$z_2 =  e^{\lambda_2 t} z_2(0) + \int_0^t e^{\lambda_2(t-\tau)}z_3(0)e^{\lambda_2 \tau}d\tau$$  
+> $$=  e^{\lambda_2 t} z_2(0) + \int_0^t  e^{\lambda_2 t} z_3(0) d\tau$$  
+> $$=  e^{\lambda_2 t} z_2(0)  + te^{\lambda_2 t}z_3(0)$$  
+> $$= [z_2(0)+tz_3(0)]e^{\lambda_2t}$$
 
 - 그렇다면 pole이 중첩될 때는 발산할까? : no. $R(\lambda_2)<0$이면, exponential이 더 빠르게 증가하므로 수렴함.
 - 실제 controll에서 중첩이 생겨 Jordan form을 쓰는 경우가 있는가?
--$det(\lambda_i I -A) = 0$에서 small purturbation이 생겨도 중첩이 깨지게 됨. 즉 물리적 측정값을 대입하여 결정되는 A의 경우 의도적으로 맞추는게 아니라면 무조건 중첩이 깨지게 됨 (full rank)
+-$$det(\lambda_i I -A) = 0$$에서 small purturbation이 생겨도 중첩이 깨지게 됨. 즉 물리적 측정값을 대입하여 결정되는 A의 경우 의도적으로 맞추는게 아니라면 무조건 중첩이 깨지게 됨 (full rank)
 	- if $T(s) = \frac{1}{s^2}$와 같은 integrator 같이, 설계자가 그 구조를 결정하는 경우에는 안깨지는 중첩이 생기게 됨.
 - Q. Transfer function을 통해 구해지는 x(t)에서는 pole이 중첩될 경우 무조건 t가 붙어서 도출되나, A의 성질을 이용하여 계산되는 x(t)에서는 diagonalizability에 따라 t가 붙을 수도 있고 안붙을 수도 있음. (diagonalizable 하면 n distinct한 eigenvector가 생기므로 안붙음) 어떠한 조건에서 이게 붙고 안붙냐?
 	- Transfer function : $T(s) = C(sI-A)^{-1}B$

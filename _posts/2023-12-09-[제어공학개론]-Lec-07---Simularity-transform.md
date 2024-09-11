@@ -22,7 +22,8 @@ pin: false
 - let's define a transform matrix
 
 > $z(t) = Tx(t)$
-
+{% raw %}
+$
 - T invertible, invarient to time. (유사변환, simularity transformation)
 - define ss representation with z
 
@@ -101,9 +102,9 @@ pin: false
 
 
 ### calculation about y(t)
-
-
-$y(t) = Ce^{At}x_0 + C\int_0^t e^{A(t-\tau)}Bu(\tau) d\tau + Du(t)$
+$
+{% endraw %}
+$y(t) = Ce^{At}x_0 + C\int_0^t e^{A(t-\tau)}Bu(\tau) d\tau + Du(t)$$
 
 
 {% endraw %}

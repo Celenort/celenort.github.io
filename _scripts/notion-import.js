@@ -20,7 +20,7 @@ function escapeCodeBlock(body) {
 function convertInlineEquationToBlock(body) {
   const regex = /\n^[ \t]*\$\$\n([\s\S]*?)\n[ \t]*\$\$\n/gm;
   return body.replace(regex, function (match, leadingWhitespace, equation) {
-    return "\n${leadingWhitespace}{% raw %}\n${leadingWhitespace}$$\n" + leadingWhitespace + equation.trim() + "\n${leadingWhitespace}$$\n${leadingWhitespace}{% endraw %}\n";
+    return "\n"+leadingWhitespace+"{% raw %}\n"+leadingWhitespace+"$$\n" + leadingWhitespace + equation.trim() + "\n"+leadingWhitespace+"$$\n"+leadingWhitespace+"{% endraw %}\n";
   });
 }
 

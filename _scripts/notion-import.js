@@ -168,8 +168,8 @@ pin: ${pin}
       continue;
     }
     md = escapeCodeBlock(md);
-    md = replaceTitleOutsideRawBlocks(md);
     md = convertInlineEquationToBlock(md);
+    md = replaceTitleOutsideRawBlocks(md);
 
 
 

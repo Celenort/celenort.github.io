@@ -18,9 +18,9 @@ function escapeCodeBlock(body) {
   });
 }
 function convertInlineEquationToBlock(body) {
-  const regex = /\n\$\n([\s\S]*?)\n\$\n/g;
+  const regex = /\n\$\$\n([\s\S]*?)\n\$\$\n/g;
   return body.replace(regex, function (match, equation) {
-    return "\n{% raw %}didi\n$$\n" + equation.trim() + "\n$$ddii\n{% endraw %}\n";
+    return "\n{% raw %}\n$$\n" + equation.trim() + "\n$$\n{% endraw %}\n";
   });
 }
 
@@ -170,7 +170,7 @@ pin: ${pin}
     md = escapeCodeBlock(md);
     //md = replaceTitleOutsideRawBlocks(md);
     
-    //md = convertInlineEquationToBlock(md);
+    md = convertInlineEquationToBlock(md);
 
 
     let index = 0;

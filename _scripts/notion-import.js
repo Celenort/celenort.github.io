@@ -168,8 +168,9 @@ pin: ${pin}
       continue;
     }
     md = escapeCodeBlock(md);
-    md = convertInlineEquationToBlock(md);
     md = replaceTitleOutsideRawBlocks(md);
+    md = convertInlineEquationToBlock(md);
+
 
 
     let index = 0;

@@ -118,10 +118,10 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
       pin = "true";
     }
     //thumb
-    let thumb = "true";
+    let thumb = true;
     let tthumb = r.properties?.["nothumb"]?.["checkbox"];
     if(tthumb) {
-      thumb = "false";
+      thumb = false;
     }
     // tags
     let tags = [];

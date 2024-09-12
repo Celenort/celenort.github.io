@@ -16,10 +16,10 @@ pin: false
 ### Precaution
 
 
-> 본 게시글은 서울대학교 이종호 B 교수님의 SNU FastMRI Challange의 [2021 Signal Processing](https://www.youtube.com/playlist?list=PLZjIfJn3RN8si1ohhmSoWgH4VYLPwIW84)을 바탕으로 제작되었습니다.
-
-
 {: .prompt-info}
+
+
+> 본 게시글은 서울대학교 이종호 B 교수님의 SNU FastMRI Challange의 [2021 Signal Processing](https://www.youtube.com/playlist?list=PLZjIfJn3RN8si1ohhmSoWgH4VYLPwIW84)을 바탕으로 제작되었습니다.
 
 
 ### Convolution
@@ -39,13 +39,13 @@ $$
 	
 	일반적으로 알고 있는 convolution을 정말 잘 시각화 한 예시인 것 같아 풀로 긁어옴.
 
-		![0](/0.png)
+![0](/0.png)
 
 
-		![1](/1.png)
+![1](/1.png)
 
 
-		![2](/2.png)
+![2](/2.png)
 
 - 2D convolution :
 	- Zero-padded 2D image

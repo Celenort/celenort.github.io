@@ -23,7 +23,7 @@ function convertInlineEquationToBlock(body) {
     return "\n{% raw %}\n$$\n" + equation.trim() + "\n$$\n{% endraw %}\n";
   });
 }
-function undifinedReplacer(body) {
+function undefinedReplacer(body) {
   const regex = /undefined- ([\s\S]*?)/g;
   return body.replace(regex, function (match, block) {
     return "- " + block.trim();

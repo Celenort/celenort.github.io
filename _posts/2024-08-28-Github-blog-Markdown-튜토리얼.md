@@ -7,7 +7,7 @@ categories: [Blogging, tutorial, ]
 media_subpath: assets/img/2024-08-28-Github-blog-Markdown-튜토리얼.md
 image:
   path: 0.png
-  alt: Sample image
+  alt: ${alt}
 description: Github 블로그 마크다운 튜토리얼에서는 제목, 문단, 목록, 인용, 표, 링크, 각주, 코드 블록, 수학식, 이미지 및 비디오 삽입 방법을 설명합니다. 다양한 마크다운 요소를 사용하여 블로그 포스트를 작성하는 방법을 안내합니다.
 pin: false
 ---

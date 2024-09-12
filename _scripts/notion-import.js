@@ -119,7 +119,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
     }
     //thumb
     let thumb = "true";
-    let tthumb = r.properties?.["no_thumb"]?.["checkbox"];
+    let tthumb = r.properties?.["nothumb"]?.["checkbox"];
     if(tthumb) {
       thumb = "false";
     }

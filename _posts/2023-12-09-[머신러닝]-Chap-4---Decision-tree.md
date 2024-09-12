@@ -34,13 +34,13 @@ Process :
 
 1. generate node $i$
 2. **if** $\forall D \in C$ :
-	1. Mark node $i$ as a class $C$ leaf node, **return**
+	- Mark node $i$ as a class $C$ leaf node, **return**
 3. **if** $A=\varnothing \ \text{or} \ \forall D
 $ take some value on $A$ :
-	1. Mark node $i$ as a leaf node, label = majority class in $D$, **return**
+	- Mark node $i$ as a leaf node, label = majority class in $D$, **return**
 4. Set optimal splitting feature $a^*$ from $A$ (Entropy, GINI, etc...)
-5. **for** each value $a_*^v$ in $a_*$, **do** :
-	1. Generate branch for node $i$ ; $D_v$ is subset of samples taking $a_*^v$ on $a_*$
+5. **for** each value $a_*^v$  in  $a_*$, **do** :
+	1. Generate branch for node $i$ ; $D_v$ is subset of samples taking $a_*^v$  on  $a_*$
 	2. **if** $D_v$ is empty :
 		- Mark $D_v$ as leaf node, label it with majority class in $D$, **return**
 	3. **else** :
@@ -107,7 +107,7 @@ $$
 
 {% raw %}
 $$
-\text{Gini index}(D,a) = \sum{v=1}^V \frac{\vert D^v\vert}{\vert D \vert} Gini(D^v)
+\text{Gini index}(D,a) = \sum_{v=1}^V \frac{\vert D^v\vert}{\vert D \vert} Gini(D^v)
 $$
 {% endraw %}
 

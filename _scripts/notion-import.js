@@ -117,6 +117,12 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
     if(ppin) {
       pin = "true";
     }
+    //thumb
+    let thumb = "true";
+    let tthumb = r.properties?.["썸네일 없음"]?.["checkbox"];
+    if(tthumb) {
+      thumb = "false";
+    }
     // tags
     let tags = [];
     let ptags = r.properties?.["태그"]?.["multi_select"];
@@ -155,14 +161,18 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
     }
     const ftitle = `${date}-${title.replaceAll(" ", "-")}.md`;
     const mediadir = path.join("assets/img", ftitle);
+    let imagefm="";
+    if (thumb) {
+      imagefm+="image:
+  path: 0.png
+  alt: ${alt}";
+    }
     const fm = `---
 layout: post
 date: ${date}
 title: "${title}"${fmtags}${fmcats}
 media_subpath: ${mediadir}
-image:
-  path: 0.png
-  alt: ${alt}
+${imagefm}
 description: ${desc}
 pin: ${pin}
 ---

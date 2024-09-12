@@ -261,6 +261,19 @@ $$
 {% endraw %}
 
 
+To refer the equation :
+
+
+
+{% raw %}
+```latex
+\label{eq:series} : numbering
+\eqref{eq:series} : refer, no need to enclose with \$
+```
+{% endraw %}
+
+
+
 ## Mermaid SVG
 
 

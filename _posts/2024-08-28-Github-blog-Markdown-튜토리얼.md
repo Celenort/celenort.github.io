@@ -149,6 +149,9 @@ undefined
 Click the hook will locate the footnote[^footnote], and here is another footnote[^fn-nth-2].
 
 
+To use : cover square brace + ^
+
+
 ## Inline code
 
 
@@ -159,6 +162,18 @@ This is an example of `Inline Code`.
 
 
 Here is the `/path/to/the/file.extend`{: .filepath}.
+
+
+To use : 
+
+
+
+{% raw %}
+```text
+`/file/directory/`{: .filepath}
+```
+{% endraw %}
+
 
 
 ## Code blocks
@@ -208,6 +223,18 @@ fi;
 
 
 
+To use :
+
+
+
+{% raw %}
+```text
+{: file='FILENAME.txt'}
+```
+{% endraw %}
+
+
+
 ## Mathematics
 
 
@@ -216,10 +243,7 @@ The mathematics powered by [**MathJax**](https://www.mathjax.org/):
 
 {% raw %}
 $$
-\begin{equation}
-\sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}
-\label{eq:series}
-\end{equation}
+\begin{equation} \sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6} \label{eq:series} \end{equation}
 $$
 {% endraw %}
 
@@ -268,6 +292,20 @@ $$
 _Full screen width and center alignment_
 
 
+To use : 
+
+
+
+{% raw %}
+```text
+{: width="WIDTH" height="HEIGHT" }
+And then Image
+_CAPTION_
+```
+{% endraw %}
+
+
+
 ### Left aligned
 
 
@@ -275,6 +313,18 @@ _Full screen width and center alignment_
 
 
 ![1](/1.png)
+
+
+To use :
+
+
+
+{% raw %}
+```text
+{: width="972" height="589" .w-75 .normal}
+```
+{% endraw %}
+
 
 
 ### Float to left
@@ -289,6 +339,18 @@ _Full screen width and center alignment_
 Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.
 
 
+To use :
+
+
+
+{% raw %}
+```text
+{: width="972" height="589" .w-50 .left}
+```
+{% endraw %}
+
+
+
 ### Float to right
 
 
@@ -300,6 +362,18 @@ Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecena
 
 
 Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.
+
+
+To use :
+
+
+
+{% raw %}
+```text
+{: width="972" height="589" .w-50 .right}
+```
+{% endraw %}
+
 
 
 ### Dark/Light mode & Shadow
@@ -320,10 +394,37 @@ The image below will toggle dark/light mode based on theme preference, notice it
 ![5](/5.png)
 
 
+To use :
+
+
+
+{% raw %}
+```text
+{: .light .w-75 .shadow .rounded-10 w='1212' h='668' }
+Image_light
+{: .dark .w-75 .shadow .rounded-10 w='1212' h='668' }
+Image_dark
+```
+{% endraw %}
+
+
+
 ## Video
 
 
 {% include embed/youtube.html id='Balreaj8Yqs' %}
+
+
+To use :
+
+
+
+{% raw %}
+```text
+{% include embed/youtube.html id='Balreaj8Yqs' %}
+```
+{% endraw %}
+
 
 
 ## Reverse Footnote
@@ -331,4 +432,16 @@ The image below will toggle dark/light mode based on theme preference, notice it
 
 [^footnote]: The footnote source
 [^fn-nth-2]: The 2nd footnote source
+
+
+To use :
+
+
+
+{% raw %}
+```text
+square brace + ^ name : Description
+```
+{% endraw %}
+
 

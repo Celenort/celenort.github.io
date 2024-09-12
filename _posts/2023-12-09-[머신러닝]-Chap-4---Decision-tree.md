@@ -2,7 +2,7 @@
 layout: post
 date: 2023-12-09
 title: "[머신러닝] Chap 4 - Decision tree"
-tags: [ml, from_velog, abstract, ]
+tags: [ml, from_velog, lecture-note, ]
 categories: [Machine Learning, ml_lecture, ]
 media_subpath: assets/img/2023-12-09-[머신러닝]-Chap-4---Decision-tree.md
 image:
@@ -39,8 +39,8 @@ Process :
 $ take some value on $A$ :
 	- Mark node $i$ as a leaf node, label = majority class in $D$, **return**
 4. Set optimal splitting feature $a^*$ from $A$ (Entropy, GINI, etc...)
-5. **for** each value $a_*^v$  in  $a_*$, **do** :
-	1. Generate branch for node $i$ ; $D_v$ is subset of samples taking $a_*^v$  on  $a_*$
+5. **for** each value $a_{*}^{v}$  in  $a_{*}$, **do** :
+	1. Generate branch for node $i$ ; $D_v$ is subset of samples taking $a_{*}^{v}$  on  $a_{*}$
 	2. **if** $D_v$ is empty :
 		- Mark $D_v$ as leaf node, label it with majority class in $D$, **return**
 	3. **else** :

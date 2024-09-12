@@ -19,9 +19,6 @@ pin: false
 > 본 게시글은 서울대학교 이종호 B 교수님의 SNU FastMRI Challange의 2021 Signal Processing을 바탕으로 제작되었습니다.
 
 
-{% raw %}
-
-
 ### System
 
 - System : a process in which input signals are transformed by the system, resulting in other signals as output.
@@ -71,6 +68,3 @@ System이 signal에 가하는 transform을 $y(n) = \mathbf{H}(x(n))$이라 하�
 > \end{aligned} $$
 
 - 유사하게 CT에서의 convolution 또한 정의할 수 있다.
-
-{% endraw %}
-

@@ -163,9 +163,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
     const mediadir = path.join("assets/img", ftitle);
     let imagefm="";
     if (thumb) {
-      imagefm+="image:
-  path: 0.png
-  alt: ${alt}";
+      imagefm="image:\n  path: 0.png\n  alt: ${alt}";
     }
     const fm = `---
 layout: post

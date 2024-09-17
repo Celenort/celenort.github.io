@@ -40,7 +40,7 @@ $ take some value on $A$ :
 	- Mark node $i$ as a leaf node, label = majority class in $D$, **return**
 4. Set optimal splitting feature $a^*$ from $A$ (Entropy, GINI, etc...)
 5. **for** each value $a_{*}^{v}$  in  $a_{*}$, **do** :
-	1. Generate branch for node $i$ ; $D_v$ is subset of samples taking $a_{*}^{v}$  on  $a_{*}$
+	1. Generate branch for node $i$ ; $D_v$ is subset of samples taking $a_{*}^{v} \text{on } a_{*}$
 	2. **if** $D_v$ is empty :
 		- Mark $D_v$ as leaf node, label it with majority class in $D$, **return**
 	3. **else** :

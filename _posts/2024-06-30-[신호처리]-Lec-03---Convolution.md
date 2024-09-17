@@ -19,7 +19,7 @@ pin: false
 {: .prompt-info}
 
 
-> 본 게시글은 서울대학교 이종호 B 교수님의 SNU FastMRI Challange의 [2021 Signal Processing](https://www.youtube.com/playlist?list=PLZjIfJn3RN8si1ohhmSoWgH4VYLPwIW84)을 바탕으로 제작되었습니다.
+> 본 게시글은 서울대학교 이종호 B 교수님의 SNU FastMRI Challange, [2021 Signal Processing](https://www.youtube.com/playlist?list=PLZjIfJn3RN8si1ohhmSoWgH4VYLPwIW84)을 바탕으로 제작되었습니다.
 
 
 ### Convolution
@@ -46,6 +46,9 @@ $$
 
 
 ![2](/2.png)
+
+
+_Convolution의 input인 두 1차원 함수가 겹침에 따라 아래쪽 plot에 값이 생성됨을 알 수 있다_
 
 - 2D convolution :
 	- Zero-padded 2D image

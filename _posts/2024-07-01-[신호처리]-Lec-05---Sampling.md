@@ -19,7 +19,7 @@ pin: false
 {: .prompt-info}
 
 
-> 본 게시글은 서울대학교 이종호 B 교수님의 SNU FastMRI Challange의 [2021 Signal Processing](https://www.youtube.com/playlist?list=PLZjIfJn3RN8si1ohhmSoWgH4VYLPwIW84)을 바탕으로 제작되었습니다.
+> 본 게시글은 서울대학교 이종호 B 교수님의 SNU FastMRI Challange, [2021 Signal Processing](https://www.youtube.com/playlist?list=PLZjIfJn3RN8si1ohhmSoWgH4VYLPwIW84)을 바탕으로 제작되었습니다.
 
 
 ### Sampling
@@ -40,8 +40,8 @@ $$
 > Signal is Band limited, we can perfectly reconstruct the original signal from the sampled signal. To do so, we need to sample the signal more than twice the frequency of the max frequency of the signal.
 
 - 직관적인 증명 :
-	- 만약 Max frequency의 2배보다 sampling frequency가 커버리면, 위쪽 figure 처럼 Aliased 된 신호끼리 겹치지 않아 원래대로 복원이가능. (Low pass filter를 쓰든 해서)
-	- 그렇지 않다면, 충분한 공간이 없어 신호가 겹치게 되고 aliased or blurry signal이 생기게 되어 정확히 원본신호를 분리할 수 없게 됨.
+	- 만약 Max frequency의 2배보다 sampling frequency가 커버리면, 위쪽 figure 처럼 Aliased 된 신호끼리 겹치지 않아 원래대로 복원이 가능. (Low pass filter를 쓰든 해서)
+	- 그렇지 않다면, 충분한 공간이 없어 신호가 겹치게 되고 aliased or blurry signal이 생기게 되어 정확히 원본 신호를 분리할 수 없게 됨.
 - 증명
 	1. original. function과 sampling function을 곱하는 것은 Frequncy domain에서 convolution하는 것과 같음. (modulation property)
 	2. Shah function은 F.T.를 거쳐도 shah function임.

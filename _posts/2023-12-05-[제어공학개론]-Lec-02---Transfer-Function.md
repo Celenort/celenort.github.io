@@ -1,14 +1,14 @@
 ---
 layout: post
-date: 2023-12-06
-title: "[제어공학개론] Lec 02 -a T"
-tags: [lecture-note, system, from_velog, ]
+date: 2023-12-05
+title: "[제어공학개론] Lec 02 - Transfer Function"
+tags: [control, lecture-note, system, from_velog, ]
 categories: [Electrical Engineering, control theory, ]
-media_subpath: assets/img/2023-12-06-[제어공학개론]-Lec-02--a-T.md
+media_subpath: assets/img/2023-12-05-[제어공학개론]-Lec-02---Transfer-Function.md
 image:
   path: 0.png
   alt:  
-description: 제어공학에서 Transfer Function(TF)의 개념과 모델링 방법을 다루며, TF의 종류(유리 함수, 적절한 함수, 시간 지연 시스템)와 연결 방식(직렬, 병렬, 피드백 시스템)을 설명합니다. Laplace 변환을 이용한 TF 계산 방법과 임펄스 응답, 부분 분수 전개를 통한 출력 계산도 포함되어 있으며, TF를 통해 시스템의 동작을 이해하는 데 도움을 줍니다. 결론적으로, TF의 변환과 출력 계산 방법을 학습하고, 다음 강의에서는 Bode plot과 선형화에 대해 다룰 예정입니다.
+description: 제어공학개론의 첫 수업에서는 제어의 정의와 과정, 예시로 드론을 통해 입력 설계의 필요성을 설명했습니다. 제어 시스템은 입력과 출력의 관계를 모델링하고, 피드백을 통해 외란을 줄이며 시스템의 강인성과 동적 특성을 개선합니다. 다음 포스트에서는 다양한 모델링 방법에 대해 다룰 예정입니다.
 pin: false
 ---
 

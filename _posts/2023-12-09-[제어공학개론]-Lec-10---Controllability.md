@@ -240,7 +240,7 @@ $$
 {% endraw %}
 
 
-	Matlab에서 `ctrb` 함수로 호출 가능.
+Matlab에서 `ctrb` 함수로 호출 가능.
 
 - PBH test
 
@@ -294,7 +294,7 @@ $$
 {% endraw %}
 
 
-	by Cayley-Hemilton’s theorem,
+by Cayley-Hemilton’s theorem,
 
 
 {% raw %}
@@ -305,7 +305,7 @@ $$
 $$
 {% endraw %}
 
-2. Prove $rank(C^T) = n\rightarrow G(T)>0$
+1. Prove $rank(C^T) = n\rightarrow G(T)>0$
 
 	같은 방법으로 귀류법 사용
 
@@ -321,7 +321,7 @@ $$
 {% endraw %}
 
 
-	모든 $\tau$에 대해서 $0$을 만족하므로, 이를 $\tau$에 대해 미분한 식 또한 $0$임.
+모든 $\tau$에 대해서 $0$을 만족하므로, 이를 $\tau$에 대해 미분한 식 또한 $0$임.
 
 
 {% raw %}
@@ -331,7 +331,7 @@ $$
 {% endraw %}
 
 
-	위 식을 column 별로 stack 하면,
+위 식을 column 별로 stack 하면,
 
 
 {% raw %}
@@ -359,7 +359,7 @@ $$
 {% endraw %}
 
 
-	$v^T$ is left eigenvector of A
+$v^T$ is left eigenvector of A
 
 
 {% raw %}
@@ -368,7 +368,7 @@ v^TC=\bigg[v^TB \ v^TAB \ \cdots \ v^T A^{n-1}B\bigg] = \bigg[\bf 0 \ 0 \ \cdots
 $$
 {% endraw %}
 
-2. Prove $rank[\lambda I - A \ B]=n \rightarrow rank(C^T) = n$
+1. Prove $rank[\lambda I - A \ B]=n \rightarrow rank(C^T) = n$
 
 	귀류법 사용
 
@@ -383,7 +383,7 @@ $$
 {% endraw %}
 
 
-	이 때의 Basis들은 orthonormal이라고 가정하자. (항상 이러한 basis를 k개 잡을 수 있다. $rank(C^T)=k$이면)
+이 때의 Basis들은 orthonormal이라고 가정하자. (항상 이러한 basis를 k개 잡을 수 있다. $rank(C^T)=k$이면)
 
 
 {% raw %}
@@ -394,7 +394,7 @@ $$
 {% endraw %}
 
 
-	Spanning set of C와 Nullspace에서 나온 basis를 구분하자.이렇게 만들어진 $V^T$로의 Simularity transform을 한 후 각각을 구분하여 Differential Eqn에 대입.
+Spanning set of C와 Nullspace에서 나온 basis를 구분하자.이렇게 만들어진 $V^T$로의 Simularity transform을 한 후 각각을 구분하여 Differential Eqn에 대입.
 
 
 {% raw %}
@@ -411,7 +411,7 @@ $$
 {% endraw %}
 
 
-	$\dot x = Ax+Bu$에 대입
+$\dot x = Ax+Bu$에 대입
 
 
 {% raw %}
@@ -435,7 +435,7 @@ $$
 {% endraw %}
 
 
-	Matrix 형태로 식을 정리해 보면,
+Matrix 형태로 식을 정리해 보면,
 
 
 {% raw %}
@@ -452,10 +452,10 @@ $$
 {% endraw %}
 
 
-	$x_A$ : controllable state, $x_B$ : uncontrollable state
+$x_A$ : controllable state, $x_B$ : uncontrollable state
 
 
-	Perform PBH test on Transformed coordinate (PBH test is invarient on Simularity transform)
+Perform PBH test on Transformed coordinate (PBH test is invarient on Simularity transform)
 
 
 {% raw %}
@@ -583,7 +583,10 @@ $$
 
 오직 $A_{co}$만이 Transfer function의 pole이 됨을 알 수 있음.
 
-- 만약 Transfer function에 같은 term을 분자, 분모에 곱해서 강제로 Controllable c.f. 만들면 어떻게 되는가.. eg :
+- 만약 Transfer function에 같은 term을 분자, 분모에 곱해서 강제로 Controllable c.f. 만들면 어떻게 되는가..
+
+eg : 
+
 
 {% raw %}
 $$

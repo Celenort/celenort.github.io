@@ -296,8 +296,22 @@ $$
 
 
 즉 reference를 제외한 순수한 $x$에 $k$를 곱한 $v$를 new input으로 보고 $A-Bk$를 해결하는 것과 동일해짐.
-$e$에 대한 원점$=0$인 input이 되며, $r^*$은 two-cart system에서 평형점에 도달하면 입력을 안줄것이므로 $0$이다.
-실제 주어야 하는 $u = r^*+v=-k(x-x^T)=-Kx+Kx^T$
+$e$에 대한 원점$=0$인 input이 되며, 
+
+
+$r^*$은 two-cart system에서 평형점에 도달하면 입력을 안줄것이므로 $0$이다.
+
+
+실제 주어야 하는
+
+
+{% raw %}
+$$
+u = r^*+v=-k(x-x^T)=-Kx+Kx^T
+$$
+{% endraw %}
+
+
 즉 bias term처럼 생긴 $Kx^T$를 입력해주어야 한다.
 
 
@@ -326,7 +340,7 @@ eg) X measurable, 위의 goal을 만족하는 $u$를 찾아야 한다.
 {% raw %}
 $$
 \begin{aligned}\dot x =& Ax+Bu \\
-\exists u^* \text{ s.t. }\dot x^* &= Ax^+Bu^(t)
+\exists u^* \text{ s.t. }\dot x^* &= Ax^*+Bu^*(t)
 \end{aligned}
 $$
 {% endraw %}

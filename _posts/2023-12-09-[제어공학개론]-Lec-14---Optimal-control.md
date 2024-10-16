@@ -46,7 +46,13 @@ $$
 {% endraw %}
 
 
-$x^*$ : optimal point, $x$ : decision variable, $f(x^*)$ : optimal value
+$x^*$ : optimal point
+
+
+$x$ : decision variable
+
+
+$f(x^*)$ : optimal value
 
 
 Let's claim that : 
@@ -159,7 +165,10 @@ $$
 {% endraw %}
 
 
-$u^*=-R^{-1}B^TPx$ is Optimal solution while $J(x(0), u^*(\cdot))=x^T(0)Px(0)$ is optimal value
+$u^*=-R^{-1}B^TPx$ is Optimal solution
+
+
+while $J(x(0), u^*(\cdot))=x^T(0)Px(0)$ is optimal value
 
 
 ### Physical Meaning of Q, R

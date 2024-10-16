@@ -452,7 +452,7 @@ $$
 
 {% raw %}
 $$
--a_0 x_1^* -a_1 x_2^* + \cdots -a_{n-1}x_n^* +bu^=y^{(n)}(t)
+-a_0 x_1^* -a_1 x_2^* + \cdots -a_{n-1}x_n^* +bu^*=y^{(n)}(t)
 $$
 {% endraw %}
 

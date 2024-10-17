@@ -1,10 +1,10 @@
 ---
 layout: post
 date: 2023-12-09
-title: "[제어공학개론] Lec 18 - Discrete time domain system"
+title: "[제어공학개론] Lec 18 - Discrete time domain system ["
 tags: [control, lecture-note, system, from_velog, ]
 categories: [Electrical Engineering, control theory, ]
-media_subpath: assets/img/2023-12-09-[제어공학개론]-Lec-18---Discrete-time-domain-system.md
+media_subpath: assets/img/2023-12-09-[제어공학개론]-Lec-18---Discrete-time-domain-system-[.md
 image:
   path: 0.png
   alt:  
@@ -54,7 +54,7 @@ Converter :
 
 {% raw %}
 $$
-u(t) = u_d[K] \text{ for }KT_s\geq t \geq (K+1)T_s
+u(t) = u_d[K] \text{ for }KT_s\leq t \leq (K+1)T_s
 $$
 {% endraw %}
 

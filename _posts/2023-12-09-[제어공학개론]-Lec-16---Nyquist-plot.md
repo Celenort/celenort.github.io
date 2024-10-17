@@ -127,7 +127,7 @@ Numerator of $1+G(s)$ is closed loop pole
 Nyquist plot of G(s) (open loop system)에 대해,
 
 
-$\#$ of counter-clockwise encirclements of "$-1$" = $P-Z$
+Number of counter-clockwise encirclements of "$-1$" = $P-Z$
 
 
 when P := $1+G(s)$ 's # of pole in ORHP (open-right half plane)

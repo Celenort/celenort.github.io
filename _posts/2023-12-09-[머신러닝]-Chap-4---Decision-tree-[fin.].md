@@ -1,10 +1,10 @@
 ---
 layout: post
 date: 2023-12-09
-title: "[머신러닝] Chap 4 - Decision tree"
+title: "[머신러닝] Chap 4 - Decision tree [fin.]"
 tags: [ml, from_velog, lecture-note, ]
 categories: [Machine Learning, ml_lecture, ]
-media_subpath: assets/img/2023-12-09-[머신러닝]-Chap-4---Decision-tree.md
+media_subpath: assets/img/2023-12-09-[머신러닝]-Chap-4---Decision-tree-[fin.].md
 image:
   path: 0.png
   alt: A Decision tree

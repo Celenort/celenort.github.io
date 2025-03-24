@@ -47,25 +47,25 @@ x가 weight에 해당하고, y가 데이터에 해당.  A (sparse mapping matrix
 y, 즉 sampling data를 full freq에서 sampling 할 경우 vs random(compressive) sampling 할 경우
 
 
-	CS 설명 : [https://www.cs.jhu.edu/~misha/ReadingSeminar/Papers/Baraniuk06.pdf](https://www.cs.jhu.edu/~misha/ReadingSeminar/Papers/Baraniuk06.pdf), [https://kr.linkedin.com/pulse/random의-재발견-압축센싱compressed-sensing-gromit-park](https://kr.linkedin.com/pulse/random의-재발견-압축센싱compressed-sensing-gromit-park)
+CS 설명 : [https://www.cs.jhu.edu/~misha/ReadingSeminar/Papers/Baraniuk06.pdf](https://www.cs.jhu.edu/~misha/ReadingSeminar/Papers/Baraniuk06.pdf), [https://kr.linkedin.com/pulse/random의-재발견-압축센싱compressed-sensing-gromit-park](https://kr.linkedin.com/pulse/random의-재발견-압축센싱compressed-sensing-gromit-park)
 
 
-	![0](/0.png)
+![0](/0.png)
 
 
-	쉽게 말하면 equal freq 간격으로 n개의 freq 데이터를 sampling하는 대신 KxN matrix T를 곱하여 k개의 undersampled data만 사용. 
+쉽게 말하면 equal freq 간격으로 n개의 freq 데이터를 sampling하는 대신 KxN matrix T를 곱하여 k개의 undersampled data만 사용. 
 
 
-	![1](/1.png)
+![1](/1.png)
 
 
-	원래의 signal (f)는 IFFT를 통해 재구성해낼 수 있음. 
+원래의 signal (f)는 IFFT를 통해 재구성해낼 수 있음. 
 
 
-	![2](/2.png)
+![2](/2.png)
 
 
-	위 식을 다음과 같이 표현할 수 있음
+위 식을 다음과 같이 표현할 수 있음
 
 
 {% raw %}
@@ -75,13 +75,13 @@ $$
 {% endraw %}
 
 
-	![3](/3.png)
+![3](/3.png)
 
 
-	general undersampling에 비해서 random sampling이 훨씬 더 많은 데이터를 가지고 있음을 알 수 있음.
+general undersampling에 비해서 random sampling이 훨씬 더 많은 데이터를 가지고 있음을 알 수 있음.
 
 
-	CS 방법은 Data Augmentation에도 활용될 여지가 있을 것으로 보인다. Masking에 비해 훨씬 더 많은 정보를 가지고 있기 때문.
+CS 방법은 Data Augmentation에도 활용될 여지가 있을 것으로 보인다. Masking에 비해 훨씬 더 많은 정보를 가지고 있기 때문.
 
 
 {% raw %}
@@ -91,7 +91,7 @@ $$
 {% endraw %}
 
 
-\xi = \alpha이며,  1-norm을 사용하는 이유는 \xi가 sparse encoding matrix이기 때문. 
+$\xi = \alpha$이며,  1-norm을 사용하는 이유는 $\xi$가 sparse encoding matrix이기 때문. 
 
 
 해당 논문에서는 
@@ -114,10 +114,10 @@ $$
 {% endraw %}
 
 
-여기서의 \zeta는 UNN의 weight, 으로 알아내야 할 var가 됨. 
+여기서의 $\zeta$는 UNN의 weight, 으로 알아내야 할 var가 됨. 
 
 
-추가적으로 알아봐야 할 논문/ 기술들
+추가적으로 알아봐야 할 논문/기술들
 
 
 SPIRiT : Iterative Self=consistent Parrel Imaging Reconstruction from Arbitary k-space
@@ -132,7 +132,7 @@ ALOHA : multi-channel version SPIRiT
 [https://mriquestions.com/senseasset.html](https://mriquestions.com/senseasset.html) - SENSE, ASSET (coil sensitivity encoding 관련하여 더 찾아보면 좋을듯)
 
 
-	SPIRit에 관하여 찾아보며 더 알아낸, 것들: SMASH, SENSE (GRAPPA 기술의 시초가 되는 듯 함, Coil sensitivity를 explicit하게 or implicit하게 사용하는지에 따라 나뉨. Multi-coil에 대한 각각의 sensitivity를 사용…
+SPIRit에 관하여 찾아보며 더 알아낸, 것들: SMASH, SENSE (GRAPPA 기술의 시초가 되는 듯 함, Coil sensitivity를 explicit하게 or implicit하게 사용하는지에 따라 나뉨. Multi-coil에 대한 각각의 sensitivity를 사용…
 
 
 ![4](/4.png)
@@ -147,10 +147,10 @@ ALOHA : multi-channel version SPIRiT
 csm : coil sensitivity map
 
 
-\phi : image shift at k-space domain? 그냥 페이즈를 주는거라 생각해야할듯
+$\phi$ : image shift at k-space domain? 그냥 페이즈를 주는거라 생각해야할듯
 
 
-\theta : 아까 말한 CS에서의 data 압축에 관련된 파라미터. 위에서는 \zeta
+$\theta$ : 아까 말한 CS에서의 data 압축에 관련된 파라미터. 위에서는 $\zeta$
 
 
 ![6](/6.png)
@@ -165,13 +165,13 @@ Objective function은
 다음으로 요약될 수 잇음. phase 부분은 왜 곱해져 있는지 이해할 수 없네.. 위에 + 하고 gradient같은것도 잘 모르겠음. 
 
 
-수치적 최적화 문제에 NN을 활용한 예시로써도 가치가 있고 어떻게 모델링했는지 보여준다는 면에서도 가치가 있긴한듯.
+수치적 최적화 문제에 NN을 활용한 예시로써도 가치가 있고 어떻게 모델링했는지 보여준다는 면에서도 가치가 있음
 
 
-겉핥기식이라 애매한 부분이 많긴한데, k-space에서 image-space 활용안하고?  정확히는 활용하는데 매 block마다가 아니라 csm의 fourier transform된거를 학습시키는거라 더 괜찮은듯.
+겉핥기식이라 애매한 부분이 많긴한데, k-space에서 image-space 활용안하고?  정확히는 활용하는데 매 block마다가 아니라 csm의 fourier transform된거를 학습시키는거라 더 괜찮음.
 
 
-추가로 csm을 어떻게 얻는지 방식이나, 어떤 식으로 활용되는지도 알아보면 좋을듯.
+추가로 csm을 어떻게 얻는지 방식이나, 어떤 식으로 활용되는지도 알아보면 좋을듯 하다
 
 
 [https://arxiv.org/abs/2307.12672](https://arxiv.org/abs/2307.12672)

@@ -61,19 +61,6 @@ $$
 
 - controllable하지 않은 예시 2
 
-{% raw %}
-$$
-\begin{aligned}
-	\dot x_1 &= -x_1 + u \\ 
-	\dot x_2 &= -x_2 + u
-	\end{aligned}
-$$
-{% endraw %}
-
-
-	각각이 $u$가 들어가므로 controllable해 보이지만, $x_1-x_2$에 $u$ term이 들어있지 않아 구분이 안됨
-
-
 ### How to determine Controllability
 
 

@@ -2,7 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 15 - Classical control"
-categories: [Electrical Engineering, control theory, ]
+tags: [Control, System, Routh-Hurwitz criterion, Root locus, ]
+categories: [Lecture, 제어공학개론, ]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-15---Classical-control.md
 image:
   path: 0.png
@@ -21,7 +22,7 @@ pin: false
 > 본 게시글은 서울대학교 심형보 교수님의 23-2 제어공학개론 수업 내용을 바탕으로 작성되었습니다.
 
 
-## Routh- Hurwitz Criterion
+## Routh-Hurwitz Criterion
 
 
 Polynomial의 근의 real part가 음수인지, 양수인지 그 여부를 근을 직접 구하지 않고 알아낼 수 있는 방법.

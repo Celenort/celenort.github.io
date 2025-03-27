@@ -2,7 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[머신러닝] Chap 5 - Neural Networks"
-categories: [Machine Learning, ml_lecture, ]
+tags: [Perceptron, ]
+categories: [Lecture, Machine Learning, ]
 media_subpath: /assets/img/2023-12-09-[머신러닝]-Chap-5---Neural-Networks.md
 image:
   path: 0.png

@@ -2,7 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 09 - Canonical form"
-categories: [Electrical Engineering, control theory, ]
+tags: [Control, System, Canonical form, ]
+categories: [Lecture, 제어공학개론, ]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-09---Canonical-form.md
 image:
   path: 0.png

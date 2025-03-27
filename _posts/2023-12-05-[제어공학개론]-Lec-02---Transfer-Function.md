@@ -2,7 +2,8 @@
 layout: post
 date: 2023-12-05
 title: "[제어공학개론] Lec 02 - Transfer Function"
-categories: [Electrical Engineering, control theory, ]
+tags: [Control, System, Transfer function, Laplace transform, ]
+categories: [Lecture, 제어공학개론, ]
 media_subpath: /assets/img/2023-12-05-[제어공학개론]-Lec-02---Transfer-Function.md
 image:
   path: 0.png

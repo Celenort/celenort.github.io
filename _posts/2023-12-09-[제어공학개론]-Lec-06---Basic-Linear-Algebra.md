@@ -2,7 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 06 - Basic Linear Algebra"
-categories: [Electrical Engineering, control theory, ]
+tags: [Linear Algebra, ]
+categories: [Lecture, 제어공학개론, ]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-06---Basic-Linear-Algebra.md
 
 description: 제어공학개론 강의에서는 행렬-벡터 및 행렬-행렬 곱셈의 전개, 선형 방정식의 해의 존재성과 유일성, 행렬의 역수, 슈르 여인수, 고유값 및 고유벡터, 대각화 조건 등을 다루며, 특히 대각화가 가능한 조건과 제어 이론에서의 응용에 대해 설명합니다.

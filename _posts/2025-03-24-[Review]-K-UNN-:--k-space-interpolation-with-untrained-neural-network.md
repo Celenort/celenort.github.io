@@ -2,7 +2,8 @@
 layout: post
 date: 2025-03-24
 title: "[Review] K-UNN :  k-space interpolation with untrained neural network"
-categories: [FASTMRI, paper review, ]
+tags: [k-space, GRAPPA, Compressed sensing, SPiRiT, ]
+categories: [Study, 논문 리뷰, ]
 media_subpath: /assets/img/2025-03-24-[Review]-K-UNN-:--k-space-interpolation-with-untrained-neural-network.md
 image:
   path: 0.png
@@ -12,10 +13,13 @@ pin: false
 ---
 
 
+{: .prompt-danger }
+
+
+> Challenge 당시 논문 리딩 요약으로, 얄팍한 지식으로 겉핥기 식으로 요약한 것이라 틀린 정보, 추측성 문장 많음.
+
+
 [https://arxiv.org/abs/2208.05827](https://arxiv.org/abs/2208.05827)
-
-
-[https://arxiv.org/pdf/2208.05827](https://arxiv.org/pdf/2208.05827)
 
 
 MRI 문제에 대한 큰 2가지 방법론 : U-net과 같이 image space 에서의 Convolutional Neural Network, k-space 도메인에서 수학적 최적화 문제를 해결하는 방법.

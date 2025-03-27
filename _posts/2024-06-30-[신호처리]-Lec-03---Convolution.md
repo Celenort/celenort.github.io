@@ -3,7 +3,7 @@ layout: post
 date: 2024-06-30
 title: "[신호처리] Lec 03 - Convolution"
 tags: [Convolution, ]
-categories: [신호처리-FRMI, Lecture, ]
+categories: [Lecture, 신호처리(FastMRI), ]
 media_subpath: /assets/img/2024-06-30-[신호처리]-Lec-03---Convolution.md
 image:
   path: 0.png

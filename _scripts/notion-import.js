@@ -160,8 +160,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
       fmcats += "]";
     }
     const ftitle = `${date}-${title.replaceAll(" ", "-")}.md`;
-    const mediatitle = path.join(ftitle, "/");
-    const mediadir = path.join("assets/img", mediatitle);
+    const mediadir = path.join("/assets/img", ftitle);
     let imagefm=``;
     if (thumb) {
       imagefm=`image:\n  path: 0.png\n  alt: ${alt}`;

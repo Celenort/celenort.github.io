@@ -3,7 +3,7 @@ layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 13 - Stability"
 categories: [Electrical Engineering, control theory, ]
-media_subpath: assets/img/2023-12-09-[제어공학개론]-Lec-13---Stability.md/
+media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-13---Stability.md
 
 description: 제어공학의 안정성에 대한 강의에서는 리ャプノ프 안정성, BIBO 안정성, 그리고 리ャ프노프 방정식의 중요성을 다루고 있다. 리ャ프노프 안정성은 특정 평형점에 대한 안정성을 평가하며, 비선형 시스템에서는 여러 평형점에 대해 각각의 안정성을 고려해야 한다. BIBO 안정성은 입력이 유계할 때 출력도 유계해야 함을 의미하며, 이는 A 행렬이 Hurwitz일 때 성립한다.
 pin: false

@@ -3,7 +3,7 @@ layout: post
 date: 2025-03-24
 title: "[Review] K-UNN :  k-space interpolation with untrained neural network"
 categories: [FASTMRI, paper review, ]
-media_subpath: assets/img/2025-03-24-[Review]-K-UNN-:--k-space-interpolation-with-untrained-neural-network.md/
+media_subpath: /assets/img/2025-03-24-[Review]-K-UNN-:--k-space-interpolation-with-untrained-neural-network.md
 image:
   path: 0.png
   alt:  

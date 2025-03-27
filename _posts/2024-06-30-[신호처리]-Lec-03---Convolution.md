@@ -3,7 +3,7 @@ layout: post
 date: 2024-06-30
 title: "[신호처리] Lec 03 - Convolution"
 categories: [FASTMRI, signal processing, ]
-media_subpath: assets/img/2024-06-30-[신호처리]-Lec-03---Convolution.md/
+media_subpath: /assets/img/2024-06-30-[신호처리]-Lec-03---Convolution.md
 image:
   path: 0.png
   alt: A diagram showing how convolution works

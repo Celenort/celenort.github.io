@@ -2,7 +2,6 @@
 layout: post
 date: 2024-06-30
 title: "[신호처리] Lec 02 - LTI system"
-tags: [lecture-note, signal processing, fastmri, from_velog, ]
 categories: [FASTMRI, signal processing, ]
 media_subpath: assets/img/2024-06-30-[신호처리]-Lec-02---LTI-system.md
 

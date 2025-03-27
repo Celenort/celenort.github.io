@@ -2,7 +2,6 @@
 layout: post
 date: 2024-08-28
 title: "Github blog Markdown 튜토리얼"
-tags: [blog, github, ]
 categories: [Blogging, tutorial, ]
 media_subpath: assets/img/2024-08-28-Github-blog-Markdown-튜토리얼.md
 image:

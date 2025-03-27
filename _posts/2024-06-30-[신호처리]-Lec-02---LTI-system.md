@@ -3,7 +3,7 @@ layout: post
 date: 2024-06-30
 title: "[신호처리] Lec 02 - LTI system"
 categories: [FASTMRI, signal processing, ]
-media_subpath: assets/img/2024-06-30-[신호처리]-Lec-02---LTI-system.md/
+media_subpath: /assets/img/2024-06-30-[신호처리]-Lec-02---LTI-system.md
 
 description: 신호처리 강의에서는 시스템의 정의, 선형성과 시간 불변성, 그리고 임펄스 응답의 개념을 다룹니다. 시스템은 입력 신호를 변환하여 출력 신호를 생성하며, 선형 시스템은 스케일링과 중첩의 성질을 만족합니다. 임펄스 응답은 시스템의 입력이 임펄스일 때의 출력이며, 출력 신호는 입력 신호와 임펄스 응답의 컨볼루션으로 표현됩니다.
 pin: false

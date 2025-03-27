@@ -3,7 +3,7 @@ layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 10 - Controllability"
 categories: [Electrical Engineering, control theory, ]
-media_subpath: assets/img/2023-12-09-[제어공학개론]-Lec-10---Controllability.md/
+media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-10---Controllability.md
 
 description: 제어공학 개론 강의에서는 시스템의 안정성, 제어 가능성, 제어 가능성 그라미안, 그리고 다양한 제어 가능성 정의를 다루고 있다. 시스템의 제어 가능성은 A, B 행렬에 의해 결정되며, 특정 초기 상태에서 원하는 목표 상태로 도달할 수 있는지를 통해 판단된다. 또한, 제어 가능성 행렬과 그라미안의 관계, PBH 테스트, 그리고 칼만 분해를 통해 제어 가능성과 관측 가능성을 분석하는 방법도 설명된다.
 pin: false

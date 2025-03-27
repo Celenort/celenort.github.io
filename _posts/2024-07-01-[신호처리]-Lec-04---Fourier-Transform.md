@@ -3,7 +3,7 @@ layout: post
 date: 2024-07-01
 title: "[신호처리] Lec 04 - Fourier Transform"
 categories: [FASTMRI, signal processing, ]
-media_subpath: assets/img/2024-07-01-[신호처리]-Lec-04---Fourier-Transform.md/
+media_subpath: /assets/img/2024-07-01-[신호처리]-Lec-04---Fourier-Transform.md
 image:
   path: 0.png
   alt: Fourier transform of usf

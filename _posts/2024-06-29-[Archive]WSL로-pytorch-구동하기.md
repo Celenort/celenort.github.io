@@ -3,7 +3,7 @@ layout: post
 date: 2024-06-29
 title: "[Archive]WSL로 pytorch 구동하기"
 categories: [FASTMRI, ]
-media_subpath: assets/img/2024-06-29-[Archive]WSL로-pytorch-구동하기.md/
+media_subpath: /assets/img/2024-06-29-[Archive]WSL로-pytorch-구동하기.md
 image:
   path: 0.png
   alt:  

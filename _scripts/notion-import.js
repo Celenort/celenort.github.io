@@ -159,7 +159,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
       }
       fmcats += "]";
     }
-    const ftitle = `${date}-${title.replaceAll(" ", "-")}.md`;
+    const ftitle = `${date}-${title.replaceAll(" ", "-")}.md/`;
     const mediadir = path.join("assets/img", ftitle);
     let imagefm=``;
     if (thumb) {

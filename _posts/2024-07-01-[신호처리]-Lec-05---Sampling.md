@@ -1,9 +1,9 @@
 ---
 layout: post
 date: 2024-07-01
-title: "[신호처리] Lec 05 - Sampling [fin."
+title: "[신호처리] Lec 05 - Sampling"
 categories: [FASTMRI, signal processing, ]
-media_subpath: /assets/img/2024-07-01-[신호처리]-Lec-05---Sampling-[fin..md
+media_subpath: /assets/img/2024-07-01-[신호처리]-Lec-05---Sampling.md
 image:
   path: 0.png
   alt: A sketch of explaining Nyquist sampling theorem

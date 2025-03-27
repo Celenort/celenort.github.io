@@ -2,7 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 17 - PID control"
-categories: [Electrical Engineering, control theory, ]
+tags: [Control, System, PID control, Saturation, Anti-windup, ]
+categories: [Lecture, 제어공학개론, ]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-17---PID-control.md
 image:
   path: 0.png

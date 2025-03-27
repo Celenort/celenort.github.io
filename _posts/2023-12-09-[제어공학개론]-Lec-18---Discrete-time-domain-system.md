@@ -1,9 +1,10 @@
 ---
 layout: post
 date: 2023-12-09
-title: "[제어공학개론] Lec 18 - Discrete time domain system [fin."
-categories: [Electrical Engineering, control theory, ]
-media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-18---Discrete-time-domain-system-[fin..md
+title: "[제어공학개론] Lec 18 - Discrete time domain system"
+tags: [Control, System, DT system, ]
+categories: [Lecture, 제어공학개론, ]
+media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-18---Discrete-time-domain-system.md
 image:
   path: 0.png
   alt:  

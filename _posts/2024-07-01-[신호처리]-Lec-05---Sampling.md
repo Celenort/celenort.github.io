@@ -2,7 +2,8 @@
 layout: post
 date: 2024-07-01
 title: "[신호처리] Lec 05 - Sampling"
-categories: [FASTMRI, signal processing, ]
+tags: [Nyquist sampling theorem, ]
+categories: [신호처리-FRMI, Lecture, ]
 media_subpath: /assets/img/2024-07-01-[신호처리]-Lec-05---Sampling.md
 image:
   path: 0.png

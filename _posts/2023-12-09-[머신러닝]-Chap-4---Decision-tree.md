@@ -2,7 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[머신러닝] Chap 4 - Decision tree"
-categories: [Machine Learning, ml_lecture, ]
+tags: [Decision tree, ]
+categories: [Lecture, Machine Learning, ]
 media_subpath: /assets/img/2023-12-09-[머신러닝]-Chap-4---Decision-tree.md
 image:
   path: 0.png

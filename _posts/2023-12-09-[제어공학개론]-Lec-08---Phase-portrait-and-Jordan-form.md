@@ -2,7 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 08 - Phase portrait and Jordan form"
-categories: [Electrical Engineering, control theory, ]
+tags: [Control, Linear Algebra, System, Phase portrait, Jordan form, ]
+categories: [Lecture, 제어공학개론, ]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-08---Phase-portrait-and-Jordan-form.md
 
 description: 제어공학 개론에서는 대칭 행렬의 고유벡터가 직교하며, 상태 초상화와 조르당 형식에 대한 내용을 다룹니다. 상태 초상화는 상태를 축으로 표시하고, 조르당 형식은 비대각화 가능한 시스템을 제어하는 방법을 설명합니다. 시스템의 제어 가능성을 높이기 위해 폐루프 시스템을 고려하며, 고유값과 고유벡터의 성질이 시스템의 동작에 미치는 영향을 논의합니다.

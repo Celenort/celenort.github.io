@@ -2,7 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 03 - Steady state response, bode plot"
-categories: [Electrical Engineering, control theory, ]
+tags: [Control, System, Steady state, Bode plot, Linearization, ]
+categories: [Lecture, 제어공학개론, ]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-03---Steady-state-response,-bode-plot.md
 image:
   path: 0.png

@@ -62,14 +62,7 @@ $$
 	- 일을 하다 : 나의 에너지를 사용하여 외부에 에너지 공급
 	- 일을 받다 : 외부 에너지를 이용하여 계에 에너지 공급됨
 	- l, 즉 경로에 관련되있는 함수이므로 Path Funution : 경로함수
-	- Work done on the expanding gas
-
-{% raw %}
-$$
-w= - Ah
-$$
-{% endraw %}
-
+	- Work done on the expanding gas : $w= - Ah$
 	- 외부 압력에 대해 일을 한 것. (일을 따질 때 마찰력에 의한 일을 일이라고 하는 것 과 같은 이치)
 	- Reversible : $P_{int} = P_{ext}$
 	- Irreversible : $P_{int} \neq P_{ext}$
@@ -113,7 +106,7 @@ $$
 
 ### For gas expansion
 
-- $|w|_{rev} > |w|_{irrev}$
+- $\vert w\vert_{rev} > \vert w\vert_{irrev}$
 - Making Engine: 최대한 Reversible하게 함. Carnot engine
 
 ### Heat capacities of (mono-atomic) ideal gas
@@ -217,7 +210,7 @@ $$
 
 - Reversible Heat여야만 함. - 실제 반응이 irreversible 이어도 reversible한 경로를 선택
 - 주위(Surr) 의 엔트로피를 구할 때는 실제 경로(irreversible) 이용.
-- 전체(Universe)의 엔트로피 : reverisble할 때의 univ의 Entropy 동일, irreversible : univ의 Entropy 증가. ($|q_{rev}| > |q_{irr}|$)
+- 전체(Universe)의 엔트로피 : reverisble할 때의 univ의 Entropy 동일, irreversible : univ의 Entropy 증가. ($\vert q_{rev}\vert > \vert q_{irr}\vert$)
 - Surrounding Entropy :
 
 {% raw %}

@@ -108,7 +108,7 @@ $$
 ### Brag’s diffraction
 
 - 격자에 대해 _θ_ 의 각도로 빛을 쏘았을 때 나타나는 회절
-- 2_dsinθ_ = (_λ_/2) × (2_n_) = _nλ_ → constructive interference
+- $2dsinθ = (λ/2) × (2n) = nλ$ → constructive interference
 - 이를 통해 Lattice 간의 거리를 구할 수 있음.
 
 ### Ionic crystals

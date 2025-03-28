@@ -46,7 +46,7 @@
     messageElement.textContent = "요청 전송 중...";
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://api.github.com/repos/USERNAME/REPO_NAME/dispatches", true);
+    xhr.open("POST", "https://api.github.com/repos/Celenort/celenort.github.io/dispatches", true);
     xhr.setRequestHeader("Accept", "application/vnd.github.v3+json");
     var token = process.env.ACCESS_TOKEN;
     xhr.setRequestHeader("Authorization", "Bearer " + token);

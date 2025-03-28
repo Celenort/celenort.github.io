@@ -3,7 +3,7 @@ layout: post
 date: 2022-04-17
 title: "[선형계획법] Simplex method"
 tags: [Linear programming, Simplex method, ]
-categories: [Lecture, ]
+categories: [Lecture, 기타, ]
 media_subpath: /assets/img/2022-04-17-[선형계획법]-Simplex-method.md
 
 description:  

@@ -3,7 +3,7 @@ layout: post
 date: 2022-09-14
 title: "[동역학] Tangential, Normal components of moving particle"
 tags: [동역학, ]
-categories: [Lecture, 동역학, ]
+categories: [Lecture, 기타, ]
 media_subpath: /assets/img/2022-09-14-[동역학]-Tangential,-Normal-components-of-moving-particle.md
 image:
   path: 0.png
@@ -150,14 +150,14 @@ $$
 
 {% raw %}
 $$
-\vec{a} = {d \vec{v} \over dt} = \"{r} \vec{e_r} + \dot{r} \dot{e_r} + \dot{r} \dot{\theta} \vec{e_\theta} + r\"{\theta} \vec{e_\theta} + r\dot{\theta} \dot{e_\theta}
+\vec{a} = {d \vec{v} \over dt} = \ddot{r} \vec{e_r} + \dot{r} \dot{e_r} + \dot{r} \dot{\theta} \vec{e_\theta} + r\ddot{\theta} \vec{e_\theta} + r\dot{\theta} \dot{e_\theta}
 $$
 {% endraw %}
 
 
 {% raw %}
 $$
-= \"{r} e_r + \dot{r}\dot{\theta} e_\theta + \dot{r} \dot{\theta} e_\theta + r\"{\theta}e_\theta - r{\dot{\theta} }^2 e_r \\ = (\"{r}-r{\dot{\theta } }^2 )e_r + (r\"{\theta}+2\dot{r}\dot{\theta}) e_\theta
+= \ddot{r} e_r + \dot{r}\dot{\theta} e_\theta + \dot{r} \dot{\theta} e_\theta + r\ddot{\theta}e_\theta - r{\dot{\theta} }^2 e_r \\ = (\ddot{r}-r{\dot{\theta } }^2 )e_r + (r\ddot{\theta}+2\dot{r}\dot{\theta}) e_\theta
 $$
 {% endraw %}
 

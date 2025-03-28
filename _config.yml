@@ -14,9 +14,9 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Celenort # the main title
+title: Loggerythm # the main title
 
-tagline: Logger of Celenort # it will display as the sub-title
+tagline: 기록하는 습관 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   Celenort의 Github blog입니다.
@@ -145,7 +145,7 @@ pwa:
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
-paginate: 5
+paginate: 8
 
 # The base URL of your site
 baseurl: ""

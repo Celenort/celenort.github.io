@@ -2,6 +2,7 @@
 layout: post
 date: 2024-07-06
 title: "[Archive] vessl 시행착오 기록"
+tags: [FastMRI, ]
 categories: [Contest, FastMRI, ]
 media_subpath: /assets/img/2024-07-06-[Archive]-vessl-시행착오-기록.md
 

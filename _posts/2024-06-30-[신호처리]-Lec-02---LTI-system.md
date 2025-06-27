@@ -2,7 +2,7 @@
 layout: post
 date: 2024-06-30
 title: "[신호처리] Lec 02 - LTI system"
-tags: [System, Convolution, ]
+tags: [FastMRI, System, Convolution, ]
 categories: [Lecture, 신호처리(FastMRI), ]
 media_subpath: /assets/img/2024-06-30-[신호처리]-Lec-02---LTI-system.md
 

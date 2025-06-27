@@ -2,8 +2,8 @@
 layout: post
 date: 2025-03-24
 title: "[Review] K-UNN :  k-space interpolation with untrained neural network"
-tags: [k-space, GRAPPA, Compressed sensing, SPiRiT, ]
-categories: [Study, 논문 리뷰, ]
+tags: [FastMRI, k-space, GRAPPA, Compressed sensing, SPiRiT, ]
+categories: [Study, Paper review, ]
 media_subpath: /assets/img/2025-03-24-[Review]-K-UNN-:--k-space-interpolation-with-untrained-neural-network.md
 image:
   path: 0.png

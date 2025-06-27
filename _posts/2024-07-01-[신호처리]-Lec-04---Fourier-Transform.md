@@ -2,7 +2,7 @@
 layout: post
 date: 2024-07-01
 title: "[신호처리] Lec 04 - Fourier Transform"
-tags: [Fourier transform, ]
+tags: [FastMRI, Fourier transform, ]
 categories: [Lecture, 신호처리(FastMRI), ]
 media_subpath: /assets/img/2024-07-01-[신호처리]-Lec-04---Fourier-Transform.md
 image:

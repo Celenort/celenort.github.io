@@ -2,8 +2,8 @@
 layout: post
 date: 2022-09-29
 title: "[전선대 Assignment] SIR model, Fractals"
-tags: [SIR model, Fractals, ]
-categories: [Assignment, 선형대수, ]
+tags: [SIR model, Fractals]
+categories: [Assignment, 선형대수]
 media_subpath: /assets/img/2022-09-29-[전선대-Assignment]-SIR-model,-Fractals.md
 image:
   path: 0.png
@@ -126,6 +126,7 @@ $$
 x_{t + 1} = A_tx_t + c_t
 $$
 {% endraw %}
+
 
 
 But different to the problem above, we will use more than one dynamics to draw fractals.

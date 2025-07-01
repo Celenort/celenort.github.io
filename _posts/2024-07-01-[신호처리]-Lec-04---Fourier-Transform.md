@@ -2,8 +2,8 @@
 layout: post
 date: 2024-07-01
 title: "[신호처리] Lec 04 - Fourier Transform"
-tags: [FastMRI, Fourier transform, ]
-categories: [Lecture, 신호처리(FastMRI), ]
+tags: [FastMRI, Fourier transform]
+categories: [Lecture, 신호처리(FastMRI)]
 media_subpath: /assets/img/2024-07-01-[신호처리]-Lec-04---Fourier-Transform.md
 image:
   path: 0.png
@@ -32,6 +32,7 @@ x(t) \stackrel{\mathcal{F}}{\rightarrow}X(f)
 $$
 {% endraw %}
 
+
 - 2D Fourier Transform
 
 {% raw %}
@@ -39,6 +40,7 @@ $$
 a(x,y) \rightarrow A(k_x, k_y)
 $$
 {% endraw %}
+
 
 
 ### Mathematical Definition (1D) 
@@ -51,6 +53,7 @@ X(f) = \int_{-\infty}^\infty x(t) e^{-j\cdot 2\pi f t}dt = \mathcal{F}(x(t))
 $$
 {% endraw %}
 
+
 - Inverse Fourier Transform
 
 {% raw %}
@@ -58,6 +61,7 @@ $$
 x(t) = \int_{-\infty}^\infty X(f) e^{+ j\cdot 2\pi f t}dt = \mathcal{F}^{-1}(X(f))
 $$
 {% endraw %}
+
 
 
 ### Mathematical Definition (2D)
@@ -70,6 +74,7 @@ A(k_x, k_y) = \int_{-\infty}^\infty\int_{-\infty}^\infty a(x,y) e^{-j\cdot 2\pi 
 $$
 {% endraw %}
 
+
 - Inverse Fourier Transform
 
 {% raw %}
@@ -77,6 +82,7 @@ $$
 a(x,y) = \int_{-\infty}^\infty\int_{-\infty}^\infty A(k_x,k_y) e^{+j\cdot 2\pi (k_x x + k_y y)}dk_xdk_y
 $$
 {% endraw %}
+
 
 - Useful Formulas
 i.e. time delay / image shift
@@ -88,6 +94,7 @@ $$
 $$
 {% endraw %}
 
+
 - Quarter-pixel shift : 1/4 픽셀만큼 shift하는 것은 복잡함. 이 때 영상을 F.T. 한 다음 Linear phase를 곱하고 다시 IFT 하면 쉽게 shift할 수 있음.
 
 {% raw %}
@@ -95,6 +102,7 @@ $$
 \begin{aligned} 1 \ &\leftrightarrow \  \delta(f) \\ \text{rect}(t) \ &\leftrightarrow \ \text{sinc}(f) \\ \land (t) = \text{rect}(t) * \text{rect}(t) \ &\leftrightarrow \ \text{sinc}^2 (f) \\ \cos{(2\pi f_0 t)}=\frac{e^{j 2\pi f_0 t}+e^{-j 2\pi f_0 t}}{2} \ &\leftrightarrow \ \frac{\delta(f-f_0) + \delta (f+f_0)}{2} \\ e^{-at}u(t) \ &\leftrightarrow \  \frac{1}{a+j\cdot 2\pi f} \end{aligned}
 $$
 {% endraw %}
+
 
 - $u(t)$ : unit step function, a: real positive number
 F.T. of exponential function is so-called Lorentzian
@@ -123,6 +131,7 @@ $$
 {% endraw %}
 
 
+
 ![2](/2.png)
 
 
@@ -136,6 +145,7 @@ $$
 $$
 {% endraw %}
 
+
 - Modulation property
 
 {% raw %}
@@ -143,6 +153,7 @@ $$
 y(t) = s(t) \cdot p(t) \leftrightarrow \  Y(f) = S(f) * P(f)
 $$
 {% endraw %}
+
 
 
 

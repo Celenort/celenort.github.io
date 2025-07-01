@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 03 - Steady state response, bode plot"
-tags: [Control, System, Steady state, Bode plot, Linearization, ]
-categories: [Lecture, 제어공학개론, ]
+tags: [Control, System, Steady state, Bode plot, Linearization]
+categories: [Lecture, 제어공학개론]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-03---Steady-state-response,-bode-plot.md
 image:
   path: 0.png
@@ -33,6 +33,7 @@ Y(s) = P(s)U(s) = \frac{A}{s-\alpha} + \frac{B}{s-\beta} + \cdots
 $$
 {% endraw %}
 
+
 - P. F. E. 를 통해 1차식으로 분해가 되는 것은 결국 $P(s)$나 $U(s)$의 근
 
 {% raw %}
@@ -42,11 +43,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 Y(s) = Ae^{\alpha t}+ Be^{\beta t}
 $$
 {% endraw %}
+
 
 
 pole의 Real part는 결국 time domain에서의 expotenent에서의 amplitude가 되므로, pole의 실수부가 음수여야지만 시간이 지남에 따라 수렴성이 생김.
@@ -83,6 +86,7 @@ $$
 {% endraw %}
 
 
+
 $\omega$의 주파수를 갖는 사인파를 넣는다면, 출력 또한 $\omega$의 주파수를 갖게 됨 : LTI system이기 때문(선형 시불변 시스템)
 
 
@@ -100,6 +104,7 @@ $$
 {% endraw %}
 
 
+
 Multiplying $(s-j\omega)$ on both sides :
 
 
@@ -113,6 +118,7 @@ $$
 {% endraw %}
 
 
+
 Magnitude & angle :
 
 
@@ -123,6 +129,7 @@ $$
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 To get $y(t)$ :
@@ -139,6 +146,7 @@ $$
 {% endraw %}
 
 
+
 For example :
 
 
@@ -147,6 +155,7 @@ $$
 \begin{aligned} u(t) &= 2\sin{t} + 3\cos{(2t+1)} \\ T(s) &= \frac{1}{s+1} \end{aligned}
 $$
 {% endraw %}
+
 
 
 signal의 중첩의 경우, Linearity holds.
@@ -166,6 +175,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \begin{aligned}
@@ -173,6 +183,7 @@ y(t) &= 2 |P(j)| \sin(t+\angle P(j)) + 3 |P(2j)|\cos(2t+1+\angle P(2j)) \\
 &=\sqrt 2 \sin(t-\frac{\pi}{4}) + \frac{3}{\sqrt 5} \cos (2t+1+\theta) \end{aligned}
 $$
 {% endraw %}
+
 
 
 주파수에 따른 증폭비, Phase angle이 다르며, 이를 Plotting 한 것이 Bode Plot이다.
@@ -238,6 +249,7 @@ $$
 {% endraw %}
 
 
+
 전체 $P(s) = P(j\omega)$로 놓고, 식의 양변에 $20\log_{10}$, 절댓값을 취해 주면,
 
 
@@ -251,6 +263,7 @@ $$
 {% endraw %}
 
 
+
 ### First order polynomial
 
 
@@ -259,6 +272,7 @@ $$
 20\log|j\omega+z_1|
 $$
 {% endraw %}
+
 
 
 $\omega<<z_1$
@@ -297,6 +311,7 @@ $$
 {% endraw %}
 
 
+
 ### Second order polynomial
 
 
@@ -310,6 +325,7 @@ $$
 {% endraw %}
 
 
+
 root of $s^2 + 2\zeta \omega_n s + \omega_n^2=0$
 
 
@@ -321,6 +337,7 @@ s &= -\zeta \omega_n \pm j\omega_n \sqrt{1-\zeta^2}
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 $\omega_n$ 
@@ -342,6 +359,7 @@ $$
 20\log \vert\frac{\omega_n^2}{(\omega_n^2-\omega^2)+j(2\zeta\omega_n))}\vert
 $$
 {% endraw %}
+
 
 
 graph로 그려보았을 때…
@@ -383,6 +401,7 @@ $$
 {% endraw %}
 
 
+
 $x_1, x_2, x_3$ : state(상태 변수)
 
 
@@ -406,6 +425,7 @@ $$
 {% endraw %}
 
 
+
 ### 비선형 시스템의 선형화
 
 
@@ -419,6 +439,7 @@ $$
 {% endraw %}
 
 
+
 $v(t)$ is input of the system, $f(z)$ is $(n\times 1)$ vector.
 
 
@@ -430,6 +451,7 @@ $$
 \dot z = f(z) = 0
 $$
 {% endraw %}
+
 
 
 평형상태에선 시간에 따른 변화가 없어야 하므로, 평형점의 $z=z^*$
@@ -449,12 +471,14 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \begin{aligned}f(z) &= f(z^*)+ f'(z^*)(z-z^*)+\text{H.O.T} \\
 f(z) &= f(z^*) + \frac{\partial f}{\partial x} (z^*)(z-z^*) +\text{H.O.T}\end{aligned}
 $$
 {% endraw %}
+
 
 
 Equibrilium이므로,
@@ -465,6 +489,7 @@ $$
 {\bf f}(z) = {\bf f}(z^)+ \frac{\partial f}{\partial \bf z}(z^)(z-z^*)+\text{H.O.T}
 $$
 {% endraw %}
+
 
 
 H.O.T(Higher order term) : $z-z^*$의 2차 이상 항은 0으로 근사 가능.
@@ -481,6 +506,7 @@ $$
 {% endraw %}
 
 
+
 $\frac{\partial f}{\partial \bf x}(z^*)$ : f의 Jacobian을 계산한 다음, z자리에 $z^*$을 대입한 것.
 
 
@@ -494,11 +520,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \text{z value near } z^*
 $$
 {% endraw %}
+
 
 
 ### 치환을 통한 $z^* $의 소거
@@ -515,6 +543,7 @@ $$
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 ### Input이 있는 경우의 선형화
@@ -537,11 +566,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 A = \frac{\partial f}{\partial z}(z^*, v^*) , B=\frac{\partial f}{\partial v}(z^*, v^*)
 $$
 {% endraw %}
+
 
 
 with the same method, we also can linearlize output of non-linear function
@@ -557,6 +588,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \begin{aligned}
@@ -567,11 +599,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 C = \frac{\partial w}{\partial z}(z^*, v^*) , D=\frac{\partial w}{\partial v}(z^*, v^*)
 $$
 {% endraw %}
+
 
 
 

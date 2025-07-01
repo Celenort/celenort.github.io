@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 08 - Phase portrait and Jordan form"
-tags: [Control, Linear Algebra, System, Phase portrait, Jordan form, ]
-categories: [Lecture, 제어공학개론, ]
+tags: [Control, Linear Algebra, System, Phase portrait, Jordan form]
+categories: [Lecture, 제어공학개론]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-08---Phase-portrait-and-Jordan-form.md
 
 description: 제어공학 개론에서는 대칭 행렬의 고유벡터가 직교하며, 상태 초상화와 조르당 형식에 대한 내용을 다룹니다. 상태 초상화는 상태를 축으로 표시하고, 조르당 형식은 비대각화 가능한 시스템을 제어하는 방법을 설명합니다. 시스템의 제어 가능성을 높이기 위해 폐루프 시스템을 고려하며, 고유값과 고유벡터의 성질이 시스템의 동작에 미치는 영향을 논의합니다.
@@ -41,6 +41,7 @@ $$
 {% endraw %}
 
 
+
 즉 $A^T=A$인데, geometric mulitplicity >1이면, a.m=g.m이며, 
 해당 $\lambda_i$에 대한 $dim(N(\lambda_i I -A))=\text{a.m}$으로 악의적이지 않다면, orthogonal한 basis를 잡을 수 있음.
 
@@ -62,6 +63,7 @@ $$
 D = V^TAV
 $$
 {% endraw %}
+
 
 
 ## Phase Portrait
@@ -100,6 +102,7 @@ $$
 {% endraw %}
 
 
+
 변환된 결과로 원래의 state를 표현해보자
 
 
@@ -112,6 +115,7 @@ x(t) &= T^{-1}z = Vz \\
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 Phase portrait에서 보았을 때 $v_1, v_2 \cdots, v_n$의 방향은 eigenvector들이 결정,
@@ -164,6 +168,7 @@ $$
 {% endraw %}
 
 
+
 example : 
 
 
@@ -180,6 +185,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \begin{aligned}
@@ -194,6 +200,7 @@ $$
 {% endraw %}
 
 
+
 $v_3$ : generalized eigenvector
 
 
@@ -205,6 +212,7 @@ $$
 \dot z_2 = \lambda_2 z_2 + z_3 \\
 $$
 {% endraw %}
+
 
 
 consider $z_3$ as input of system
@@ -222,6 +230,7 @@ z_2 &=  e^{\lambda_2 t} z_2(0) + \int_0^t e^{\lambda_2(t-\tau)}z_3(0)e^{\lambda_
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 그렇다면 pole이 중첩될 때는 발산할까? : no. $R(\lambda_2)<0$이면, exponential이 더 빠르게 증가하므로 수렴함.

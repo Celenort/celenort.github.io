@@ -2,8 +2,8 @@
 layout: post
 date: 2021-10-29
 title: "[일반화학] Lec 04 - Ideal Gas Law"
-tags: [화학, Ideal gas law, Van deer Walls Equation, ]
-categories: [Lecture, 일반화학, ]
+tags: [화학, Ideal gas law, Van deer Walls Equation]
+categories: [Lecture, 일반화학]
 media_subpath: /assets/img/2021-10-29-[일반화학]-Lec-04---Ideal-Gas-Law.md
 image:
   path: 0.png
@@ -64,6 +64,7 @@ T = ({2\over 3R}) (K.E)
 $$
 {% endraw %}
 
+
 - RMS : 위 식을 _u_ 에 대해서 정리해주면,
 
 {% raw %}
@@ -71,6 +72,7 @@ $$
 u_{rms} = \sqrt{3RT\over M }
 $$
 {% endraw %}
+
 
 
 ### Maxwell-Boltzmann distribution:
@@ -95,6 +97,7 @@ Z = {PV\over nRT}
 $$
 {% endraw %}
 
+
 - Z>1이다 : 동일 P, T 조건에서 V가 PV=nRT의 값보다 더 크게 나옴
 - Z<1이다 : 동일 P, T 조건에서 V가 PV=nRT의 갑보다 더 작게 나옴
 
@@ -116,6 +119,7 @@ P \rightarrow P + a(n/V)^2
 $$
 {% endraw %}
 
+
 - $(n/V)^2$인 이유 : 두 particle 간의 간섭만 생각할 경우 단위 부피 안에 _N_ = _n_/_V_ 개의 분자가 존재하며, 이들간의 상호작용의 가짓수는 $_{N_0}C_2$이며, 이를 근사하면 위 식을 얻을 수 있음.
 
 ### Van deer Waals Equation
@@ -126,6 +130,7 @@ $$
 [P_{obs}+a(n/V)^2] \times (V-nb)=nRT
 $$
 {% endraw %}
+
 
 - a : 극성 분자, 분자간의 인력이 큰 물질일 수록 큰 경향
 - b : 분자의 크기자체가 큰 분자 (크기가 큰 원자가 달린) 일 수록 큰 경향

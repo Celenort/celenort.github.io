@@ -2,7 +2,7 @@
 layout: post
 date: 2024-08-28
 title: "Github blog Markdown 튜토리얼"
-categories: [ETC, blogging, ]
+categories: [ETC, blogging]
 media_subpath: /assets/img/2024-08-28-Github-blog-Markdown-튜토리얼.md
 image:
   path: 0.png
@@ -247,6 +247,7 @@ $$
 {% endraw %}
 
 
+
 We can reference the equation as \eqref{eq:series}.
 
 
@@ -258,6 +259,7 @@ $$
 x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}
 $$
 {% endraw %}
+
 
 
 To refer the equation :

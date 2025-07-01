@@ -2,8 +2,8 @@
 layout: post
 date: 2025-03-24
 title: "[Review] K-UNN :  k-space interpolation with untrained neural network"
-tags: [FastMRI, k-space, GRAPPA, Compressed sensing, SPiRiT, ]
-categories: [Study, Paper review, ]
+tags: [FastMRI, k-space, GRAPPA, Compressed sensing, SPiRiT]
+categories: [Study, Paper review]
 media_subpath: /assets/img/2025-03-24-[Review]-K-UNN-:--k-space-interpolation-with-untrained-neural-network.md
 image:
   path: 0.png
@@ -44,6 +44,7 @@ $$
 {% endraw %}
 
 
+
 x가 weight에 해당하고, y가 데이터에 해당.  A (sparse mapping matrix)를 알아내는게 목적. 
 
 
@@ -78,6 +79,7 @@ $$
 {% endraw %}
 
 
+
 ![3](/3.png)
 
 
@@ -94,6 +96,7 @@ $$
 {% endraw %}
 
 
+
 $\xi = \alpha$이며,  1-norm을 사용하는 이유는 $\xi$가 sparse encoding matrix이기 때문. 
 
 
@@ -107,6 +110,7 @@ $$
 {% endraw %}
 
 
+
 이 mapping임을 활용하여 UNN을 이용하여 해당 Mapping을 학습시켜보자는 목적을 가지고 있음.
 
 
@@ -115,6 +119,7 @@ $$
 x=\Phi(\zeta), \\ \min_{\Phi} \frac{1}{2} ||A\Phi(\zeta)-y||_1^2
 $$
 {% endraw %}
+
 
 
 여기서의 $\zeta$는 UNN의 weight, 으로 알아내야 할 var가 됨. 

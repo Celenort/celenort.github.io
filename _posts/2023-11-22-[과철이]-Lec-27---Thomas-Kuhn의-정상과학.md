@@ -2,8 +2,8 @@
 layout: post
 date: 2023-11-22
 title: "[과철이] Lec 27 - Thomas Kuhn의 정상과학"
-tags: [철학, 토마스 쿤, 정상과학, ]
-categories: [Lecture, 과학의 철학적 이해, ]
+tags: [철학, 토마스 쿤, 정상과학]
+categories: [Lecture, 과학의 철학적 이해]
 media_subpath: /assets/img/2023-11-22-[과철이]-Lec-27---Thomas-Kuhn의-정상과학.md
 image:
   path: 0.png

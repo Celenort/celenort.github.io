@@ -2,8 +2,8 @@
 layout: post
 date: 2021-12-06
 title: "[일반화학] Lec 10 - Solubility"
-tags: [화학, 용해도, ]
-categories: [Lecture, 일반화학, ]
+tags: [화학, 용해도]
+categories: [Lecture, 일반화학]
 media_subpath: /assets/img/2021-12-06-[일반화학]-Lec-10---Solubility.md
 image:
   path: 0.png
@@ -28,6 +28,7 @@ $$
 {% endraw %}
 
 
+
 ### 용해도 차를 이용한 분리
 
 
@@ -45,6 +46,7 @@ Q = \lbrack Pb^{2+}\rbrack\lbrack Cl^-\rbrack^2 <K_{sp} = 2.4\times 10^-4
 $$
 {% endraw %}
 
+
 - $\lbrack Cl^- \rbrack  = 0.049M$
 - 이 때의 Ag의 농도는 Cl의 농도에서 아래로 쭉 내려서 확인가능. 매우 작음 → 대부분 용출됨
 
@@ -57,6 +59,7 @@ $$
 Zn(OH)_2 \leftrightarrow Zn^{2+}+2OH^-
 $$
 {% endraw %}
+
 
 - OH-가 고정됨, 물에 녹을 땐 잘 녹지 않지만, 산성 용액일 때는 OH의 농도가 낮음, 용해도 상승
 - 용해된 이온이 약산의 짝염기라면 → 산의 추가 → 용해도의 상승
@@ -71,6 +74,7 @@ $$
 AgBr \leftrightarrow Ag^+ + Br^-
 $$
 {% endraw %}
+
 
 - Ksp 매우 낮으나,
 - $Ag^+ + NH_3 \leftrightarrow Ag(NH_3)^+, Ag(NH_3)^+ \leftrightarrow Ag(NH_3)_2^+$ 반응 K가 매우 커 용해 잘시킴

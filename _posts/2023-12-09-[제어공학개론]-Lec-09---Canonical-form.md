@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 09 - Canonical form"
-tags: [Control, System, Canonical form, ]
-categories: [Lecture, 제어공학개론, ]
+tags: [Control, System, Canonical form]
+categories: [Lecture, 제어공학개론]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-09---Canonical-form.md
 image:
   path: 0.png
@@ -41,6 +41,7 @@ $$
 {% endraw %}
 
 
+
 it represents transfer function
 
 
@@ -49,6 +50,7 @@ $$
 T(s) = \frac{b_{n-1}s^{n-1}+\cdots + b_1s+b_0}{s^n+a_{n-1}s^{n-1}+\cdots+a_1s + a_0}+D
 $$
 {% endraw %}
+
 
 
 ### another book...'s controllability canonical form
@@ -75,6 +77,7 @@ D &= [D]
  \end{aligned}
 $$
 {% endraw %}
+
 
 
 ### another book...'s observability canonical form

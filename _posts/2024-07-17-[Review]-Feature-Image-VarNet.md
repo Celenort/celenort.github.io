@@ -2,8 +2,8 @@
 layout: post
 date: 2024-07-17
 title: "[Review] Feature-Image VarNet"
-tags: [Variational Network, Attention, FastMRI, Compressed sensing, Cross-domain learning, ]
-categories: [Paper review, ]
+tags: [Variational Network, Attention, FastMRI, Compressed sensing, Cross-domain learning]
+categories: [Paper review]
 media_subpath: /assets/img/2024-07-17-[Review]-Feature-Image-VarNet.md
 image:
   path: 0.png
@@ -34,6 +34,7 @@ $$
 $$
 {% endraw %}
 
+
 - $\odot$ operator : element-wise (Hadamard) multiplication - Does resemble multiplication, but distinct from ‘Matrix’ or ‘Vector’ multiplication
 - ${\bf c}_i$ : receive coil sensitivity profile (Image domain)
 - $\bf F$ : discretized Fourier transform working on with multichannel images concatenated (DFT operator)
@@ -48,6 +49,7 @@ $$
 $$
 {% endraw %}
 
+
 - $\mathcal {\textbf Q}$ : Regularizer, $\lambda$ : its weighting factor
 - $\tilde {\bf k}_i = \bf m \odot  {\bf k}_i$ (tilde) is undersampled measured k-space data
 
@@ -60,6 +62,7 @@ $$
 $$
 {% endraw %}
 
+
 - where $\varepsilon(\ \cdot \ )$ : expand operator, performs individual coil images with ${\bf c}_i$
 
 {% raw %}
@@ -67,6 +70,7 @@ $$
 \varepsilon\{z\} = [{\bf c}_1 \odot z, \cdots , {\bf c}_N \odot z] \tag{3b}
 $$
 {% endraw %}
+
 
 - where $\mathcal R (\ \cdot \ )$ : reduce operator, multiplies element-wise the conjugate of ${\bf c}_i$ with coil images and sums over coil chans.
 - $\eta^j$ : learning rate of gradient descent (iter $j$)

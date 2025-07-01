@@ -2,8 +2,8 @@
 layout: post
 date: 2021-12-06
 title: "[일반화학] Lec 11 - Electrochemistry"
-tags: [화학, 산화수 규칙, 반쪽 반응식, ]
-categories: [Lecture, 일반화학, ]
+tags: [화학, 산화수 규칙, 반쪽 반응식]
+categories: [Lecture, 일반화학]
 media_subpath: /assets/img/2021-12-06-[일반화학]-Lec-11---Electrochemistry.md
 
 description:  

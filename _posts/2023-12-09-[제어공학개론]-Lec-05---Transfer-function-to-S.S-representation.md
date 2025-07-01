@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 05 - Transfer function to S.S representation"
-tags: [System, State-space, ]
-categories: [Lecture, 제어공학개론, ]
+tags: [System, State-space]
+categories: [Lecture, 제어공학개론]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-05---Transfer-function-to-S.S-representation.md
 
 description: 제어공학에서 전달 함수(T.F)를 상태 공간(S.S) 표현으로 변환하는 방법을 설명하며, 예시로 주어진 T.F를 통해 상태 공간 표현의 행렬 A, B, C, D를 도출합니다. 또한, 분자 다항식이 포함된 경우와 몫이 있는 경우의 처리 방법을 다루고, 행렬의 전치가 T.F에 미치는 영향을 설명합니다.
@@ -37,6 +37,7 @@ $$
 {% endraw %}
 
 
+
 State-space representation of T. F
 
 
@@ -51,6 +52,7 @@ C &= \begin{bmatrix}1 & 0 & 0\end{bmatrix} \\
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 ## if there's numerator polynomial?
@@ -70,6 +72,7 @@ $$
 {% endraw %}
 
 
+
 Transfer function을 2개의 Transfer function의 곱으로 나타내기 (num, denom)
 
 
@@ -83,6 +86,7 @@ $$
 {% endraw %}
 
 
+
 중간 변수의 설정으로, 다음과 같은 식이 만들어짐
 
 
@@ -94,6 +98,7 @@ y^{(3)} + 3\ddot y + 2 \dot y - y &= \bar y \\
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 ss representation of T. F :
@@ -111,6 +116,7 @@ D &= [0]
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 $B$ : $[0, 0, 1]^T$ since 중간 결과 = $1 \cdot \bar y$
@@ -132,6 +138,7 @@ $$
 {% endraw %}
 
 
+
 $D$ = 5 (입력 신호가 5배의 gain을 얻어 그대로 출력 신호에 전달됨)
 
 
@@ -151,6 +158,7 @@ $$
 {% endraw %}
 
 
+
 Then, differential equation follows
 
 
@@ -162,6 +170,7 @@ y &= B^T x
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 

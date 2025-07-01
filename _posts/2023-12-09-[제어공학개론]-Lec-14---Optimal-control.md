@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 14 - Optimal control"
-tags: [Control, System, Optimal control, ]
-categories: [Lecture, 제어공학개론, ]
+tags: [Control, System, Optimal control]
+categories: [Lecture, 제어공학개론]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-14---Optimal-control.md
 
 description: 최적 제어에 관한 강의에서는 상태 피드백을 이용해 시스템을 최적화하는 방법을 다룹니다. 알제브라릭 리카티 방정식을 통해 최적 제어 입력을 도출하고, Q와 R의 물리적 의미를 설명합니다. Q는 상태의 상대적 비용 가중치를 나타내고, R은 제어 입력의 비용을 나타냅니다. 또한, 강화 학습 방법과 관련하여 V(x)를 학습하는 과정도 언급됩니다.
@@ -36,6 +36,7 @@ $$
 {% endraw %}
 
 
+
 Also consider Optimization problem
 
 
@@ -44,6 +45,7 @@ $$
 \begin{aligned}\text{Goal : Find } x^* &= \arg\min_x f(x) \\f : \mathbb{R}^n &\rightarrow \mathbb{R}\end{aligned}
 $$
 {% endraw %}
+
 
 
 $x^*$ : optimal point
@@ -63,6 +65,7 @@ $$
 u^*(\cdot) = \arg\min_{u(\cdot)} J\big(x(0), u(\cdot)\big) = \int_0^\infty \bigg(x^T(\tau)Qx(\tau) + u^T(\tau)Ru(\tau)\bigg)d\tau
 $$
 {% endraw %}
+
 
 
 $u^*$ : optimal control
@@ -87,6 +90,7 @@ $$
 {% endraw %}
 
 
+
 (Algebraic Riccati Equation, ARE about $P$)
 
 
@@ -95,6 +99,7 @@ $$
 u^*(t) = -R^{-1} B^TPx(t)
 $$
 {% endraw %}
+
 
 
 LQR(Linear Quadratic Regulator)
@@ -113,6 +118,7 @@ $$
 {% endraw %}
 
 
+
 보조 정리
 
 
@@ -123,6 +129,7 @@ $$
 {% endraw %}
 
 
+
 (any PositiveDefinite matrix $P$가 가능하지만 Riccati Eqn의 $P$를 사용하자)
 
 
@@ -131,6 +138,7 @@ $$
 \int_0^\infty x^T(t)(A^TP+PA)x(t)+2x^T(t)PBu(t)dt = -x^T(0)Px(0)
 $$
 {% endraw %}
+
 
 
 위 수식의 이해 : $x(t), A, B, u$를 집어넣으면, Initial value만으로 해당 적분을 표현할 수 있음
@@ -144,6 +152,7 @@ $$
 \int_0^\infty \dot x^T(t) Px(t) + x^T(t)P\dot x(t) dt = \int \frac{d}{dt} (x^T(t)Px(t))dt
 $$
 {% endraw %}
+
 
 
 $\dot x(t) = Ax+Bu$임을 대입하면,
@@ -163,6 +172,7 @@ $$
 \begin{aligned}J &= \int_0^\infty (x^T Q x + u^T R u) \, dt = x^T(0) P x(0) - x^T(0) P x(0) + \int_0^\infty (x^T Q x + u^T R u) \, dt \\&= x^T(0) P x(0) + \int_0^\infty (x^T (A^T P + PA) x + 2 x^T P B u) \, dt + \int_0^\infty (x^T Q x + u^T R u) \, dt \\&= x^T(0) P x(0) + \int_0^\infty \left( u + R^{-1} B^T P x \right)^T R \left( u + R^{-1} B^T P x \right) \, dt \\&\quad + \int_0^\infty x^T (A^T P + PA - P B R^{-1} B^T P + Q) \, dt \\&= x^T(0) P x(0) + 0 \text{ (if } u = u^*) + 0 \text{ (by Riccati Eqn)}\end{aligned}
 $$
 {% endraw %}
+
 
 
 $u^*=-R^{-1}B^TPx$ is Optimal solution

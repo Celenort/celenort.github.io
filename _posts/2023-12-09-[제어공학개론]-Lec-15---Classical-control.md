@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 15 - Classical control"
-tags: [Control, System, Routh-Hurwitz criterion, Root locus, ]
-categories: [Lecture, 제어공학개론, ]
+tags: [Control, System, Routh-Hurwitz criterion, Root locus]
+categories: [Lecture, 제어공학개론]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-15---Classical-control.md
 image:
   path: 0.png
@@ -38,6 +38,7 @@ $$
 {% endraw %}
 
 
+
 Real Part의 부호의 변화를 알 수 있음.
 
 1. polynomial의 계수들을 세로로 번갈아 가며 쓰기.
@@ -48,6 +49,7 @@ $$
 $$
 {% endraw %}
 
+
 1. 그 다음 줄은, 바로 윗줄의 가장 왼쪽 원소를 분모로 하고, 첫번째 열과 자신의 오른쪽 열에 대해 2x2 matrix의 Determinent처럼 계산을 진행하여 써준다. (단 determinent랑은 부호가 다름.)
 
 {% raw %}
@@ -57,6 +59,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 * = a_{n-1} a_{n-2} - a_n a_{n-3}
@@ -64,11 +67,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 ** = a_{n-1} a_{n-4} - a_n a_{n-5}
 $$
 {% endraw %}
+
 
 1. 같은 방법으로 계산을 반복하여 최종적으로 한 행에 하나의 원소만 남을 때 까지 반복함. 삼각형 모양이 되면, 첫번째 열의 array의 부호가 바뀐 횟수를 곧 우반 평면의 근의 횟수로 생각.
 	- 예를 들어 부호가 다 ----, 다 ++++인 경우는 Hurwitz임. (부호가 다 안바뀌었으므로, 모든 애들이 좌반평면에 있음.)
@@ -90,6 +95,7 @@ $$
 {% endraw %}
 
 
+
 $\text{Denominator} = 1+kG(s)$ 의 근의 부호를 Routh-Hurwitz Criterion으로 확인하여 안정성을 check할 수 있음.
 
 
@@ -108,11 +114,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 Den(s) = D(s)+kN(s)
 $$
 {% endraw %}
+
 
 
 어차피 $1+kG(s) = 0$을 만들것이므로,
@@ -124,6 +132,7 @@ $$
 $$
 {% endraw %}
 
+
 1. Open loop의 Pole, zero에 점을 찍자.
 2. Test Point(어떤 점)은 Loot locus 선 위에 올라가있는지를 확인하려면, 각각의 Angle 기여도를 더하는데, zero의 Angle 기여도는 더하고, pole의 Angle 기여도는 빼는 식으로 해서 이 값이 $-\pi + 2k\pi$이어야 함.
 Test point가 정해졌다는 것은, $s$가 결정되었다는 것인데, $G(s)$에 $s$를 대입하게 되면,
@@ -133,6 +142,7 @@ $$
 \begin{aligned}G(s) &= \frac{(s - z_1)(s - z_2)}{(s - p_1)(s - p_2)(\cdots)} \\\angle G(s) &= (\angle \text{ from zeros}) - (\angle \text{ from poles}) \\&= -\pi + 2p\pi, \quad p \in \mathbb{Z}\end{aligned}
 $$
 {% endraw %}
+
 
 
 k값은 어떤 양수든 될 수 있으니 Angle이 중요.
@@ -164,6 +174,7 @@ $$
 {% endraw %}
 
 
+
 $s^4$를 곱해서,
 
 
@@ -172,6 +183,7 @@ $$
 \begin{aligned}s^4 + s^2 + ks + 1 &= 0 \\1 + k \frac{s}{s^4 + s^2 + 1} &= 0\end{aligned}
 $$
 {% endraw %}
+
 
 
 로 바꾸어 root locus를 그리면 됨.

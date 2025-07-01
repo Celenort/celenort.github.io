@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-05
 title: "[제어공학개론] Lec 01 - Introduction"
-tags: [Control, System, Feedback, ]
-categories: [Lecture, 제어공학개론, ]
+tags: [Control, System, Feedback]
+categories: [Lecture, 제어공학개론]
 media_subpath: /assets/img/2023-12-05-[제어공학개론]-Lec-01---Introduction.md
 image:
   path: 0.png
@@ -96,6 +96,7 @@ $$
 {% endraw %}
 
 
+
 입력변수 $u(t)$에 따라 출력변수 $y(t)$의 2번 미분된 값, 즉 가속도가 결정되는 미분방정식이다. 
 
 
@@ -164,6 +165,7 @@ $$
 {% endraw %}
 
 
+
 여기서 정확한 질량 $m$, (더하여 중력가속도 $g$)를 알지 못하기 때문에, 대략적인 Approximation 값인 $\bar{mg}$를 이용할 수 있다. 다만, 이제는 $y(t)$를 알기 때문에 $y(t)$, 그리고 이를 미분한 $\dot y(t)$도 사용할 수 있다. 이를 이용해서 $u(t)$를 만드는 것도 가능하다.
 
 
@@ -174,6 +176,7 @@ $$
 {% endraw %}
 
 
+
 다음과 같이 sensor로부터 얻어낸 신호를 이용해서 다음과 같이 $u(t)$를 만들어 볼 수 있다. (3) 식을 (2)에 다시 대입해보면,
 
 
@@ -182,6 +185,7 @@ $$
 \begin{equation}m\ddot y + c\dot y + ky = \overline{mg} - mg\end{equation}
 $$
 {% endraw %}
+
 
 
 다음과 같은 Mass-Spring-Damper의 2차 미분방정식으로 system의 지배방정식이 바뀐 것을 알 수 있다.  단지 $F=ma$에서 비롯되었던 식이 Feedback을 통해 (4)과 같이 그 Dynamics 자체가 바뀌었다는 것을 알 수 있다.

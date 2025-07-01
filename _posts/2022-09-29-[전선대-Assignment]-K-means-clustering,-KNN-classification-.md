@@ -2,8 +2,8 @@
 layout: post
 date: 2022-09-29
 title: "[전선대 Assignment] K-means clustering, KNN classification "
-tags: [Linear Algebra, k means clustering, KNN classification, ]
-categories: [Assignment, 선형대수, ]
+tags: [Linear Algebra, k means clustering, KNN classification]
+categories: [Assignment, 선형대수]
 media_subpath: /assets/img/2022-09-29-[전선대-Assignment]-K-means-clustering,-KNN-classification-.md
 image:
   path: 0.png

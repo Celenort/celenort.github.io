@@ -2,8 +2,8 @@
 layout: post
 date: 2024-07-01
 title: "[신호처리] Lec 05 - Sampling"
-tags: [FastMRI, Nyquist sampling theorem, ]
-categories: [Lecture, 신호처리(FastMRI), ]
+tags: [FastMRI, Nyquist sampling theorem]
+categories: [Lecture, 신호처리(FastMRI)]
 media_subpath: /assets/img/2024-07-01-[신호처리]-Lec-05---Sampling.md
 image:
   path: 0.png
@@ -32,6 +32,7 @@ x(t) \text{(continuous)} \cdot \frac{1}{T} III(\frac{t}{T})
 $$
 {% endraw %}
 
+
 - Sampling function : Shah function, 각 Area가 1이며, 간격 T인 Dirac's delta function의 합
 
 ### Nyquist Sampling Theorem
@@ -52,6 +53,7 @@ $$
 \mathcal{F} \bigg(x(t) \cdot \frac{1}{T} III(\frac{t}{T})\bigg) = X(f) * III(f/f_s)
 $$
 {% endraw %}
+
 
 
 ![0](/0.png)

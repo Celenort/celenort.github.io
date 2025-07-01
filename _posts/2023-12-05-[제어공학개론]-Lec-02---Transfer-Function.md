@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-05
 title: "[제어공학개론] Lec 02 - Transfer Function"
-tags: [Control, System, Transfer function, Laplace transform, ]
-categories: [Lecture, 제어공학개론, ]
+tags: [Control, System, Transfer function, Laplace transform]
+categories: [Lecture, 제어공학개론]
 media_subpath: /assets/img/2023-12-05-[제어공학개론]-Lec-02---Transfer-Function.md
 image:
   path: 0.png
@@ -40,6 +40,7 @@ $$
 $$
 {% endraw %}
 
+
 - 장점 : 한눈에 봤을 때 물리적 의미가 드러남
 - 단점1 : 여러 시스템을 연결, 해석에 불편함이 따름. 후술할 방법을 위한 수식의 원형에 가까움
 - 단점2 : $u(t)$가 주어졌을 때 $y(t)$를 evaluate 하는 것이 어려움. 시스템이 수행하는 동작을 따라 $y(t)$를 구하려면 식 (1)에 대입하여 $\ddot y(t)$를 알아내고 이를 2번 적분하여 얻어내는 방법밖에 없음.
@@ -52,6 +53,7 @@ $$
 T(s) = \frac{Y(s)}{U(s)} = \frac{\mathcal{L}(y(t))}{\mathcal{L}(u(t))}
 $$
 {% endraw %}
+
 
 
 Transfer function의 정의는 Input Laplace 변환에 대한 Output Laplace 변환의 비이다. 
@@ -68,6 +70,7 @@ $$
 \begin{equation}F(s) = \mathcal{L}(f) = \displaystyle\int_0^\infty e^{-st}f(t)dt\end{equation}
 $$
 {% endraw %}
+
 
 
 _Source : Kreyszig 공업수학 10th ed. p. 204_
@@ -129,6 +132,7 @@ $$
 {% endraw %}
 
 
+
 우리가 알고자 하는 것(출력)은 $p_3$이므로, $y=p_3$로 둘 수 있음. 
 
 
@@ -155,6 +159,7 @@ $$
 {% endraw %}
 
 
+
 Transfer function은 모든 초깃값이 0일 때의 출력 신호의 라플라스 변환을 입력 신호의 라플라스 변환으로 나눈 것으로 정의된다. 이 때 모든 초깃값이 0이라는 점은, 입력 신호 $u(t)\equiv 0 \text{ for } t<0$을 의미한다. 입력 신호가 $0$이므로, 당연히도 출력값 $y(t)$도 $0$을 가리키게 된다.
 
 
@@ -171,6 +176,7 @@ $$
 {% endraw %}
 
 
+
 $y$의 최대 $n$차 도함수와 $u$의 최대 $m$차 도함수간에 선형적인 결합으로 이루어진 differential equation. 
 
 
@@ -179,6 +185,7 @@ $$
 \begin{equation}\text{let } {\mathcal L}\{y(t)\}=Y(s)\\{\mathcal L}(\dot y)= sY(s)-y(0^-)\end{equation}
 $$
 {% endraw %}
+
 
 
 초깃값은 Transfer function의 조건에 의해 0으로 둘 수 있다. 이 때 초깃값은 $y(0^-)$로 0보다 살짝 왼쪽의(작은) 값으로 써주었는데, 이는 $0+, 0-$ 양쪽 방향에서 **Direc's Delta function**을 극한으로 보낼 때 값을 보정하기 위함이라, 수학적인 극한의 이유에서 저렇게 쓴것이라 생각해도 무방.
@@ -194,6 +201,7 @@ $$
 \therefore T_{u\rightarrow y} =\displaystyle\frac{Y(s)}{U(s)}&= \frac{\displaystyle\sum_{j=0}^m b_j s^j}{\displaystyle\sum_{i=0}^n a_i s^i}\end{aligned}
 $$
 {% endraw %}
+
 
 
 원래 ODE 입출력 각각의 $n$th derivative의 coefficient가 Transfer function에서의 $s^n$의 계수임.
@@ -251,6 +259,7 @@ $$
 	y(t) &= u(t-a)\end{aligned}
 $$
 {% endraw %}
+
 
 
 ## Connecting TF
@@ -311,6 +320,7 @@ $$
 {% endraw %}
 
 
+
 ### 병렬 연결
 
 
@@ -359,6 +369,7 @@ $$
 {% endraw %}
 
 
+
 ### Feedback System
 
 
@@ -404,6 +415,7 @@ $$
 {% endraw %}
 
 
+
 여기서 보조변수 $E(s)$를 소거하고, 전체 출력에 대한 전체 입력의 TF를 구하면,
 
 
@@ -416,6 +428,7 @@ T(s) &= \displaystyle\frac{Y(s)}{U(s)} = \frac{P(s)}{1+P(s)C(s)}
 \end{aligned}\end{equation}
 $$
 {% endraw %}
+
 
 
 $E(s)$가, $U(s)$에서 Controller의 출력, 즉 $C(s)Y(s)$ (Controller의 TF와 출력의 Laplace Transform의 곱)을 제하였음.
@@ -446,6 +459,7 @@ $$
 {% endraw %}
 
 
+
 ### Impulse response
 
 
@@ -459,6 +473,7 @@ Y(s) &= P(s)U(s) = P(s) \times 1 \\
 y(t) &= p(t)\end{aligned}\end{equation}
 $$
 {% endraw %}
+
 
 
 식 (10)과 같이 디락 델타함수의 Laplace transform은 $1$이기 때문에, 출력값은 Transfer function의 inverse transform이 된다.
@@ -485,6 +500,7 @@ $$
 {% endraw %}
 
 
+
 ### Concrete example
 
 
@@ -496,6 +512,7 @@ $$
 P(s) = \displaystyle\frac{1}{s+1}, \ u(t) = \sin{\omega t}
 $$
 {% endraw %}
+
 
 
 위와 같은 Plant에 $\omega$의 주파수를 가진 사인파를 인가하면 어떻게되는지, Laplace transform을 적용하면,
@@ -512,6 +529,7 @@ $$
 {% endraw %}
 
 
+
 Taking Inverse Laplace Transform,
 
 
@@ -520,6 +538,7 @@ $$
 y(t) = Ae^{-t}+ B \cos{\omega t} + \displaystyle\frac{C}{\omega} \sin{\omega t}
 $$
 {% endraw %}
+
 
 
 위 식에서 A, B, C는 항등식으로부터 계산가능한 '미정계수'
@@ -547,6 +566,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \begin{aligned}
@@ -554,6 +574,7 @@ A &= \displaystyle\left.\frac{s+3}{s+2}\right\vert_{s=-1}\\B &= \displaystyle\le
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 통분을 해서 A와 B를 구할 수도 있지만,  위와 같은 공식에 의해 계산이 가능.
@@ -572,6 +593,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \begin{aligned}
@@ -582,6 +604,7 @@ A = \displaystyle\left.\frac{1}{2}\big(\frac{d^2}{ds^2}\frac{s+3}{s+2}\big)\righ
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 위 식에서 $(s+1)$이 분모에 3번 중첩이 된 삼중근인데, 중첩된 횟수를 $n$이라고 하면 $\displaystyle\frac{1}{(s+1)^i}$ 에 대한 미정계수는 $(s+1)^3$ 전부를 통채로 뺀 그 식($D$에 해당하는)을 $s$에 대해 $n-i$번 미분한 값에 $s=-1$을 대입한 것과 같다. 추가로 미분할 때 계수가 계속 떨어져 나오므로 $(n-1)!$로 나누어 주어야 한다. 
@@ -595,6 +618,7 @@ $$
 A_k = \displaystyle\left.\frac{1}{(n-1)!}\bigg(\frac{d^{(n-1)}}{ds^{(n-1)}}Y(s)(s-\alpha)^{n}\bigg)\right\vert_{s=-\alpha}
 $$
 {% endraw %}
+
 
 
 _Laurent Series의 residue (_$a_{-1}$_)을 구하는 과정과 닮아있다._

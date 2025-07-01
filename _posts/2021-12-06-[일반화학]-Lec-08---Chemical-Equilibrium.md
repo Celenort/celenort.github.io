@@ -2,8 +2,8 @@
 layout: post
 date: 2021-12-06
 title: "[일반화학] Lec 08 - Chemical Equilibrium"
-tags: [화학, 평형상수, Van't Hoff equation, ]
-categories: [Lecture, 일반화학, ]
+tags: [화학, 평형상수, Van't Hoff equation]
+categories: [Lecture, 일반화학]
 media_subpath: /assets/img/2021-12-06-[일반화학]-Lec-08---Chemical-Equilibrium.md
 image:
   path: 0.png
@@ -44,6 +44,7 @@ G_{A(aq), m}(p) = G_{A(aq), m}^0 + RTln({[A]\over c_0})
 $$
 {% endraw %}
 
+
 - Pure 한 상태의 증기압 평형 :
 
 {% raw %}
@@ -52,6 +53,7 @@ G_{A, m}^* (l) = G_{A, m}^0 (g)+RTln({p_A^*\over p})
 $$
 {% endraw %}
 
+
 - Impure 한 상태의 증기압 평형 (pure 한 상태보다 증기압 감소)
 
 {% raw %}
@@ -59,6 +61,7 @@ $$
 G_{A, m} (l) = G_{A, m}^0 (g)+RTln({p_A\over p})
 $$
 {% endraw %}
+
 
 - 정리하면 : $G_{A, m} (l) = G_{A, m}^* (l)+RTln(\chi_A)$
 - 순수한 수용액과 용액의 Gibbs Free Energy 차이는 RTln 몰분율
@@ -77,6 +80,7 @@ $$
 ln(K(T)) = -{\Delta H_{rxn}\over R} \cdot {1\over T} + \text{const}
 $$
 {% endraw %}
+
 
 
 ![2](/2.png)

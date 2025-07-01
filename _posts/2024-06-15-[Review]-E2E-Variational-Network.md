@@ -2,8 +2,8 @@
 layout: post
 date: 2024-06-15
 title: "[Review] E2E Variational Network"
-tags: [Variational Network, FastMRI, Compressed sensing, Cross-domain learning, ]
-categories: [Paper review, ]
+tags: [Variational Network, FastMRI, Compressed sensing, Cross-domain learning]
+categories: [Paper review]
 media_subpath: /assets/img/2024-06-15-[Review]-E2E-Variational-Network.md
 image:
   path: 0.png
@@ -47,6 +47,7 @@ $$
 {% endraw %}
 
 
+
 where $\bf x \in \Complex^M, \bf k \in \Complex^M$ / $\epsilon$ is measurement noise, $\mathcal F$ is the fourier transform operator.
 
 
@@ -60,6 +61,7 @@ $$
 {% endraw %}
 
 
+
 where $S_i$ is a complex-valued diagonal matrix that encodes position dependent sensitivity map of _i_-th coil and $N$ is number of coils. Sensitivity maps are normalized to satisfy :
 
 
@@ -68,6 +70,7 @@ $$
 \sum_{i=1}^N S_i^{*} S_i = 1 \tag{3}
 $$
 {% endraw %}
+
 
 - Undersampled k-spaced data : $\tilde {\bf k} _i = M{\bf k}_i$, where $M$ is binary mask operator that selects a subset of k-space point. Undersampled k-spaced data results in **aliasing artifacts** in image domain
 - Sensitivity map $S_i$ can be estimated using the central region of k-space corresponding to low frequencies, called the _Auto-Calibration Signal_ (ACS) line which is typically fully sampled.
@@ -83,11 +86,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \hat {\bf x} = \argmin_{\bf x} {1 \over 2} \sum_i \Vert A({\bf x } ) - \tilde {\bf k}\Vert ^2 + \lambda \Psi({\bf x}) \tag{5}
 $$
 {% endraw %}
+
 
 
 	where $\Psi$ is regularization function, $A( \ \cdot  \ ) $ is the linear forward operator (multiplies by sensitivity maps → apply 2D FFT → undersampling data), $\tilde {\bf k}$ vector of masked k-space for all coils
@@ -102,6 +107,7 @@ $$
 {\bf x}^{t+1} = {\bf x}^{t} - \eta^t \big(A^{*}(A({\bf x} - \tilde {\bf k}) + \lambda \Phi ({\bf  x}^t) \big) \tag {6}
 $$
 {% endraw %}
+
 
 
 where $\eta^t$ learning rate, $\Phi({\bf x}) = \nabla_{\bf x} \Psi$, $A^{*}$ is the hermitian of forward operator $A$ .

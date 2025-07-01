@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 07 - Simularity transform"
-tags: [Linear Algebra, System, Simularity transform, ]
-categories: [Lecture, 제어공학개론, ]
+tags: [Linear Algebra, System, Simularity transform]
+categories: [Lecture, 제어공학개론]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-07---Simularity-transform.md
 
 description: 제어공학 개론에서 유사변환, 상태 공간 표현, 그리고 입력이 있는 경우와 없는 경우의 해법을 다룹니다. 유사변환을 통해 상태 공간 표현의 변환을 정의하고, 상태 방정식의 해를 구하는 방법을 설명하며, 행렬 지수의 특성과 전이 함수 간의 관계를 비교합니다. 최종적으로 출력 y(t)에 대한 계산식을 제시합니다.
@@ -36,6 +36,7 @@ $$
 {% endraw %}
 
 
+
 $T$ invertible, invarient to time. (유사변환, simularity transformation)
 
 
@@ -53,6 +54,7 @@ $$
 {% endraw %}
 
 
+
 Transfer function (matrix form) are equivalent
 
 
@@ -65,6 +67,7 @@ T^{-1}(sI-TAT^{-1})T &= T^{-1}(sTT^{-1}-TAT^{-1})T \\
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 ## solution to $\dot x = Ax$
@@ -83,6 +86,7 @@ $$
 {% endraw %}
 
 
+
 Answer : 
 
 
@@ -94,6 +98,7 @@ e^{At} &= (I+At+\frac{(At)^2}{2!}+\cdots)
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 solution이라는 사실 proof : 대입
@@ -110,6 +115,7 @@ $$
 {% endraw %}
 
 
+
 ## solution to $\dot x = Ax+Bu$
 
 
@@ -123,6 +129,7 @@ $$
 {% endraw %}
 
 
+
 Multiplying integrating factor (variation of constant formula) :
 
 
@@ -134,6 +141,7 @@ $$
 \end{aligned}
 $$
 {% endraw %}
+
 
 - Response to the initial condition : $e^{At}x_0$
 - State transition matrix : $e^{A(t-\tau)}$
@@ -154,6 +162,7 @@ $$
 {% endraw %}
 
 
+
 $t_1$초만큼 solution이 이동한 것 + $t_2$초만큼 이동한 solution : $t_1+t_2$초만큼 이동한 sol.
 
 
@@ -170,6 +179,7 @@ $$
 {% endraw %}
 
 
+
 ### comparing solutions at Transfer function
 
 
@@ -183,6 +193,7 @@ $$
 {% endraw %}
 
 
+
 matrixwise convolution이 s-domain에서의 곱으로 표현된 것을 확인할 수 있음.
 
 
@@ -191,6 +202,7 @@ $$
 \int_0^t e^{A(t-\tau)} B u(\tau) d\tau \leftrightarrow (sI-A)^{-1} BU(s)
 $$
 {% endraw %}
+
 
 
 Laplace transform of state transition matrix : Taylor series of inverse of $sI-A$
@@ -203,6 +215,7 @@ $$
 {% endraw %}
 
 
+
 ### calculation about $y(t)$
 
 
@@ -211,6 +224,7 @@ $$
 y(t) = Ce^{At}x_0 + C\int_0^t e^{A(t-\tau)}Bu(\tau) d\tau + Du(t)
 $$
 {% endraw %}
+
 
 
 

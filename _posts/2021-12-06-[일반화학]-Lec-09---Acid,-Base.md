@@ -2,8 +2,8 @@
 layout: post
 date: 2021-12-06
 title: "[일반화학] Lec 09 - Acid, Base"
-tags: [화학, Auto-ionization, Buffer, ]
-categories: [Lecture, 일반화학, ]
+tags: [화학, Auto-ionization, Buffer]
+categories: [Lecture, 일반화학]
 media_subpath: /assets/img/2021-12-06-[일반화학]-Lec-09---Acid,-Base.md
 image:
   path: 0.png
@@ -46,11 +46,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 pK_a = -logK_a
 $$
 {% endraw %}
+
 
 - 강산의 짝염기는 약함, 강염기의 짝산은 약함. ..
 - 짝산-짝염기 관계의 두 K 값을 곱하면 $\lbrack H_3O^+\rbrack\lbrack OH^-\rbrack$가 됨. (강산은 제외)
@@ -81,6 +83,7 @@ K_{In} = K_a = {\lbrack H_3O^+\rbrack \lbrack In^-\rbrack \over [HIn]}
 $$
 {% endraw %}
 
+
 - 개중에는 색 변화가 여러번 일어날 수도 있음.
 
 ### 염(Salt) 의 액성
@@ -109,6 +112,7 @@ $$
 {% endraw %}
 
 
+
 ### 다양성자산
 
 - 무조건 첫번째 H를 떨어트리는게 가장 쉽고, 그 이후는 점점 어려워짐. (pKa 점점 커짐)
@@ -122,6 +126,7 @@ $$
 {% endraw %}
 
 
+
 ### Buffer (완충 용액)
 
 - 약산이나 약염기의 짝산과 그 짝염기를 넣어서 용액을 만들면 완충 용액이 됨
@@ -132,6 +137,7 @@ $$
 pH = pK_a+log({\lbrack A^-\rbrack\over \lbrack HA\rbrack })
 $$
 {% endraw %}
+
 
 
 ### 강산, 강염기의 적정

@@ -2,8 +2,8 @@
 layout: post
 date: 2021-10-29
 title: "[일반화학] Lec 05 - Liquids, Solids, MO"
-tags: [화학, Inter-molecular forces, London dispersion force, 수소결합, ]
-categories: [Lecture, 일반화학, ]
+tags: [화학, Inter-molecular forces, London dispersion force, 수소결합]
+categories: [Lecture, 일반화학]
 media_subpath: /assets/img/2021-10-29-[일반화학]-Lec-05---Liquids,-Solids,-MO.md
 image:
   path: 0.png
@@ -34,6 +34,7 @@ $$
 $$
 {% endraw %}
 
+
 - 전기장에 의해서 dipole이 되려 하는 경향을 의미하는 텐서 값.
 
 ### London dispersion force
@@ -45,6 +46,7 @@ $$
 V(r) = {\alpha_{1} \alpha_2 \over r^6}
 $$
 {% endraw %}
+
 
 
 ### Hydrogen bonding

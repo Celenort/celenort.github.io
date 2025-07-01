@@ -197,3 +197,31 @@ Controllability에서의 증명의 dual이 Observability에서 성립하므로, 
 
 동일한 방법으로 Observable state, nonobservable state를 구분할 수 있음.
 
+
+
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        R: "\\mathbb{R}",
+        N: "\\mathbb{N}",
+        Z: "\\mathbb{Z}",
+        Q: "\\mathbb{Q}",
+        C: "\\mathbb{C}",
+        proj: "\\operatorname{proj}",
+        rank: "\\operatorname{rank}",
+        im: "\\operatorname{im}",
+        dom: "\\operatorname{dom}",
+        codom: "\\operatorname{codom}",
+        argmax: "\\operatorname*{arg\,max}",
+        argmin: "\\operatorname*{arg\,min}"
+      },
+      tags: "ams",
+      strict: false
+    },
+    options: {
+      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

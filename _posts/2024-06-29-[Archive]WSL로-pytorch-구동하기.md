@@ -255,3 +255,31 @@ pip install matplotlib
 1. 위치를 잘 확인하고 내가 다운받고싶은 위치에서 git clone [주소] 입력. 주소는 github의 <>code 버튼을 눌러서 확인할 수 있다. 나는 내 리포에 포크해서 하니깐 [https://github.com/Celenort/FastMRI_challenge.git](https://github.com/Celenort/FastMRI_challenge.git) 이걸로 함.
 2. 모든 브랜치를 다운받는게 아니라 메인 브렌치만 오게 되서 Readme.md만 확인할 수 있다. branch 명령어는 git branch [branch name]. branch 목록은 git branch -a로 확인가능.
 3. 나는 브랜치 옮겨다니면서 하기 귀찮아서 걍 물리적으로 2개다 복사해서 붙여넣었다. 왼쪽에 2024_baby_varnet , 2024_baby_unet 폴더 확인.
+
+
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        R: "\\mathbb{R}",
+        N: "\\mathbb{N}",
+        Z: "\\mathbb{Z}",
+        Q: "\\mathbb{Q}",
+        C: "\\mathbb{C}",
+        proj: "\\operatorname{proj}",
+        rank: "\\operatorname{rank}",
+        im: "\\operatorname{im}",
+        dom: "\\operatorname{dom}",
+        codom: "\\operatorname{codom}",
+        argmax: "\\operatorname*{arg\,max}",
+        argmin: "\\operatorname*{arg\,min}"
+      },
+      tags: "ams",
+      strict: false
+    },
+    options: {
+      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

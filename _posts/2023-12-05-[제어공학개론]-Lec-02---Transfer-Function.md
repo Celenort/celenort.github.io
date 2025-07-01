@@ -602,3 +602,31 @@ _Laurent Series의 residue (_$a_{-1}$_)을 구하는 과정과 닮아있다._
 
 Partial fraction expansion하는것도 분모의 pole(Analytic하지 않은 부분)을 따로 떼어내서 series형태로 만드는 작업이다 보니 비슷한 꼴로 유도되는듯.
 
+
+
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        R: "\\mathbb{R}",
+        N: "\\mathbb{N}",
+        Z: "\\mathbb{Z}",
+        Q: "\\mathbb{Q}",
+        C: "\\mathbb{C}",
+        proj: "\\operatorname{proj}",
+        rank: "\\operatorname{rank}",
+        im: "\\operatorname{im}",
+        dom: "\\operatorname{dom}",
+        codom: "\\operatorname{codom}",
+        argmax: "\\operatorname*{arg\,max}",
+        argmin: "\\operatorname*{arg\,min}"
+      },
+      tags: "ams",
+      strict: false
+    },
+    options: {
+      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

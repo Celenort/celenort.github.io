@@ -296,3 +296,31 @@ Popper의 과학 철학은 실제로 하는 일에 대한 설명, 사실(is)에 
 
 진리를 추구하는 사람을 존중하라. 그러나 그것을 발견했다고 주장하는 사람은 경계하라 : truth에 적중했다고 우리 스스로 말할 수 없다. 그러나 그것을 추구하는 일이 무의미한 것은 아니다. 추측과 반박의 방법에 의해 보다 경험적 내용이 풍부한 이론으로 나아가는 것이다.
 
+
+
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        R: "\\mathbb{R}",
+        N: "\\mathbb{N}",
+        Z: "\\mathbb{Z}",
+        Q: "\\mathbb{Q}",
+        C: "\\mathbb{C}",
+        proj: "\\operatorname{proj}",
+        rank: "\\operatorname{rank}",
+        im: "\\operatorname{im}",
+        dom: "\\operatorname{dom}",
+        codom: "\\operatorname{codom}",
+        argmax: "\\operatorname*{arg\,max}",
+        argmin: "\\operatorname*{arg\,min}"
+      },
+      tags: "ams",
+      strict: false
+    },
+    options: {
+      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

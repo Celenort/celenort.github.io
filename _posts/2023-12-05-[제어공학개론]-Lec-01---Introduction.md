@@ -201,3 +201,31 @@ Dynamic system과 Static system은 간단히 설명하자면 Memory의 여부에
 
 정보의 저장 없이 단순히 입력으로부터 출력을 내는 Static system와의 차이가 여기서 발생하는데, 예를 들어 $u(t)$의 값을 3배 하여 $y(t)$로 출력하는 System이 있다면, 이는 Static system이다. 값을 바로 도출해내므로 메모리가 필요 없고 입력받은 즉시 출력하는 (instant response) 시스템이다.
 
+
+
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        R: "\\mathbb{R}",
+        N: "\\mathbb{N}",
+        Z: "\\mathbb{Z}",
+        Q: "\\mathbb{Q}",
+        C: "\\mathbb{C}",
+        proj: "\\operatorname{proj}",
+        rank: "\\operatorname{rank}",
+        im: "\\operatorname{im}",
+        dom: "\\operatorname{dom}",
+        codom: "\\operatorname{codom}",
+        argmax: "\\operatorname*{arg\,max}",
+        argmin: "\\operatorname*{arg\,min}"
+      },
+      tags: "ams",
+      strict: false
+    },
+    options: {
+      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

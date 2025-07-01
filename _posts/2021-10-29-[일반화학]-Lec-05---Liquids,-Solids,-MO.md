@@ -155,3 +155,31 @@ $$
 - OLED : 전기를 통해 electron energy 올리고, 다시 내려오면서 빛 방출되도록. gap이 멀 수록 더 높은 에너지, 즉 낮은 파장의 빛이 나옴. 이를 이용하여 적절히 색을 배합. 이를 Organic한 물질로 만듬.
 - QLED : RGB가 모두 포함된 백색광을 내보내고, Quantum Dot을 이용하여 Filter를 만듬.
 - Quantum dot을 이용하여 Band gap을 더 구체적으로 바꿀 수 있음. (P.I.B가 더 좁을 수록 에너지 간격이 선명해지고 넓어짐)
+
+
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        R: "\\mathbb{R}",
+        N: "\\mathbb{N}",
+        Z: "\\mathbb{Z}",
+        Q: "\\mathbb{Q}",
+        C: "\\mathbb{C}",
+        proj: "\\operatorname{proj}",
+        rank: "\\operatorname{rank}",
+        im: "\\operatorname{im}",
+        dom: "\\operatorname{dom}",
+        codom: "\\operatorname{codom}",
+        argmax: "\\operatorname*{arg\,max}",
+        argmin: "\\operatorname*{arg\,min}"
+      },
+      tags: "ams",
+      strict: false
+    },
+    options: {
+      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

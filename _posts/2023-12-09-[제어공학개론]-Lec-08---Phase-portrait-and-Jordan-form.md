@@ -255,7 +255,13 @@ if  $T(s) = \displaystyle \frac{1}{s^2}$ 와 같은 integrator 같이, 설계자
         dom: "\\operatorname{dom}",
         codom: "\\operatorname{codom}",
         argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}"
+        argmin: "\\operatorname*{arg\,min}",
+        "\\{": "\\lbrace",
+        "\\}": "\\rbrace",
+        sub: "\\subset",
+        sup: "\\supset",
+        sube: "\\subseteq",
+        supe: "\\supseteq"
       },
       tags: "ams",
       strict: false, 

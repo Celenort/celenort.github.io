@@ -413,7 +413,13 @@ $w_n$을 반지름으로 하는 원 상에서 $\xi=0$에서는 $j\omega$ 축 위
         dom: "\\operatorname{dom}",
         codom: "\\operatorname{codom}",
         argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}"
+        argmin: "\\operatorname*{arg\,min}",
+        "\\{": "\\lbrace",
+        "\\}": "\\rbrace",
+        sub: "\\subset",
+        sup: "\\supset",
+        sube: "\\subseteq",
+        supe: "\\supseteq"
       },
       tags: "ams",
       strict: false, 

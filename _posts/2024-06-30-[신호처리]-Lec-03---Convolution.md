@@ -92,7 +92,9 @@ _Convolution의 input인 두 1차원 함수가 겹침에 따라 아래쪽 plot�
         argmin: "\\operatorname*{arg\,min}"
       },
       tags: "ams",
-      strict: false
+      strict: false, 
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

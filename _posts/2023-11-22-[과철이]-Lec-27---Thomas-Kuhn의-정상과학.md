@@ -170,7 +170,9 @@ Kuhn은 이러한 대중적 이미지는 실제 과학 활동과 다르다.
         argmin: "\\operatorname*{arg\,min}"
       },
       tags: "ams",
-      strict: false
+      strict: false, 
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

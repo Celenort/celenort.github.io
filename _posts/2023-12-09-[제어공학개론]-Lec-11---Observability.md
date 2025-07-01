@@ -217,7 +217,9 @@ Controllability에서의 증명의 dual이 Observability에서 성립하므로, 
         argmin: "\\operatorname*{arg\,min}"
       },
       tags: "ams",
-      strict: false
+      strict: false, 
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

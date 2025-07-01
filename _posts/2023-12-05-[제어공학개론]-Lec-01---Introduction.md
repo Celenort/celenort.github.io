@@ -221,7 +221,9 @@ Dynamic system과 Static system은 간단히 설명하자면 Memory의 여부에
         argmin: "\\operatorname*{arg\,min}"
       },
       tags: "ams",
-      strict: false
+      strict: false, 
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

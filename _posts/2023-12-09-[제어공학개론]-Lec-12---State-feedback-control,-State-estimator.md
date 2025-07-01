@@ -526,7 +526,9 @@ Jordan form으로 나타냈을 떄 eigenvalue들이 중첩된 경우, Jordan blo
         argmin: "\\operatorname*{arg\,min}"
       },
       tags: "ams",
-      strict: false
+      strict: false, 
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

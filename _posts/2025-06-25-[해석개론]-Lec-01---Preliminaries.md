@@ -149,11 +149,9 @@ $$
 
 	(1) $A, B \subset X$
 
+	- $f(A\cup B) = f(A) \cup f(B)$
 
-	$f(A\cup B) = f(A) \cup f(B)$
-
-
-	proof )
+		proof )
 
 
 {% raw %}
@@ -162,9 +160,9 @@ $$
 $$
 {% endraw %}
 
-- $f(A\cap B) \subset f(A)  \cap f(B) \ (*)$
+	- $f(A\cap B) \subset f(A)  \cap f(B) \ (*)$
 
-	proof )
+		proof )
 
 
 {% raw %}
@@ -174,13 +172,13 @@ $$
 {% endraw %}
 
 
-eg) $f(x)=x^2 : \R \rightarrow \R$
+	eg) $f(x)=x^2 : \R \rightarrow \R$
 
 
-	$A=[0, 1]$, $B = [-1,0]$, then $A\cap B = \{0\}$, 
+		$A=[0, 1]$, $B = [-1,0]$, then $A\cap B = \{0\}$, 
 
 
-	$f(A\cap B) = \{0\} \in f(A)\cap f(B) =[0,1]$
+		$f(A\cap B) = \{0\} \in f(A)\cap f(B) =[0,1]$
 
 
 	(2) $A, B \subset Y$
@@ -214,7 +212,7 @@ $$
 {% endraw %}
 
 
-	Injective property used at the third line
+Injective property used at the third line
 
 
 (2) $f : \text{ surjective } B\subseteq Y$
@@ -259,17 +257,17 @@ $$
 	(4) If $g \circ f$ is surjective, then so is $g$
 
 
-		Take $z \in Z$. Then we have $x \in X$ s.t. $z=(g\circ f) (x)$
+	Take $z \in Z$. Then we have $x \in X$ s.t. $z=(g\circ f) (x)$
 
 
-		Now $z=g(f(x))$, $f(x) \in Y$
+	Now $z=g(f(x))$, $f(x) \in Y$
 
 
 	→ Therefore, if $g\circ f$ is bijective, $g$ : surjective, $f$ : injective
 
 - Ex 4) f : $X \rightarrow Y, g : Y \rightarrow Z, A\sube Z$
 
-	          $(g\circ f)^{-1} (A) = f^{-1}(g^{-1}(A))$
+	$(g\circ f)^{-1} (A) = f^{-1}(g^{-1}(A))$
 
 
 {% raw %}
@@ -292,10 +290,17 @@ Every nonempty subset of $\N$ has a least element
 - Thm. (Principle of Mathemital Induction)
 
 Let $S \sube \N$
-Supp. (i) $0 \in S$
 
-	           (ii) $\forall k \in \N, k\in S \Rightarrow k+1\in S$
-	Then $S=\N$
+	Supp. 
+
+
+		(i) $0 \in S$
+
+
+		(ii) $\forall k \in \N, k\in S \Rightarrow k+1\in S$
+
+
+		Then $S=\N$
 
 
 	(pf) Let $A = \N \smallsetminus S$. Supp. $A\neq \emptyset$
@@ -308,14 +313,21 @@ Supp. (i) $0 \in S$
 
 
 		Now $m-1\in \N \smallsetminus A$ by minimality of $m$
+
+
 		By (ii), $m\in S \ (*)$
 
 
 	Cor. Let $p(n)$ be a statement about $n\in \N$
 
 
-		Supp. (i) $p(0)$ is true.
-		           (ii) $\forall k \in \N$.  $p(k) \Rightarrow p(k+1)$
+		Supp. 
+
+
+			(i) $p(0)$ is true.
+
+
+			(ii) $\forall k \in \N$.  $p(k) \Rightarrow p(k+1)$
 
 
 		Then $p(n)$ is true for all $n\in \N$
@@ -381,10 +393,14 @@ Supp. (i) $0 \in S$
 
 
 		Supp. $n$ is prime. Then $n$ has a prime divisor $n$. 
+
+
 		Supp. not. Then $n=ab$ for some $a\in \Z>1, b\in Z>1$.
 
 
 		Now, $1<a<n$ so by inductive hypothesis. a has a prime divisor.
+
+
 		Hence, $n$ has a prime divisor.
 
 
@@ -466,7 +482,9 @@ $$
         argmin: "\\operatorname*{arg\,min}"
       },
       tags: "ams",
-      strict: false
+      strict: false, 
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

@@ -129,7 +129,9 @@ where $\eta^t$ learning rate, $\Phi({\bf x}) = \nabla_{\bf x} \Psi$, $A^{*}$ is 
         argmin: "\\operatorname*{arg\,min}"
       },
       tags: "ams",
-      strict: false
+      strict: false, 
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

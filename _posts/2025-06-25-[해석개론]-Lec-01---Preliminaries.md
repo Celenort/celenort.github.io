@@ -149,7 +149,9 @@ $$
 
 	(1) $A, B \subset X$
 
-	- $f(A\cup B) = f(A) \cup f(B)$
+
+	$f(A\cup B) = f(A) \cup f(B)$
+
 
 		proof )
 
@@ -160,7 +162,12 @@ $$
 $$
 {% endraw %}
 
-	- $f(A\cap B) \subset f(A)  \cap f(B) \ (*)$
+
+ 
+
+
+	$f(A\cap B) \subset f(A)  \cap f(B) \ (*)$
+
 
 		proof )
 
@@ -172,13 +179,19 @@ $$
 {% endraw %}
 
 
+ 
+
+
 	eg) $f(x)=x^2 : \R \rightarrow \R$
 
 
-		$A=[0, 1]$, $B = [-1,0]$, then $A\cap B = \{0\}$, 
+	$A=[0, 1]$, $B = [-1,0]$, then $A\cap B = \{0\}$, 
 
 
-		$f(A\cap B) = \{0\} \in f(A)\cap f(B) =[0,1]$
+	$f(A\cap B) = \{0\} \in f(A)\cap f(B) =[0,1]$
+
+
+	 
 
 
 	(2) $A, B \subset Y$
@@ -252,6 +265,9 @@ $$
 	\end{aligned}
 $$
 {% endraw %}
+
+
+ 
 
 
 	(4) If $g \circ f$ is surjective, then so is $g$
@@ -349,10 +365,13 @@ Let $S \sube \N$
 		Let $S \sube \N$
 
 
-		Supp. (i) $0 \in S$
+		Supp. 
 
 
-			     (ii) $\forall k \in \N$.  $\{0, \cdots, k \} \sube S \Rightarrow k+1 \in S$
+		(i) $0 \in S$
+
+
+		(ii) $\forall k \in \N$.  $\{0, \cdots, k \} \sube S \Rightarrow k+1 \in S$
 
 
 		Then $S=\N$
@@ -389,7 +408,10 @@ Let $S \sube \N$
 	(1) $2$ has a prime diviser $2$. (base case)
 
 
-	(2) Take $n\in\Z>2$, Supp. the statement holds for all positive integers $\geq 2$ less than $n$. (Induction Hypothesis)
+	(2) Take $n\in\Z>2$, Supp. the statement holds for all positive integers $\geq 2$ less than $n$.
+
+
+	(Induction Hypothesis)
 
 
 		Supp. $n$ is prime. Then $n$ has a prime divisor $n$. 
@@ -450,7 +472,7 @@ $$
 {% endraw %}
 
 
-	→ Uniform / contiunous 차이 발생이유, $\exists y$가 $x$의 의존 여부
+→ Uniform / contiunous 차이 발생이유, $\exists y$가 $x$의 의존 여부
 
 - Negation rule
 

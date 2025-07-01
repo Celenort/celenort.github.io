@@ -4,6 +4,35 @@ const moment = require("moment");
 const path = require("path");
 const fs = require("fs");
 const axios = require("axios");
+
+const mathjaxScript = `
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}"
+      },
+      tags: "ams",
+      strict: false
+    },
+    options: {
+      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+`;
 // or
 // import {NotionToMarkdown} from "notion-to-md";
 
@@ -220,9 +249,8 @@ pin: ${pin}
       }
     );
     //edited_md = convertInlineEquationToBlock(edited_md);
-
-    //writing to file
-    fs.writeFile(path.join(root, ftitle), fm + edited_md, (err) => {
+    const finalContent = fm + edited_md + "\n" + mathjaxScript;
+    fs.writeFile(path.join(root, ftitle), finalContent, (err) => {
       if (err) {
         console.log(err);
       }

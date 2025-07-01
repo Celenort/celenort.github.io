@@ -252,9 +252,15 @@ $$
 	$\therefore \ x=f(a)\in f(f^{-1}(B))$
 
 - Ex 3) $f : X \rightarrow Y, g: Y\rightarrow Z$
-(1) If $f, g$ are injective, then so is $g \circ f$
-(2) If $f, g$ are surjective, then so is $g \circ f$
-(3) If $g \circ f$ is injective, then so is $f$
+
+	(1) If $f, g$ are injective, then so is $g \circ f$
+
+
+	(2) If $f, g$ are surjective, then so is $g \circ f$
+
+
+	(3) If $g \circ f$ is injective, then so is $f$
+
 
 {% raw %}
 $$
@@ -267,7 +273,7 @@ $$
 {% endraw %}
 
 
- 
+.
 
 
 	(4) If $g \circ f$ is surjective, then so is $g$
@@ -305,7 +311,8 @@ $$
 Every nonempty subset of $\N$ has a least element
 - Thm. (Principle of Mathemital Induction)
 
-Let $S \sube \N$
+	Let $S \sube \N$
+
 
 	Supp. 
 
@@ -316,7 +323,7 @@ Let $S \sube \N$
 		(ii) $\forall k \in \N, k\in S \Rightarrow k+1\in S$
 
 
-		Then $S=\N$
+	Then $S=\N$
 
 
 	(pf) Let $A = \N \smallsetminus S$. Supp. $A\neq \emptyset$
@@ -411,19 +418,19 @@ Let $S \sube \N$
 	(2) Take $n\in\Z>2$, Supp. the statement holds for all positive integers $\geq 2$ less than $n$.
 
 
-	(Induction Hypothesis)
+		(Induction Hypothesis)
 
 
-		Supp. $n$ is prime. Then $n$ has a prime divisor $n$. 
+	Supp. $n$ is prime. Then $n$ has a prime divisor $n$. 
 
 
-		Supp. not. Then $n=ab$ for some $a\in \Z>1, b\in Z>1$.
+	Supp. not. Then $n=ab$ for some $a\in \Z>1, b\in Z>1$.
 
 
-		Now, $1<a<n$ so by inductive hypothesis. a has a prime divisor.
+	Now, $1<a<n$ so by inductive hypothesis. a has a prime divisor.
 
 
-		Hence, $n$ has a prime divisor.
+	Hence, $n$ has a prime divisor.
 
 
 ### Basic Logic
@@ -479,8 +486,8 @@ $$
 {% raw %}
 $$
 \sim ( \forall x, p(x)) = \exists x, \sim p(x) \\
-	\sim (\exists x, p(x)) = \forall x, \sim p(x) \\
-	\sim (\forall x \exists y, p(x,y)) = \exists x \forall y \sim p(x,y)
+\sim (\exists x, p(x)) = \forall x, \sim p(x) \\
+\sim (\forall x \exists y, p(x,y)) = \exists x \forall y \sim p(x,y)
 $$
 {% endraw %}
 
@@ -502,8 +509,8 @@ $$
         codom: "\\operatorname{codom}",
         argmax: "\\operatorname*{arg\,max}",
         argmin: "\\operatorname*{arg\,min}",
-        "\\{": "\\lbrace",
-        "\\}": "\\rbrace",
+        "\{": "\\lbrace",
+        "\}": "\\rbrace",
         sub: "\\subset",
         sup: "\\supset",
         sube: "\\subseteq",

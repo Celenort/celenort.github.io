@@ -2,12 +2,15 @@
 layout: post
 date: 2025-06-25
 title: "[해석개론] Lec 01 - Preliminaries"
-categories: [Lecture, 해석개론, ]
+categories: [Lecture, 해석개론]
 media_subpath: /assets/img/2025-06-25-[해석개론]-Lec-01---Preliminaries.md
 
 description:  
 pin: false
 ---
+
+
+hw
 
 
 ## Sets and Functions
@@ -31,12 +34,13 @@ $$
 $$
 {% endraw %}
 
+
 - Notation.
 
-	$\mathbb{N} = \{0, 1,  2, \cdots \}$
+	$\mathbb{N} = \lbrace0, 1,  2, \cdots \rbrace$
 
 
-	$\mathbb{Z}= \{\cdots , -2, -1, 0, 1, 2, \cdots \}$
+	$\mathbb{Z}= \lbrace\cdots , -2, -1, 0, 1, 2, \cdots \rbrace$
 
 
 	$\mathbb{Q} = \{m/n : m, n\in \Z, n\neq 0 \}$
@@ -153,7 +157,7 @@ $$
 	$f(A\cup B) = f(A) \cup f(B)$
 
 
-		proof )
+	proof )
 
 
 {% raw %}
@@ -163,13 +167,11 @@ $$
 {% endraw %}
 
 
- 
+
+$f(A\cap B) \subset f(A)  \cap f(B) \ (*)$
 
 
-	$f(A\cap B) \subset f(A)  \cap f(B) \ (*)$
-
-
-		proof )
+	proof )
 
 
 {% raw %}
@@ -177,6 +179,7 @@ $$
 \begin{aligned} x\in f(A\cap B) & \Leftrightarrow x=f(y) \text{ for some } y\in A\cap B \\ & \Leftrightarrow x= f(y), y\in A, y\in B \text{ for some } y \\ &\Rightarrow x\in f(A), x\in f(B) \\ &\Leftrightarrow x\in f(A)\cap f(B)\end{aligned}
 $$
 {% endraw %}
+
 
 
  
@@ -225,6 +228,7 @@ $$
 {% endraw %}
 
 
+
 Injective property used at the third line
 
 
@@ -243,6 +247,7 @@ $$
 	\end{aligned}
 $$
 {% endraw %}
+
 
 - $B \sub f(f^{-1}(B))$
 
@@ -271,6 +276,7 @@ $$
 	\end{aligned}
 $$
 {% endraw %}
+
 
 
 .
@@ -303,6 +309,7 @@ $$
 	\end{aligned}
 $$
 {% endraw %}
+
 
 
 ### Mathematical Induction
@@ -479,6 +486,7 @@ $$
 {% endraw %}
 
 
+
 → Uniform / contiunous 차이 발생이유, $\exists y$가 $x$의 의존 여부
 
 - Negation rule
@@ -490,6 +498,7 @@ $$
 \sim (\forall x \exists y, p(x,y)) = \exists x \forall y \sim p(x,y)
 $$
 {% endraw %}
+
 
 
 

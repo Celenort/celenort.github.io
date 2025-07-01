@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[머신러닝] Chap 4 - Decision tree"
-tags: [Decision tree, ]
-categories: [Lecture, Machine Learning, ]
+tags: [Decision tree]
+categories: [Lecture, Machine Learning]
 media_subpath: /assets/img/2023-12-09-[머신러닝]-Chap-4---Decision-tree.md
 image:
   path: 0.png
@@ -63,6 +63,7 @@ $$
 $$
 {% endraw %}
 
+
 - $f$ : Number of features
 - Entropy 의미 : 클 수록 잘 분배되어 있는 것. 0에 가까울 수록 한쪽으로 편향되어 있다는 뜻 (작을 수록 순도가 높음)
 - Gain of splitting samples by feature
@@ -72,6 +73,7 @@ $$
 Gain(D, feature) = Ent(D)-\sum_{k=1}^{V}\frac{\vert D^v\vert}{\vert D \vert} Ent(D^v)
 $$
 {% endraw %}
+
 
 - 모든 남아있는 feature에 대한 information gain을 계산하여 가장 gain이 높은 (엔트로피를 효과적으로 줄일 수 있는) feature를 택하여 분할을 진행
 
@@ -88,6 +90,7 @@ $$
 $$
 {% endraw %}
 
+
 - Gain ratio is biased towards features with fewer possible values : possible values 수가 많은 경우 (like case of ID) 저평가함.
 
 ### Split by GINI Index
@@ -103,6 +106,7 @@ $$
 $$
 {% endraw %}
 
+
 - Gini index가 가장 작은 feature를 고름
 
 {% raw %}
@@ -110,6 +114,7 @@ $$
 \text{Gini index}(D,a) = \sum_{v=1}^V \frac{\vert D^v\vert}{\vert D \vert} Gini(D^v)
 $$
 {% endraw %}
+
 
 
 ## 4.3 Pruning
@@ -151,6 +156,7 @@ T_a = \{\frac{a^i+a^{i+1}}{2}\} \text{ for 1 }\leq i \leq n-1
 $$
 {% endraw %}
 
+
 - Midpoint $T_a$가 사용되며, 이를 이용해 구한 Gain은 다음과 같음.
 
 {% raw %}
@@ -158,6 +164,7 @@ $$
 \begin{aligned}Gain(D,a) =& \  \max_{t\in T_a} Gain(D,a,t) \\ =& \  max\ Ent(D)-\sum_{\lambda\in\{-,+\}} \frac{\vert D_t^\lambda\vert}{\vert D\vert} Ent(D_t^\lambda)\end{aligned}
 $$
 {% endraw %}
+
 
 - a라는 property를 이용해 D를 분리할 때 t라는 새로운 변수까지 고려해서 gain이 최대화되는 t를 선택하겠다는 뜻.
 
@@ -179,6 +186,7 @@ $$
 $$
 {% endraw %}
 
+
 - $\tilde p_k$ : 결측값 없는 데이터 중 label : $k$의 비율 (weighted)
 
 {% raw %}
@@ -187,6 +195,7 @@ $$
 $$
 {% endraw %}
 
+
 - $\tilde r_v$ : 결측값 없는 데이터 중 feature $a$에 대해서 $v$의 값을 갖는 비율 (weighted)
 
 {% raw %}
@@ -194,6 +203,7 @@ $$
 \tilde r_v = \frac{\sum_{x\in \tilde D^v} w_x}{\sum_{x\in \tilde D} w_x}
 $$
 {% endraw %}
+
 
 - Gain, Entropy의 재정의
 
@@ -204,6 +214,7 @@ $$
 	\end{aligned}
 $$
 {% endraw %}
+
 
 - 만약 feature $a$로 분할 했는데 특정 sample $x$의 feature $a$가 결측값이라면, $x$를 모든 하위 node에 동일하게 귀속시키는 대신 그 가중치(weight)을 $w_x$에서 $\tilde r_v w_x$로 update한다.
 

@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 13 - Stability"
-tags: [Control, System, Lyapnov stability, BIBO stability, ]
-categories: [Lecture, 제어공학개론, ]
+tags: [Control, System, Lyapnov stability, BIBO stability]
+categories: [Lecture, 제어공학개론]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-13---Stability.md
 
 description: 제어공학의 안정성에 대한 강의에서는 리ャプノ프 안정성, BIBO 안정성, 그리고 리ャ프노프 방정식의 중요성을 다루고 있다. 리ャ프노프 안정성은 특정 평형점에 대한 안정성을 평가하며, 비선형 시스템에서는 여러 평형점에 대해 각각의 안정성을 고려해야 한다. BIBO 안정성은 입력이 유계할 때 출력도 유계해야 함을 의미하며, 이는 A 행렬이 Hurwitz일 때 성립한다.
@@ -32,11 +32,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 y = Cx+Du
 $$
 {% endraw %}
+
 
 
 or $G(s)$ (Input, output이 defined 된)
@@ -71,6 +73,7 @@ $$
 {% endraw %}
 
 
+
 Definition of Attractive Point :
 
 
@@ -79,6 +82,7 @@ $$
 x^* \text{is attractive if } \lim\limits_{t\rightarrow \infty } x(t) = x^*
 $$
 {% endraw %}
+
 
 
 Stable + Attractive Equiv Point : **Asymptotically Stable**
@@ -116,6 +120,7 @@ $$
 {% endraw %}
 
 
+
 Linear equation이며, $P$는 symmetric(positive definite이려면) 하므로 미지수는 3개.
 
 
@@ -135,6 +140,7 @@ $$
 {% endraw %}
 
 
+
 state transition matrix V (orthonormal matrix)를 고려
 
 
@@ -145,6 +151,7 @@ $$
 {% endraw %}
 
 
+
 이를 평면에 그려보면 ellipse 형태를 띄게 됨.
 
 
@@ -153,6 +160,7 @@ $$
 \begin{aligned}\frac{d}{dt} V(x(t)) &< 0 \\&= \dot{x}^T P x + x^T P \dot{x} \\&= x^T A^T P x + x^T P A x \\&= x^T (A^T P + PA) x = -x^T Q x < 0 \\\because & \, Q > 0\end{aligned}
 $$
 {% endraw %}
+
 
 
 즉 $V(x)$는 결국 0이 됨.
@@ -171,6 +179,7 @@ $$
 {% endraw %}
 
 
+
 어차피 Arbitary $Q>0$에 대한 것이므로 $Q$를 지우고 다음과 같이 표현가능
 
 
@@ -179,6 +188,7 @@ $$
 A^T P + PA <0
 $$
 {% endraw %}
+
 
 
 (Negative Definite)
@@ -203,6 +213,7 @@ $$
 {% endraw %}
 
 
+
 Principle eigenvalue at matrix exponent
 
 
@@ -211,6 +222,7 @@ $$
 \begin{aligned}||e^{At}|| &\leq k e^{\lambda_{\text{max}} t} \\k &\neq 1 \\\lambda_{\text{max}} &= \max \text{Re}(\lambda_i(A))\end{aligned}
 $$
 {% endraw %}
+
 
 
 

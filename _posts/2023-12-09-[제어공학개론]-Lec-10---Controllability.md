@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 10 - Controllability"
-tags: [Control, System, Stability, Controllability, Gramian, PBH test, Pole-zero cancelation, ]
-categories: [Lecture, 제어공학개론, ]
+tags: [Control, System, Stability, Controllability, Gramian, PBH test, Pole-zero cancelation]
+categories: [Lecture, 제어공학개론]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-10---Controllability.md
 
 description: 제어공학 개론 강의에서는 시스템의 안정성, 제어 가능성, 제어 가능성 그라미안, 그리고 다양한 제어 가능성 정의를 다루고 있다. 시스템의 제어 가능성은 A, B 행렬에 의해 결정되며, 특정 초기 상태에서 원하는 목표 상태로 도달할 수 있는지를 통해 판단된다. 또한, 제어 가능성 행렬과 그라미안의 관계, PBH 테스트, 그리고 칼만 분해를 통해 제어 가능성과 관측 가능성을 분석하는 방법도 설명된다.
@@ -39,11 +39,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \text{such that }X(T)=X^T
 $$
 {% endraw %}
+
 
 
 유한 시간 내에 Initial condition에 무관하게(어디에 있든지) 원하는 $X^T$(target state)로 갈 수 있다면 controllable함.
@@ -55,6 +57,7 @@ $$
 \dot x_1 = u, \dot x_2 = 0
 $$
 {% endraw %}
+
 
 
 	$x_2$에는 손도 댈 수 없으므로, uncontrollable
@@ -69,6 +72,7 @@ $$
 	\end{aligned}
 $$
 {% endraw %}
+
 
 
 	각각이 $u$가 들어가므로 controllable해 보이지만, $x_1-x_2$에 $u$ term이 들어있지 않아 구분이 안됨
@@ -87,6 +91,7 @@ $$
 {% endraw %}
 
 
+
 arbitary $x^T$와, $x(0)$에 대해 위 식을 만족하는 $u(t)$를 찾아야 함.
 
 
@@ -98,6 +103,7 @@ $$
 x^T-e^{At}x(0) = \int_0^t e^{A(t-\tau)}B u(\tau) d \tau
 $$
 {% endraw %}
+
 
 
 문제를 바꾸어 생각하자. 어떠한 함수 $u(t)$가 주어지면, $\Re^n$ 공간을 Mapping 할 수 있나? (즉 onto matrix인가?)
@@ -113,6 +119,7 @@ $$
 {% endraw %}
 
 
+
 ### Controllability Gramian
 
 
@@ -121,6 +128,7 @@ $$
 \int_0^T \bigg[e^{A(t-\tau)}BB^Te^{A^T(t-\tau)}d\tau\bigg]
 $$
 {% endraw %}
+
 
 
 $e^{A(t-\tau)}B$
@@ -139,6 +147,7 @@ $$
 v^* = G^{-1}(x^T-e^{At}x(0))
 $$
 {% endraw %}
+
 
 
 을 선택할 경우 모든 입력,target에 대해서 가능하다.
@@ -160,6 +169,7 @@ $$
 {% endraw %}
 
 
+
 claim : $R(L) = R(W) =span(col(W))$ s. t. $W:=\displaystyle\int_0^T F(t)F^T(t)dt$
 
 
@@ -171,6 +181,7 @@ $$
 \begin{aligned}&x\in R(W), \exists z \text{ s.t. } x=Wz \\ &\text{Let } u(t) = F^T(t)z, \\ &L(u(t)) = \int_0^TF(t)F^T(t)dt \cdot z = Wz= x\end{aligned}
 $$
 {% endraw %}
+
 
 
 Proof 2 : $R(L) \rightarrow R(W)$
@@ -192,6 +203,7 @@ $$
 {% endraw %}
 
 
+
 ## Different definitions of controllability
 
 - Original definition of controllability
@@ -203,11 +215,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \text{such that }X(T)=X^T
 $$
 {% endraw %}
+
 
 - Controllability by controllability gramian
 
@@ -218,11 +232,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \text{then, } u(t) = B^T e^{A^T(t-\tau)}G(T)^{-1} \big(x^T(t)-e^{At}x(0)\big)
 $$
 {% endraw %}
+
 
 - Controllability matrix
 
@@ -233,11 +249,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 C = \bigg[B\  AB\ A^2B\ \cdots\ A^{n-1}B\bigg]\text{ has full row rank}
 $$
 {% endraw %}
+
 
 
 Matlab에서 `ctrb` 함수로 호출 가능.
@@ -249,6 +267,7 @@ $$
 rank\bigg[\lambda I - A \ B\bigg]=n \text{ for } \forall \lambda \in \text{e.v. of A}
 $$
 {% endraw %}
+
 
 
 ## 서로 다른 controllability 확인법이 필요충분 조건임을 확인
@@ -294,6 +313,7 @@ $$
 {% endraw %}
 
 
+
 by Cayley-Hemilton’s theorem,
 
 
@@ -304,6 +324,7 @@ $$
 	&x^TG(T)x = 0, G(T) \text{ is not Positive Definite matrix}\end{aligned}
 $$
 {% endraw %}
+
 
 1. Prove $rank(C^T) = n\rightarrow G(T)>0$
 
@@ -321,6 +342,7 @@ $$
 {% endraw %}
 
 
+
 모든 $\tau$에 대해서 $0$을 만족하므로, 이를 $\tau$에 대해 미분한 식 또한 $0$임.
 
 
@@ -331,6 +353,7 @@ $$
 {% endraw %}
 
 
+
 위 식을 column 별로 stack 하면,
 
 
@@ -339,6 +362,7 @@ $$
 x^T \bigg(B\ AB\ \cdots \ A^{n-1} B\bigg) = 0\rightarrow x^T C = 0
 $$
 {% endraw %}
+
 
 
 ### PBH Test, Controllability Matrix C
@@ -359,6 +383,7 @@ $$
 {% endraw %}
 
 
+
 $v^T$ is left eigenvector of A
 
 
@@ -367,6 +392,7 @@ $$
 v^TC=\bigg[v^TB \ v^TAB \ \cdots \ v^T A^{n-1}B\bigg] = \bigg[\bf 0 \ 0 \ \cdots \ 0\bigg] = {\bf 0}
 $$
 {% endraw %}
+
 
 1. Prove $rank[\lambda I - A \ B]=n \rightarrow rank(C^T) = n$
 
@@ -383,6 +409,7 @@ $$
 {% endraw %}
 
 
+
 이 때의 Basis들은 orthonormal이라고 가정하자. (항상 이러한 basis를 k개 잡을 수 있다. $rank(C^T)=k$이면)
 
 
@@ -392,6 +419,7 @@ $$
 	\\ &V := \bigg[v_1, v_2\cdots, v_k , (v_{k+1}, \cdots, v_n)\bigg]= \bigg[[v_A], [v_B]\bigg]\end{aligned}
 $$
 {% endraw %}
+
 
 
 Spanning set of C와 Nullspace에서 나온 basis를 구분하자.이렇게 만들어진 $V^T$로의 Simularity transform을 한 후 각각을 구분하여 Differential Eqn에 대입.
@@ -404,11 +432,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 V^T = V^{-1}, x = V\begin{bmatrix}x_A \\ x_B\end{bmatrix} = V_Ax_A +V_Bx_B
 $$
 {% endraw %}
+
 
 
 $\dot x = Ax+Bu$에 대입
@@ -428,11 +458,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \dot x_B=0+v_B^TAv_Bx_B + 0
 $$
 {% endraw %}
+
 
 
 Matrix 형태로 식을 정리해 보면,
@@ -445,11 +477,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \begin{pmatrix}\dot x_A \\ \dot x_B\end{pmatrix} = \begin{bmatrix}v_A^TAv_A & v_A^T Av_B \\ 0 & v_B^TAv_B\end{bmatrix}\begin{bmatrix}x_A \\ x_B \end{bmatrix} + \begin{bmatrix}x_A^TB \\ 0 \end{bmatrix} u
 $$
 {% endraw %}
+
 
 
 $x_A$ : controllable state, $x_B$ : uncontrollable state
@@ -463,6 +497,7 @@ $$
 rank\bigg[\lambda I - \begin{bmatrix}v_A^TAv_A & v_A^T Av_B \\ 0 & v_B^TAv_B\end{bmatrix} \ \begin{bmatrix}x_A^TB \\ 0 \end{bmatrix}\bigg]<n
 $$
 {% endraw %}
+
 
 
 	when $\lambda \in \text{e.v. of }v_B^TAv_B, \ rank<n$
@@ -495,6 +530,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \begin{aligned}
@@ -504,11 +540,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 z_1 = g^T x, z_2 = g^TAx, \cdots z_n = g^T A^{n-1}x
 $$
 {% endraw %}
+
 
 
 {% raw %}
@@ -518,12 +556,14 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \begin{aligned}\because g^T B &= 0 \text{ by definition of g} \\
 \dot z_n = g^T A^n x + g^T A^{n-1}Bu &= \sum_{i=0}^{n-1}a_i A^i z_i + 1\cdot u\end{aligned}
 $$
 {% endraw %}
+
 
 
 (Cayley-Hamilton Theorem, $A^n$을 $I, A, \cdots A^{n-1}$의 Characteristic Polynomial로 나타낼 수 있음.)
@@ -546,6 +586,7 @@ $$
 {% endraw %}
 
 
+
 A가 $n\times n$ matrix이면 Transfer function에서의 Denom의 차수인 $n$과 같다.
 Kalman Decomposition을 통해 Controllable Part-Uncontrollable part를 나누면,
 
@@ -561,6 +602,7 @@ $$
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 Uncontrollable part cancels out.
@@ -581,6 +623,7 @@ $$
 {% endraw %}
 
 
+
 오직 $A_{co}$만이 Transfer function의 pole이 됨을 알 수 있음.
 
 - 만약 Transfer function에 같은 term을 분자, 분모에 곱해서 강제로 Controllable c.f. 만들면 어떻게 되는가..
@@ -593,6 +636,7 @@ $$
 \text{T.F. } = \frac{2}{s-2} = \frac{2(s-1)}{(s-1)(s-2)}
 $$
 {% endraw %}
+
 
 
 이 때의 우변의 T.F.를 CCF로 표현가능하나, 이 때 $s-1$에 해당하는 cancel된 pole-zero는 observability에 의한 것임을 알 수 있다.
@@ -615,6 +659,7 @@ sX(s) -x(0) &= Ax(s)
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 에서 $x(0)$ term을 남겨두고 T.F.를 구한다면 Initial value의 효과도 고려는 가능하다.

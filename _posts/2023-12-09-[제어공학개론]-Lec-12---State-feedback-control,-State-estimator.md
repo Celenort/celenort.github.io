@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 12 - State feedback control, State estimator"
-tags: [Control, System, State-feedback controller, State observer, Tracking control, ]
-categories: [Lecture, 제어공학개론, ]
+tags: [Control, System, State-feedback controller, State observer, Tracking control]
+categories: [Lecture, 제어공학개론]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-12---State-feedback-control,-State-estimator.md
 image:
   path: 0.png
@@ -44,6 +44,7 @@ $$
 {% endraw %}
 
 
+
 controllability canonical form으로 변환시켜 생각해 봤을 때
 
 
@@ -58,6 +59,7 @@ $$
 {% endraw %}
 
 
+
 Last row of equation above
 
 
@@ -66,6 +68,7 @@ $$
 \dot z_n = \begin{bmatrix}-a_1-k_1 & -a_2-k_2 & \cdots & -a_n-k_n\end{bmatrix}
 $$
 {% endraw %}
+
 
 
 즉 state에 적절한 gain $K$를 곱한 feedback control은 characteristic polynomial을 바꾸는 효과가 있음.
@@ -84,6 +87,7 @@ $$
 {% endraw %}
 
 
+
 let $\Delta(s)$ be decired C.P with desired roots
 사실 s에는 실수(혹은 complex number)가 들어가야 할 것 같지만, $A-Bk$라는 matrix를 잠시 넣을 수 있다고 해보자.
 
@@ -93,6 +97,7 @@ $$
 \Delta(A-BK) = (A-BK)^n + a_{n-1}(A-BK)^{n-1} + \cdots a_1 (A-BK) + a_0 I = 0
 $$
 {% endraw %}
+
 
 
 =0이 성립하는 이유는 desired c.p로 $\Delta$를 설정하였기 때문에, Cayley-Hamilton theorem에 의해서 성립.
@@ -107,6 +112,7 @@ $$
 {% endraw %}
 
 
+
 $A^{n-1}B$ term은 단 한번, $(A-BK)^{n-1}$에서 등장하며, 이 때의 계수는 $K$이다.
 
 
@@ -115,6 +121,7 @@ $$
 \therefore K = \begin{bmatrix}0 & 0 & \cdots & 1\end{bmatrix} \begin{bmatrix}* \\ * \\ \vdots \\ K\end{bmatrix} = \begin{bmatrix}0 & 0 & \cdots & 1\end{bmatrix} C^{-1} \Delta A
 $$
 {% endraw %}
+
 
 
 ## State-Observer (Estimator)
@@ -130,6 +137,7 @@ $$
 {% endraw %}
 
 
+
 System copy + 보정 term
 
 
@@ -138,6 +146,7 @@ $$
 \hat x \rightarrow x \text{ as }  t\rightarrow \infty
 $$
 {% endraw %}
+
 
 
 state-feedback controller와 함께 적용되는데, 이 때 $u=-Kx$의 $x$를 모르므로, $u=-K\hat x$로 함.
@@ -161,6 +170,7 @@ $$
 {% endraw %}
 
 
+
 $A-LC$의 eigenvector를 잘 설정하는 방법으로, state observer의 $L$을 알아낼 수 있음.
 
 
@@ -175,6 +185,7 @@ L &= \text{acker}(A^T, C^T)^T
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 ### Output Feedback Controller
@@ -194,6 +205,7 @@ $$
 {% endraw %}
 
 
+
 now consider Transfer function of Controller
 
 
@@ -209,6 +221,7 @@ C(s) &= -K(sI-(A-BK-LC)^{-1})L
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 ### Linearization of two cart example
@@ -227,6 +240,7 @@ $$
 {% endraw %}
 
 
+
 여기서 $x_T$는 Target state를 의미한다.
 
 
@@ -237,6 +251,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \text{Let} \  u = r^* + v
@@ -244,11 +259,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \dot e = Ae+Ax^T + Bu
 $$
 {% endraw %}
+
 
 
 $r^*$ 은 reference input, 혹은 Steady state input
@@ -264,11 +281,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \text{if } x^T \text{ is valid state}
 $$
 {% endraw %}
+
 
 
 왜냐하면 $\dot x = Ax^T + Br^* = 0$ in steady-state
@@ -281,6 +300,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \dot e = Ax+B(r^*+v) = Ae+Bv
@@ -288,11 +308,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 u = r^*+v=-k(x-x^T)=-Kx+Kx^T
 $$
 {% endraw %}
+
 
 
 즉 reference를 제외한 순수한 $x$에 $k$를 곱한 $v$를 new input으로 보고 $A-Bk$를 해결하는 것과 동일해짐.
@@ -310,6 +332,7 @@ $$
 u = r^*+v=-k(x-x^T)=-Kx+Kx^T
 $$
 {% endraw %}
+
 
 
 즉 bias term처럼 생긴 $Kx^T$를 입력해주어야 한다.
@@ -331,6 +354,7 @@ $$
 {% endraw %}
 
 
+
 eg) X measurable, 위의 goal을 만족하는 $u$를 찾아야 한다.
 
 
@@ -344,6 +368,7 @@ $$
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 그 다음으로 문제를 풀려면, 어떻게 해야할까?
@@ -361,6 +386,7 @@ e(t) &= x(t) - x^*(t) \\
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 ### Desired output -> desired state
@@ -382,6 +408,7 @@ $$
 {% endraw %}
 
 
+
 즉 출력을 $n$번 미분하게 되면, 입력값을 알 수 있음.
 
 
@@ -396,6 +423,7 @@ $$
 y(t) =: x_1(t)
 $$
 {% endraw %}
+
 
 
 우리의 희망사항은 $y(t) = y^*(t)$
@@ -417,6 +445,7 @@ $$
 {% endraw %}
 
 
+
 그러면,
 
 
@@ -425,6 +454,7 @@ $$
 y^{(n)}(t) = \dot x_n(t)
 $$
 {% endraw %}
+
 
 
 위처럼 정의하는 순간, $1\sim n-1$번째까지의 행은 원래의 Controllability canonical form을 따라가게 되고, 어쨌든 $y$로 만든 것도 system을 설명해야하므로 마지막 줄은 필연적으로 원래 system의 C.P를 담고 있어야 함.
@@ -437,6 +467,7 @@ $$
 {% endraw %}
 
 
+
 즉 이를 만족시키기 위해서는 desired $x$를 다음과 같이 두면 됨.
 
 
@@ -447,6 +478,7 @@ $$
 {% endraw %}
 
 
+
 또한, 여기서 desired output이 valid한지를 확인하기 위해 마지막 식에 $u^*$를 넣으면,
 
 
@@ -455,6 +487,7 @@ $$
 -a_0 x_1^* -a_1 x_2^* + \cdots -a_{n-1}x_n^* +bu^*=y^{(n)}(t)
 $$
 {% endraw %}
+
 
 
 이를 위해서는 desired output은 $n$번 미분 가능한 $C^n$ smooth curve이면서, system의 relative degree는 $n$이어야 함.
@@ -474,6 +507,7 @@ $$
 {% endraw %}
 
 
+
 Let's consider closed loop system, considering real and estimated state ($2n$차 system)
 
 
@@ -485,6 +519,7 @@ $$
 
 
 
+
 $(x, \hat x) \rightarrow (x ,\hat x - x)$ 의 translation
 
 
@@ -493,6 +528,7 @@ $$
 \begin{pmatrix}\dot x \\ \dot {e}\end{pmatrix} = \begin{pmatrix}A-BK & * \\ 0 & A-LC\end{pmatrix}\begin{pmatrix} x \\ e\end{pmatrix}
 $$
 {% endraw %}
+
 
 
 $\dot x$의 eigenvalue는 $K$에 의해 설정된 eigenvalue임을 알 수 있음.

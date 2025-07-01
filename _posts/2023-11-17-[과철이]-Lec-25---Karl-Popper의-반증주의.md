@@ -2,8 +2,8 @@
 layout: post
 date: 2023-11-17
 title: "[과철이] Lec 25 - Karl Popper의 반증주의"
-tags: [철학, 칼 포퍼, 반증주의, 연역법, ]
-categories: [Lecture, 과학의 철학적 이해, ]
+tags: [철학, 칼 포퍼, 반증주의, 연역법]
+categories: [Lecture, 과학의 철학적 이해]
 media_subpath: /assets/img/2023-11-17-[과철이]-Lec-25---Karl-Popper의-반증주의.md
 image:
   path: 0.png

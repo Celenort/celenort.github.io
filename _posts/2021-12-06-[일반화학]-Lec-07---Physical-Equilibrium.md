@@ -2,8 +2,8 @@
 layout: post
 date: 2021-12-06
 title: "[일반화학] Lec 07 - Physical Equilibrium"
-tags: [화학, GIbbs free energy, ]
-categories: [Lecture, 일반화학, ]
+tags: [화학, GIbbs free energy]
+categories: [Lecture, 일반화학]
 media_subpath: /assets/img/2021-12-06-[일반화학]-Lec-07---Physical-Equilibrium.md
 image:
   path: 0.png
@@ -29,6 +29,7 @@ G(P) = G^0 + RTln({P\over P_0})
 $$
 {% endraw %}
 
+
 - Solid, V(p)=const, G naught + V(pf-pi)로 표현
 
 ### Clapeyron equation
@@ -42,6 +43,7 @@ $$
 {% endraw %}
 
 
+
 ### 증기압 (vapor pressure)
 
 
@@ -50,6 +52,7 @@ $$
 \Delta G_{vap} = G_{gas}-G_{liq} = G_{gas}^0 +RTln({P\over P_0})-G_{liq}^0
 $$
 {% endraw %}
+
 
 - at equibrilium, _ΔG_ = 0
 
@@ -60,11 +63,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \Delta G_{vap} = \Delta H_{vap} - T\Delta S_{vap}
 $$
 {% endraw %}
+
 
 - naught : 1atm이므로 T1, P1 → T2, P2로 바뀔 때
 
@@ -73,6 +78,7 @@ $$
 ln({P_2 \over P_1}) = (-{\Delta H_{vap}\over RT_2}+{\Delta S_{vap}^0 \over R})-(-{\Delta H_{vap}\over RT_1}+{\Delta S_{vap}^0 \over R})=-{\Delta H_{vap}\over R}({1\over T_2}-{1\over T_1})
 $$
 {% endraw %}
+
 
 - Vaporization : Molecular structure, Temperature에는 영향 받으나 Amount에는 Independent
 
@@ -102,6 +108,7 @@ $$
 {% endraw %}
 
 
+
 ![1](/1.png)
 
 
@@ -114,6 +121,7 @@ $$
 P_B = {n_B\over n_A+n_B} k_B=\chi_B k_B
 $$
 {% endraw %}
+
 
 
 

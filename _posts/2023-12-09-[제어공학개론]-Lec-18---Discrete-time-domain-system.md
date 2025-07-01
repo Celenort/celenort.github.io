@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 18 - Discrete time domain system"
-tags: [Control, System, DT system, ]
-categories: [Lecture, 제어공학개론, ]
+tags: [Control, System, DT system]
+categories: [Lecture, 제어공학개론]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-18---Discrete-time-domain-system.md
 image:
   path: 0.png
@@ -59,6 +59,7 @@ $$
 {% endraw %}
 
 
+
 ### State-space representation of discrete system
 
 
@@ -70,6 +71,7 @@ $$
 \begin{aligned}\bar{x}[K+1] &= \bar{A} \bar{x}[K] + \bar{B} \bar{u}[K] + W[K] \\\bar{y}[K] &= \bar{C} \bar{x}[K] + \bar{D} \bar{u}[K]\end{aligned}
 $$
 {% endraw %}
+
 
 
 일종의 MDP(Markov decision process)
@@ -91,6 +93,7 @@ $$
 {% endraw %}
 
 
+
 when using ZOH, $u(s)$ is constant for one period.
 
 
@@ -99,6 +102,7 @@ $$
 \begin{aligned}\bar{x}[1] &= e^{A T_s} x[0] + \int_0^{T_s} e^{A(T_s - s)} \, ds \, \bar{u}[0] \\\bar{A} &= e^{A T_s}, \quad \bar{B} = \int_0^{T_s} e^{A(T_s - s)} \, ds \\\bar{C} &= C, \quad \bar{D} = D\end{aligned}
 $$
 {% endraw %}
+
 
 
 (단순히 sampling하는 것은 값을 바꾸지 않으므로.)
@@ -121,6 +125,7 @@ $$
 \begin{aligned}\bar{x}[K] &= \bar{A}^K \bar{x}[0] \\A^K &= (T J T^{-1})^K = T J^K T^{-1}\end{aligned}
 $$
 {% endraw %}
+
 
 
 

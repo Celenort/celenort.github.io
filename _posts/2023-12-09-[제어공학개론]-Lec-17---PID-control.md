@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 17 - PID control"
-tags: [Control, System, PID control, Saturation, Anti-windup, ]
-categories: [Lecture, 제어공학개론, ]
+tags: [Control, System, PID control, Saturation, Anti-windup]
+categories: [Lecture, 제어공학개론]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-17---PID-control.md
 image:
   path: 0.png
@@ -44,6 +44,7 @@ $$
 {% endraw %}
 
 
+
 대입하면,
 
 
@@ -52,6 +53,7 @@ $$
 \dot x = -(1+k_p)x+1
 $$
 {% endraw %}
+
 
 
 원래의 $x=1$ 에서 converge한다면, feedback 후에는
@@ -76,6 +78,7 @@ $$
 {% endraw %}
 
 
+
 2차 시스템 + P controller를 설치한 경우
 
 
@@ -89,6 +92,7 @@ $$
 {% endraw %}
 
 
+
 $k_p$가 커질 수록 $r, y$의 차이는 작아지며 steady state error는 작아짐을 알 수 있음.
 
 
@@ -99,6 +103,7 @@ $$
 {% endraw %}
 
 
+
 한편 Feedback system의 새로운 Natural freq $w_n^*$
 
 
@@ -107,6 +112,7 @@ $$
 w_n^{*2}=w_n^2+k_p
 $$
 {% endraw %}
+
 
 
 이므로 Natural Frequency도 소폭 커짐을 알 수 있음. 즉 Pole이 살짝 더 negative real part 값이 커지므로 system의 응답속도가 빨라지는(rise time이 줄어드는) 것도 설명 가능.
@@ -137,6 +143,7 @@ $$
 {% endraw %}
 
 
+
 for 2nd order system. $k_d, k_p$만으로 2nd order system의 pole의 eigenvealue를 바꿀 수 있음.
 
 
@@ -160,6 +167,7 @@ $$
 U(s) = k_d s E(s)
 $$
 {% endraw %}
+
 
 
 미분기에 해당하는 $s$를 실제 소자들로 구현하기 어렵기 때문에
@@ -214,6 +222,7 @@ $$
 {% endraw %}
 
 
+
 Example
 
 
@@ -224,6 +233,7 @@ $$
 {% endraw %}
 
 
+
 Equibrilium point
 
 
@@ -232,6 +242,7 @@ $$
 \begin{aligned}x_1^* &= r, \quad z^* = \frac{d}{k_I} \\x_1 &\rightarrow r, \quad r - y = r - x_1 = e \rightarrow 0 \\\text{when } z &= z^* = \frac{d}{k_I}, \quad \dot{x}_1 = 0\end{aligned}
 $$
 {% endraw %}
+
 
 
 Physical, Cyber system의 경계는 어디인가
@@ -269,6 +280,7 @@ $$
 u(t) = k_I \int_0^t \bigg(e(s) + k_a \left(u(s)-u_c(s)\right)\bigg)ds
 $$
 {% endraw %}
+
 
 
 $u_c(s)$ : command (Integrator, 다른 제어기들을 거쳐 나온 출력)

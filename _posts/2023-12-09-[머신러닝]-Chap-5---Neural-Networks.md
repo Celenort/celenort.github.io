@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[머신러닝] Chap 5 - Neural Networks"
-tags: [Perceptron, ]
-categories: [Lecture, Machine Learning, ]
+tags: [Perceptron]
+categories: [Lecture, Machine Learning]
 media_subpath: /assets/img/2023-12-09-[머신러닝]-Chap-5---Neural-Networks.md
 image:
   path: 0.png
@@ -70,6 +70,7 @@ w_i &\leftarrow w_i + \Delta w_i \\
 $$
 {% endraw %}
 
+
 - (Single layer) Perceptron은 Linearly seperable problem에 대한 학습만이 가능. if XOR (00, 11 = 0, 01,11=1) 같은 회로는 하나의 선으로 분류가 불가능하므로 학습이 안됨 (but it is guaranteed to converge for linear seperable ploblems)
 - 제한적 학습 능력
 
@@ -96,6 +97,7 @@ $$
 {% endraw %}
 
 
+
 ![2](/2.png)
 
 - Consider a single sample $\bf x_i$ to be trained at Multi-layered network with 1 hidden layer
@@ -109,6 +111,7 @@ b_i &= f(\alpha_h - \gamma_h) \\ \alpha_h &= \sum_{i=1}^d v_{ih} x_i
 $$
 {% endraw %}
 
+
 - Ouptut layer의 output $\hat y_j^k$ :
 
 {% raw %}
@@ -118,6 +121,7 @@ $$
 $$
 {% endraw %}
 
+
 - Data index $k$, ($\bf x_k$) 에 대한 sum of squared(?) error :
 
 {% raw %}
@@ -125,6 +129,7 @@ $$
 E_k = \frac{1}{2} \sum_{j=1}^l (\hat y_j^k - y_j^k)^2
 $$
 {% endraw %}
+
 
 - Parameters to tune : $v_{ih}, w_{hj}, \theta_j, \gamma_h$
 - How to tune : update $v$ with delta v
@@ -134,6 +139,7 @@ $$
 \Delta w_hj = -\eta \frac{\partial E_k}{\partial w_hj}
 $$
 {% endraw %}
+
 
 - 각 변수에 대한 Delta는 $E_k$를 object function으로 보고 $E_k$를 내가 tune 하고자 하는 변수에 대한 편미분을 한 다음 학습률 $\eta$와 -1을 곱한 값으로 Delta를 정하여 업데이트 한다. (기울기는 증가하는 방향이 아니라 줄어드는 방향쪽으로 찾아야 Minimum을 찾으니까 -를 붙임.) 이 때 계산은 계산 순서에 따라 chain rule을 적용,
 - object function에는 sigmoid function을 사용했다고 가정. $\hat y_j^k$나, hidden layer의 output을 미분할 때에는 weighted sum이 아닌, function안에 weighted sum이 들어간 형태를 사용하게 되므로 function 자체의 derivative를 취해주는 과정, 속미분 과정 잊지말아야.
@@ -151,6 +157,7 @@ $$
 E = \frac{1}{m} \sum_{k=1}^m E_k
 $$
 {% endraw %}
+
 
 - Tunes parameter less frequently.
 - 은닉층 뉴런 개수는 trial-and-error밖에 없음

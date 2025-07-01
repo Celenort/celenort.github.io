@@ -2,8 +2,8 @@
 layout: post
 date: 2022-09-14
 title: "[동역학] Tangential, Normal components of moving particle"
-tags: [동역학, ]
-categories: [Lecture, 기타, ]
+tags: [동역학]
+categories: [Lecture, 기타]
 media_subpath: /assets/img/2022-09-14-[동역학]-Tangential,-Normal-components-of-moving-particle.md
 image:
   path: 0.png
@@ -23,6 +23,7 @@ $$
 $$
 {% endraw %}
 
+
 - 증명을 위해, $d\vec{e_t} / d\theta$ 를 구해보자.
 - $\Delta \theta$ 동안 tangential 방향의 unit vector를 이용해 삼각형을 만들면, 두 벡터의 차가 $\Delta e_t$임.
 
@@ -33,6 +34,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \lim\limits_{\Delta \theta \rightarrow 0} {\Delta \vec{e_t} \over \Delta \theta} = \lim\limits_{\Delta \theta \rightarrow 0} {\sin{\Delta \theta / 2} \over \Delta \theta / 2} \vec{e_n} = \vec{e_n}
@@ -40,11 +42,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \vec {e_n} = {d\vec{e_t}\over d\theta}
 $$
 {% endraw %}
+
 
 
 Proof :
@@ -57,11 +61,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 = {dv\over dt} \vec{e_t} + v {d\vec{e_t} \over d\theta} {d\theta \over ds} {ds \over dt}
 $$
 {% endraw %}
+
 
 
 by geometrical insight,
@@ -74,6 +80,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \vec{a}= {dv\over dt} \vec{e_t} + v \cdot {1\over \rho} \cdot v \cdot \vec{e_n}
@@ -81,11 +88,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \therefore \vec{a} = {dv \over dt} \vec{e_t} + {v^2\over \rho} \vec{e_n}
 $$
 {% endraw %}
+
 
 
 ### Tangential and Normal compoenets in 3-dimension
@@ -98,11 +107,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \vec{e_b} : \text{binormal}
 $$
 {% endraw %}
+
 
 
 ## Polar Coordinate x, v, a
@@ -117,11 +128,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \boldsymbol{x} = r\vec{e_r}
 $$
 {% endraw %}
+
 
 
 {% raw %}
@@ -131,6 +144,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \dot{e_r} = {d\vec{e_r} \over d \theta} {d\theta \over dt} = \dot{\theta} \cdot \vec{e_\theta}
@@ -138,11 +152,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \therefore \boldsymbol{v} = \dot{r} \vec{e_r} + r\dot{\theta} \vec{e_\theta}
 $$
 {% endraw %}
+
 
 
 같은 방법으로,
@@ -155,11 +171,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 = \ddot{r} e_r + \dot{r}\dot{\theta} e_\theta + \dot{r} \dot{\theta} e_\theta + r\ddot{\theta}e_\theta - r{\dot{\theta} }^2 e_r \\ = (\ddot{r}-r{\dot{\theta } }^2 )e_r + (r\ddot{\theta}+2\dot{r}\dot{\theta}) e_\theta
 $$
 {% endraw %}
+
 
 
 ![0](/0.png)

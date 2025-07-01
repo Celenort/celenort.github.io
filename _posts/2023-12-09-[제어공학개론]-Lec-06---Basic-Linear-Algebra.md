@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 06 - Basic Linear Algebra"
-tags: [Linear Algebra, ]
-categories: [Lecture, 제어공학개론, ]
+tags: [Linear Algebra]
+categories: [Lecture, 제어공학개론]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-06---Basic-Linear-Algebra.md
 
 description: 제어공학개론 강의에서는 행렬-벡터 및 행렬-행렬 곱셈의 전개, 선형 방정식의 해의 존재성과 유일성, 행렬의 역수, 슈르 여인수, 고유값 및 고유벡터, 대각화 조건 등을 다루며, 특히 대각화가 가능한 조건과 제어 이론에서의 응용에 대해 설명합니다.
@@ -30,11 +30,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \begin{aligned}x^TB &= \begin{bmatrix}- & x & -\end{bmatrix}\begin{bmatrix}- & b_{1\cdot} & - \\ - & b_{2\cdot} & -\\ & \vdots &  \\- & b_{n\cdot} & -\end{bmatrix}  \\ &= x_1^T  \begin{bmatrix}- & b_{1\cdot} & - \end{bmatrix} + \cdots + x_n^T \begin{bmatrix}- & b_{n\cdot} & -\end{bmatrix}\end{aligned}
 $$
 {% endraw %}
+
 
 
 ## Row/Columnwise expansion of matrix-matrix multiplication
@@ -53,6 +55,7 @@ $$
 {% endraw %}
 
 
+
 ## two ways to describe Vectorspace
 
 - 제한형
@@ -63,6 +66,7 @@ $$
 $$
 {% endraw %}
 
+
 - 생성형
 
 {% raw %}
@@ -70,6 +74,7 @@ $$
 \{span{\bigg[\begin{bmatrix}1 \\ 0\\ 0\end{bmatrix}, \begin{bmatrix}0 \\ 1\\ 0\end{bmatrix}, \begin{bmatrix}0 \\0\\ 1\end{bmatrix}\bigg]}\}
 $$
 {% endraw %}
+
 
 
 ## solve Ax=b (linear equation)
@@ -83,6 +88,7 @@ $$
 $$
 {% endraw %}
 
+
 - 해의 유일성 : A의 nullspace가 공집합인 경우
 
 {% raw %}
@@ -90,6 +96,7 @@ $$
 N(A) = 0, N(A):=\{x|Ax=0\}
 $$
 {% endraw %}
+
 
 - proof)
 
@@ -101,6 +108,7 @@ $$
 	\end{aligned}
 $$
 {% endraw %}
+
 
 
 ### "full column/row rank"
@@ -125,6 +133,7 @@ $$
 {% endraw %}
 
 
+
 solving N linear equations
 
 
@@ -139,6 +148,7 @@ $$
 {% endraw %}
 
 
+
 A의 Inverse의 column들 역시 선형 독립이어야 함.
 
 
@@ -151,6 +161,7 @@ A(c_1x_1+c_2x_2 + \cdots +c_nx_n) = 0, \text{then,} \\
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 Inverse의 존재성은 $det(A)\neq0$
@@ -174,6 +185,7 @@ A, B &= \text{rectangular matrix} \\
 $$
 {% endraw %}
 
+
 - ABCD에서 A가 invertible하면 D로 가고 이후 시계방향.
 - D가 invertible하면, A로 가고 이후 시계방향
 
@@ -187,6 +199,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \lambda, x = \text{(eigenvalue, eigenvector)}
@@ -194,11 +207,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \begin{aligned} (\lambda I - A) x &= 0 \\ det(\lambda I - A)&= 0\end{aligned}
 $$
 {% endraw %}
+
 
 - $\lambda$에 대한 Characteristic polynomial.
 - C.P의 coeff가 Real이면 eigenvalue도 real or complex conjugate
@@ -213,6 +228,7 @@ $$
 	\end{aligned}
 $$
 {% endraw %}
+
 
 
 ### Companion form
@@ -234,6 +250,7 @@ $$
 v_i \in N(\lambda_i I -A)
 $$
 {% endraw %}
+
 
 
 does $v_i$ s are independent?
@@ -258,6 +275,7 @@ v_i, v_j \in N(\lambda_i I -A), \text{s.t.} v_i \neq kv_j
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 ### Algebraic Multiplicity > Geometric Multiplicity
@@ -291,6 +309,7 @@ $$
 {% endraw %}
 
 
+
 Diagonalization of A
 
 
@@ -302,6 +321,7 @@ $$
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 if $v$ are invertible (all columns of v are linearly independent,)
@@ -317,6 +337,7 @@ $$
 {% endraw %}
 
 
+
 Application to control theory :
 
 
@@ -329,6 +350,7 @@ $$
 \end{aligned}
 $$
 {% endraw %}
+
 
 
 since $D$ is diagonal matrix, easy to calculate $e^{At}$ (scalar for each row)

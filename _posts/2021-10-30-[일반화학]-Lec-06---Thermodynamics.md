@@ -2,8 +2,8 @@
 layout: post
 date: 2021-10-30
 title: "[일반화학] Lec 06 - Thermodynamics"
-tags: [화학, 단열과정, 엔탈피, 헤스의 법칙, 엔트로피, 카르노 기관, ]
-categories: [Lecture, 일반화학, ]
+tags: [화학, 단열과정, 엔탈피, 헤스의 법칙, 엔트로피, 카르노 기관]
+categories: [Lecture, 일반화학]
 media_subpath: /assets/img/2021-10-30-[일반화학]-Lec-06---Thermodynamics.md
 image:
   path: 0.png
@@ -26,6 +26,7 @@ $$
 T = ({2\over 3R}) (KE)
 $$
 {% endraw %}
+
 
 - 온도가 높으면 높을 수록 에너지가 큼.
 - 온도 : Random kinetic energy의 한가지 측정방식
@@ -104,6 +105,7 @@ $$
 {% endraw %}
 
 
+
 ### For gas expansion
 
 - $\vert w\vert_{rev} > \vert w\vert_{irrev}$
@@ -138,6 +140,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 T^{C_v\over R} V = const
@@ -145,11 +148,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 PV^{5/3} = const
 $$
 {% endraw %}
+
 
 - 단열이라고 볼 수도 있지만, 외부에서 열이 들어오기 전에 빠르게 팽창하여 온도가 낮다고 볼 수 있음
 - 등온, 즉 PV=const보다 부피 팽창률이 더 작음.
@@ -208,6 +213,7 @@ $$
 $$
 {% endraw %}
 
+
 - Reversible Heat여야만 함. - 실제 반응이 irreversible 이어도 reversible한 경로를 선택
 - 주위(Surr) 의 엔트로피를 구할 때는 실제 경로(irreversible) 이용.
 - 전체(Universe)의 엔트로피 : reverisble할 때의 univ의 Entropy 동일, irreversible : univ의 Entropy 증가. ($\vert q_{rev}\vert > \vert q_{irr}\vert$)
@@ -218,6 +224,7 @@ $$
 \Delta S_{surr} = {-q_{surr}\over T}
 $$
 {% endraw %}
+
 
 - $q_{surr} = q_{sys} $  sys : 가역이라는 조건은 없음.
 - 계의 엔트로피 변화는 가역이든 비가역이든 가역경로에 대한 q를 쓰므로 동일 / 주위의 엔트로피 변화는 반응경로에 따라 달라짐
@@ -232,6 +239,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \Delta S_{surr} = -nRln({V_f\over V_i})
@@ -239,11 +247,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \Delta S_{tot} = 0
 $$
 {% endraw %}
+
 
 
 ### Irriversible Isothermal Expansion
@@ -256,6 +266,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \Delta S_{surr} =\int _{V_i}^{V_f}{dq_{sur, irrev}\over T} = {-w_{surr, irrev}\over T} ={w_{sys, irrev}\over T} ={-P_{ext} \Delta V\over T}=0
@@ -263,11 +274,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \Delta S_{tot} = nRln({V_f\over V_i})>0
 $$
 {% endraw %}
+
 
 
 ### Reversible Entropy change in Changing T
@@ -280,11 +293,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \Delta S_{sys} = n\int {T_i}^{T_f} {C{v, p}dT\over T} = nC_{v, p}ln({T_f \over T_i})
 $$
 {% endraw %}
+
 
 
 ### Clausius inequality
@@ -299,6 +314,7 @@ $$
 $$
 {% endraw %}
 
+
 - 내가 주위에 일을 해줌 → -값 증가 → 절댓값으로 크기 증가
 - 등온이 아니어도 상관은 없지만, 이 때 준 열만큼 일을 하기 때문에 $q_{sys,rev}>q_{sys,irrev}$를 만족함.
 - $ΔS_{sys}$의 정의에 의해
@@ -310,11 +326,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \Delta S_{sys}\geq {q_{sys}\over T}
 $$
 {% endraw %}
+
 
 
 ### 3rd law of thermodynamics
@@ -331,6 +349,7 @@ $$
 $$
 {% endraw %}
 
+
 - 특정 T에서 어떤 물질의 엔트로피 구하기
 
 	![5](/5.png)
@@ -343,11 +362,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 S_{sys}(T) = n \int _{0}^T {C_p (T)dT\over T}
 $$
 {% endraw %}
+
 
 
 ### Carnot 기관의 열 효율 (최대 효율)
@@ -359,6 +380,7 @@ $$
 $$
 {% endraw %}
 
+
 - Heat이 온도 높은 곳에서 낮은 곳으로 이동하는 것은 Spontaneous Process
 - 
 
@@ -369,6 +391,7 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \Delta S_{univ} = \Delta S_{sys} + \Delta S_{surr} = \Delta S_{sys} + {|q_c|\over T_c} = |q_{h, rev}|({T_h-T_c\over T_cT_h})-{|w_{rev}|\over T_c}=0
@@ -376,11 +399,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 |w_{rev}| = |w_{max}| = |q_{h, rev}|({T_h-T_c\over T_h})
 $$
 {% endraw %}
+
 
 - efficiency : $1-{T_c\over T_h}$
 
@@ -393,6 +418,7 @@ $$
 \Delta S_{univ} = \Delta S_{sys}+\Delta S_{surr} = \Delta S_{sys}-{\Delta H_{sys}\over T} = -{(\Delta H_{sys}-T\Delta S_{sys})\over T}
 $$
 {% endraw %}
+
 
 - at constant T, P
 - Gibbs Free Energy : $G_{sys} = G = H_{sys} − TS_{sys}$
@@ -410,11 +436,13 @@ $$
 {% endraw %}
 
 
+
 {% raw %}
 $$
 \Delta G_{reaction} = \Delta G_{rxn}^0 + RTln({(P_c)^c (P_d)^d\over (P_a)^a (P_b)^b}) = \Delta G_{rxn}^0 + RTln(Q)
 $$
 {% endraw %}
+
 
 - Q = K, _ΔGrxn_ = 0 이므로, $lnK = (-{\Delta G_{rxn}^0\over RT})$
 

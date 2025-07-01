@@ -2,8 +2,8 @@
 layout: post
 date: 2024-06-30
 title: "[신호처리] Lec 03 - Convolution"
-tags: [FastMRI, Convolution, ]
-categories: [Lecture, 신호처리(FastMRI), ]
+tags: [FastMRI, Convolution]
+categories: [Lecture, 신호처리(FastMRI)]
 media_subpath: /assets/img/2024-06-30-[신호처리]-Lec-03---Convolution.md
 image:
   path: 0.png
@@ -31,6 +31,7 @@ $$
 \begin{aligned} x(n)& \rightarrow \lbrack h(n)\rbrack \rightarrow y(n)\\ y(n) &= \sum x(k) h(n-k)\\ &=x(n) * h(n)\end{aligned}
 $$
 {% endraw %}
+
 
 - 신기한 점은, System에 대한 Transfer function을 정의하지 않고, Dirac's Delta의 정의를 이용한 Impulse response만으로 convolution 관계를 얻어낼 수 있다는 것이다.
 	- What convolution actually do ?

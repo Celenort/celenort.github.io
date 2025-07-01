@@ -2,8 +2,8 @@
 layout: post
 date: 2021-10-23
 title: "[일반화학] Lec 01 - Fundamentals"
-tags: [화학, ]
-categories: [Lecture, 일반화학, ]
+tags: [화학]
+categories: [Lecture, 일반화학]
 media_subpath: /assets/img/2021-10-23-[일반화학]-Lec-01---Fundamentals.md
 image:
   path: 0.png
@@ -65,6 +65,7 @@ $$
 {}^Z _AX
 $$
 {% endraw %}
+
 
 - A : Mass number, 중성자 + 양성자의 수
 - z : Atomic number, 양성자 수

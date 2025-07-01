@@ -2,8 +2,8 @@
 layout: post
 date: 2023-12-09
 title: "[제어공학개론] Lec 16 - Nyquist plot"
-tags: [Control, System, Nyquist plot, Gain/Phase margain, Lead/lag compansator, Loop gain, ]
-categories: [Lecture, 제어공학개론, ]
+tags: [Control, System, Nyquist plot, Gain/Phase margain, Lead/lag compansator, Loop gain]
+categories: [Lecture, 제어공학개론]
 media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-16---Nyquist-plot.md
 image:
   path: 0.png
@@ -96,6 +96,7 @@ $$
 {% endraw %}
 
 
+
 Let's Draw Nyquist plot of $1+G(s)$
 
 
@@ -110,6 +111,7 @@ $$
 1+G(s) = \frac{D(s)+N(s)}{D(s)}
 $$
 {% endraw %}
+
 
 
 Denominator of $1+G(s)$ is open loop pole
@@ -282,6 +284,7 @@ $$
 {% endraw %}
 
 
+
 위의 좋은 $L(s)$의 조건으로부터, $L(s)$에 Integrator가 존재할 경우, 즉 $1/s$가 존재하면 Bode plot 상에서 왼쪽으로 갈 때 계속 위로 치솟으므로, 이것이 좋은 $G(s)$, Closed loop tranfrer function의 조건이라 할 수 있음.
 
 
@@ -304,6 +307,7 @@ $$
 {% endraw %}
 
 
+
 이로부터 알 수 있는 사실 : $C(s)$를 키우게 되면, $L(s)$도 $C(s)$가 포함되어 같이 커지므로, Noise에 의한 효과를 줄일수는 없음.
 
 
@@ -321,6 +325,7 @@ $$
 $$
 {% endraw %}
 
+
 1. PID control
 
 {% raw %}
@@ -328,6 +333,7 @@ $$
 k_p + k_i \int e(t)dt + k_d \frac{d(e)}{dt}
 $$
 {% endraw %}
+
 
 
 ## Dominent Pole
@@ -358,6 +364,7 @@ $$
 {% endraw %}
 
 
+
 입력은 unit step function이라 하자.
 
 
@@ -366,6 +373,7 @@ $$
 Y(s) = U(s)T(s)
 $$
 {% endraw %}
+
 
 
 by PFE, $y(t)= \cdots$ 로 풀수 있음.

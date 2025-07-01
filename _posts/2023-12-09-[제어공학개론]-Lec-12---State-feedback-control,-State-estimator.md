@@ -523,7 +523,13 @@ Jordan form으로 나타냈을 떄 eigenvalue들이 중첩된 경우, Jordan blo
         dom: "\\operatorname{dom}",
         codom: "\\operatorname{codom}",
         argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}"
+        argmin: "\\operatorname*{arg\,min}",
+        "\\{": "\\lbrace",
+        "\\}": "\\rbrace",
+        sub: "\\subset",
+        sup: "\\supset",
+        sube: "\\subseteq",
+        supe: "\\supseteq"
       },
       tags: "ams",
       strict: false, 

@@ -272,7 +272,13 @@ pip install matplotlib
         dom: "\\operatorname{dom}",
         codom: "\\operatorname{codom}",
         argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}"
+        argmin: "\\operatorname*{arg\,min}",
+        "\\{": "\\lbrace",
+        "\\}": "\\rbrace",
+        sub: "\\subset",
+        sup: "\\supset",
+        sube: "\\subseteq",
+        supe: "\\supseteq"
       },
       tags: "ams",
       strict: false, 

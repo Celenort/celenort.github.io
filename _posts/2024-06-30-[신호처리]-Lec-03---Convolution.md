@@ -89,7 +89,13 @@ _Convolution의 input인 두 1차원 함수가 겹침에 따라 아래쪽 plot�
         dom: "\\operatorname{dom}",
         codom: "\\operatorname{codom}",
         argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}"
+        argmin: "\\operatorname*{arg\,min}",
+        "\\{": "\\lbrace",
+        "\\}": "\\rbrace",
+        sub: "\\subset",
+        sup: "\\supset",
+        sube: "\\subseteq",
+        supe: "\\supseteq"
       },
       tags: "ams",
       strict: false, 

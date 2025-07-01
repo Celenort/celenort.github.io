@@ -86,3 +86,31 @@ $$
 - 원자의 평균 질량은 자연에서의 분포 비율을 곱하여 가중평균으로 나타냄.
 - ex) Carbon의 평균 질량은 98.89% x 12 + 1.11% x 13.0034 = 12.01 amu
 - ex2) Br : $^{79}Br : 50.7\%  \ ^{81}Br : 49.3\%$ 이므로 Br의 원자량은 80이라고 함.
+
+
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        R: "\\mathbb{R}",
+        N: "\\mathbb{N}",
+        Z: "\\mathbb{Z}",
+        Q: "\\mathbb{Q}",
+        C: "\\mathbb{C}",
+        proj: "\\operatorname{proj}",
+        rank: "\\operatorname{rank}",
+        im: "\\operatorname{im}",
+        dom: "\\operatorname{dom}",
+        codom: "\\operatorname{codom}",
+        argmax: "\\operatorname*{arg\,max}",
+        argmin: "\\operatorname*{arg\,min}"
+      },
+      tags: "ams",
+      strict: false
+    },
+    options: {
+      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

@@ -4,6 +4,7 @@ const moment = require("moment");
 const path = require("path");
 const fs = require("fs");
 const axios = require("axios");
+const crypto = require("crypto");
 
 const mathjaxScript = `
 <script>
@@ -41,8 +42,6 @@ const mathjaxScript = `
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 `;
-// or
-// import {NotionToMarkdown} from "notion-to-md";
 
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
@@ -54,12 +53,14 @@ function escapeCodeBlock(body) {
     return "\n{% raw %}\n```" + htmlBlock.trim() + "\n```\n{% endraw %}\n";
   });
 }
+
 function convertInlineEquationToBlock(body) {
   const regex = /\n^[ \t]*\$\$\n([\s\S]*?)\n[ \t]*\$\$\n/gm;
   return body.replace(regex, function (match, equation) {
-    return "\n{% raw %}\n$$\n" + equation.trim() + "\n$$\n{% endraw %}\n";
+    return "\n{% raw %}\n$$\n" + equation.trim() + "\n$$\n{% endraw %}\n\n";
   });
 }
+
 function undefinedReplacer(body) {
   const regex = /undefined- ([\s\S]*?)/g;
   return body.replace(regex, function (match, block) {
@@ -67,31 +68,13 @@ function undefinedReplacer(body) {
   });
 }
 
-function replaceTitleOutsideRawBlocks(body) {
-  const rawBlocks = [];
-  const placeholder = "%%RAW_BLOCK%%";
-  body = body.replace(/{% raw %}[\s\S]*?{% endraw %}/g, (match) => {
-    rawBlocks.push(match);
-    return placeholder;
-  });
-
-  const regex = /\n#[^\n]+\n/g;
-  body = body.replace(regex, function (match) {
-    return "\n" + match.replace("\n#", "\n##");
-  });
-
-  rawBlocks.forEach(block => {
-    body = body.replace(placeholder, block);
-  });
-
-  return body;
+function getHash(content) {
+  return crypto.createHash("sha256").update(content).digest("hex");
 }
 
-// passing notion client to the option
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
 (async () => {
-  // ensure directory exists
   const root = "_posts";
   fs.mkdirSync(root, { recursive: true });
 
@@ -124,84 +107,54 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 
   for (const r of pages) {
     const id = r.id;
-    // date
     let date = moment(r.created_time).format("YYYY-MM-DD");
     let pdate = r.properties?.["날짜"]?.["date"]?.["start"];
-    if (pdate) {
-      date = moment(pdate).format("YYYY-MM-DD");
-    }
-    // title
+    if (pdate) date = moment(pdate).format("YYYY-MM-DD");
+
     let title = id;
     let ptitle = r.properties?.["게시물"]?.["title"];
-    if (ptitle?.length > 0) {
-      title = ptitle[0]?.["plain_text"];
-    }
-    //desc
+    if (ptitle?.length > 0) title = ptitle[0]?.["plain_text"];
+
     let desc = " ";
     let pdesc = r.properties?.["description"]?.["rich_text"];
-    if (pdesc?.length > 0) {
-      desc = pdesc[0]?.["plain_text"];
-    }
-    // alt
+    if (pdesc?.length > 0) desc = pdesc[0]?.["plain_text"];
+
     let alt = " ";
     let palt = r.properties?.["alt text"]?.["rich_text"];
-    if (palt?.length > 0) {
-      alt = palt[0]?.["plain_text"];
-    }
-    //pin
+    if (palt?.length > 0) alt = palt[0]?.["plain_text"];
+
     let pin = "false";
     let ppin = r.properties?.["pin"]?.["checkbox"];
-    if(ppin) {
-      pin = "true";
-    }
-    //thumb
+    if (ppin) pin = "true";
+
     let thumb = true;
     let tthumb = r.properties?.["nothumb"]?.["checkbox"];
-    if(tthumb) {
-      thumb = false;
-    }
-    // tags
+    if (tthumb) thumb = false;
+
     let tags = [];
     let ptags = r.properties?.["태그"]?.["multi_select"];
     for (const t of ptags) {
       const n = t?.["name"];
-      if (n) {
-        tags.push(n);
-      }
+      if (n) tags.push(n);
     }
-    // categories
+
     let cats = [];
     let pcats = r.properties?.["카테고리"]?.["multi_select"];
     for (const t of pcats) {
       const n = t?.["name"];
-      if (n) {
-        cats.push(n);
-      }
+      if (n) cats.push(n);
     }
 
-    // frontmatter
     let fmtags = "";
     let fmcats = "";
-    if (tags.length > 0) {
-      fmtags += "\ntags: [";
-      for (const t of tags) {
-        fmtags += t + ", ";
-      }
-      fmtags += "]";
-    }
-    if (cats.length > 0) {
-      fmcats += "\ncategories: [";
-      for (const t of cats) {
-        fmcats += t + ", ";
-      }
-      fmcats += "]";
-    }
+    if (tags.length > 0) fmtags = `\ntags: [${tags.join(", ")}]`;
+    if (cats.length > 0) fmcats = `\ncategories: [${cats.join(", ")}]`;
+
     const ftitle = `${date}-${title.replaceAll(" ", "-")}.md`;
     const mediadir = path.join("/assets/img", ftitle);
-    let imagefm=``;
-    if (thumb) {
-      imagefm=`image:\n  path: 0.png\n  alt: ${alt}`;
-    }
+    let imagefm = "";
+    if (thumb) imagefm = `image:\n  path: 0.png\n  alt: ${alt}`;
+
     const fm = `---
 layout: post
 date: ${date}
@@ -213,55 +166,56 @@ pin: ${pin}
 ---
 
 `;
+
     const mdblocks = await n2m.pageToMarkdown(id);
     let md = n2m.toMarkdownString(mdblocks)["parent"];
-    if (md === "") {
-      continue;
-    }
+    if (md === "") continue;
+
     md = escapeCodeBlock(md);
-    //md = replaceTitleOutsideRawBlocks(md);
-    
     md = convertInlineEquationToBlock(md);
     md = undefinedReplacer(md);
 
-
     let index = 0;
-    let edited_md = md.replace(
-      /!\[(.*?)\]\((.*?)\)/g,
-      function (match, p1, p2, p3) {
-        const dirname = path.join("assets/img", ftitle);
-        if (!fs.existsSync(dirname)) {
-          fs.mkdirSync(dirname, { recursive: true });
-        }
-        const filename = path.join(dirname, `${index}.png`);
+    let edited_md = md.replace(/!\[(.*?)\]\((.*?)\)/g, function (match, p1, p2) {
+      const dirname = path.join("assets/img", ftitle);
+      if (!fs.existsSync(dirname)) fs.mkdirSync(dirname, { recursive: true });
 
-        axios({
-          method: "get",
-          url: p2,
-          responseType: "stream",
+      const filename = path.join(dirname, `${index}.png`);
+      axios({
+        method: "get",
+        url: p2,
+        responseType: "stream",
+      })
+        .then(function (response) {
+          let file = fs.createWriteStream(`${filename}`);
+          response.data.pipe(file);
         })
-          .then(function (response) {
-            let file = fs.createWriteStream(`${filename}`);
-            response.data.pipe(file);
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-        const imgname = `${index}.png`;
+        .catch(function (error) {
+          console.log(error);
+        });
 
-        let res;
-        if (p1 === "") res = "";
-        else res = `_${p1}_`;
-
-        return `![${index++}](/${imgname})${res}`; // here is the place that we must edit.
-      }
-    );
-    //edited_md = convertInlineEquationToBlock(edited_md);
-    const finalContent = fm + edited_md + "\n" + mathjaxScript;
-    fs.writeFile(path.join(root, ftitle), finalContent, (err) => {
-      if (err) {
-        console.log(err);
-      }
+      const imgname = `${index}.png`;
+      return `![${index++}](/${imgname})${p1 ? `_${p1}_` : ""}`;
     });
+
+    const finalContent = fm + edited_md + "\n" + mathjaxScript;
+    const filePath = path.join(root, ftitle);
+    let shouldWrite = true;
+
+    if (fs.existsSync(filePath)) {
+      const existingContent = fs.readFileSync(filePath, "utf8");
+      const oldHash = getHash(existingContent);
+      const newHash = getHash(finalContent);
+      if (oldHash === newHash) shouldWrite = false;
+    }
+
+    if (shouldWrite) {
+      fs.writeFile(filePath, finalContent, (err) => {
+        if (err) console.log(err);
+        else console.log(`Updated: ${ftitle}`);
+      });
+    } else {
+      console.log(`Unchanged: ${ftitle}`);
+    }
   }
 })();

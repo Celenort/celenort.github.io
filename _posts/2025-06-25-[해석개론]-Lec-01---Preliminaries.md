@@ -10,9 +10,6 @@ pin: false
 ---
 
 
-hw
-
-
 ## Sets and Functions
 
 - Definition.
@@ -171,7 +168,7 @@ $$
 $f(A\cap B) \subset f(A)  \cap f(B) \ (*)$
 
 
-	proof )
+proof )
 
 
 {% raw %}
@@ -182,10 +179,7 @@ $$
 
 
 
- 
-
-
-	eg) $f(x)=x^2 : \R \rightarrow \R$
+ eg) $f(x)=x^2 : \R \rightarrow \R$
 
 
 	$A=[0, 1]$, $B = [-1,0]$, then $A\cap B = \{0\}$, 
@@ -279,10 +273,7 @@ $$
 
 
 
-.
-
-
-	(4) If $g \circ f$ is surjective, then so is $g$
+(4) If $g \circ f$ is surjective, then so is $g$
 
 
 	Take $z \in Z$. Then we have $x \in X$ s.t. $z=(g\circ f) (x)$
@@ -324,13 +315,13 @@ Every nonempty subset of $\N$ has a least element
 	Supp. 
 
 
-		(i) $0 \in S$
+(i) $0 \in S$
 
 
-		(ii) $\forall k \in \N, k\in S \Rightarrow k+1\in S$
+(ii) $\forall k \in \N, k\in S \Rightarrow k+1\in S$
 
 
-	Then $S=\N$
+Then $S=\N$
 
 
 	(pf) Let $A = \N \smallsetminus S$. Supp. $A\neq \emptyset$

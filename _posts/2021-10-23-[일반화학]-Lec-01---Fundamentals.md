@@ -1,17 +1,3 @@
----
-layout: post
-date: 2021-10-23
-title: "[일반화학] Lec 01 - Fundamentals"
-tags: [화학]
-categories: [Lecture, 일반화학]
-media_subpath: /assets/img/2021-10-23-[일반화학]-Lec-01---Fundamentals.md
-image:
-  path: 0.png
-  alt:  
-description:  
-pin: false
----
-
 
 ## 원자 구성요소의 발견 역사
 
@@ -22,14 +8,14 @@ pin: false
 - 음극선의 전하 부호 확인 : 전기장을 인가하여 +극쪽으로 쏠림
 - CRT schematic : 음극선의 방향, B, E의 방향이 서로 직교하도록 하여 전자가 직진하도록 함.
 
-![0](/0.png)
+![](/assets/img/2021-10-23-[일반화학]-Lec-01---Fundamentals.md/0.png)
 
 
 ### 전자 전하(비전하)의 정량적 측정
 
 - 밀리컨의 기름방울 실험 : 기름방울을 분사하여 전기장이 있는 판 속에 넣음
 
-![1](/1.png)
+![](/assets/img/2021-10-23-[일반화학]-Lec-01---Fundamentals.md/1.png)
 
 - X-Ray에 의해 기름방울에 전하가 대전됨.
 - Mg=QE라는 식에 의해 모든 전하량 Q는 기본전하량 $1.602 × 10^{-19}C$의 배수라는 사실 확인함. 즉 전자의 전하량을 구함.
@@ -42,7 +28,7 @@ pin: false
 
 - 알파입자(헬륨 원자핵)을 얇은 금속박에 산란
 
-![2](/2.png)
+![](/assets/img/2021-10-23-[일반화학]-Lec-01---Fundamentals.md/2.png)
 
 - 극히 일부의 알파입자가 산란, 혹은 되튕겨져 나옴
 - 원자에서 원자핵이 차지하는 부피는 극히 적고, 밀도는 매우 크다는 사실을 알게 됨
@@ -87,35 +73,33 @@ $$
 - 원자의 평균 질량은 자연에서의 분포 비율을 곱하여 가중평균으로 나타냄.
 - ex) Carbon의 평균 질량은 98.89% x 12 + 1.11% x 13.0034 = 12.01 amu
 - ex2) Br : $^{79}Br : 50.7\%  \ ^{81}Br : 49.3\%$ 이므로 Br의 원자량은 80이라고 함.
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

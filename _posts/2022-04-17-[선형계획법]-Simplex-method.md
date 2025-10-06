@@ -1,15 +1,3 @@
----
-layout: post
-date: 2022-04-17
-title: "[선형계획법] Simplex method"
-tags: [Linear programming, Simplex method]
-categories: [Lecture, 기타]
-media_subpath: /assets/img/2022-04-17-[선형계획법]-Simplex-method.md
-
-description:  
-pin: false
----
-
 
 ### Simplex Algorithm (Linear Programming)
 
@@ -57,35 +45,33 @@ pin: false
 
 - 일단 한 단 계 진행 → 여전히 Degenerate할듯?
 - 이 상태에서 한단계 진행하되, Degenerate의 이유가 됐던 Row가 아닌 다른 Row를 Pivot 한다. (했던거 그대로 하면 거기 짱박힐듯.)
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

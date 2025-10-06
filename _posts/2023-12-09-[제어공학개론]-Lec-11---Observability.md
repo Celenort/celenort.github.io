@@ -1,15 +1,3 @@
----
-layout: post
-date: 2023-12-09
-title: "[제어공학개론] Lec 11 - Observability"
-tags: [Control, System, Observability, Gramian, PBH test]
-categories: [Lecture, 제어공학개론]
-media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-11---Observability.md
-
-description: 제어공학에서 관측 가능성은 입력 신호와 출력만으로 상태를 알아낼 수 있는지를 정의하며, 관측 가능성 행렬과 그람 행렬을 통해 시스템의 관측 가능성을 평가할 수 있다. PBH 테스트는 고유값에 대해 행렬의 랭크를 확인하여 관측 불가능한 상태를 식별하는 방법이다.
-pin: false
----
-
 
 ## 📢Precaution
 
@@ -208,35 +196,33 @@ Controllability에서의 증명의 dual이 Observability에서 성립하므로, 
 
 동일한 방법으로 Observable state, nonobservable state를 구분할 수 있음.
 
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

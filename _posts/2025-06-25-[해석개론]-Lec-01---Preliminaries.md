@@ -1,14 +1,3 @@
----
-layout: post
-date: 2025-06-25
-title: "[해석개론] Lec 01 - Preliminaries"
-categories: [Lecture, 해석개론]
-media_subpath: /assets/img/2025-06-25-[해석개론]-Lec-01---Preliminaries.md
-
-description:  
-pin: false
----
-
 
 ## Sets and Functions
 
@@ -491,35 +480,33 @@ $$
 {% endraw %}
 
 
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

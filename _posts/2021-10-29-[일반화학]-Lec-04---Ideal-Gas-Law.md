@@ -1,17 +1,3 @@
----
-layout: post
-date: 2021-10-29
-title: "[일반화학] Lec 04 - Ideal Gas Law"
-tags: [화학, Ideal gas law, Van deer Walls Equation]
-categories: [Lecture, 일반화학]
-media_subpath: /assets/img/2021-10-29-[일반화학]-Lec-04---Ideal-Gas-Law.md
-image:
-  path: 0.png
-  alt:  
-description:  
-pin: false
----
-
 
 ## Gas
 
@@ -83,7 +69,7 @@ $$
 
 - Graham’s Law of effusion : 서로다른 두 gas가 용출될 때 그 비율은 분자량이 제곱근의 비를 따름.
 
-	![0](/0.png)
+	![](/assets/img/2021-10-29-[일반화학]-Lec-04---Ideal-Gas-Law.md/0.png)
 
 
 ## Real, non ideal gases
@@ -101,7 +87,7 @@ $$
 - Z>1이다 : 동일 P, T 조건에서 V가 PV=nRT의 값보다 더 크게 나옴
 - Z<1이다 : 동일 P, T 조건에서 V가 PV=nRT의 갑보다 더 작게 나옴
 
-	![1](/1.png)
+	![](/assets/img/2021-10-29-[일반화학]-Lec-04---Ideal-Gas-Law.md/1.png)
 
 - 압력이 높아질 수록 Z는 달라짐. P가 높아질 수록 분자간의 힘, 분자 자체의 크기를 무시할 수 없게 되므로
 
@@ -134,35 +120,33 @@ $$
 
 - a : 극성 분자, 분자간의 인력이 큰 물질일 수록 큰 경향
 - b : 분자의 크기자체가 큰 분자 (크기가 큰 원자가 달린) 일 수록 큰 경향
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

@@ -1,17 +1,3 @@
----
-layout: post
-date: 2022-09-29
-title: "[전선대 Assignment] SIR model, Fractals"
-tags: [SIR model, Fractals]
-categories: [Assignment, 선형대수]
-media_subpath: /assets/img/2022-09-29-[전선대-Assignment]-SIR-model,-Fractals.md
-image:
-  path: 0.png
-  alt:  
-description:  
-pin: false
----
-
 
 ### **Problem 1 - Simulation of the SIR model**
 
@@ -112,7 +98,7 @@ plt.show()
 Output:
 
 
-![0](/0.png)
+![](/assets/img/2022-09-29-[전선대-Assignment]-SIR-model,-Fractals.md/0.png)
 
 
 ### **Problem 2 - Fractals**
@@ -229,37 +215,35 @@ plt.show()
 Output:
 
 
-![1](/1.png)
-
-
+![](/assets/img/2022-09-29-[전선대-Assignment]-SIR-model,-Fractals.md/1.png)
 
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

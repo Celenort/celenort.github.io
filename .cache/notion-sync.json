@@ -1,0 +1,485 @@
+{
+  "pages": {
+    "21dca610-d234-80dd-9faa-fa7163506aa6": {
+      "last_edited_time": "2025-07-31T05:29:00.000Z",
+      "outfile": "_posts/2025-06-25-[해석개론]-Lec-01---Preliminaries.md"
+    },
+    "1f8ca610-d234-80ec-a03c-e6c786ec490e": {
+      "last_edited_time": "2025-05-22T06:39:00.000Z",
+      "outfile": "_posts/2024-06-15-[Review]-E2E-Variational-Network.md"
+    },
+    "1f6ca610-d234-802d-a664-dd247c12e5ee": {
+      "last_edited_time": "2025-10-06T12:26:00.000Z",
+      "outfile": "_posts/2024-07-17-[Review]-Feature-Image-VarNet.md"
+    },
+    "1c4ca610-d234-8195-a30a-f6a537292b6b": {
+      "last_edited_time": "2025-07-31T06:04:00.000Z",
+      "outfile": "_posts/2023-08-02-[공수2]---Chap-10.-벡터-적분.md"
+    },
+    "1c4ca610-d234-8173-8243-cafafc1d610c": {
+      "last_edited_time": "2025-07-31T05:50:00.000Z",
+      "outfile": "_posts/2023-06-30-[공수2]---Chap-9-벡터-미분.md"
+    },
+    "1c4ca610-d234-802e-8039-e39dd0fefc78": {
+      "last_edited_time": "2025-03-28T14:44:00.000Z",
+      "outfile": "_posts/2023-08-15-[C++]-오목-게임-구현.md"
+    },
+    "1c4ca610-d234-80ad-b6fd-c1772fcbf653": {
+      "last_edited_time": "2025-03-28T14:44:00.000Z",
+      "outfile": "_posts/2022-04-17-[선형계획법]-Simplex-method.md"
+    },
+    "1c4ca610-d234-8041-b691-f002f9f5e5e7": {
+      "last_edited_time": "2025-03-28T14:49:00.000Z",
+      "outfile": "_posts/2022-09-14-[동역학]-Tangential,-Normal-components-of-moving-particle.md"
+    },
+    "1c4ca610-d234-8124-8791-ca5ddd250728": {
+      "last_edited_time": "2025-03-28T13:55:00.000Z",
+      "outfile": "_posts/2021-12-06-[일반화학]-Lec-11---Electrochemistry.md"
+    },
+    "1c4ca610-d234-81bd-b537-e099ca8daa51": {
+      "last_edited_time": "2025-03-28T13:55:00.000Z",
+      "outfile": "_posts/2021-12-06-[일반화학]-Lec-10---Solubility.md"
+    },
+    "1c4ca610-d234-8129-9574-fcc9e2a31c18": {
+      "last_edited_time": "2025-03-28T13:55:00.000Z",
+      "outfile": "_posts/2021-12-06-[일반화학]-Lec-09---Acid,-Base.md"
+    },
+    "1c4ca610-d234-8190-b736-ec0cbc8eb84d": {
+      "last_edited_time": "2025-03-28T14:46:00.000Z",
+      "outfile": "_posts/2021-12-06-[일반화학]-Lec-08---Chemical-Equilibrium.md"
+    },
+    "1c4ca610-d234-81a9-9e77-d5a3ba013196": {
+      "last_edited_time": "2025-03-28T13:55:00.000Z",
+      "outfile": "_posts/2021-12-06-[일반화학]-Lec-07---Physical-Equilibrium.md"
+    },
+    "1c4ca610-d234-8170-a470-d9d31e879dcb": {
+      "last_edited_time": "2025-03-28T13:55:00.000Z",
+      "outfile": "_posts/2021-10-30-[일반화학]-Lec-06---Thermodynamics.md"
+    },
+    "1c4ca610-d234-81cd-8b26-dac3905e6fc8": {
+      "last_edited_time": "2025-03-28T13:55:00.000Z",
+      "outfile": "_posts/2021-10-29-[일반화학]-Lec-05---Liquids,-Solids,-MO.md"
+    },
+    "1c4ca610-d234-8129-bec5-cad4406341a1": {
+      "last_edited_time": "2025-03-28T13:55:00.000Z",
+      "outfile": "_posts/2021-10-29-[일반화학]-Lec-04---Ideal-Gas-Law.md"
+    },
+    "1c4ca610-d234-81fc-ab4d-e22669dd45b7": {
+      "last_edited_time": "2025-03-28T13:55:00.000Z",
+      "outfile": "_posts/2021-10-29-[일반화학]-Lec-03---Bonding.md"
+    },
+    "1c4ca610-d234-81f2-9a1d-fb405d6ae4bd": {
+      "last_edited_time": "2025-03-28T14:52:00.000Z",
+      "outfile": "_posts/2021-10-23-[일반화학]-Lec-02---Atoms.md"
+    },
+    "1c4ca610-d234-8141-81b0-d97e4af22de6": {
+      "last_edited_time": "2025-03-28T13:55:00.000Z",
+      "outfile": "_posts/2021-10-23-[일반화학]-Lec-01---Fundamentals.md"
+    },
+    "1c4ca610-d234-81a6-a677-f9f44db6fb5b": {
+      "last_edited_time": "2025-03-28T14:49:00.000Z",
+      "outfile": "_posts/2021-11-28-[C#]-Lec-13---정렬.md"
+    },
+    "1c4ca610-d234-81d9-9952-e33c8cd5b675": {
+      "last_edited_time": "2025-03-28T14:49:00.000Z",
+      "outfile": "_posts/2021-11-28-[C#]-Lec-12---파일-입출력.md"
+    },
+    "1c4ca610-d234-8131-80c9-f8b64a7d95d3": {
+      "last_edited_time": "2025-03-28T14:49:00.000Z",
+      "outfile": "_posts/2021-11-28-[C#]-Lec-11---람다-표현식,-LINQ.md"
+    },
+    "1c4ca610-d234-816d-b2e5-d05a2af03be3": {
+      "last_edited_time": "2025-03-28T14:49:00.000Z",
+      "outfile": "_posts/2021-11-27-[C#]-Lec-10---델리게이트,-이벤트.md"
+    },
+    "1c4ca610-d234-81c5-94be-d2eb4553d4af": {
+      "last_edited_time": "2025-03-28T14:49:00.000Z",
+      "outfile": "_posts/2021-11-27-[C#]-Lec-09---일반화-프로그래밍.md"
+    },
+    "1c4ca610-d234-8129-a14c-fda9b1bf49c4": {
+      "last_edited_time": "2025-03-28T14:50:00.000Z",
+      "outfile": "_posts/2021-11-24-[C#]-2차원-인덱서-과제.md"
+    },
+    "1c4ca610-d234-812d-ab67-e5a17fda1e7c": {
+      "last_edited_time": "2025-03-28T14:50:00.000Z",
+      "outfile": "_posts/2021-11-18-[C#]-Lec-08---프로퍼티,-인덱서.md"
+    },
+    "1c4ca610-d234-81b6-beec-d169cd290d99": {
+      "last_edited_time": "2025-03-28T14:50:00.000Z",
+      "outfile": "_posts/2021-11-18-[C#]-Lec-07---인터페이스,-추상클래스.md"
+    },
+    "1c4ca610-d234-8199-98f7-c4185dc969ef": {
+      "last_edited_time": "2025-03-28T14:50:00.000Z",
+      "outfile": "_posts/2021-11-18-[C#]-Lec-06---객체지향.md"
+    },
+    "1c4ca610-d234-8152-9682-e58748958d3b": {
+      "last_edited_time": "2025-03-28T14:50:00.000Z",
+      "outfile": "_posts/2021-10-12-[C#]-Lec-05---자료구조.md"
+    },
+    "1c4ca610-d234-81d5-ad54-e4ff5bc5267d": {
+      "last_edited_time": "2025-03-28T14:50:00.000Z",
+      "outfile": "_posts/2021-10-12-[C#]-Lec-04---메서드.md"
+    },
+    "1c4ca610-d234-813a-8bb7-c26f334e4ec3": {
+      "last_edited_time": "2025-03-28T14:50:00.000Z",
+      "outfile": "_posts/2021-10-11-[C#]-Lec-03---분기문.md"
+    },
+    "1c4ca610-d234-81ac-a7a6-ef2a94983070": {
+      "last_edited_time": "2025-03-28T14:49:00.000Z",
+      "outfile": "_posts/2021-10-11-[C#]-Lec-02---데이터-형식과-연산자.md"
+    },
+    "1c4ca610-d234-81e1-952a-ef7a2e7d83b8": {
+      "last_edited_time": "2025-03-28T14:49:00.000Z",
+      "outfile": "_posts/2021-10-11-[C#]-Lec-01---C#프로그래밍의-구조.md"
+    },
+    "1c4ca610-d234-8130-a327-f29005be260e": {
+      "last_edited_time": "2025-03-28T14:49:00.000Z",
+      "outfile": "_posts/2021-11-30-[C#]-Lec-15---라이브러리.md"
+    },
+    "1c4ca610-d234-81e0-b3cb-f3f51d6a9fd5": {
+      "last_edited_time": "2025-03-28T14:49:00.000Z",
+      "outfile": "_posts/2021-11-30-[C#]-Lec-14---노드-기반-자료구조.md"
+    },
+    "1c4ca610-d234-817f-911b-f7f226a94756": {
+      "last_edited_time": "2025-03-28T11:13:00.000Z",
+      "outfile": "_posts/2022-02-02-[서철이]-기말고사-답안.md"
+    },
+    "1c4ca610-d234-8178-866d-e3b4745f0b1c": {
+      "last_edited_time": "2025-03-28T11:13:00.000Z",
+      "outfile": "_posts/2022-01-28-[서철이]-Lec-06---니체.md"
+    },
+    "1c4ca610-d234-81c6-9145-ca2d3240f793": {
+      "last_edited_time": "2025-03-28T11:13:00.000Z",
+      "outfile": "_posts/2022-01-24-[서철이]-Lec-05---칸트.md"
+    },
+    "1c4ca610-d234-8141-82e5-c99902003bd7": {
+      "last_edited_time": "2025-03-28T11:13:00.000Z",
+      "outfile": "_posts/2022-01-24-[서철이]-Lec-04---스피노자.md"
+    },
+    "1c4ca610-d234-8113-a4d2-e9d9e8fd3593": {
+      "last_edited_time": "2025-03-28T11:13:00.000Z",
+      "outfile": "_posts/2022-01-24-[서철이]-Lec-03---중세-철학,-데카르트.md"
+    },
+    "1c4ca610-d234-81bd-adb8-d4673402fa10": {
+      "last_edited_time": "2025-03-28T11:13:00.000Z",
+      "outfile": "_posts/2022-01-24-[서철이]-Lec-02---아리스토텔레스.md"
+    },
+    "1c4ca610-d234-8178-a433-e65dc0343e3a": {
+      "last_edited_time": "2025-03-28T12:01:00.000Z",
+      "outfile": "_posts/2022-01-24-[서철이]-Lec-01---플라톤,-소크라테스.md"
+    },
+    "1c4ca610-d234-818d-a9de-d99d2315f8e3": {
+      "last_edited_time": "2025-03-28T11:13:00.000Z",
+      "outfile": "_posts/2022-06-09-[심리학개론]-기말고사-요약정리.md"
+    },
+    "1c4ca610-d234-81cd-8ce6-ef564b6d6cf4": {
+      "last_edited_time": "2025-03-28T11:13:00.000Z",
+      "outfile": "_posts/2022-06-06-[심리학개론]-Lec-09---정신장애.md"
+    },
+    "1c4ca610-d234-8128-8f48-daa49b7354fb": {
+      "last_edited_time": "2025-03-28T11:13:00.000Z",
+      "outfile": "_posts/2022-06-05-[심리학개론]-Lec-08---사회성과-번식행동.md"
+    },
+    "1c4ca610-d234-811a-bbb6-dcba1f177c30": {
+      "last_edited_time": "2025-03-28T11:13:00.000Z",
+      "outfile": "_posts/2022-05-29-[심리학개론]-Lec-07---성격.md"
+    },
+    "1c4ca610-d234-81ea-9e2a-d701a1ab9f22": {
+      "last_edited_time": "2025-03-28T11:13:00.000Z",
+      "outfile": "_posts/2022-05-24-[심리학개론]-Lec-06---학습.md"
+    },
+    "1c4ca610-d234-8121-b28e-e61a9b1efecd": {
+      "last_edited_time": "2025-03-28T11:13:00.000Z",
+      "outfile": "_posts/2022-05-24-[심리학개론]-Lec-05---기억.md"
+    },
+    "1c4ca610-d234-817c-92b4-dac7bd2b86c0": {
+      "last_edited_time": "2025-03-28T11:13:00.000Z",
+      "outfile": "_posts/2022-04-08-[심리학개론]-Lec-04---수면.md"
+    },
+    "1c4ca610-d234-816b-8b42-e4755db06731": {
+      "last_edited_time": "2025-03-28T11:13:00.000Z",
+      "outfile": "_posts/2022-03-30-[심리학개론]-Lec-03---뇌와-유전자.md"
+    },
+    "1c4ca610-d234-814e-8493-d6d8107da407": {
+      "last_edited_time": "2025-03-28T11:13:00.000Z",
+      "outfile": "_posts/2022-03-30-[심리학개론]-Lec-02---심리학과-과학.md"
+    },
+    "1c4ca610-d234-8123-aa34-c7bf758bd0fa": {
+      "last_edited_time": "2025-03-28T11:13:00.000Z",
+      "outfile": "_posts/2022-03-30-[심리학개론]-Lec-01---심리학이란.md"
+    },
+    "1c3ca610-d234-802d-a40e-d8c9d9e5b51d": {
+      "last_edited_time": "2025-03-27T12:32:00.000Z",
+      "outfile": "_posts/2022-11-04-[유체역학]-Chap-4.md"
+    },
+    "1c3ca610-d234-8083-beb5-f0b0d994d010": {
+      "last_edited_time": "2025-03-27T12:15:00.000Z",
+      "outfile": "_posts/2022-10-04-[유체역학]-Chap-3.md"
+    },
+    "1c3ca610-d234-8029-a6cc-dfc82cf8b6d0": {
+      "last_edited_time": "2025-03-27T12:14:00.000Z",
+      "outfile": "_posts/2022-10-03-[유체역학]-Chap-1,-2.md"
+    },
+    "1c3ca610-d234-800d-a562-df7e6fa77560": {
+      "last_edited_time": "2025-03-27T12:20:00.000Z",
+      "outfile": "_posts/2022-09-29-[전선대-Assignment]-SIR-model,-Fractals.md"
+    },
+    "1c3ca610-d234-80f5-9571-fed15330299b": {
+      "last_edited_time": "2025-03-27T11:39:00.000Z",
+      "outfile": "_posts/2022-09-29-[전선대-Assignment]-K-means-clustering,-KNN-classification-.md"
+    },
+    "1c3ca610-d234-801d-a355-c5769676281d": {
+      "last_edited_time": "2025-03-28T09:45:00.000Z",
+      "outfile": "_posts/2023-12-26-[과철이]-기말고사-답안.md"
+    },
+    "1c3ca610-d234-803b-a457-ca4b5f5c5c44": {
+      "last_edited_time": "2025-03-28T09:45:00.000Z",
+      "outfile": "_posts/2023-11-26-[과철이]-중간고사-답안.md"
+    },
+    "1c2ca610-d234-8053-a43f-d5e10e41e561": {
+      "last_edited_time": "2025-03-27T10:19:00.000Z",
+      "outfile": "_posts/2023-10-18-[과철이]-Lec-13---현대-사상사-개관-:-현대성의-근본적-모순.md"
+    },
+    "1c0ca610-d234-806b-b894-ea4dcc009b8d": {
+      "last_edited_time": "2025-10-06T12:27:00.000Z",
+      "outfile": "_posts/2025-03-24-[Review]-K-UNN-:--k-space-interpolation-with-untrained-neural-network.md"
+    },
+    "1c0ca610-d234-8088-9082-ed6006250311": {
+      "last_edited_time": "2025-03-27T10:31:00.000Z",
+      "outfile": "_posts/2024-07-06-[Archive]-vessl-시행착오-기록.md"
+    },
+    "1c0ca610-d234-804c-8642-cfc81ca298d8": {
+      "last_edited_time": "2025-03-27T05:40:00.000Z",
+      "outfile": "_posts/2024-06-29-[Archive]WSL로-pytorch-구동하기.md"
+    },
+    "128ca610-d234-800b-b1c3-d4072ee18c9c": {
+      "last_edited_time": "2025-03-27T10:08:00.000Z",
+      "outfile": "_posts/2023-12-09-[머신러닝]-Chap-5---Neural-Networks.md"
+    },
+    "59ae53bc-dd77-4add-9d2e-058f205136e7": {
+      "last_edited_time": "2025-03-27T09:37:00.000Z",
+      "outfile": "_posts/2023-10-16-[과철이]-Lec-12---자연주의의-오류와-철학의-가치론적-접근.md"
+    },
+    "c78aa357-d25a-4b2f-98b1-fcad273359e1": {
+      "last_edited_time": "2025-03-27T09:36:00.000Z",
+      "outfile": "_posts/2023-10-14-[과철이]-Lec-11---과학의-의미-:-사실과-가치의-구분.md"
+    },
+    "b665448f-9dfc-45a4-8761-860d5c60d841": {
+      "last_edited_time": "2025-03-27T09:41:00.000Z",
+      "outfile": "_posts/2023-10-23-[과철이]-Lec-14---21세기의-시대정신과-문화상대주의.md"
+    },
+    "2c4cde80-593a-4b08-b075-1b300c3f934a": {
+      "last_edited_time": "2025-03-27T09:34:00.000Z",
+      "outfile": "_posts/2023-09-27-[과철이]-Lec-08---사피엔스-:-자연계의-유일한-낭만주의자.md"
+    },
+    "943da568-64bc-48bb-927c-7fddffde162f": {
+      "last_edited_time": "2025-03-27T09:34:00.000Z",
+      "outfile": "_posts/2023-10-01-[과철이]-Lec-09---인지유동성의-치명적-귀결(과도한-욕망추구).md"
+    },
+    "5ce9df2c-b9f9-4960-9497-6d4ba2426f48": {
+      "last_edited_time": "2025-03-27T09:35:00.000Z",
+      "outfile": "_posts/2023-10-03-[과철이]-Lec-10---과학의-가치론적-함축.md"
+    },
+    "cc1b5066-ad98-493a-bec3-ae1ea53d2966": {
+      "last_edited_time": "2025-03-27T09:44:00.000Z",
+      "outfile": "_posts/2023-11-03-[과철이]-Lec-17---근대-과학혁명-1-4.md"
+    },
+    "9fa5c516-d6ed-4dca-b62c-cb68452662b9": {
+      "last_edited_time": "2025-03-27T09:42:00.000Z",
+      "outfile": "_posts/2023-10-25-[과철이]-Lec-15---문화상대주의의-논리적-문제점,-인식에-대한-상대주의-논박.md"
+    },
+    "22ece573-a123-4580-88a9-1ba132ad7c2e": {
+      "last_edited_time": "2025-03-27T10:19:00.000Z",
+      "outfile": "_posts/2023-11-02-[과철이]-Lec-16---무지에의-호소-오류,-상대주의(회의주의),-자유주의,-객관주의.md"
+    },
+    "5a554089-c5da-4216-ae84-a879c42a8fbb": {
+      "last_edited_time": "2025-03-27T09:30:00.000Z",
+      "outfile": "_posts/2023-09-18-[과철이]-Lec-05---진화론적-관점의-사회적-뇌.md"
+    },
+    "9d6ffdd3-5d87-4855-9e7b-0acab63ac9a2": {
+      "last_edited_time": "2025-03-27T09:30:00.000Z",
+      "outfile": "_posts/2023-09-13-[과철이]-Lec-04---진화생물학,-진화심리학적-고찰,-과학의-비자연적-본성.md"
+    },
+    "d1267c67-eea2-4b93-a894-34036241aa52": {
+      "last_edited_time": "2025-03-27T09:33:00.000Z",
+      "outfile": "_posts/2023-09-25-[과철이]-Lec-07---인지-유동성-:-사회적-지능의-범람.md"
+    },
+    "ac556f7c-fcb7-4b3c-9e8a-df0d40eea175": {
+      "last_edited_time": "2025-03-27T09:31:00.000Z",
+      "outfile": "_posts/2023-09-20-[과철이]-Lec-06---마음-이론과-거울-체계.md"
+    },
+    "ebfd5fc3-1456-4c49-bcdc-0cf53c610cbd": {
+      "last_edited_time": "2025-03-27T09:53:00.000Z",
+      "outfile": "_posts/2023-12-04-[과철이]-Lec-30---지식-발전과-미래-예측.md"
+    },
+    "fa636c4d-ac06-4cb8-9647-e411756cc8a6": {
+      "last_edited_time": "2025-03-27T09:52:00.000Z",
+      "outfile": "_posts/2023-11-27-[과철이]-Lec-28---Kuhn의-패러다임.md"
+    },
+    "641497fa-107a-4c07-8153-733c35ce85c6": {
+      "last_edited_time": "2025-03-27T09:52:00.000Z",
+      "outfile": "_posts/2023-11-29-[과철이]-Lec-29---패러다임과-창의적-문제해결력.md"
+    },
+    "129dbdb0-7c18-4bcf-aa15-265d1c1b2d16": {
+      "last_edited_time": "2025-03-27T09:51:00.000Z",
+      "outfile": "_posts/2023-11-20-[과철이]-Lec-26---과학의-형이상학.md"
+    },
+    "c4fea146-9cd3-40d0-8353-4400a1371932": {
+      "last_edited_time": "2025-03-27T09:50:00.000Z",
+      "outfile": "_posts/2023-11-17-[과철이]-Lec-25---Karl-Popper의-반증주의.md"
+    },
+    "4a19b618-c385-4ece-8533-04897b5e82aa": {
+      "last_edited_time": "2025-03-27T09:51:00.000Z",
+      "outfile": "_posts/2023-11-22-[과철이]-Lec-27---Thomas-Kuhn의-정상과학.md"
+    },
+    "4675009a-db8c-466b-a306-46b5b9d37165": {
+      "last_edited_time": "2025-03-27T09:46:00.000Z",
+      "outfile": "_posts/2023-11-08-[과철이]-Lec-21---과학적-세계관과-낭만주의적-관점의-대립-:-생명과-엔트로피.md"
+    },
+    "0ec866f4-c6c2-499d-acff-43d788c2ea7f": {
+      "last_edited_time": "2025-03-27T09:46:00.000Z",
+      "outfile": "_posts/2023-11-06-[과철이]-Lec-20---부분과-전체의-관계-:-복잡계-네트워크와-창발.md"
+    },
+    "7499ffb8-85f8-4dca-bcfb-8e1555c6bbe1": {
+      "last_edited_time": "2025-03-27T09:44:00.000Z",
+      "outfile": "_posts/2023-11-04-[과철이]-Lec-18---근대과학혁명-4-5,-현대-과학-담론.md"
+    },
+    "4944590b-0763-41c1-b485-8649c1f8408d": {
+      "last_edited_time": "2025-03-27T09:45:00.000Z",
+      "outfile": "_posts/2023-11-05-[과철이]-Lec-19---과학적-세계관에-반발-:-19c-낭만주의를-중심으로.md"
+    },
+    "d46bcc17-1a5a-4202-9c94-aa147245bee6": {
+      "last_edited_time": "2025-03-27T09:49:00.000Z",
+      "outfile": "_posts/2023-11-16-[과철이]-Lec-24---귀납법,-연역에-대한-논리적-고찰.md"
+    },
+    "5cf7a5a3-2921-4de6-b362-b6832ac849bc": {
+      "last_edited_time": "2025-03-27T09:47:00.000Z",
+      "outfile": "_posts/2023-11-13-[과철이]-Lec-22---과학적-세계관과-낭만주의적-관점의-대립-:-자유의지와-자기인식.md"
+    },
+    "bdef1ff0-5dd7-44b6-b83b-4e8f4e856f38": {
+      "last_edited_time": "2025-03-27T09:48:00.000Z",
+      "outfile": "_posts/2023-11-15-[과철이]-Lec-23---생명과-지능의-한계.md"
+    },
+    "10aca610-d234-8071-ba58-f45d92550bac": {
+      "last_edited_time": "2025-03-27T09:30:00.000Z",
+      "outfile": "_posts/2023-09-11-[과철이]-Lec-03---인간의-자기중심성-:-사회•문화적-접근.md"
+    },
+    "10aca610-d234-8003-a576-d7f7b78d858b": {
+      "last_edited_time": "2025-03-27T09:26:00.000Z",
+      "outfile": "_posts/2023-09-04-[과철이]-Lec-01---인간의-자기중심성.md"
+    },
+    "10aca610-d234-8062-accd-f4ca60053378": {
+      "last_edited_time": "2025-03-27T09:28:00.000Z",
+      "outfile": "_posts/2023-09-06-[과철이]-Lec-02---인간의-자기중심성-:-심리학적-탐구,-보수성.md"
+    },
+    "105ca610-d234-802a-b3f4-d50a5df9c432": {
+      "last_edited_time": "2025-03-27T09:56:00.000Z",
+      "outfile": "_posts/2023-12-05-[제어공학개론]-Lec-02---Transfer-Function.md"
+    },
+    "b1f629bb-9d58-411a-8228-0a48b6452ab4": {
+      "last_edited_time": "2025-03-27T10:07:00.000Z",
+      "outfile": "_posts/2023-12-09-[머신러닝]-Chap-4---Decision-tree.md"
+    },
+    "0bdf1015-c2b1-40f2-baec-03ff0af7f785": {
+      "last_edited_time": "2025-03-27T10:07:00.000Z",
+      "outfile": "_posts/2023-09-30-[머신러닝]-Chap-3---리니어-모델.md"
+    },
+    "b6a95573-0b72-438f-b4df-2efd779dd787": {
+      "last_edited_time": "2025-03-27T10:06:00.000Z",
+      "outfile": "_posts/2023-09-30-[머신러닝]-Chap-2---모델-선정과-성능평가.md"
+    },
+    "5a3a236d-751b-401a-80bb-b33e2d701204": {
+      "last_edited_time": "2025-03-27T10:05:00.000Z",
+      "outfile": "_posts/2023-09-30-[머신러닝]-Chap-1---서론.md"
+    },
+    "e45a28d5-46e6-4d93-9ca8-8b2d502e62b5": {
+      "last_edited_time": "2025-03-27T10:02:00.000Z",
+      "outfile": "_posts/2023-12-09-[제어공학개론]-Lec-18---Discrete-time-domain-system.md"
+    },
+    "87254e9e-7a9b-4d7f-97b0-ab9a0f7ec815": {
+      "last_edited_time": "2025-03-27T10:02:00.000Z",
+      "outfile": "_posts/2023-12-09-[제어공학개론]-Lec-17---PID-control.md"
+    },
+    "23d30409-bf70-4814-83f2-b600b14ec449": {
+      "last_edited_time": "2025-10-06T12:41:00.000Z",
+      "outfile": "_posts/2023-12-09-[제어공학개론]-Lec-16---Nyquist-plot.md"
+    },
+    "164d15df-e173-4068-816a-01825e825838": {
+      "last_edited_time": "2025-03-27T10:01:00.000Z",
+      "outfile": "_posts/2023-12-09-[제어공학개론]-Lec-15---Classical-control.md"
+    },
+    "f344c8ba-5a64-46b5-94d8-dca292e139d3": {
+      "last_edited_time": "2025-03-27T10:00:00.000Z",
+      "outfile": "_posts/2023-12-09-[제어공학개론]-Lec-14---Optimal-control.md"
+    },
+    "2e27a217-1c80-4010-9eb8-c745a57650c5": {
+      "last_edited_time": "2025-03-27T10:00:00.000Z",
+      "outfile": "_posts/2023-12-09-[제어공학개론]-Lec-13---Stability.md"
+    },
+    "d0ec3ee5-5155-4faa-8894-5d8288da0a91": {
+      "last_edited_time": "2025-03-27T10:00:00.000Z",
+      "outfile": "_posts/2023-12-09-[제어공학개론]-Lec-12---State-feedback-control,-State-estimator.md"
+    },
+    "8f5a5a9b-e7f3-45b0-9371-4f2cd28edb11": {
+      "last_edited_time": "2025-03-27T09:59:00.000Z",
+      "outfile": "_posts/2023-12-09-[제어공학개론]-Lec-11---Observability.md"
+    },
+    "edadd182-6447-4026-b7cd-92e564d7cef0": {
+      "last_edited_time": "2025-03-27T09:59:00.000Z",
+      "outfile": "_posts/2023-12-09-[제어공학개론]-Lec-10---Controllability.md"
+    },
+    "1467ef3c-2d1a-437c-a254-74a1ee674918": {
+      "last_edited_time": "2025-03-27T09:58:00.000Z",
+      "outfile": "_posts/2023-12-09-[제어공학개론]-Lec-09---Canonical-form.md"
+    },
+    "40f4a61e-2c38-4163-8b91-078216dc7460": {
+      "last_edited_time": "2025-03-27T09:58:00.000Z",
+      "outfile": "_posts/2023-12-09-[제어공학개론]-Lec-08---Phase-portrait-and-Jordan-form.md"
+    },
+    "c8c4485e-998f-491d-ba4a-ea1e91d709ef": {
+      "last_edited_time": "2025-03-27T09:58:00.000Z",
+      "outfile": "_posts/2023-12-09-[제어공학개론]-Lec-07---Simularity-transform.md"
+    },
+    "5dbf9147-4fe6-4c84-b938-4d4819c564cc": {
+      "last_edited_time": "2025-03-27T09:57:00.000Z",
+      "outfile": "_posts/2023-12-09-[제어공학개론]-Lec-06---Basic-Linear-Algebra.md"
+    },
+    "0bd212b3-19f2-4746-b485-004c840eabaf": {
+      "last_edited_time": "2025-03-27T09:57:00.000Z",
+      "outfile": "_posts/2023-12-09-[제어공학개론]-Lec-05---Transfer-function-to-S.S-representation.md"
+    },
+    "e368cba4-3dce-40e0-8d0d-776cd2157857": {
+      "last_edited_time": "2025-03-27T09:57:00.000Z",
+      "outfile": "_posts/2023-12-09-[제어공학개론]-Lec-04---S.S.-representation,-conversion-to-T.F..md"
+    },
+    "b0dde0d0-a2ca-4743-b41b-5c8d7728cfa4": {
+      "last_edited_time": "2025-03-27T09:56:00.000Z",
+      "outfile": "_posts/2023-12-09-[제어공학개론]-Lec-03---Steady-state-response,-bode-plot.md"
+    },
+    "f9cf904c-9f0c-4d11-b5a9-983d665901ca": {
+      "last_edited_time": "2025-03-27T10:03:00.000Z",
+      "outfile": "_posts/2023-12-05-[제어공학개론]-Lec-01---Introduction.md"
+    },
+    "97c04b90-fcd8-4a57-933d-78ffaff2ce49": {
+      "last_edited_time": "2025-10-06T12:21:00.000Z",
+      "outfile": "_posts/2024-07-01-[신호처리]-Lec-05---Sampling.md"
+    },
+    "5c1390bc-fe50-44d1-85e1-0f99264790ee": {
+      "last_edited_time": "2025-03-27T10:44:00.000Z",
+      "outfile": "_posts/2024-07-01-[신호처리]-Lec-04---Fourier-Transform.md"
+    },
+    "9a5f1391-44c9-44e5-a877-9ade19e8a626": {
+      "last_edited_time": "2025-03-27T10:44:00.000Z",
+      "outfile": "_posts/2024-06-30-[신호처리]-Lec-03---Convolution.md"
+    },
+    "4599bbb2-436f-45d6-9992-7f0cd8337288": {
+      "last_edited_time": "2025-03-27T10:44:00.000Z",
+      "outfile": "_posts/2024-06-30-[신호처리]-Lec-02---LTI-system.md"
+    },
+    "d34ec057-0cd5-451a-b0b6-33ae7941e4f3": {
+      "last_edited_time": "2025-03-27T10:44:00.000Z",
+      "outfile": "_posts/2024-06-29-[신호처리]-Lec-01---Signal.md"
+    }
+  },
+  "last_run": "2025-10-06T13:36:28.637Z"
+}

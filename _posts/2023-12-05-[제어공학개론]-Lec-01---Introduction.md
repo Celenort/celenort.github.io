@@ -1,17 +1,3 @@
----
-layout: post
-date: 2023-12-05
-title: "[제어공학개론] Lec 01 - Introduction"
-tags: [Control, System, Feedback]
-categories: [Lecture, 제어공학개론]
-media_subpath: /assets/img/2023-12-05-[제어공학개론]-Lec-01---Introduction.md
-image:
-  path: 0.png
-  alt:  
-description: 제어공학개론의 첫 수업에서는 제어의 정의와 과정, 예시로 드론을 통해 입력 설계의 필요성을 설명했습니다. 제어 시스템은 입력과 출력의 관계를 모델링하고, 피드백을 통해 외란을 줄이며 시스템의 강인성과 동적 특성을 개선합니다. 다음 포스트에서는 다양한 모델링 방법에 대해 다룰 예정입니다.
-pin: false
----
-
 
 ## 📢Precaution
 
@@ -41,7 +27,7 @@ pin: false
 - Controller
 : 제어를 위해 (주로) feedback의 형태로 출력신호를 받아 입력신호에 반영시켜주는 것.
 
-![0](/0.png)
+![](/assets/img/2023-12-05-[제어공학개론]-Lec-01---Introduction.md/0.png)
 
 
 ## Block diagram : 제어의 추상화
@@ -83,7 +69,7 @@ columns 9
 드론의 예시를 실제 세계로부터 Modeling 하면, 지표면으로부터의 높이를 system의 출력에 해당하는 $y(t)$로 놓고, 인가하는 힘을 $u(t)$로 놓을 수 있다.
 
 
-![1](/1.png)
+![](https://i.imgur.com/6q1eqbt.jpg)
 
 
 이 상태에서 $F=ma$ 라는 뉴턴의 제 2법칙으로부터 하나의 미분방정식을 얻어낼 수 있다.
@@ -109,7 +95,7 @@ $$
 ### Command
 
 
-![2](/2.png)
+![](https://i.imgur.com/eIzOKsK.jpg)
 
 
 _시간에 따라 초기 위치에서 최종 위치로 부드럽게 올라가는 desired height graph_
@@ -205,35 +191,33 @@ Dynamic system과 Static system은 간단히 설명하자면 Memory의 여부에
 
 정보의 저장 없이 단순히 입력으로부터 출력을 내는 Static system와의 차이가 여기서 발생하는데, 예를 들어 $u(t)$의 값을 3배 하여 $y(t)$로 출력하는 System이 있다면, 이는 Static system이다. 값을 바로 도출해내므로 메모리가 필요 없고 입력받은 즉시 출력하는 (instant response) 시스템이다.
 
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

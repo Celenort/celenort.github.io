@@ -1,22 +1,8 @@
----
-layout: post
-date: 2021-12-06
-title: "[일반화학] Lec 07 - Physical Equilibrium"
-tags: [화학, GIbbs free energy]
-categories: [Lecture, 일반화학]
-media_subpath: /assets/img/2021-12-06-[일반화학]-Lec-07---Physical-Equilibrium.md
-image:
-  path: 0.png
-  alt:  
-description:  
-pin: false
----
-
 
 ### phase diagram
 
 
-![0](/0.png)
+![](/assets/img/2021-12-06-[일반화학]-Lec-07---Physical-Equilibrium.md/0.png)
 
 - T, P axis 위에서
 
@@ -109,7 +95,7 @@ $$
 
 
 
-![1](/1.png)
+![](/assets/img/2021-12-06-[일반화학]-Lec-07---Physical-Equilibrium.md/1.png)
 
 
 ### Henry’s Law of Solute
@@ -123,35 +109,33 @@ $$
 {% endraw %}
 
 
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

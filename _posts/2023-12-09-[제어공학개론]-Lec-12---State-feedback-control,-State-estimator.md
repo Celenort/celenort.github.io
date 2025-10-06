@@ -1,17 +1,3 @@
----
-layout: post
-date: 2023-12-09
-title: "[제어공학개론] Lec 12 - State feedback control, State estimator"
-tags: [Control, System, State-feedback controller, State observer, Tracking control]
-categories: [Lecture, 제어공학개론]
-media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-12---State-feedback-control,-State-estimator.md
-image:
-  path: 0.png
-  alt:  
-description: 제어공학 개론에서는 상태 피드백 제어와 상태 추정기를 다루며, 상태 피드백 제어는 시스템의 특성 다항식을 변경하는 효과가 있고, Ackermann의 공식을 통해 제어기를 설계할 수 있다. 상태 추정기는 직접 상태를 확인할 수 없을 때 사용되며, 출력 피드백 제어는 상태 추정기를 결합하여 동작한다. 또한, 추적 제어와 분리 원칙, 조르당 형식 및 제어 가능성에 대한 논의가 포함되어 있다.
-pin: false
----
-
 
 ## 📢Precaution
 
@@ -540,37 +526,35 @@ $\dot x$의 eigenvalue는 $K$에 의해 설정된 eigenvalue임을 알 수 있�
 Jordan form으로 나타냈을 떄 eigenvalue들이 중첩된 경우, Jordan block으로 묶이지 않다면, single input이 아닌 multi input이어야 controllable해짐.
 
 
-![0](/0.png)
-
-
+![](/assets/img/2023-12-09-[제어공학개론]-Lec-12---State-feedback-control,-State-estimator.md/0.png)
 
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

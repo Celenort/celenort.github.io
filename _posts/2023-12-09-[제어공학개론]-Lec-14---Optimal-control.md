@@ -1,15 +1,3 @@
----
-layout: post
-date: 2023-12-09
-title: "[제어공학개론] Lec 14 - Optimal control"
-tags: [Control, System, Optimal control]
-categories: [Lecture, 제어공학개론]
-media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-14---Optimal-control.md
-
-description: 최적 제어에 관한 강의에서는 상태 피드백을 이용해 시스템을 최적화하는 방법을 다룹니다. 알제브라릭 리카티 방정식을 통해 최적 제어 입력을 도출하고, Q와 R의 물리적 의미를 설명합니다. Q는 상태의 상대적 비용 가중치를 나타내고, R은 제어 입력의 비용을 나타냅니다. 또한, 강화 학습 방법과 관련하여 V(x)를 학습하는 과정도 언급됩니다.
-pin: false
----
-
 
 ## 📢Precaution
 
@@ -202,35 +190,33 @@ $V(x)$을 학습.
 $J(x(0), u^*) = V(x(0))$ 학습 : by figuring Analytic form
 Table을 만들어서 Q-Q learning, Neural network
 
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

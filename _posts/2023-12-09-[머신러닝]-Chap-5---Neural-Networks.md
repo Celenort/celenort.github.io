@@ -1,17 +1,3 @@
----
-layout: post
-date: 2023-12-09
-title: "[머신러닝] Chap 5 - Neural Networks"
-tags: [Perceptron]
-categories: [Lecture, Machine Learning]
-media_subpath: /assets/img/2023-12-09-[머신러닝]-Chap-5---Neural-Networks.md
-image:
-  path: 0.png
-  alt: A Decision tree
-description: 머신러닝의 결정 트리 알고리즘은 데이터를 분할하기 위해 정보 엔트로피, 이득 비율, 지니 지수를 사용하며, 과적합 문제를 해결하기 위해 전후 가지치기를 적용합니다. 연속 값과 결측값 처리 방법도 설명되며, 다변량 결정 트리의 가능성에 대해서도 논의됩니다.
-pin: false
----
-
 
 ### Disclaimer
 
@@ -34,7 +20,7 @@ pin: false
 - Process : weighted sum of received signals is compared against the threshold
 - Output : signal produced by activation function i.e.) $\text{output = } f({\bf w^T x + b})$
 
-![0](/0.png)
+![](/assets/img/2023-12-09-[머신러닝]-Chap-5---Neural-Networks.md/0.png)
 
 
 ### Activation function
@@ -47,7 +33,7 @@ pin: false
 
 - Perceptron : 2개 layer (input, output)으로 구성, input layer는 input을 받아서 output layer에 전달, output layer는 M-P neuron으로 threshold 연산 수행.
 
-![1](/1.png)
+![](/assets/img/2023-12-09-[머신러닝]-Chap-5---Neural-Networks.md/1.png)
 
 - Perceptron으로 Logic Gate를 구현 가능 (AND, OR, NAND) : by tuning $w_1, w_2, \theta$
 - Activation function을 USF로 가정하면,
@@ -98,7 +84,7 @@ $$
 
 
 
-![2](/2.png)
+![](/assets/img/2023-12-09-[머신러닝]-Chap-5---Neural-Networks.md/2.png)
 
 - Consider a single sample $\bf x_i$ to be trained at Multi-layered network with 1 hidden layer
 - Hidden Layer의 output $b_i$ :
@@ -145,7 +131,7 @@ $$
 - object function에는 sigmoid function을 사용했다고 가정. $\hat y_j^k$나, hidden layer의 output을 미분할 때에는 weighted sum이 아닌, function안에 weighted sum이 들어간 형태를 사용하게 되므로 function 자체의 derivative를 취해주는 과정, 속미분 과정 잊지말아야.
 - Derivation process
 
-![3](/3.png)
+![](/assets/img/2023-12-09-[머신러닝]-Chap-5---Neural-Networks.md/3.png)
 
 
 ### Accumulated BP Algorithm
@@ -185,35 +171,33 @@ $$
 ## 5.6 Deep learning
 
 - NOT considered in this lecture
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

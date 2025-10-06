@@ -1,17 +1,3 @@
----
-layout: post
-date: 2024-06-30
-title: "[신호처리] Lec 03 - Convolution"
-tags: [FastMRI, Convolution]
-categories: [Lecture, 신호처리(FastMRI)]
-media_subpath: /assets/img/2024-06-30-[신호처리]-Lec-03---Convolution.md
-image:
-  path: 0.png
-  alt: A diagram showing how convolution works
-description: 신호처리에 관한 강의 노트에서는 1D 및 2D 컨볼루션의 개념을 설명합니다. 1D 컨볼루션은 임펄스 응답을 이용해 시스템의 출력을 계산하며, 2D 컨볼루션은 제로 패딩된 이미지를 사용하여 포인트 스프레드 함수와의 곱셈을 통해 출력을 생성합니다. 각 과정에서 시각적 예시를 통해 이해를 돕고 있습니다.
-pin: false
----
-
 
 ### Precaution
 
@@ -40,13 +26,13 @@ $$
 	
 	일반적으로 알고 있는 convolution을 정말 잘 시각화 한 예시인 것 같아 풀로 긁어옴.
 
-![0](/0.png)
+![](https://i.imgur.com/y4SzKnB.png)
 
 
-![1](/1.png)
+![](https://imgur.com/QGJ35El.png)
 
 
-![2](/2.png)
+![](https://imgur.com/f3HLL6X.png)
 
 
 _Convolution의 input인 두 1차원 함수가 겹침에 따라 아래쪽 plot에 값이 생성됨을 알 수 있다_
@@ -54,7 +40,7 @@ _Convolution의 input인 두 1차원 함수가 겹침에 따라 아래쪽 plot�
 - 2D convolution :
 	- Zero-padded 2D image
 
-		![3](/3.png)
+		![](https://imgur.com/yeFd6Q6.png)
 
 
 		_Zero-Padded 5x5 input image_
@@ -62,46 +48,44 @@ _Convolution의 input인 두 1차원 함수가 겹침에 따라 아래쪽 plot�
 	- Point-spread function ( works as I.R.F at 1D conv.)
 	Zero Padding은 Point-spread function의 dimensionallity 에서 1만큼 제하여서 적용됨. (Meaningful한 값을 output signal로 얻어내려면 자명)
 
-		![4](/4.png)
+		![](https://imgur.com/1rfMNtL.png)
 
 	- How to evalutate?
 	1. Flip the point spread function. (x축 대칭을 적용한 것 처럼, 원점 대칭 적용)
 	2. 이후 Input signal을 point spread function의 크기의 필터를 씌운 것 처럼 잘라내어 element-wise multiplication을 적용하고 sum한 값을 Output singnal에 값에 집어넣는다.
 
-		![5](/5.png)
+		![](https://imgur.com/WjaQegO.png)
 
 
-		![6](/6.png)
-
-
+		![](https://imgur.com/IFQZuHt.png)
 
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

@@ -1,17 +1,3 @@
----
-layout: post
-date: 2023-12-05
-title: "[제어공학개론] Lec 02 - Transfer Function"
-tags: [Control, System, Transfer function, Laplace transform]
-categories: [Lecture, 제어공학개론]
-media_subpath: /assets/img/2023-12-05-[제어공학개론]-Lec-02---Transfer-Function.md
-image:
-  path: 0.png
-  alt:  
-description: 제어공학개론의 첫 수업에서는 제어의 정의와 과정, 예시로 드론을 통해 입력 설계의 필요성을 설명했습니다. 제어 시스템은 입력과 출력의 관계를 모델링하고, 피드백을 통해 외란을 줄이며 시스템의 강인성과 동적 특성을 개선합니다. 다음 포스트에서는 다양한 모델링 방법에 대해 다룰 예정입니다.
-pin: false
----
-
 
 ## 📢Precaution
 
@@ -91,7 +77,7 @@ _Source : Kreyszig 공업수학 10th ed. p. 204_
 ## Benchmark Problem : 3-cart
 
 
-![0](/0.png)
+![](https://i.imgur.com/g4PPrKK.jpg)
 
 
 질량이 $m_1, m_2, m_3$ 인 cart, spring constant가 $k_1, k_2$인 용수철에 의해 연결되어 있다.
@@ -626,35 +612,33 @@ _Laurent Series의 residue (_$a_{-1}$_)을 구하는 과정과 닮아있다._
 
 Partial fraction expansion하는것도 분모의 pole(Analytic하지 않은 부분)을 따로 떼어내서 series형태로 만드는 작업이다 보니 비슷한 꼴로 유도되는듯.
 
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

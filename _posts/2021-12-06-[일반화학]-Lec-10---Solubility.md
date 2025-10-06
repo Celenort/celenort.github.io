@@ -1,24 +1,10 @@
----
-layout: post
-date: 2021-12-06
-title: "[일반화학] Lec 10 - Solubility"
-tags: [화학, 용해도]
-categories: [Lecture, 일반화학]
-media_subpath: /assets/img/2021-12-06-[일반화학]-Lec-10---Solubility.md
-image:
-  path: 0.png
-  alt:  
-description:  
-pin: false
----
-
 
 ### 용해도곱 상수(이온성 결정 )
 
 - Gram Solubility, Molar Solubility : 1L의 물에 용해되는 그램수, 몰수
 - 용해 반응에 대한 평형상수를 통해서 녹는 몰농도를 계산할 수 있음 → $\Delta G$를 이용하여 경향성 파악
 
-![0](/0.png)
+![](/assets/img/2021-12-06-[일반화학]-Lec-10---Solubility.md/0.png)
 
 
 {% raw %}
@@ -32,12 +18,12 @@ $$
 ### 용해도 차를 이용한 분리
 
 
-![1](/1.png)
+![](/assets/img/2021-12-06-[일반화학]-Lec-10---Solubility.md/1.png)
 
 - 용해도곱 차이가 나므로, $Ag$를 모두 침전시키고 $Pb$만을 남길 수 있을 것으로 예상. 이 때 넣어야 할 $Cl$은?
 - $Pb$가 녹아있을 수 있는 최댓값만큼 넣음. 이에대한 계산 :
 
-![2](/2.png)
+![](/assets/img/2021-12-06-[일반화학]-Lec-10---Solubility.md/2.png)
 
 
 {% raw %}
@@ -79,35 +65,33 @@ $$
 - Ksp 매우 낮으나,
 - $Ag^+ + NH_3 \leftrightarrow Ag(NH_3)^+, Ag(NH_3)^+ \leftrightarrow Ag(NH_3)_2^+$ 반응 K가 매우 커 용해 잘시킴
 - 물 분자와의 반응하는 경우 존재
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

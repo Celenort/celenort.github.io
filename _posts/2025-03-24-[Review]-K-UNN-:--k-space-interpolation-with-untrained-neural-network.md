@@ -1,17 +1,3 @@
----
-layout: post
-date: 2025-03-24
-title: "[Review] K-UNN :  k-space interpolation with untrained neural network"
-tags: [FastMRI, k-space, GRAPPA, Compressed sensing, SPiRiT]
-categories: [Study, Paper review]
-media_subpath: /assets/img/2025-03-24-[Review]-K-UNN-:--k-space-interpolation-with-untrained-neural-network.md
-image:
-  path: 0.png
-  alt:  
-description:  
-pin: false
----
-
 
 {: .prompt-danger }
 
@@ -54,19 +40,19 @@ y, 즉 sampling data를 full freq에서 sampling 할 경우 vs random(compressiv
 CS 설명 : [https://www.cs.jhu.edu/~misha/ReadingSeminar/Papers/Baraniuk06.pdf](https://www.cs.jhu.edu/~misha/ReadingSeminar/Papers/Baraniuk06.pdf), [https://kr.linkedin.com/pulse/random의-재발견-압축센싱compressed-sensing-gromit-park](https://kr.linkedin.com/pulse/random의-재발견-압축센싱compressed-sensing-gromit-park)
 
 
-![0](/0.png)
+![](/assets/img/2025-03-24-[Review]-K-UNN-:--k-space-interpolation-with-untrained-neural-network.md/0.png)
 
 
 쉽게 말하면 equal freq 간격으로 n개의 freq 데이터를 sampling하는 대신 KxN matrix T를 곱하여 k개의 undersampled data만 사용. 
 
 
-![1](/1.png)
+![](/assets/img/2025-03-24-[Review]-K-UNN-:--k-space-interpolation-with-untrained-neural-network.md/1.png)
 
 
 원래의 signal (f)는 IFFT를 통해 재구성해낼 수 있음. 
 
 
-![2](/2.png)
+![](/assets/img/2025-03-24-[Review]-K-UNN-:--k-space-interpolation-with-untrained-neural-network.md/2.png)
 
 
 위 식을 다음과 같이 표현할 수 있음
@@ -80,7 +66,7 @@ $$
 
 
 
-![3](/3.png)
+![](/assets/img/2025-03-24-[Review]-K-UNN-:--k-space-interpolation-with-untrained-neural-network.md/3.png)
 
 
 general undersampling에 비해서 random sampling이 훨씬 더 많은 데이터를 가지고 있음을 알 수 있음.
@@ -143,10 +129,10 @@ ALOHA : multi-channel version SPIRiT
 SPIRit에 관하여 찾아보며 더 알아낸, 것들: SMASH, SENSE (GRAPPA 기술의 시초가 되는 듯 함, Coil sensitivity를 explicit하게 or implicit하게 사용하는지에 따라 나뉨. Multi-coil에 대한 각각의 sensitivity를 사용…
 
 
-![4](/4.png)
+![](/assets/img/2025-03-24-[Review]-K-UNN-:--k-space-interpolation-with-untrained-neural-network.md/4.png)
 
 
-![5](/5.png)
+![](/assets/img/2025-03-24-[Review]-K-UNN-:--k-space-interpolation-with-untrained-neural-network.md/5.png)
 
 
 여기는 내가 설명하는것보다 이거 보는게 빠를 것 같아서 썼음.
@@ -161,13 +147,13 @@ $\phi$ : image shift at k-space domain? 그냥 페이즈를 주는거라 생각�
 $\theta$ : 아까 말한 CS에서의 data 압축에 관련된 파라미터. 위에서는 $\zeta$
 
 
-![6](/6.png)
+![](/assets/img/2025-03-24-[Review]-K-UNN-:--k-space-interpolation-with-untrained-neural-network.md/6.png)
 
 
 Objective function은 
 
 
-![7](/7.png)
+![](/assets/img/2025-03-24-[Review]-K-UNN-:--k-space-interpolation-with-untrained-neural-network.md/7.png)
 
 
 다음으로 요약될 수 잇음. phase 부분은 왜 곱해져 있는지 이해할 수 없네.. 위에 + 하고 gradient같은것도 잘 모르겠음. 
@@ -184,35 +170,33 @@ Objective function은
 
 [https://arxiv.org/abs/2307.12672](https://arxiv.org/abs/2307.12672)
 
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

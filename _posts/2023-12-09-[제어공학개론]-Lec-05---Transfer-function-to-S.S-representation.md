@@ -1,15 +1,3 @@
----
-layout: post
-date: 2023-12-09
-title: "[제어공학개론] Lec 05 - Transfer function to S.S representation"
-tags: [System, State-space]
-categories: [Lecture, 제어공학개론]
-media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-05---Transfer-function-to-S.S-representation.md
-
-description: 제어공학에서 전달 함수(T.F)를 상태 공간(S.S) 표현으로 변환하는 방법을 설명하며, 예시로 주어진 T.F를 통해 상태 공간 표현의 행렬 A, B, C, D를 도출합니다. 또한, 분자 다항식이 포함된 경우와 몫이 있는 경우의 처리 방법을 다루고, 행렬의 전치가 T.F에 미치는 영향을 설명합니다.
-pin: false
----
-
 
 ## 📢Precaution
 
@@ -172,35 +160,33 @@ $$
 {% endraw %}
 
 
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

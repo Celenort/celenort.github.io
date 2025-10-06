@@ -1,15 +1,3 @@
----
-layout: post
-date: 2023-12-09
-title: "[제어공학개론] Lec 07 - Simularity transform"
-tags: [Linear Algebra, System, Simularity transform]
-categories: [Lecture, 제어공학개론]
-media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-07---Simularity-transform.md
-
-description: 제어공학 개론에서 유사변환, 상태 공간 표현, 그리고 입력이 있는 경우와 없는 경우의 해법을 다룹니다. 유사변환을 통해 상태 공간 표현의 변환을 정의하고, 상태 방정식의 해를 구하는 방법을 설명하며, 행렬 지수의 특성과 전이 함수 간의 관계를 비교합니다. 최종적으로 출력 y(t)에 대한 계산식을 제시합니다.
-pin: false
----
-
 
 ## 📢Precaution
 
@@ -226,35 +214,33 @@ $$
 {% endraw %}
 
 
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

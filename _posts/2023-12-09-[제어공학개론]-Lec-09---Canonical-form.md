@@ -1,17 +1,3 @@
----
-layout: post
-date: 2023-12-09
-title: "[제어공학개론] Lec 09 - Canonical form"
-tags: [Control, System, Canonical form]
-categories: [Lecture, 제어공학개론]
-media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-09---Canonical-form.md
-image:
-  path: 0.png
-  alt:  
-description: 제어공학에서 표준형으로 설정된 시스템의 캐노니컬 형식에 대해 설명하며, 제어 가능성과 관측 가능성의 캐노니컬 형식을 수식과 함께 제시합니다. 각 형식은 시스템의 전이 함수를 나타내며, 교과서에 따라 다르게 정의될 수 있습니다.
-pin: false
----
-
 
 ## 📢Precaution
 
@@ -57,11 +43,11 @@ $$
 
 - original canonical form
 
-![0](/0.png)
+![](/assets/img/2023-12-09-[제어공학개론]-Lec-09---Canonical-form.md/0.png)
 
 - also called as companion form
 
-![1](/1.png)
+![](/assets/img/2023-12-09-[제어공학개론]-Lec-09---Canonical-form.md/1.png)
 
 
 ### Observability canonical form
@@ -84,41 +70,39 @@ $$
 
 - original canonical form
 
-![2](/2.png)
+![](/assets/img/2023-12-09-[제어공학개론]-Lec-09---Canonical-form.md/2.png)
 
 - companion canonical form
 
-![3](/3.png)
-
-
+![](/assets/img/2023-12-09-[제어공학개론]-Lec-09---Canonical-form.md/3.png)
 
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

@@ -282,27 +282,26 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
     const imageAltFinal = getPlainText(props, ["image_alt", "alt", "이미지 ALT", "이미지Alt", "이미지alt", "대체텍스트"]) || firstImg?.alt || title;
 
     // --- full front matter with image/alt/description/pin/draft/published ---
-    const frontmatter = [
-      '---',
-      `title: "${escapeYAML(title)}"`,
-      `date: ${date}`,
-      `notion_id: ${id}`,
-      `draft: ${(!published).toString()}`,
-      `published: ${published.toString()}`,
-      `pin: ${pin.toString()}`,
-      `image: "${escapeYAML(imageFinal)}"`,
-      `image_alt: "${escapeYAML(imageAltFinal)}"`,
-      `description: "${escapeYAML(descText)}"`,
-      `tags: ${yamlList(tagsArr)}`,
-      `categories: ${yamlList(categoriesArr)}`,
-      `media_subpath: "/assets/img/${fileBase}"`,
-      'math: true',
-      '---',
-      ''
-    ].join('
-');
-
+    const frontmatter = `---
+    title: "${escapeYAML(title)}"
+    date: ${date}
+    notion_id: ${id}
+    draft: ${(!published).toString()}
+    published: ${published.toString()}
+    pin: ${pin.toString()}
+    image: "${escapeYAML(imageFinal)}"
+    image_alt: "${escapeYAML(imageAltFinal)}"
+    description: "${escapeYAML(descText)}"
+    tags: ${yamlList(tagsArr)}
+    categories: ${yamlList(categoriesArr)}
+    media_subpath: "/assets/img/${fileBase}"
+    math: true
+    ---
+    
+    `;
+    
     const finalContent = `${frontmatter}${md}\n${mathjaxSnippet}`;
+
 
     let shouldWrite = true;
     if (fs.existsSync(filePath)) {

@@ -58,7 +58,7 @@ function getHash(content) {
 }
 
 // ---- Property helpers for YAML/front matter ----
-function escapeYAML(s = "") { return String(s).replace(/"/g, '\\"'); }
+function escapeYAML(s = "") { return String(s).replace(/"/g, '\"'); }
 function yamlList(arr) {
   if (!arr || !arr.length) return "[]";
   const items = arr.map(v => `"${escapeYAML(v)}"`).join(", ");
@@ -299,27 +299,26 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
     const imageAltFinal = getPlainText(props, ["image_alt", "alt", "이미지 ALT", "이미지Alt", "이미지alt", "대체텍스트"]) || firstImg?.alt || title;
 
     // --- YAML front matter ---
-    const frontmatter = `---\n` +
-`title: "${escapeYAML(title)}"\n` +
-`date: ${date}\n` +
-`notion_id: ${id}\n` +
-`draft: ${(!published).toString()}\n` +
-`published: ${published.toString()}\n` +
-`pin: ${pin.toString()}\n` +
-`image: "${escapeYAML(imageFinal)}"\n` +
-`image_alt: "${escapeYAML(imageAltFinal)}"\n` +
-`thumb: "${escapeYAML(thumbFinal)}"\n` +
-`imagefm: "${escapeYAML(imageFmFinal)}"\n` +
-`description: "${escapeYAML(descText)}"\n` +
-`tags: ${yamlList(tagsArr)}\n` +
-`categories: ${yamlList(catsArr)}\n` +
-`fmcats: ${yamlList(fmcatsArr)}\n` +
-`pcats: ${yamlList(pcatsArr)}\n` +
-`media_subpath: "/assets/img/${fileBase}"\n` +
-`math: true\n` +
-`---\n\n`;
+    const frontmatter = `---
+layout: post
+title: "${escapeYAML(title)}"
+date: ${date}
+draft: ${(!published).toString()}
+published: ${published.toString()}
+pin: ${pin.toString()}
+image:
+  path: "${escapeYAML(imageFinal)}"
+  alt: "${escapeYAML(imageAltFinal)}"
+description: "${escapeYAML(descText)}"
+tags: ${yamlList(tagsArr)}
+categories: ${yamlList(catsArr)}
+math: true
+---
 
-    const finalContent = `${frontmatter}${md}\n${mathjaxSnippet}`;
+`;
+
+    const finalContent = `${frontmatter}${md}
+${mathjaxSnippet}`;
 
     // Write only if content changed
     let shouldWrite = true;

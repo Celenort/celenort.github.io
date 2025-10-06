@@ -359,7 +359,8 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
     frontLines.push(`categories: ${yamlList(catsArr)}`);
     frontLines.push('math: true');
     frontLines.push('---', '');
-    const frontmatter = frontLines.join('');
+    const frontmatter = frontLines.join('
+');
 
     const finalContent = `${frontmatter}${md}
 ${mathjaxSnippet}`;
@@ -380,8 +381,7 @@ ${mathjaxSnippet}`;
     }
 
     // update state for this page
-    state.pages[id] = { last_edited_time: iso(r.last_edited_time), outfile: filePath, images: imgResult.images, images: imgResult.images };
-    state.pages[id] = { last_edited_time: iso(lastEdit), outfile: filePath };
+    state.pages[id] = { last_edited_time: iso(r.last_edited_time), outfile: filePath, images: imgResult.images };
   }
 
   // 5) Remove files for pages no longer in Notion (deleted/archived or 공개=false)

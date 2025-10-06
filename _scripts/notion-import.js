@@ -1,3 +1,11 @@
+// notion-import.js
+// Requirements: @notionhq/client, notion-to-md, axios, moment
+// PURPOSE
+// 1) External image (e.g., Imgur) links are kept as-is (do NOT download) so they render on the web directly.
+//    Only Notion-hosted file URLs are downloaded locally.
+// 2) Incremental sync: Only pages changed since last run are processed; removed pages are deleted locally.
+// 3) YAML front matter generated (restored from original fields).
+
 const { Client } = require("@notionhq/client");
 const { NotionToMarkdown } = require("notion-to-md");
 const moment = require("moment");
@@ -50,74 +58,52 @@ function getHash(content) {
 }
 
 // ---- Property helpers for YAML/front matter ----
-function escapeYAML(s = "") {
-  return String(s).replace(/"/g, '\"');
-}
+function escapeYAML(s = "") { return String(s).replace(/"/g, '\\"'); }
 function yamlList(arr) {
-  if (!arr || !arr.length) return '[]';
-  const items = arr.map(v => `"${escapeYAML(v)}"`).join(', ');
+  if (!arr || !arr.length) return "[]";
+  const items = arr.map(v => `"${escapeYAML(v)}"`).join(", ");
   return `[${items}]`;
 }
 function getProp(props, names) {
   if (!props) return null;
-  const lowNames = names.map(s => s.toLowerCase());
+  const low = names.map(n => String(n).toLowerCase());
   for (const [k, v] of Object.entries(props)) {
-    if (lowNames.includes(k.toLowerCase())) return v;
+    if (low.includes(String(k).toLowerCase())) return v;
   }
   return null;
 }
-function getCheckbox(props, names) {
-  const p = getProp(props, names);
-  return p?.checkbox === true;
-}
-function getMulti(props, names) {
-  const p = getProp(props, names);
-  if (!p) return [];
-  if (p.multi_select) return p.multi_select.map(o => o.name);
-  return [];
-}
-function getSelectAsArray(props, names) {
-  const p = getProp(props, names);
-  if (p?.select?.name) return [p.select.name];
-  return [];
-}
+function getCheckbox(props, names) { const p = getProp(props, names); return p?.checkbox === true; }
+function getMulti(props, names) { const p = getProp(props, names); return p?.multi_select ? p.multi_select.map(o => o.name) : []; }
+function getSelectAsArray(props, names) { const p = getProp(props, names); return p?.select?.name ? [p.select.name] : []; }
 function getPlainText(props, names) {
-  const p = getProp(props, names);
-  if (!p) return '';
-  if (p.type === 'rich_text' && p.rich_text) return p.rich_text.map(t => t.plain_text).join('');
-  if (p.type === 'title' && p.title) return p.title.map(t => t.plain_text).join('');
-  if (typeof p[p.type] === 'string') return p[p.type];
-  return '';
+  const p = getProp(props, names); if (!p) return "";
+  if (p.type === "rich_text" && p.rich_text) return p.rich_text.map(t => t.plain_text).join("");
+  if (p.type === "title" && p.title) return p.title.map(t => t.plain_text).join("");
+  if (typeof p[p.type] === "string") return p[p.type];
+  return "";
 }
 function getImageUrl(props, names) {
-  const p = getProp(props, names);
-  if (!p) return null;
-  if (p.files && p.files.length) {
-    const f = p.files[0];
-    return f.external?.url || f.file?.url || null;
-  }
+  const p = getProp(props, names); if (!p) return null;
+  if (p.files && p.files.length) { const f = p.files[0]; return f.external?.url || f.file?.url || null; }
   if (p.url) return p.url;
   return null;
 }
 function extractFirstImage(md) {
   const m = /!\[(.*?)\]\((.*?)\)/.exec(md);
-  if (!m) return null;
-  return { alt: m[1] || '', url: m[2] || '' };
+  return m ? { alt: m[1] || "", url: m[2] || "" } : null;
 }
-async function processImageURLForYaml(url, ftitle, baseName = 'cover') {
-  if (!url) return '';
+async function processImageURLForYaml(url, fileBase, baseName = "cover") {
+  if (!url) return "";
   if (isExternalImageLink(url)) return url;
   try {
     const ext = await headForExt(url);
-    const mediaSubpath = `/assets/img/${ftitle}`;
-    const localDir = path.join('assets/img', ftitle);
+    const mediaSubpath = `/assets/img/${fileBase}`;
+    const localDir = path.join("assets/img", fileBase);
     await fs.promises.mkdir(localDir, { recursive: true });
     const filename = path.join(localDir, `${baseName}${ext}`);
     await downloadTo(filename, url);
     return `${mediaSubpath}/${baseName}${ext}`;
-  } catch {
-    return url;
-  }
+  } catch { return url; }
 }
 
 // ---- Image handling: keep external links, download Notion file links only ----
@@ -130,7 +116,7 @@ const FILE_HOST_WHITELIST = [
 function isExternalImageLink(rawUrl) {
   try {
     const u = new URL(rawUrl);
-    if (!/^https?:$/.test(u.protocol)) return false;
+    if (!/^https?:$/.test(u.protocol)) return false; // treat non-http(s) as non-external
     return !FILE_HOST_WHITELIST.includes(u.hostname);
   } catch {
     return false;
@@ -160,12 +146,13 @@ async function downloadTo(filename, url) {
   });
 }
 
-async function transformImagesInMarkdown(md, ftitle) {
+async function transformImagesInMarkdown(md, fileBase) {
   const matches = [...md.matchAll(/!\[(.*?)\]\((.*?)\)/g)];
   if (matches.length === 0) return md;
 
-  const mediaSubpath = `/assets/img/${ftitle}`;
-  const localDir = path.join("assets/img", ftitle);
+  // target local dir and URL base
+  const mediaSubpath = `/assets/img/${fileBase}`; // URL path for markdown
+  const localDir = path.join("assets/img", fileBase); // local folder
   await fs.promises.mkdir(localDir, { recursive: true });
 
   const replacements = [];
@@ -174,6 +161,7 @@ async function transformImagesInMarkdown(md, ftitle) {
     const src = matches[i][2];
 
     if (isExternalImageLink(src)) {
+      // Keep as-is
       replacements.push(`![${alt}](${src})`);
       continue;
     }
@@ -185,10 +173,12 @@ async function transformImagesInMarkdown(md, ftitle) {
       await downloadTo(absPath, src);
       replacements.push(`![${alt}](${mediaSubpath}/${localName})`);
     } catch (e) {
+      // Fallback to original src (don’t break rendering)
       replacements.push(`![${alt}](${src})`);
     }
   }
 
+  // Rebuild string with replacements in place
   let cursor = 0;
   let out = "";
   for (let i = 0; i < matches.length; i++) {
@@ -215,43 +205,62 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
 
 // ---------------- MAIN ----------------
 (async () => {
-  const root = "_posts";
+  const root = "_posts"; // output directory for markdown posts
   fs.mkdirSync(root, { recursive: true });
 
   const databaseId = process.env.DATABASE_ID;
 
+  // 1) Fetch ALL current pages (for deletion detection)
   let response = await notion.databases.query({
+    database_id: databaseId,
+    filter: {
+      property: "공개",
+      checkbox: { equals: true },
+    },
+  });
+  const allPages = response.results;
+  while (response.has_more) {
+    response = await notion.databases.query({
       database_id: databaseId,
       start_cursor: response.next_cursor,
+      filter: { property: "공개", checkbox: { equals: true } },
     });
     allPages.push(...response.results);
   }
 
+  // 2) Load previous state & build maps
   const state = loadState();
   const currentById = new Map(allPages.map(p => [p.id, p]));
 
+  // 3) Determine changed pages (if first run, process all)
   const changed = [];
   for (const p of allPages) {
     const prev = state.pages[p.id]?.last_edited_time;
-    const now = p.last_edited_time;
+    const now = p.last_edited_time || p.last_edited_time; // Notion returns last_edited_time at page root
     if (!prev || new Date(now) > new Date(prev)) changed.push(p);
   }
 
+  // 4) Render only changed pages
   for (const r of changed) {
     const id = r.id;
+
+    // date: prefer a custom date property named "날짜" if present, else created_time
     let date = moment(r.created_time).format("YYYY-MM-DD");
     const pdate = r.properties?.["날짜"]?.["date"]?.["start"];
     if (pdate) date = moment(pdate).format("YYYY-MM-DD");
 
+    // title: use title property named "게시물"
     let title = id;
-    const ptitle = r.properties?.["게시물"]?.["title"];
+    const ptitle = r.properties?.["게시물"]?.["title"]; // array of rich text
     if (ptitle?.length > 0) title = ptitle[0]?.["plain_text"];
 
+    // filename
     const safeTitle = (title || id).replaceAll(" ", "-");
     const fileBase = `${date}-${safeTitle}`;
     const ftitle = `${fileBase}.md`;
     const filePath = path.join(root, ftitle);
 
+    // blocks → markdown
     const mdblocks = await n2m.pageToMarkdown(id);
     let md = n2m.toMarkdownString(mdblocks)["parent"];
     if (!md || md.trim() === "") {
@@ -259,9 +268,12 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
       continue;
     }
 
+    // text transforms
     md = escapeCodeBlock(md);
     md = convertInlineEquationToBlock(md);
     md = undefinedReplacer(md);
+
+    // image transforms (external kept, notion files downloaded)
     md = await transformImagesInMarkdown(md, fileBase);
 
     // --- collect metadata for front matter ---
@@ -269,40 +281,47 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
     const published = !!getCheckbox(props, ["공개", "published", "Publish", "Visible", "Public"]);
     const pin = !!getCheckbox(props, ["pin", "Pin", "핀", "고정", "고정핀"]);
     const tagsArr = getMulti(props, ["tags", "Tags", "태그"]);
-    const categoriesArr = getMulti(props, ["categories", "Categories", "카테고리"])
-      .concat(getSelectAsArray(props, ["category", "Category", "카테고리"]));
-    const descText = getPlainText(props, ["description", "Description", "설명", "요약", "excerpt"]);
+    const catsArr = getMulti(props, ["categories", "Categories", "카테고리"]).concat(
+      getSelectAsArray(props, ["category", "Category", "카테고리"]))
+    const fmcatsArr = getMulti(props, ["fmcats", "FMCats", "FM Categories"]);
+    const pcatsArr = getMulti(props, ["pcats", "PCats", "Parent Categories", "상위카테고리"]);
+    const descText = getPlainText(props, ["description", "Description", "설명", "요약", "excerpt", "desc"]);
 
-    // preferred image: property > page cover > first image in content
     const propImageUrl = getImageUrl(props, ["image", "Image", "이미지", "대표이미지", "썸네일", "thumbnail"]);
-    let imageSource = propImageUrl || (r.cover?.external?.url || r.cover?.file?.url) || null;
+    const thumbUrl = getImageUrl(props, ["thumb", "Thumb", "썸네일", "thumbnail"]);
+    const imageFmUrl = getImageUrl(props, ["imagefm", "imageFM", "ImageFM", "대표이미지FM", "썸네일FM"]);
+
     const firstImg = extractFirstImage(md);
-    if (!imageSource && firstImg?.url) imageSource = firstImg.url;
-    const imageFinal = imageSource ? (await processImageURLForYaml(imageSource, fileBase, 'cover')) : "";
+    let imageSource = propImageUrl || r.cover?.external?.url || r.cover?.file?.url || (firstImg?.url || null);
+    const imageFinal = imageSource ? await processImageURLForYaml(imageSource, fileBase, "cover") : "";
+    const thumbFinal = thumbUrl ? await processImageURLForYaml(thumbUrl, fileBase, "thumb") : "";
+    const imageFmFinal = imageFmUrl ? await processImageURLForYaml(imageFmUrl, fileBase, "imagefm") : "";
     const imageAltFinal = getPlainText(props, ["image_alt", "alt", "이미지 ALT", "이미지Alt", "이미지alt", "대체텍스트"]) || firstImg?.alt || title;
 
-    // --- full front matter with image/alt/description/pin/draft/published ---
-    const frontmatter = `---
-    title: "${escapeYAML(title)}"
-    date: ${date}
-    notion_id: ${id}
-    draft: ${(!published).toString()}
-    published: ${published.toString()}
-    pin: ${pin.toString()}
-    image: "${escapeYAML(imageFinal)}"
-    image_alt: "${escapeYAML(imageAltFinal)}"
-    description: "${escapeYAML(descText)}"
-    tags: ${yamlList(tagsArr)}
-    categories: ${yamlList(categoriesArr)}
-    media_subpath: "/assets/img/${fileBase}"
-    math: true
-    ---
-    
-    `;
-    
+    // --- YAML front matter ---
+    const frontmatter = `---\n` +
+`title: "${escapeYAML(title)}"\n` +
+`date: ${date}\n` +
+`notion_id: ${id}\n` +
+`draft: ${(!published).toString()}\n` +
+`published: ${published.toString()}\n` +
+`pin: ${pin.toString()}\n` +
+`image: "${escapeYAML(imageFinal)}"\n` +
+`image_alt: "${escapeYAML(imageAltFinal)}"\n` +
+`thumb: "${escapeYAML(thumbFinal)}"\n` +
+`imagefm: "${escapeYAML(imageFmFinal)}"\n` +
+`description: "${escapeYAML(descText)}"\n` +
+`tags: ${yamlList(tagsArr)}\n` +
+`categories: ${yamlList(catsArr)}\n` +
+`fmcats: ${yamlList(fmcatsArr)}\n` +
+`pcats: ${yamlList(pcatsArr)}\n` +
+`media_subpath: "/assets/img/${fileBase}"\n` +
+`math: true\n` +
+`---\n\n`;
+
     const finalContent = `${frontmatter}${md}\n${mathjaxSnippet}`;
 
-
+    // Write only if content changed
     let shouldWrite = true;
     if (fs.existsSync(filePath)) {
       const oldHash = getHash(fs.readFileSync(filePath, "utf8"));
@@ -317,10 +336,12 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
       console.log(`Unchanged: ${ftitle}`);
     }
 
-    const lastEdit = r.last_edited_time;
+    // update state for this page
+    const lastEdit = r.last_edited_time || r.last_edited_time;
     state.pages[id] = { last_edited_time: iso(lastEdit), outfile: filePath };
   }
 
+  // 5) Remove files for pages no longer in Notion (deleted/archived or 공개=false)
   const aliveIds = new Set(allPages.map(p => p.id));
   for (const [pid, meta] of Object.entries(state.pages)) {
     if (!aliveIds.has(pid)) {
@@ -336,6 +357,7 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
     }
   }
 
+  // 6) Save checkpoint
   state.last_run = new Date().toISOString();
   saveState(state);
 })();

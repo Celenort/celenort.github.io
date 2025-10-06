@@ -298,6 +298,57 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
     const ftitle = `${fileBase}.md`;
     const filePath = path.join(root, ftitle);
 
+    // --- handle rename (old file -> new file) ---
+    const prevMeta = state.pages[id];
+    if (prevMeta?.outfile && prevMeta.outfile !== filePath) {
+      // 1) remove previous markdown file
+      try {
+        if (fs.existsSync(prevMeta.outfile)) {
+          fs.unlinkSync(prevMeta.outfile);
+          console.log(`Removed (renamed): ${path.basename(prevMeta.outfile)}`);
+        }
+      } catch (e) {
+        console.log("Rename cleanup (md) failed:", e?.message || e);
+      }
+
+      // 2) move/merge image folder: assets/img/<oldBase> -> assets/img/<fileBase>
+      try {
+        const oldBase = path.basename(prevMeta.outfile, ".md");
+        const oldDir = path.join("assets/img", oldBase);
+        const newDir = path.join("assets/img", fileBase);
+
+        if (fs.existsSync(oldDir)) {
+          if (!fs.existsSync(newDir)) {
+            fs.renameSync(oldDir, newDir);
+            console.log(`Moved images: ${oldBase} -> ${fileBase}`);
+          } else {
+            // merge file-by-file without overwriting
+            for (const name of fs.readdirSync(oldDir)) {
+              const src = path.join(oldDir, name);
+              const dst = path.join(newDir, name);
+              if (!fs.existsSync(dst)) fs.renameSync(src, dst);
+            }
+            try { fs.rmdirSync(oldDir, { recursive: true }); } catch {}
+            console.log(`Merged images into: ${fileBase}`);
+          }
+
+          // update image manifest paths in state
+          if (Array.isArray(prevMeta.images)) {
+            const oldPrefix = `/assets/img/${oldBase}/`;
+            const newPrefix = `/assets/img/${fileBase}/`;
+            prevMeta.images = prevMeta.images.map(it =>
+              it && it.kind === "local" && it.file
+                ? { ...it, file: it.file.replace(oldPrefix, newPrefix) }
+                : it
+            );
+            state.pages[id].images = prevMeta.images;
+          }
+        }
+      } catch (e) {
+        console.log("Rename cleanup (images) failed:", e?.message || e);
+      }
+    }
+
     // blocks → markdown
     const mdblocks = await n2m.pageToMarkdown(id);
     let md = n2m.toMarkdownString(mdblocks)["parent"];

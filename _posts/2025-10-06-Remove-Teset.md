@@ -1,0 +1,50 @@
+---
+layout: post
+title: "Remove Teset"
+date: 2025-10-06
+draft: false
+published: true
+pin: false
+description: ""
+tags: []
+categories: []
+math: true
+---
+
+sdfadf
+
+
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        R: "\\mathbb{R}",
+        N: "\\mathbb{N}",
+        Z: "\\mathbb{Z}",
+        Q: "\\mathbb{Q}",
+        C: "\\mathbb{C}",
+        proj: "\\operatorname{proj}",
+        rank: "\\operatorname{rank}",
+        im: "\\operatorname{im}",
+        dom: "\\operatorname{dom}",
+        codom: "\\operatorname{codom}",
+        argmax: "\\operatorname*{arg\,max}",
+        argmin: "\\operatorname*{arg\,min}",
+        "\{": "\\lbrace",
+        "\}": "\\rbrace",
+        sub: "\\subset",
+        sup: "\\supset",
+        sube: "\\subseteq",
+        supe: "\\supseteq"
+      },
+      tags: "ams",
+      strict: false, 
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+    },
+    options: {
+      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

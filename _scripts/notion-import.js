@@ -359,8 +359,7 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
     frontLines.push(`categories: ${yamlList(catsArr)}`);
     frontLines.push('math: true');
     frontLines.push('---', '');
-    const frontmatter = frontLines.join('
-');
+    const frontmatter = frontLines.join('');
 
     const finalContent = `${frontmatter}${md}
 ${mathjaxSnippet}`;

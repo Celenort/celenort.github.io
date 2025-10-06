@@ -213,31 +213,30 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
   // 1) Fetch ALL current pages (for deletion detection)
   let response = await notion.databases.query({
     database_id: databaseId,
-    filter: {
-      property: "공개",
-      checkbox: { equals: true },
-    },
   });
   const allPages = response.results;
   while (response.has_more) {
     response = await notion.databases.query({
-      database_id: databaseId,
-      start_cursor: response.next_cursor,
-      filter: { property: "공개", checkbox: { equals: true } },
-    });
+    database_id: databaseId,
+    start_cursor: response.next_cursor,
+  });
     allPages.push(...response.results);
   }
 
   // 2) Load previous state & build maps
   const state = loadState();
+  // One-time full rebuild flag (no env var needed). If not yet done, process ALL pages once.
+  const forceFullOnce = state.__full_rebuild_done !== true;
   const currentById = new Map(allPages.map(p => [p.id, p]));
 
   // 3) Determine changed pages (if first run, process all)
-  const changed = [];
-  for (const p of allPages) {
-    const prev = state.pages[p.id]?.last_edited_time;
-    const now = p.last_edited_time || p.last_edited_time; // Notion returns last_edited_time at page root
-    if (!prev || new Date(now) > new Date(prev)) changed.push(p);
+  const changed = forceFullOnce ? allPages.slice() : [];
+  if (!forceFullOnce) {
+    for (const p of allPages) {
+      const prev = state.pages[p.id]?.last_edited_time;
+      const now = p.last_edited_time;
+      if (!prev || new Date(now) > new Date(prev)) changed.push(p);
+    }
   }
 
   // 4) Render only changed pages
@@ -341,7 +340,8 @@ ${mathjaxSnippet}`;
   }
 
   // 5) Remove files for pages no longer in Notion (deleted/archived or 공개=false)
-  const aliveIds = new Set(allPages.map(p => p.id));
+  if (allPages.length === 0) { console.log('Notion returned 0 pages; skip deletion to preserve existing _posts.'); } else {
+    const aliveIds = new Set(allPages.map(p => p.id));
   for (const [pid, meta] of Object.entries(state.pages)) {
     if (!aliveIds.has(pid)) {
       try {
@@ -355,8 +355,10 @@ ${mathjaxSnippet}`;
       delete state.pages[pid];
     }
   }
+  }
 
   // 6) Save checkpoint
+  state.__full_rebuild_done = true; // ensure full rebuild happens only once
   state.last_run = new Date().toISOString();
   saveState(state);
 })();

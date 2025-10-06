@@ -1921,11 +1921,17 @@
       ]
     },
     "284ca610-d234-8071-8f35-f039bac7cfb7": {
-      "last_edited_time": "2025-10-06T17:17:00.000Z",
+      "last_edited_time": "2025-10-06T17:25:00.000Z",
       "outfile": "_posts/2025-10-07-Update2.md",
-      "images": []
+      "images": [
+        {
+          "kind": "local",
+          "norm": "image.png",
+          "file": "/assets/img/2025-10-07-Update2/0-c2ca448d93.png"
+        }
+      ]
     }
   },
-  "last_run": "2025-10-06T17:23:26.075Z",
+  "last_run": "2025-10-06T17:26:06.775Z",
   "__full_rebuild_done": true
 }

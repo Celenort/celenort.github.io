@@ -68,6 +68,9 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
+      - name: Jekyll clean
+        run: bundle exec jekyll clean
+
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:

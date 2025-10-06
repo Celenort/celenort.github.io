@@ -249,7 +249,7 @@
       "outfile": "_posts/2024-07-06-[Archive]-vessl-시행착오-기록.md"
     },
     "1c0ca610-d234-804c-8642-cfc81ca298d8": {
-      "last_edited_time": "2025-03-27T05:40:00.000Z",
+      "last_edited_time": "2025-10-06T15:04:00.000Z",
       "outfile": "_posts/2024-06-29-[Archive]WSL로-pytorch-구동하기.md"
     },
     "128ca610-d234-800b-b1c3-d4072ee18c9c": {
@@ -461,7 +461,7 @@
       "outfile": "_posts/2023-12-05-[제어공학개론]-Lec-01---Introduction.md"
     },
     "97c04b90-fcd8-4a57-933d-78ffaff2ce49": {
-      "last_edited_time": "2025-10-06T12:21:00.000Z",
+      "last_edited_time": "2025-10-06T15:05:00.000Z",
       "outfile": "_posts/2024-07-01-[신호처리]-Lec-05---Sampling.md"
     },
     "5c1390bc-fe50-44d1-85e1-0f99264790ee": {
@@ -473,7 +473,7 @@
       "outfile": "_posts/2024-06-30-[신호처리]-Lec-03---Convolution.md"
     },
     "4599bbb2-436f-45d6-9992-7f0cd8337288": {
-      "last_edited_time": "2025-03-27T10:44:00.000Z",
+      "last_edited_time": "2025-10-06T15:04:00.000Z",
       "outfile": "_posts/2024-06-30-[신호처리]-Lec-02---LTI-system.md"
     },
     "d34ec057-0cd5-451a-b0b6-33ae7941e4f3": {
@@ -481,5 +481,5 @@
       "outfile": "_posts/2024-06-29-[신호처리]-Lec-01---Signal.md"
     }
   },
-  "last_run": "2025-10-06T15:02:57.020Z"
+  "last_run": "2025-10-06T15:05:51.877Z"
 }

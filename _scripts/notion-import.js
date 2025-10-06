@@ -146,41 +146,79 @@ async function downloadTo(filename, url) {
   });
 }
 
-async function transformImagesInMarkdown(md, fileBase) {
-  const matches = [...md.matchAll(/!\[(.*?)\]\((.*?)\)/g)];
-  if (matches.length === 0) return md;
+function shortHash(str){return crypto.createHash("sha1").update(String(str)).digest("hex").slice(0,10);} 
+function normalizeImageKey(rawUrl){
+  try{ const u=new URL(rawUrl); const base=path.basename(u.pathname||""); return base.toLowerCase(); }catch{ return String(rawUrl); }
+}
+function extFromUrl(rawUrl){ try{ const u=new URL(rawUrl); const ext=path.extname(u.pathname||"").toLowerCase(); return ext || null; }catch{ return null; } }
 
-  // target local dir and URL base
-  const mediaSubpath = `/assets/img/${fileBase}`; // URL path for markdown
-  const localDir = path.join("assets/img", fileBase); // local folder
+async function transformImagesInMarkdown(md, fileBase, prevImages){
+  const matches = [...md.matchAll(/!\[(.*?)\]\((.*?)\)/g)];
+  if (matches.length === 0) return { md, images: prevImages || [] };
+
+  const mediaSubpath = `/assets/img/${fileBase}`;
+  const localDir = path.join("assets/img", fileBase);
   await fs.promises.mkdir(localDir, { recursive: true });
 
+  // Build maps from previous manifest for reuse
+  const prevByNorm = new Map();
+  for (const it of (prevImages||[])) { if (it && it.kind === 'local' && it.norm) prevByNorm.set(it.norm, it); }
+
+  const newManifest = [];
   const replacements = [];
+  const currentNorms = new Set();
+
   for (let i = 0; i < matches.length; i++) {
     const alt = matches[i][1] || "";
     const src = matches[i][2];
 
     if (isExternalImageLink(src)) {
-      // Keep as-is
+      // External → keep as-is; track in manifest
+      newManifest.push({ kind: 'external', src, alt });
       replacements.push(`![${alt}](${src})`);
       continue;
     }
 
-    try {
-      const ext = await headForExt(src);
-      const localName = `${i}${ext}`;
-      const absPath = path.join(localDir, localName);
-      await downloadTo(absPath, src);
-      replacements.push(`![${alt}](${mediaSubpath}/${localName})`);
-    } catch (e) {
-      // Fallback to original src (don’t break rendering)
-      replacements.push(`![${alt}](${src})`);
+    const norm = normalizeImageKey(src);
+    currentNorms.add(norm);
+    let fileName;
+    let targetPath;
+
+    // Try reuse previous mapping
+    const prev = prevByNorm.get(norm);
+    if (prev && prev.file) {
+      fileName = path.basename(prev.file);
+      targetPath = path.join(localDir, fileName);
+      // If file missing (cleaned or first time), re-download
+      if (!fs.existsSync(targetPath)) {
+        const ext = extFromUrl(src) || await headForExt(src);
+        fileName = fileName || `${i}-${shortHash(norm)}${ext || '.png'}`;
+        targetPath = path.join(localDir, fileName);
+        await downloadTo(targetPath, src);
+      }
+    } else {
+      // New local image
+      const ext = extFromUrl(src) || await headForExt(src);
+      fileName = `${i}-${shortHash(norm)}${ext || '.png'}`;
+      targetPath = path.join(localDir, fileName);
+      await downloadTo(targetPath, src);
+    }
+
+    newManifest.push({ kind: 'local', src, alt, norm, file: `${mediaSubpath}/${fileName}` });
+    replacements.push(`![${alt}](${mediaSubpath}/${fileName})`);
+  }
+
+  // Delete removed local images (present in prev but not in current)
+  for (const it of (prevImages||[])) {
+    if (it && it.kind === 'local' && it.norm && !currentNorms.has(it.norm)) {
+      const p = it.file ? it.file.replace(/^\//, '') : null; // stored as "/assets/..."
+      const abs = p ? path.join(process.cwd(), p) : null;
+      try { if (abs && fs.existsSync(abs)) fs.unlinkSync(abs); } catch {}
     }
   }
 
   // Rebuild string with replacements in place
-  let cursor = 0;
-  let out = "";
+  let cursor = 0; let out = "";
   for (let i = 0; i < matches.length; i++) {
     const m = matches[i];
     out += md.slice(cursor, m.index);
@@ -188,7 +226,7 @@ async function transformImagesInMarkdown(md, fileBase) {
     cursor = m.index + m[0].length;
   }
   out += md.slice(cursor);
-  return out;
+  return { md: out, images: newManifest };
 }
 
 // ---- Incremental sync state ----
@@ -230,9 +268,10 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
   const currentById = new Map(allPages.map(p => [p.id, p]));
 
   // 3) Determine changed pages (if first run, process all)
-  const changed = forceFullOnce ? allPages.slice() : [];
+  const publishedPages = allPages.filter(p => getCheckbox(p.properties || {}, ["공개", "published", "Publish", "Visible", "Public"]));
+  const changed = forceFullOnce ? publishedPages.slice() : [];
   if (!forceFullOnce) {
-    for (const p of allPages) {
+    for (const p of publishedPages) {
       const prev = state.pages[p.id]?.last_edited_time;
       const now = p.last_edited_time;
       if (!prev || new Date(now) > new Date(prev)) changed.push(p);
@@ -273,7 +312,9 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
     md = undefinedReplacer(md);
 
     // image transforms (external kept, notion files downloaded)
-    md = await transformImagesInMarkdown(md, fileBase);
+    const prevImages = state.pages[id]?.images || [];
+    const imgResult = await transformImagesInMarkdown(md, fileBase, prevImages);
+    md = imgResult.md;
 
     // --- collect metadata for front matter ---
     const props = r.properties || {};
@@ -287,34 +328,39 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
     const descText = getPlainText(props, ["description", "Description", "설명", "요약", "excerpt", "desc"]);
 
     const propImageUrl = getImageUrl(props, ["image", "Image", "이미지", "대표이미지", "썸네일", "thumbnail"]);
-    const thumbUrl = getImageUrl(props, ["thumb", "Thumb", "썸네일", "thumbnail"]);
-    const imageFmUrl = getImageUrl(props, ["imagefm", "imageFM", "ImageFM", "대표이미지FM", "썸네일FM"]);
 
     const firstImg = extractFirstImage(md);
     let imageSource = propImageUrl || r.cover?.external?.url || r.cover?.file?.url || (firstImg?.url || null);
-    const imageFinal = imageSource ? await processImageURLForYaml(imageSource, fileBase, "cover") : "";
-    const thumbFinal = thumbUrl ? await processImageURLForYaml(thumbUrl, fileBase, "thumb") : "";
-    const imageFmFinal = imageFmUrl ? await processImageURLForYaml(imageFmUrl, fileBase, "imagefm") : "";
-    const imageAltFinal = getPlainText(props, ["image_alt", "alt", "이미지 ALT", "이미지Alt", "이미지alt", "대체텍스트"]) || firstImg?.alt || title;
+
+    let imageFinal = "";
+    let imageAltFinal = "";
+    if (imageSource) {
+      imageFinal = await processImageURLForYaml(imageSource, fileBase, "cover");
+      imageAltFinal = getPlainText(props, ["image_alt", "alt", "이미지 ALT", "이미지Alt", "이미지alt", "대체텍스트"]) || firstImg?.alt || title;
+    }
 
     // --- YAML front matter ---
-    const frontmatter = `---
-layout: post
-title: "${escapeYAML(title)}"
-date: ${date}
-draft: ${(!published).toString()}
-published: ${published.toString()}
-pin: ${pin.toString()}
-image:
-  path: "${escapeYAML(imageFinal)}"
-  alt: "${escapeYAML(imageAltFinal)}"
-description: "${escapeYAML(descText)}"
-tags: ${yamlList(tagsArr)}
-categories: ${yamlList(catsArr)}
-math: true
----
-
-`;
+    const frontLines = [
+      '---',
+      `layout: post`,
+      `title: "${escapeYAML(title)}"`,
+      `date: ${date}`,
+      `draft: ${(!published).toString()}`,
+      `published: ${published.toString()}`,
+      `pin: ${pin.toString()}`,
+    ];
+    if (imageFinal) {
+      frontLines.push('image:');
+      frontLines.push(`  path: "${escapeYAML(imageFinal)}"`);
+      frontLines.push(`  alt: "${escapeYAML(imageAltFinal)}"`);
+    }
+    frontLines.push(`description: "${escapeYAML(descText)}"`);
+    frontLines.push(`tags: ${yamlList(tagsArr)}`);
+    frontLines.push(`categories: ${yamlList(catsArr)}`);
+    frontLines.push('math: true');
+    frontLines.push('---', '');
+    const frontmatter = frontLines.join('
+');
 
     const finalContent = `${frontmatter}${md}
 ${mathjaxSnippet}`;
@@ -335,13 +381,13 @@ ${mathjaxSnippet}`;
     }
 
     // update state for this page
-    const lastEdit = r.last_edited_time || r.last_edited_time;
+    state.pages[id] = { last_edited_time: iso(r.last_edited_time), outfile: filePath, images: imgResult.images, images: imgResult.images };
     state.pages[id] = { last_edited_time: iso(lastEdit), outfile: filePath };
   }
 
   // 5) Remove files for pages no longer in Notion (deleted/archived or 공개=false)
   if (allPages.length === 0) { console.log('Notion returned 0 pages; skip deletion to preserve existing _posts.'); } else {
-    const aliveIds = new Set(allPages.map(p => p.id));
+    const aliveIds = new Set(publishedPages.map(p => p.id));
   for (const [pid, meta] of Object.entries(state.pages)) {
     if (!aliveIds.has(pid)) {
       try {

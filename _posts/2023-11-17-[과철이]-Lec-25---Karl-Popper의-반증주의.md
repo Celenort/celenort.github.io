@@ -1,17 +1,3 @@
----
-layout: post
-date: 2023-11-17
-title: "[과철이] Lec 25 - Karl Popper의 반증주의"
-tags: [철학, 칼 포퍼, 반증주의, 연역법]
-categories: [Lecture, 과학의 철학적 이해]
-media_subpath: /assets/img/2023-11-17-[과철이]-Lec-25---Karl-Popper의-반증주의.md
-image:
-  path: 0.png
-  alt:  
-description:  
-pin: false
----
-
 
 ### Precaution
 
@@ -61,7 +47,7 @@ pin: false
 단 하나의 반증 사례로 ’모든 까마귀가 검은 것은 아니다’라는 진술을 논리적으로 도출할 수 있다.
 
 
-![0](/0.png)
+![](/assets/img/2023-11-17-[과철이]-Lec-25---Karl-Popper의-반증주의.md/0.png)
 
 - 검은 백조, 블랙 스완 : 불가능하다고 인식한 상황이 실제 발생하는 것을 일컫는 단어가 됨
 
@@ -98,7 +84,7 @@ pin: false
 ### 칼 포퍼
 
 
-![1](/1.png)
+![](/assets/img/2023-11-17-[과철이]-Lec-25---Karl-Popper의-반증주의.md/1.png)
 
 
 소련 공산주의, 히틀러 전체주의의 몰락 예견, 이를 적중하는 것을 확인하는 행운을 누리기도 함.
@@ -296,35 +282,33 @@ Popper의 과학 철학은 실제로 하는 일에 대한 설명, 사실(is)에 
 
 진리를 추구하는 사람을 존중하라. 그러나 그것을 발견했다고 주장하는 사람은 경계하라 : truth에 적중했다고 우리 스스로 말할 수 없다. 그러나 그것을 추구하는 일이 무의미한 것은 아니다. 추측과 반박의 방법에 의해 보다 경험적 내용이 풍부한 이론으로 나아가는 것이다.
 
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

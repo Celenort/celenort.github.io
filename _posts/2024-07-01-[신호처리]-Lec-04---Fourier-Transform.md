@@ -1,17 +1,3 @@
----
-layout: post
-date: 2024-07-01
-title: "[신호처리] Lec 04 - Fourier Transform"
-tags: [FastMRI, Fourier transform]
-categories: [Lecture, 신호처리(FastMRI)]
-media_subpath: /assets/img/2024-07-01-[신호처리]-Lec-04---Fourier-Transform.md
-image:
-  path: 0.png
-  alt: Fourier transform of usf
-description: 이 문서는 푸리에 변환에 대한 강의 노트로, 1D 및 2D 푸리에 변환의 수학적 정의, 유용한 공식, 샤 함수와의 관계, 그리고 푸리에 변환의 주요 속성을 설명합니다. 푸리에 변환은 주파수 도메인으로의 변환을 통해 합성곱 계산을 단순화하고, 변조 속성을 포함하여 다양한 신호 처리 응용에 활용됩니다.
-pin: false
----
-
 
 ### Precaution
 
@@ -107,13 +93,13 @@ $$
 - $u(t)$ : unit step function, a: real positive number
 F.T. of exponential function is so-called Lorentzian
 
-![0](/0.png)
+![](https://imgur.com/gCoG8nG.png)
 
 
 _rect and sinc function_
 
 
-![1](/1.png)
+![](https://imgur.com/jAJgQoP.png)
 
 
 _Lorentzian function_
@@ -132,7 +118,7 @@ $$
 
 
 
-![2](/2.png)
+![](https://imgur.com/2uGG9Yd.png)
 
 
 ### Properties of F.T.
@@ -155,35 +141,33 @@ $$
 {% endraw %}
 
 
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

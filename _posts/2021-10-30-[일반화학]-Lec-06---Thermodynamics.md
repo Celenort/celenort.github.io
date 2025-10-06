@@ -1,17 +1,3 @@
----
-layout: post
-date: 2021-10-30
-title: "[일반화학] Lec 06 - Thermodynamics"
-tags: [화학, 단열과정, 엔탈피, 헤스의 법칙, 엔트로피, 카르노 기관]
-categories: [Lecture, 일반화학]
-media_subpath: /assets/img/2021-10-30-[일반화학]-Lec-06---Thermodynamics.md
-image:
-  path: 0.png
-  alt:  
-description:  
-pin: false
----
-
 
 ## 열역학
 
@@ -47,7 +33,7 @@ $$
 
 - PV=nRT에서 R을 제외한 4개의 변수가 기본 set.
 
-![0](/0.png)
+![](/assets/img/2021-10-30-[일반화학]-Lec-06---Thermodynamics.md/0.png)
 
 
 - pv=nrt 공식은 pvt surface를 만듬.
@@ -173,7 +159,7 @@ $$
 
 - 엔탈피는 상태함수이다. 해당 반응 전후에 일어나는 열 변화를 보려면 과정에 해당하는 반응들의 엔탈피를 계수를 곱하여 합하면 됨.
 
-	![1](/1.png)
+	![](/assets/img/2021-10-30-[일반화학]-Lec-06---Thermodynamics.md/1.png)
 
 - _ΔH_ > 0, 열을 흡수. _ΔH_ < 0, 열을 방출
 
@@ -186,10 +172,10 @@ $$
 - 해당 상태일 때 naught을 붙일 수 있음.
 - formation의 경우, 순수한 홑원소 물질에 대해 formation Enthalpy를 0으로 정의함.
 
-![2](/2.png)
+![](/assets/img/2021-10-30-[일반화학]-Lec-06---Thermodynamics.md/2.png)
 
 
-![3](/3.png)
+![](/assets/img/2021-10-30-[일반화학]-Lec-06---Thermodynamics.md/3.png)
 
 - 전체 반응에서의 생성엔탈피는 그 반응물을 홑원소로 분리했다가 다시 생성물로 만드는 반응이기 때문에 prod - react 를 이용
 - 엔탈피 : $H=U+PV$ , 일정한 외부 압력에서 반응이 진행되면,
@@ -305,7 +291,7 @@ $$
 ### Clausius inequality
 
 
-![4](/4.png)
+![](/assets/img/2021-10-30-[일반화학]-Lec-06---Thermodynamics.md/4.png)
 
 
 {% raw %}
@@ -352,7 +338,7 @@ $$
 
 - 특정 T에서 어떤 물질의 엔트로피 구하기
 
-	![5](/5.png)
+	![](/assets/img/2021-10-30-[일반화학]-Lec-06---Thermodynamics.md/5.png)
 
 
 {% raw %}
@@ -453,7 +439,7 @@ $$
 ### The Effect of Temp.
 
 
-![6](/6.png)
+![](/assets/img/2021-10-30-[일반화학]-Lec-06---Thermodynamics.md/6.png)
 
 
 - H>0, S>0 : 온도 올라감에 따라 자발
@@ -461,35 +447,33 @@ $$
 - H<0, S>0 : 항상 자발
 - H>0, S<0 : 항상 비자발
 
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

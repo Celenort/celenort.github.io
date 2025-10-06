@@ -1,17 +1,3 @@
----
-layout: post
-date: 2023-12-09
-title: "[제어공학개론] Lec 18 - Discrete time domain system"
-tags: [Control, System, DT system]
-categories: [Lecture, 제어공학개론]
-media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-18---Discrete-time-domain-system.md
-image:
-  path: 0.png
-  alt:  
-description: 제어공학 개론의 18번째 강의에서는 이산 시간 영역 시스템에 대해 다루며, 물리적 세계와 사이버 세계의 연결, 샘플링 시간, 상태 공간 표현, 그리고 이산 시스템의 안정성 조건을 설명합니다. 이산 신호는 입력과 출력으로 구성되며, 안정성을 위해서는 시스템의 고유값이 단위 원 내부에 있어야 합니다.
-pin: false
----
-
 
 ## 📢Precaution
 
@@ -31,7 +17,7 @@ Physical world는 analog이지만, Cyber world는 컴퓨터로 진행되므로, 
 Cyber world와 Physical world를 이어주는 2개의 선에서, Controller output 을 $P(s)$에 전달해주는 Actuator, 혹은 Digital to Analog Convert(DAC). 그리고 $P(s)$의 출력 $y$를 Sampler (Analog to Digtal Converter) (Switch형태로 표시) 가 있음.
 
 
-![0](/0.png)
+![](/assets/img/2023-12-09-[제어공학개론]-Lec-18---Discrete-time-domain-system.md/0.png)
 
 
 Sampling time $T_s$에 대해서 Discrete signal을 $y_d[K]$의 형태로 index로 적음.
@@ -127,35 +113,33 @@ $$
 {% endraw %}
 
 
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

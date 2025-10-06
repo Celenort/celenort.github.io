@@ -1,17 +1,3 @@
----
-layout: post
-date: 2023-12-09
-title: "[제어공학개론] Lec 03 - Steady state response, bode plot"
-tags: [Control, System, Steady state, Bode plot, Linearization]
-categories: [Lecture, 제어공학개론]
-media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-03---Steady-state-response,-bode-plot.md
-image:
-  path: 0.png
-  alt:  
-description: 제어공학 개론에서는 안정적인 전달 함수, 정상 상태 응답, 보드 플롯 및 상태 공간 표현에 대해 설명합니다. 안정적인 전달 함수는 모든 극의 실수부가 음수여야 하며, 정상 상태 응답은 입력 신호에 의해 발생합니다. 보드 플롯은 주파수에 따른 전달 함수의 진폭과 위상을 시각화하며, 로그 스케일을 사용하여 저주파와 고주파를 효과적으로 표현합니다. 비선형 시스템의 선형화는 평형점 근처에서의 거동을 분석하는 데 사용됩니다.
-pin: false
----
-
 
 ## 📢Precaution
 
@@ -210,7 +196,7 @@ Transfer function의 Amplitude와 Angle을 주파수 $\omega$에 따라 plot한 
 Amplitude, freq에는 각각 $20\log_{10}$, $\log_{10}$을 씌운 뒤 plot
 
 
-![0](/0.png)
+![](/assets/img/2023-12-09-[제어공학개론]-Lec-03---Steady-state-response,-bode-plot.md/0.png)
 
 
 각각을 Magnitude plot, Phase plot이라고 함.
@@ -607,35 +593,33 @@ $$
 {% endraw %}
 
 
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

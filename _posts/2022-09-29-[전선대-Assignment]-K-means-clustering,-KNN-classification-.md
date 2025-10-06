@@ -1,17 +1,3 @@
----
-layout: post
-date: 2022-09-29
-title: "[전선대 Assignment] K-means clustering, KNN classification "
-tags: [Linear Algebra, k means clustering, KNN classification]
-categories: [Assignment, 선형대수]
-media_subpath: /assets/img/2022-09-29-[전선대-Assignment]-K-means-clustering,-KNN-classification-.md
-image:
-  path: 0.png
-  alt:  
-description:  
-pin: false
----
-
 
 ### **Problem 1 - K means clustering**
 
@@ -191,7 +177,7 @@ Output : Run ended with 6 iterations!
 For K : 3 the distance was 0.5138938958006479
 
 
-![0](/0.png)
+![](/assets/img/2022-09-29-[전선대-Assignment]-K-means-clustering,-KNN-classification-.md/0.png)
 
 
 ### **Problem 2 - KNN classification**
@@ -419,37 +405,35 @@ processing… k= 45
 processing… k= 50
 
 
-![1](/1.png)
-
-
+![](/assets/img/2022-09-29-[전선대-Assignment]-K-means-clustering,-KNN-classification-.md/1.png)
 
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

@@ -1,17 +1,3 @@
----
-layout: post
-date: 2023-12-09
-title: "[머신러닝] Chap 4 - Decision tree"
-tags: [Decision tree]
-categories: [Lecture, Machine Learning]
-media_subpath: /assets/img/2023-12-09-[머신러닝]-Chap-4---Decision-tree.md
-image:
-  path: 0.png
-  alt: A Decision tree
-description: 머신러닝의 결정 트리 알고리즘은 데이터를 분할하기 위해 정보 엔트로피, 이득 비율, 지니 지수를 사용하며, 과적합 문제를 해결하기 위해 전후 가지치기를 적용합니다. 연속 값과 결측값 처리 방법도 설명되며, 다변량 결정 트리의 가능성에 대해서도 논의됩니다.
-pin: false
----
-
 
 ### Disclaimer
 
@@ -126,7 +112,7 @@ $$
 ### Pre-pruning
 
 
-![0](/0.png)
+![](/assets/img/2023-12-09-[머신러닝]-Chap-4---Decision-tree.md/0.png)
 
 - comparing before/after splitting
 - 가지치기를 하기 전에 splitting 과정에서부터 pre-pruning을 진행하는 것.
@@ -223,37 +209,35 @@ $$
 - Feature axis에 data point를 plot 하였을 때 Decision tree가 하는 일은 axis에 parallel한 경계선을 긋는 행위.
 - Parallel하지 않은 대각선 line을 그릴 수 있다면?
 
-![1](/1.png)
-
-
+![](/assets/img/2023-12-09-[머신러닝]-Chap-4---Decision-tree.md/1.png)
 
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

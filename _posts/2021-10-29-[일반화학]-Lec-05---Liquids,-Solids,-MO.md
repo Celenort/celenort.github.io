@@ -1,17 +1,3 @@
----
-layout: post
-date: 2021-10-29
-title: "[일반화학] Lec 05 - Liquids, Solids, MO"
-tags: [화학, Inter-molecular forces, London dispersion force, 수소결합]
-categories: [Lecture, 일반화학]
-media_subpath: /assets/img/2021-10-29-[일반화학]-Lec-05---Liquids,-Solids,-MO.md
-image:
-  path: 0.png
-  alt:  
-description:  
-pin: false
----
-
 
 ## Liquids
 
@@ -53,7 +39,7 @@ $$
 
 - O, N, F는 워낙에 E.N이 크기 때문에 분자 내에서 이온인 것 처럼 행동.
 
-![0](/0.png)
+![](/assets/img/2021-10-29-[일반화학]-Lec-05---Liquids,-Solids,-MO.md/0.png)
 
 - 한 분자의 수소와 결합한 O, N, F가 다른 분자의 수소와 이루는 결합
 - 분자의 크기가 작아질수록 Bonding energy가 작아지는 것이 정석인데 $NH_3, HF, H_2O$는 그 크기가 증가.
@@ -63,7 +49,7 @@ $$
 1. Suface tension : 표면장력.
 2. Meniscus formation : 매니스커스
 
-![1](/1.png)
+![](/assets/img/2021-10-29-[일반화학]-Lec-05---Liquids,-Solids,-MO.md/1.png)
 
 - Hg : 금속이므로 자신들끼리 결합하는 것을 선호 → Convex
 - 물과 물의 결합보다 물과 벽의 결합을 더 선호 → Concave
@@ -79,7 +65,7 @@ $$
 2. Metallic solids
 	- 좁은 공간 안에 최대한 많이 응집하려고 함. - 아래 층의 빈공간에 다음 층이 올라가는 방식
 
-		![2](/2.png)
+		![](/assets/img/2021-10-29-[일반화학]-Lec-05---Liquids,-Solids,-MO.md/2.png)
 
 	- ccp, fcc 동일.
 3. Network solids (공유결합 분자)
@@ -95,7 +81,7 @@ $$
 ### Interstitial sites in FCC
 
 
-![3](/3.png)
+![](/assets/img/2021-10-29-[일반화학]-Lec-05---Liquids,-Solids,-MO.md/3.png)
 
 - 흰색 구멍을 둘러싸고 있는 가장 가까운 검은색 원소 갯수 : 6개, 팔면체 모양 → Octahedral intersite
 - (우측 그림) 흰색 그림을 둘러싸고 있는 검은색 원소 갯수 : 4개, 사면체 모양 → Tetrahedral intersite
@@ -104,7 +90,7 @@ $$
 	> ratio가 두 site의 그것 사이에 들어가게 될 경우 더 ratio가 작은쪽으로 들어가게됨 (최대한 멀어지고 싶으므로)
 
 
-	![4](/4.png)
+	![](/assets/img/2021-10-29-[일반화학]-Lec-05---Liquids,-Solids,-MO.md/4.png)
 
 
 ### Brag’s diffraction
@@ -126,7 +112,7 @@ $$
 ### Lithium ion batteries
 
 
-![5](/5.png)
+![](/assets/img/2021-10-29-[일반화학]-Lec-05---Liquids,-Solids,-MO.md/5.png)
 
 - Anode (음극) : Graphite를 속에 리튬이온을 묶어둠
 - Cathode (양극) : LiCoO2, Transition metel - O 결합 속 틈새 공간에 Li를 묶어둠
@@ -141,11 +127,11 @@ $$
 
 - Metalic solid의 경우 원자가 매우 많으므로 orbital간의 에너지 준위 격차가 매우 작음, Band 형성
 
-	![6](/6.png)
+	![](/assets/img/2021-10-29-[일반화학]-Lec-05---Liquids,-Solids,-MO.md/6.png)
 
 - 이 때 실제 MO처럼 Orbital 안에 전자가 차있는 곳, 차있지 않은 곳이 존재하므로 이를 각각 valance band, conductive band라고 명명
 
-	![7](/7.png)
+	![](/assets/img/2021-10-29-[일반화학]-Lec-05---Liquids,-Solids,-MO.md/7.png)
 
 - Half -filled orbital 이 존재해야지만 Conductive라고 할 수 있음. Gap이 너무 크면 잘 통과하지 못함.
 - Conduction electrons and holes : valence band에 있는 전자들이 소량 위로 올라가 위쪽에는 전자가 쌓이고 아래쪽에는 hole, 양공이 쌓임. 이로 인해서 위와 아래에 어느정도의 전류가 흐를 수 있게 됨. → 흐르는 전자 양 자체는 작지만 잘 흐르는, 반도체
@@ -157,35 +143,33 @@ $$
 - OLED : 전기를 통해 electron energy 올리고, 다시 내려오면서 빛 방출되도록. gap이 멀 수록 더 높은 에너지, 즉 낮은 파장의 빛이 나옴. 이를 이용하여 적절히 색을 배합. 이를 Organic한 물질로 만듬.
 - QLED : RGB가 모두 포함된 백색광을 내보내고, Quantum Dot을 이용하여 Filter를 만듬.
 - Quantum dot을 이용하여 Band gap을 더 구체적으로 바꿀 수 있음. (P.I.B가 더 좁을 수록 에너지 간격이 선명해지고 넓어짐)
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

@@ -1,15 +1,3 @@
----
-layout: post
-date: 2024-06-30
-title: "[신호처리] Lec 02 - LTI system"
-tags: [FastMRI, System, Convolution]
-categories: [Lecture, 신호처리(FastMRI)]
-media_subpath: /assets/img/2024-06-30-[신호처리]-Lec-02---LTI-system.md
-
-description: 신호처리 강의에서는 시스템의 정의, 선형성과 시간 불변성, 그리고 임펄스 응답의 개념을 다룹니다. 시스템은 입력 신호를 변환하여 출력 신호를 생성하며, 선형 시스템은 스케일링과 중첩의 성질을 만족합니다. 임펄스 응답은 시스템의 입력이 임펄스일 때의 출력이며, 출력 신호는 입력 신호와 임펄스 응답의 컨볼루션으로 표현됩니다.
-pin: false
----
-
 
 ### Precaution
 
@@ -86,35 +74,33 @@ $$
 
 
 - 유사하게 CT에서의 convolution 또한 정의할 수 있다.
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

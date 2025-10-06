@@ -1,22 +1,8 @@
----
-layout: post
-date: 2021-12-06
-title: "[일반화학] Lec 08 - Chemical Equilibrium"
-tags: [화학, 평형상수, Van't Hoff equation]
-categories: [Lecture, 일반화학]
-media_subpath: /assets/img/2021-12-06-[일반화학]-Lec-08---Chemical-Equilibrium.md
-image:
-  path: 0.png
-  alt:  
-description:  
-pin: false
----
-
 
 ## Chemical Equilibrium
 
 
-![0](/0.png)
+![](/assets/img/2021-12-06-[일반화학]-Lec-08---Chemical-Equilibrium.md/0.png)
 
 - 농도 변하는 부분 : Potentially reversible 하지만 실제로는 irreversible
 - 평형 도달 : Foward, Reverse 반응의 반응속도가 동일할 때 평형에 도달했다고 간주
@@ -25,7 +11,7 @@ pin: false
 ### 평형 상수 (Equilibrium Constant)
 
 
-![1](/1.png)
+![](/assets/img/2021-12-06-[일반화학]-Lec-08---Chemical-Equilibrium.md/1.png)
 
 - 평형상수 = 평형에서의 농도의 계수 제곱의 비 (몰농도 단위) 온도에 대한 Term이므로 온도도 기입.
 - Kc (농도 평형상수), Kp (압력 평형상수) 는 관계 있으며, $RT^n$배, n=반응물 계수합 - 생성물 계수합
@@ -83,44 +69,42 @@ $$
 
 
 
-![2](/2.png)
+![](/assets/img/2021-12-06-[일반화학]-Lec-08---Chemical-Equilibrium.md/2.png)
 
 - 기울기에 $ΔH_{rxn}$ 이 포함되어 있으므로, 발열일 경우 slope 양수, 흡열일 경우 slope 음수
 
 ### 용해도 차이를 이용한 추출
 
 
-![3](/3.png)
-
-
+![](/assets/img/2021-12-06-[일반화학]-Lec-08---Chemical-Equilibrium.md/3.png)
 
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

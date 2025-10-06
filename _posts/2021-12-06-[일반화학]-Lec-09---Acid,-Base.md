@@ -1,17 +1,3 @@
----
-layout: post
-date: 2021-12-06
-title: "[일반화학] Lec 09 - Acid, Base"
-tags: [화학, Auto-ionization, Buffer]
-categories: [Lecture, 일반화학]
-media_subpath: /assets/img/2021-12-06-[일반화학]-Lec-09---Acid,-Base.md
-image:
-  path: 0.png
-  alt:  
-description:  
-pin: false
----
-
 
 ### 산, 염기의 정의
 
@@ -67,7 +53,7 @@ $$
 - $HClO, HClO_2, HClO_3, HClO_4$ : 산소가 많을 수록 잘 당김
 - 카복실기의 예시도 동일
 
-![0](/0.png)
+![](/assets/img/2021-12-06-[일반화학]-Lec-09---Acid,-Base.md/0.png)
 
 - 단, $CH_3$의 경우 전자 밀어내는 경향
 
@@ -152,35 +138,33 @@ $$
 - 짝산의 가수분해반응에 대한 Ka를 주어진 Kb를 Kw에 나누어서 구함, 이후 계산.
 - pH를 -log 해서 구하기
 - 반당량점에서는 H-H 식 적용가능, 당량점에서는 강한 쪽의 pH를 따라가는 경향.
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

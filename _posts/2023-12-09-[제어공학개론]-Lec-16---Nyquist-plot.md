@@ -1,17 +1,3 @@
----
-layout: post
-date: 2023-12-09
-title: "[제어공학개론] Lec 16 - Nyquist plot"
-tags: [Control, System, Nyquist plot, Gain/Phase margain, Lead/lag compansator, Loop gain]
-categories: [Lecture, 제어공학개론]
-media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-16---Nyquist-plot.md
-image:
-  path: 0.png
-  alt:  
-description: 제어공학에서 Nyquist plot은 개방 루프 전달 함수 G(s)의 안정성을 평가하는 데 사용되며, Nyquist 안정성 기준과 Cauchy의 주장을 통해 안정성 분석을 수행한다. Nyquist 정리에 따르면, "-1"의 반시계 방향 감싸기 횟수는 시스템의 불안정한 극과 영의 개수 차이와 관련이 있다. 또한, Bode plot과 Nyquist plot은 본질적으로 동일한 정보를 제공하며, Gain margin과 Phase margin을 통해 시스템의 강건성을 평가할 수 있다. Lead-lag 보상기는 주파수 응답을 조정하여 시스템의 안정성을 향상시키는 방법으로 설명된다.
-pin: false
----
-
 
 ## 📢Precaution
 
@@ -217,7 +203,7 @@ Bode plot은 w에 따른 $G(jw)$의 phase, magnitude를 표현하고 있는 것�
 고전 제어에서 (간단한) system의 bode plot은 Magnitude의 경우 low frequency에서 일정하고, high freq에서 깎여나가는 모양이며, Phase는 -90도 ~ -270도 사이를 한번 cross하는 형태로 만들어짐
 
 
-![0](/0.png)
+![](/assets/img/2023-12-09-[제어공학개론]-Lec-16---Nyquist-plot.md/0.png)
 
 
 이 때 Magnitude의 0dB (1)을 지나는 순간 phase가 -180도보다 크거나, 반대로 -180도를 지나는 동안 Magnitude가 1 (0dB)보다 낮아야만 system은 stable하다고 할 수 있다. 한바퀴 도는 Nyquist plot을 생각해보면, -180도에서 크기가 1보다 작아야만 "$-1$"을 enclosement에 포함하지 않을 수 있음.
@@ -244,7 +230,7 @@ Magnitude를 줄이는 경우가 Lag compansator,
 Phase를 들어올리는 경우가 Lead compansator라고 함
 
 
-![1](/1.png)
+![](/assets/img/2023-12-09-[제어공학개론]-Lec-16---Nyquist-plot.md/1.png)
 
 
 use $C(s) = \frac{s+b}{s+a}$ 사용, or $C(s) = \frac{b}{a}\frac{s/b+1}{s/a+1}$
@@ -385,7 +371,7 @@ Performing Loot locus on $1+\xi\left(\cdot \right) = 0$
 $w_n$을 반지름으로 하는 원 상에서 $\xi=0$에서는 $j\omega$ 축 위에 있다가 점점 미끄러져 내려옴. $\xi=0$ 에서 $-w_n$으로 pole이 모두 모이고, 이후로 좌우로 퍼짐.
 
 
-![2](/2.png)
+![](/assets/img/2023-12-09-[제어공학개론]-Lec-16---Nyquist-plot.md/2.png)
 
 
 ### 2nd order system usf response parameter들
@@ -399,40 +385,38 @@ $w_n$을 반지름으로 하는 원 상에서 $\xi=0$에서는 $j\omega$ 축 위
 - Settling time ($t_s$) : 최종 값의 $\pm x\%$ 값 이내로 줄어드는 데까지 걸리는 시간
 - Steady state-error :  Input step value와 최종 값 과의 차이
 
-![3](/3.png)
+![](/assets/img/2023-12-09-[제어공학개론]-Lec-16---Nyquist-plot.md/3.png)
 
 
 다음과 같이 수식적으로도 표현 가능
-
-
 
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

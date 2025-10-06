@@ -1,15 +1,3 @@
----
-layout: post
-date: 2023-12-09
-title: "[제어공학개론] Lec 08 - Phase portrait and Jordan form"
-tags: [Control, Linear Algebra, System, Phase portrait, Jordan form]
-categories: [Lecture, 제어공학개론]
-media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-08---Phase-portrait-and-Jordan-form.md
-
-description: 제어공학 개론에서는 대칭 행렬의 고유벡터가 직교하며, 상태 초상화와 조르당 형식에 대한 내용을 다룹니다. 상태 초상화는 상태를 축으로 표시하고, 조르당 형식은 비대각화 가능한 시스템을 제어하는 방법을 설명합니다. 시스템의 제어 가능성을 높이기 위해 폐루프 시스템을 고려하며, 고유값과 고유벡터의 성질이 시스템의 동작에 미치는 영향을 논의합니다.
-pin: false
----
-
 
 ## 📢Precaution
 
@@ -247,35 +235,33 @@ if  $T(s) = \displaystyle \frac{1}{s^2}$ 와 같은 integrator 같이, 설계자
 - Q. Transfer function을 통해 구해지는 $x(t)$에서는 pole이 중첩될 경우 무조건 $t$가 붙어서 도출되나, $A$의 성질을 이용하여 계산되는 $x(t)$에서는 diagonalizability에 따라 $t$가 붙을 수도 있고 안붙을 수도 있음. (diagonalizable 하면 $n$ distinct한 eigenvector가 생기므로 안붙음) 어떠한 조건에서 이게 붙고 안붙냐?
 - A. Transfer function : $T(s) = C(sI-A)^{-1}B$
 - 이 때 transfer function에서 추가로 붙는 C와 B가 t가 안붙었다 하더라도 무조건 붙게 만들게 됨.
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

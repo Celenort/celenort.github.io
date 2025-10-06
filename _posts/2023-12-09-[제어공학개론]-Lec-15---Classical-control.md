@@ -1,17 +1,3 @@
----
-layout: post
-date: 2023-12-09
-title: "[제어공학개론] Lec 15 - Classical control"
-tags: [Control, System, Routh-Hurwitz criterion, Root locus]
-categories: [Lecture, 제어공학개론]
-media_subpath: /assets/img/2023-12-09-[제어공학개론]-Lec-15---Classical-control.md
-image:
-  path: 0.png
-  alt:  
-description: 제어공학 개론에서는 Routh-Hurwitz 기준을 통해 다항식의 근의 실수 부분의 부호 변화를 확인하고, Root Locus를 이용해 피드백 시스템의 안정성을 판단하는 방법을 설명합니다. Routh-Hurwitz 기준을 통해 다항식의 계수를 이용해 안정성을 체크하며, Root Locus는 개방 루프의 극과 제로의 위치 변화를 시각화하여 시스템의 안정성을 분석하는 데 사용됩니다.
-pin: false
----
-
 
 ## 📢Precaution
 
@@ -85,7 +71,7 @@ $$
 G(s)의 전달 함수를 가진 System에 $K$의 미지의 Gain을 주어 Feedback system을 구성. 이 때 어떤 $K$ 값의 범위에서 안정한지를 판단할 수 있는가?
 
 
-![0](/0.png)
+![](/assets/img/2023-12-09-[제어공학개론]-Lec-15---Classical-control.md/0.png)
 
 
 {% raw %}
@@ -188,35 +174,33 @@ $$
 
 로 바꾸어 root locus를 그리면 됨.
 
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

@@ -1,17 +1,3 @@
----
-layout: post
-date: 2024-07-01
-title: "[신호처리] Lec 05 - Sampling"
-tags: [FastMRI, Nyquist sampling theorem]
-categories: [Lecture, 신호처리(FastMRI)]
-media_subpath: /assets/img/2024-07-01-[신호처리]-Lec-05---Sampling.md
-image:
-  path: 0.png
-  alt: A sketch of explaining Nyquist sampling theorem
-description: 신호처리 강의에서는 연속 함수와 샘플링 함수의 곱을 통해 샘플링 과정을 설명하고, 나이퀴스트 샘플링 정리에 따라 신호의 최대 주파수의 두 배 이상으로 샘플링해야 원래 신호를 완벽하게 복원할 수 있음을 강조합니다. 샤 함수와 주파수 도메인에서의 컨볼루션 개념도 다루어집니다.
-pin: false
----
-
 
 ### Precaution
 
@@ -56,37 +42,35 @@ $$
 
 
 
-![0](/0.png)
-
-
+![](/assets/img/2024-07-01-[신호처리]-Lec-05---Sampling.md/0.png)
 
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

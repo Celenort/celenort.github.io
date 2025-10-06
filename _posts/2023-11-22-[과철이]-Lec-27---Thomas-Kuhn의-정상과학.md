@@ -1,17 +1,3 @@
----
-layout: post
-date: 2023-11-22
-title: "[과철이] Lec 27 - Thomas Kuhn의 정상과학"
-tags: [철학, 토마스 쿤, 정상과학]
-categories: [Lecture, 과학의 철학적 이해]
-media_subpath: /assets/img/2023-11-22-[과철이]-Lec-27---Thomas-Kuhn의-정상과학.md
-image:
-  path: 0.png
-  alt:  
-description:  
-pin: false
----
-
 
 ### Precaution
 
@@ -28,7 +14,7 @@ pin: false
 철학, 역사를 전공하지 않고 평범한 과학자의 길을 걸었으나, 가장 영향력 있는 책 출간.
 
 
-![0](/0.png)
+![](/assets/img/2023-11-22-[과철이]-Lec-27---Thomas-Kuhn의-정상과학.md/0.png)
 
 
 참고 : 1962년 부근의 시대상은 상대주의 사상으로 서구 과학 기술문명에 대한 비판이 고조되던 시기
@@ -76,7 +62,7 @@ pin: false
 평범한 과학도들이 하는 과학자의 길을 가는 사람이면, 누구나 경험하는 실제 과학활동이 우리 머릿속의 대중적 통념, 이념적 과학과 크게 다르다는 것을 느낀 데에서 문제의식이 싹틈.
 
 
-![1](/1.png)
+![](/assets/img/2023-11-22-[과철이]-Lec-27---Thomas-Kuhn의-정상과학.md/1.png)
 
 
 _일반적으로 사람들이 생각하는 과학자의 이미지_
@@ -150,35 +136,33 @@ Kuhn은 이러한 대중적 이미지는 실제 과학 활동과 다르다.
 
 보수성으로 인하여 과학혁명이 열림. 즉 사회적 인정과 관련된 사회적 동기가 과학 혁명을 지피는 불쏘시개이자 연료가 되는 것.
 
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

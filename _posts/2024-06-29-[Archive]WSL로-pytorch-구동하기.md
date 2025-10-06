@@ -1,17 +1,3 @@
----
-layout: post
-date: 2024-06-29
-title: "[Archive]WSL로 pytorch 구동하기"
-tags: [FastMRI]
-categories: [FastMRI]
-media_subpath: /assets/img/2024-06-29-[Archive]WSL로-pytorch-구동하기.md
-image:
-  path: 0.png
-  alt:  
-description:  
-pin: false
----
-
 
 ### 개요
 
@@ -197,7 +183,7 @@ code .
 이후 VSC에서 wsl extension 받으면 켜져있는 wsl 자동으로 캐치해서 연결시켜준다. 
 
 
-![0](/0.png)
+![](/assets/img/2024-06-29-[Archive]WSL로-pytorch-구동하기.md/0.png)
 
 
 현재 내가 돌리고 있는 모습. 일단 파일 다운 겁나 오래걸려서 다운받고있다. 
@@ -250,40 +236,38 @@ pip install matplotlib
 # 6. git repository 연결하기
 
 
-![1](/1.png)
+![](/assets/img/2024-06-29-[Archive]WSL로-pytorch-구동하기.md/1.png)
 
 1. 위치를 잘 확인하고 내가 다운받고싶은 위치에서 git clone [주소] 입력. 주소는 github의 <>code 버튼을 눌러서 확인할 수 있다. 나는 내 리포에 포크해서 하니깐 [https://github.com/Celenort/FastMRI_challenge.git](https://github.com/Celenort/FastMRI_challenge.git) 이걸로 함.
 2. 모든 브랜치를 다운받는게 아니라 메인 브렌치만 오게 되서 Readme.md만 확인할 수 있다. branch 명령어는 git branch [branch name]. branch 목록은 git branch -a로 확인가능.
 3. 나는 브랜치 옮겨다니면서 하기 귀찮아서 걍 물리적으로 2개다 복사해서 붙여넣었다. 왼쪽에 2024_baby_varnet , 2024_baby_unet 폴더 확인.
-
-
 <script>
   window.MathJax = {
     tex: {
       macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
+        R: "\\\\mathbb{R}",
+        N: "\\\\mathbb{N}",
+        Z: "\\\\mathbb{Z}",
+        Q: "\\\\mathbb{Q}",
+        C: "\\\\mathbb{C}",
+        proj: "\\\\operatorname{proj}",
+        rank: "\\\\operatorname{rank}",
+        im: "\\\\operatorname{im}",
+        dom: "\\\\operatorname{dom}",
+        codom: "\\\\operatorname{codom}",
+        argmax: "\\\\operatorname*{arg\\,max}",
+        argmin: "\\\\operatorname*{arg\\,min}",
+        "\\{": "\\\\lbrace",
+        "\\}": "\\\\rbrace",
+        sub: "\\\\subset",
+        sup: "\\\\supset",
+        sube: "\\\\subseteq",
+        supe: "\\\\supseteq"
       },
       tags: "ams",
       strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+      displayMath: [["$$", "$$"], ["\\\\[", "\\\\]"]]
     },
     options: {
       skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]

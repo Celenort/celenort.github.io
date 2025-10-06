@@ -1,22 +1,20 @@
 name: "Build and Deploy"
+
 on:
   push:
-    branches:
-      - main
-      - master
+    branches: [main, master]
     paths-ignore:
       - .gitignore
       - README.md
       - LICENSE
   repository_dispatch:
     types: [RUN_WORKFLOW_DISPATCH]
-      
+
 permissions:
   contents: write
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -24,55 +22,47 @@ concurrency:
 jobs:
   importer:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@master
-    
-      - name: Clean Directory
-        run: |
-          for file in assets/img/*
-          do
-              if [[ $file != "assets/img/favicons" ]]
-              then
-                  rm -rf "$file"
-              fi
-          done
-          rm -rf _posts/*
-      
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ✅ 기존 파일 유지: _posts / assets/img 통삭제 금지
+      #   필요하면 임시 파일만 정리하세요 (예: .cache만)
+      #- name: Clean (optional)
+      #  run: rm -rf .cache/*
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          node-version: "17"
+          node-version: "20"
+          cache: "npm"
 
-      - run: npm install
+      - run: npm ci
 
-      - run: node _scripts/notion-import.js
+      - name: Import from Notion
+        run: node _scripts/notion-import.js
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           DATABASE_ID: ${{ secrets.DATABASE_ID }}
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[배포] Notion 변경 사항 저장"
           branch: main
-          commit_user_name: importer-bot 🤖
-          commit_user_email: actions@github.com
-          commit_author: importer-bot 🤖 <actions@github.com>
- 
+          commit_user_name: "importer-bot 🤖"
+          commit_user_email: "actions@github.com"
+          commit_author: "importer-bot 🤖 <actions@github.com>"
+
   build:
     needs: importer
     runs-on: ubuntu-latest
-
-    steps:           
+    steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 1
-          # submodules: true
-          # If using the 'assets' git submodule from Chirpy Starter, uncomment above
-          # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
 
       - name: Setup Pages
         id: pages
@@ -81,19 +71,13 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3' # reads from a '.ruby-version' or '.tools-version' file if 'ruby-version' is omitted
+          ruby-version: "3.3"
           bundler-cache: true
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: "production"
-
-      #- name: Test site
-      #  run: |
-      #    bundle exec htmlproofer _site \
-      #      \-\-disable-external \
-      #      \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3

@@ -218,8 +218,7 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
     // image transforms (external kept, notion files downloaded)
     md = await transformImagesInMarkdown(md, ftitle);
 
-    const finalContent = md + "
-" + mathjaxSnippet;
+    const finalContent = md + mathjaxSnippet;
 
     // Write only if content changed
     let shouldWrite = true;

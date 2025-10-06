@@ -173,8 +173,7 @@ async function transformImagesInMarkdown(md, fileBase, prevImages){
     const src = matches[i][2];
 
     if (isExternalImageLink(src)) {
-      // External → keep as-is; track in manifest
-      newManifest.push({ kind: 'external', src, alt });
+      // External → keep as-is; do NOT store in manifest to avoid leaking URLs/tokens
       replacements.push(`![${alt}](${src})`);
       continue;
     }
@@ -204,7 +203,7 @@ async function transformImagesInMarkdown(md, fileBase, prevImages){
       await downloadTo(targetPath, src);
     }
 
-    newManifest.push({ kind: 'local', src, alt, norm, file: `${mediaSubpath}/${fileName}` });
+    newManifest.push({ kind: 'local', norm, file: `${mediaSubpath}/${fileName}` });
     replacements.push(`![${alt}](${mediaSubpath}/${fileName})`);
   }
 
@@ -263,6 +262,15 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
 
   // 2) Load previous state & build maps
   const state = loadState();
+  // Sanitize any existing image cache to remove source URLs/tokens
+  for (const pid of Object.keys(state.pages || {})) {
+    const imgs = state.pages[pid]?.images;
+    if (Array.isArray(imgs)) {
+      state.pages[pid].images = imgs
+        .filter(it => it && it.kind === 'local' && it.file && it.norm)
+        .map(it => ({ kind: 'local', norm: it.norm, file: it.file }));
+    }
+  }
   // One-time full rebuild flag (no env var needed). If not yet done, process ALL pages once.
   const forceFullOnce = state.__full_rebuild_done !== true;
   const currentById = new Map(allPages.map(p => [p.id, p]));
@@ -431,7 +439,11 @@ ${mathjaxSnippet}`;
     }
 
     // update state for this page
-    state.pages[id] = { last_edited_time: iso(r.last_edited_time), outfile: filePath, images: imgResult.images };
+    // Save sanitized image manifest (no src)
+    const sanitizedImages = (imgResult.images || [])
+      .filter(it => it && it.kind === 'local' && it.file && it.norm)
+      .map(it => ({ kind: 'local', norm: it.norm, file: it.file }));
+    state.pages[id] = { last_edited_time: iso(r.last_edited_time), outfile: filePath, images: sanitizedImages };
   }
 
   // 5) Remove files for pages no longer in Notion (deleted/archived or 공개=false)

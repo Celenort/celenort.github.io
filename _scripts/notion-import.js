@@ -49,6 +49,77 @@ function getHash(content) {
   return crypto.createHash("sha256").update(content).digest("hex");
 }
 
+// ---- Property helpers for YAML/front matter ----
+function escapeYAML(s = "") {
+  return String(s).replace(/"/g, '\"');
+}
+function yamlList(arr) {
+  if (!arr || !arr.length) return '[]';
+  const items = arr.map(v => `"${escapeYAML(v)}"`).join(', ');
+  return `[${items}]`;
+}
+function getProp(props, names) {
+  if (!props) return null;
+  const lowNames = names.map(s => s.toLowerCase());
+  for (const [k, v] of Object.entries(props)) {
+    if (lowNames.includes(k.toLowerCase())) return v;
+  }
+  return null;
+}
+function getCheckbox(props, names) {
+  const p = getProp(props, names);
+  return p?.checkbox === true;
+}
+function getMulti(props, names) {
+  const p = getProp(props, names);
+  if (!p) return [];
+  if (p.multi_select) return p.multi_select.map(o => o.name);
+  return [];
+}
+function getSelectAsArray(props, names) {
+  const p = getProp(props, names);
+  if (p?.select?.name) return [p.select.name];
+  return [];
+}
+function getPlainText(props, names) {
+  const p = getProp(props, names);
+  if (!p) return '';
+  if (p.type === 'rich_text' && p.rich_text) return p.rich_text.map(t => t.plain_text).join('');
+  if (p.type === 'title' && p.title) return p.title.map(t => t.plain_text).join('');
+  if (typeof p[p.type] === 'string') return p[p.type];
+  return '';
+}
+function getImageUrl(props, names) {
+  const p = getProp(props, names);
+  if (!p) return null;
+  if (p.files && p.files.length) {
+    const f = p.files[0];
+    return f.external?.url || f.file?.url || null;
+  }
+  if (p.url) return p.url;
+  return null;
+}
+function extractFirstImage(md) {
+  const m = /!\[(.*?)\]\((.*?)\)/.exec(md);
+  if (!m) return null;
+  return { alt: m[1] || '', url: m[2] || '' };
+}
+async function processImageURLForYaml(url, ftitle, baseName = 'cover') {
+  if (!url) return '';
+  if (isExternalImageLink(url)) return url;
+  try {
+    const ext = await headForExt(url);
+    const mediaSubpath = `/assets/img/${ftitle}`;
+    const localDir = path.join('assets/img', ftitle);
+    await fs.promises.mkdir(localDir, { recursive: true });
+    const filename = path.join(localDir, `${baseName}${ext}`);
+    await downloadTo(filename, url);
+    return `${mediaSubpath}/${baseName}${ext}`;
+  } catch {
+    return url;
+  }
+}
+
 // ---- Image handling: keep external links, download Notion file links only ----
 const FILE_HOST_WHITELIST = [
   "prod-files-secure.s3.us-west-2.amazonaws.com",
@@ -150,18 +221,8 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
   const databaseId = process.env.DATABASE_ID;
 
   let response = await notion.databases.query({
-    database_id: databaseId,
-    filter: {
-      property: "공개",
-      checkbox: { equals: true },
-    },
-  });
-  const allPages = response.results;
-  while (response.has_more) {
-    response = await notion.databases.query({
       database_id: databaseId,
       start_cursor: response.next_cursor,
-      filter: { property: "공개", checkbox: { equals: true } },
     });
     allPages.push(...response.results);
   }
@@ -187,7 +248,8 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
     if (ptitle?.length > 0) title = ptitle[0]?.["plain_text"];
 
     const safeTitle = (title || id).replaceAll(" ", "-");
-    const ftitle = `${date}-${safeTitle}.md`;
+    const fileBase = `${date}-${safeTitle}`;
+    const ftitle = `${fileBase}.md`;
     const filePath = path.join(root, ftitle);
 
     const mdblocks = await n2m.pageToMarkdown(id);
@@ -200,20 +262,45 @@ function iso(s) { return s ? new Date(s).toISOString() : null; }
     md = escapeCodeBlock(md);
     md = convertInlineEquationToBlock(md);
     md = undefinedReplacer(md);
-    md = await transformImagesInMarkdown(md, ftitle);
+    md = await transformImagesInMarkdown(md, fileBase);
 
-    // --- full front matter restored ---
+    // --- collect metadata for front matter ---
+    const props = r.properties || {};
+    const published = !!getCheckbox(props, ["공개", "published", "Publish", "Visible", "Public"]);
+    const pin = !!getCheckbox(props, ["pin", "Pin", "핀", "고정", "고정핀"]);
+    const tagsArr = getMulti(props, ["tags", "Tags", "태그"]);
+    const categoriesArr = getMulti(props, ["categories", "Categories", "카테고리"])
+      .concat(getSelectAsArray(props, ["category", "Category", "카테고리"]));
+    const descText = getPlainText(props, ["description", "Description", "설명", "요약", "excerpt"]);
+
+    // preferred image: property > page cover > first image in content
+    const propImageUrl = getImageUrl(props, ["image", "Image", "이미지", "대표이미지", "썸네일", "thumbnail"]);
+    let imageSource = propImageUrl || (r.cover?.external?.url || r.cover?.file?.url) || null;
+    const firstImg = extractFirstImage(md);
+    if (!imageSource && firstImg?.url) imageSource = firstImg.url;
+    const imageFinal = imageSource ? (await processImageURLForYaml(imageSource, fileBase, 'cover')) : "";
+    const imageAltFinal = getPlainText(props, ["image_alt", "alt", "이미지 ALT", "이미지Alt", "이미지alt", "대체텍스트"]) || firstImg?.alt || title;
+
+    // --- full front matter with image/alt/description/pin/draft/published ---
     const frontmatter = [
       '---',
-      `title: "${title.replace(/"/g, '\\"')}"`,
+      `title: "${escapeYAML(title)}"`,
       `date: ${date}`,
       `notion_id: ${id}`,
-      'tags: []',
-      'categories: []',
+      `draft: ${(!published).toString()}`,
+      `published: ${published.toString()}`,
+      `pin: ${pin.toString()}`,
+      `image: "${escapeYAML(imageFinal)}"`,
+      `image_alt: "${escapeYAML(imageAltFinal)}"`,
+      `description: "${escapeYAML(descText)}"`,
+      `tags: ${yamlList(tagsArr)}`,
+      `categories: ${yamlList(categoriesArr)}`,
+      `media_subpath: "/assets/img/${fileBase}"`,
       'math: true',
       '---',
       ''
-    ].join('\n');
+    ].join('
+');
 
     const finalContent = `${frontmatter}${md}\n${mathjaxSnippet}`;
 

@@ -2491,16 +2491,9 @@
       ]
     },
     "284ca610-d234-8071-8f35-f039bac7cfb7": {
-      "last_edited_time": "2025-10-06T16:30:00.000Z",
+      "last_edited_time": "2025-10-06T16:38:00.000Z",
       "outfile": "_posts/2025-10-07-New-test.md",
       "images": [
-        {
-          "kind": "local",
-          "src": "https://prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/ac62e788-d2c8-45f3-b002-4ef7901f8166/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB46626GRP4IU%2F20251006%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20251006T163038Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEPj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIFG%2B8WrMIrJO%2FfVTPcX5mQk1TPg00OeF%2B2x206Mvun6dAiEA%2BW28%2BAuiv0d%2FBStVJS%2F2pwfuoemcHMy6Pbg8CJ%2Brb50qiAQIkf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKF%2FhWFAkBT5ov%2BrcircA2NhhGuuKBvXlcMNLQ4cOKVHkm%2FEeRthx4JpF1j76PxmPOJ9AYQ7KqVP2vbA%2BvHstJTu9gjN4fWjrGBsNPLx%2FV4J%2BU54Vn0Z99VdV4isQmA1q0aJEV9CmsY1WYOsAhA%2BdF9E1r8T6DV1qW6uEqQOFwwti3ovVjG%2BMt8SXbIfiIKLg27cnc73IphsrVDnXb1rn6%2FB84sOXP4Qyoop2jKLv7h2xbHklx%2BqO1GUUC0mx8F4W4NJmvbC%2FyHVjuzn5KgQlIdm%2FIjaHqxZjF6jeOUdyKYkWLMNsvd079hm9yisQ08taOtbEd5C91thhrJzaNISk9NuUejOMYjUhdBWPljiBbXJTW1WDKYySKqak6Zj9JAiaMjpR0G0dCddE%2BgjlpYaVJv5coihBj4mOoWCJ5CYwDyzpJGDv1624yoCAkk82LW%2FBqr5bZiNdzVU06TatzpyQ%2BlyGbY7qbtBgQVc%2FIlLurtRP0rmDb1DGikC07Pt6i42%2BTp0HhIQL3bvgq2wGmKnQ7TS5tvpmNywCRnBn85rXusOSjL8flGhL%2FQ9cmmddz0smwsGC3J383lYQS1OCEgacXBcNA7I6blURNuowM9aH6P%2F35Gq16q4WqHi%2FL93PZMEVLH3pQhYhVtYUzCeMOfMj8cGOqUBfwQR5utli8ygeHReNZlqcWNXjq6F0XBrqRNxXbjKAzcjAb7exC8tHwgCR3gGDBSHLWjrfZSlbIJn4eXGoyB8jE%2FvXVecZ2jBVUHmLMD1ACAQdOnqhHoihTyVvtHnotG6M9oVFB4ul0H0Dmk41fGOvbn6HV3epacGXQCsUboA8cYiavKWCNXq2Mz4e1DzD28q06iKJmep0cl8Qln72kiqleRQWCqV&X-Amz-Signature=8cdf7fede289eb2d78332b446a8bb2f68669ad5bae1ad1286f2a85df56f099ac&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
-          "alt": "",
-          "norm": "image.png",
-          "file": "/assets/img/2025-10-07-New-test/0-c2ca448d93.png"
-        },
         {
           "kind": "external",
           "src": "https://i.imgur.com/BzBYJlg.png",
@@ -2509,6 +2502,6 @@
       ]
     }
   },
-  "last_run": "2025-10-06T16:34:51.964Z",
+  "last_run": "2025-10-06T16:38:23.321Z",
   "__full_rebuild_done": true
 }

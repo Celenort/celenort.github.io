@@ -26,16 +26,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ✅ 기존 파일 유지: _posts / assets/img 통삭제 금지
-      #   필요하면 임시 파일만 정리하세요 (예: .cache만)
-      #- name: Clean (optional)
-      #  run: rm -rf .cache/*
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "npm"
 
       - run: npm install
 

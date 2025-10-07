@@ -1930,8 +1930,18 @@
           "file": "/assets/img/2025-10-07-Update2/0-c2ca448d93.png"
         }
       ]
+    },
+    "284ca610-d234-805d-bc59-d0174df0bd0e": {
+      "last_edited_time": "2025-10-07T06:07:00.000Z",
+      "outfile": "_posts/2025-10-07-[GNN]-그래프-신경망-입문-pt.2.md",
+      "images": []
+    },
+    "284ca610-d234-802b-8fcb-e84f8eddd2c4": {
+      "last_edited_time": "2025-10-07T06:06:00.000Z",
+      "outfile": "_posts/2025-10-06-[GNN]-그래프-신경망-입문-pt.1.md",
+      "images": []
     }
   },
-  "last_run": "2025-10-06T17:26:06.775Z",
+  "last_run": "2025-10-07T06:08:02.664Z",
   "__full_rebuild_done": true
 }

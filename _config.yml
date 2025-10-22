@@ -93,7 +93,7 @@ theme_mode: # [light | dark]
 # will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-cdn: "https://celenort.github.io"
+cdn: "https://note.celenort.site"
 
 # the avatar on sidebar, support local or CORS resources
 avatar: /assets/profile.jpg

@@ -6,7 +6,7 @@ draft: false
 published: true
 pin: false
 image:
-  path: "/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/0-c2ca448d93.png"
+  path: "/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png"
   alt: "[기초회로이론] Chap 02 - Circuit Elements"
 description: ""
 tags: []
@@ -56,13 +56,13 @@ defined as constant resistance R, as Ohm’s Law, $v=Ri$, as we all know.
 
 - voltage or current independent source is a generator not dependent on other circuit variables.
 
-![](/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/0-c2ca448d93.png)
+![](/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png)
 
 
 Independent voltage source. $i(t)$can be $-\infty$ to $+\infty$
 
 
-![](/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/1-c2ca448d93.png)
+![](/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png)
 
 
 Independent current source. $v(t)$ can be any value.
@@ -73,9 +73,41 @@ Every independent source is ideal, conceptual.
 - Some batteries can be modeled as independent voltage source within certain conditions (small range of current)
 - Short circuit(Closed) : Special case of ideal voltage source (no resistance)
 
-![](/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/2-c2ca448d93.png)
+![](/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png)
 
 - Open circuit : Special case of ideal current source ($v(t)$can be any value)
+
+![](/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png)
+
+
+### 2.6 Voltmeters and Ammeters
+
+- in case of ideal ammeter and voltmeter, it can be considered as ideal short / open circuit, respectively.
+- Black (or dark) pole denotes the ‘minus’ polarity
+
+### 2.7 Dependent Sources
+
+- Voltage or current of one circuit element is proportional to volt or current of second circuit element.
+
+![](/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png)
+
+
+CCCS, VCVS, VCCS, CCVS
+
+- for some three-terminal element can be dissected (or interpreted) with combination of two-terminal elements including dependent sources.
+
+### 2.8 Resisitive Transducers
+
+- transducers convert physical quantities to electrical quantities. (a.k.a. sensor)
+
+### 2.9 Switches
+
+- SPST(Single pole single throw) switch : open / close state
+- SPDT(Single pole double throw) switch : Break before make, Make before break switches
+- make before break switch is often used when circuit is not defined when the switch passes thru.
+
+![](/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png)
+
 
 ![](/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png)
 

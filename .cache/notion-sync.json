@@ -1952,7 +1952,7 @@
       "images": []
     },
     "319ca610-d234-80f5-b453-d6d6e68bf2ca": {
-      "last_edited_time": "2026-03-09T14:24:00.000Z",
+      "last_edited_time": "2026-03-11T10:59:00.000Z",
       "outfile": "_posts/2023-12-09-[기초회로이론]-Chap-01---Electric-Circuit-Variables.md",
       "images": [
         {
@@ -1963,23 +1963,38 @@
       ]
     },
     "31eca610-d234-8080-9cc7-ee79574985cd": {
-      "last_edited_time": "2026-03-09T14:24:00.000Z",
+      "last_edited_time": "2026-03-11T10:58:00.000Z",
       "outfile": "_posts/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements.md",
       "images": [
         {
           "kind": "local",
           "norm": "image.png",
-          "file": "/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/0-c2ca448d93.png"
+          "file": "/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png"
         },
         {
           "kind": "local",
           "norm": "image.png",
-          "file": "/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/1-c2ca448d93.png"
+          "file": "/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png"
         },
         {
           "kind": "local",
           "norm": "image.png",
-          "file": "/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/2-c2ca448d93.png"
+          "file": "/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png"
+        },
+        {
+          "kind": "local",
+          "norm": "image.png",
+          "file": "/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png"
+        },
+        {
+          "kind": "local",
+          "norm": "image.png",
+          "file": "/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png"
+        },
+        {
+          "kind": "local",
+          "norm": "image.png",
+          "file": "/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png"
         },
         {
           "kind": "local",
@@ -1987,8 +2002,13 @@
           "file": "/assets/img/2023-12-09-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png"
         }
       ]
+    },
+    "320ca610-d234-803a-8206-e43145c1fcbe": {
+      "last_edited_time": "2026-03-11T11:06:00.000Z",
+      "outfile": "_posts/2023-12-09-[기초회로이론]-Chap-03---Resistive-Circuits.md",
+      "images": []
     }
   },
-  "last_run": "2026-03-09T14:25:33.375Z",
+  "last_run": "2026-03-11T11:06:47.121Z",
   "__full_rebuild_done": true
 }

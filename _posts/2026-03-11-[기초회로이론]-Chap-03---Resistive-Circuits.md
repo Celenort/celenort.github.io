@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[기초회로이론] Chap 03 - Resistive Circuits"
-date: 2023-12-09
+date: 2026-03-11
 draft: false
 published: true
 pin: false

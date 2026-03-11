@@ -6,7 +6,7 @@ draft: false
 published: true
 pin: false
 image:
-  path: "/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png"
+  path: "/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/0-11fdcb75c7.png"
   alt: "[기초회로이론] Chap 02 - Circuit Elements"
 description: ""
 tags: []
@@ -35,7 +35,7 @@ math: true
 
 ### 2.4 Resistors 
 
-- Always passive element (can be active if and only if R<0 but it is impossible)
+- Always passive element (can be active if and only if R<0 but it is impossible).
 
 {% raw %}
 $$
@@ -56,11 +56,11 @@ defined as constant resistance R, as Ohm’s Law, $v=Ri$, as we all know.
 
 - voltage or current independent source is a generator not dependent on other circuit variables.
 
-	![](/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png)
+	![](/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/0-11fdcb75c7.png)
 
 - Independent voltage source. $i(t)$can be $-\infty$ to $+\infty$
 
-	![](/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png)
+	![](/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/1-a410ac62b3.png)
 
 
 Independent current source. $v(t)$ can be any value.
@@ -71,11 +71,11 @@ Every independent source is ideal, conceptual.
 - Some batteries can be modeled as independent voltage source within certain conditions (small range of current)
 - Short circuit(Closed) : Special case of ideal voltage source (no resistance)
 
-	![](/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png)
+	![](/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/2-2116b024ed.png)
 
 - Open circuit : Special case of ideal current source ($v(t)$can be any value)
 
-	![](/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png)
+	![](/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-58ccd7c3ad.png)
 
 
 ### 2.6 Voltmeters and Ammeters
@@ -87,7 +87,7 @@ Every independent source is ideal, conceptual.
 
 - Voltage or current of one circuit element is proportional to volt or current of second circuit element.
 
-	![](/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png)
+	![](/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/4-1daf3062f2.png)
 
 
 CCCS, VCVS, VCCS, CCVS
@@ -104,10 +104,10 @@ CCCS, VCVS, VCCS, CCVS
 - SPDT(Single pole double throw) switch : Break before make, Make before break switches
 - make before break switch is often used when circuit is not defined when the switch passes thru.
 
-	![](/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png)
+	![](/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/5-a95530a688.png)
 
 
-	![](/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png)
+	![](/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/6-cd431118e9.png)
 
 
 <script>

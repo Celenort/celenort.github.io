@@ -1963,43 +1963,43 @@
       ]
     },
     "31eca610-d234-8080-9cc7-ee79574985cd": {
-      "last_edited_time": "2026-03-11T11:19:00.000Z",
+      "last_edited_time": "2026-03-11T12:33:00.000Z",
       "outfile": "_posts/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements.md",
       "images": [
         {
           "kind": "local",
-          "norm": "image.png",
-          "file": "/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png"
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/fa46ee83-9037-49ed-8d4e-cf2df88d26db/image.png",
+          "file": "/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/0-11fdcb75c7.png"
         },
         {
           "kind": "local",
-          "norm": "image.png",
-          "file": "/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png"
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/b90ef0ff-64e3-41c3-bc80-d14a95f4b48c/image.png",
+          "file": "/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/1-a410ac62b3.png"
         },
         {
           "kind": "local",
-          "norm": "image.png",
-          "file": "/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png"
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/32f587a7-e30a-4fdb-ab45-d866d12a5be8/image.png",
+          "file": "/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/2-2116b024ed.png"
         },
         {
           "kind": "local",
-          "norm": "image.png",
-          "file": "/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png"
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/6b3ed609-cc69-4f68-a84d-a7fcda02952d/image.png",
+          "file": "/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-58ccd7c3ad.png"
         },
         {
           "kind": "local",
-          "norm": "image.png",
-          "file": "/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png"
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/7c2eedd6-2b3b-428d-84f5-f4dc865bc63c/image.png",
+          "file": "/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/4-1daf3062f2.png"
         },
         {
           "kind": "local",
-          "norm": "image.png",
-          "file": "/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png"
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/642868f3-9245-419b-8afb-78e1210bf5d7/image.png",
+          "file": "/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/5-a95530a688.png"
         },
         {
           "kind": "local",
-          "norm": "image.png",
-          "file": "/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/3-c2ca448d93.png"
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/8529ee80-20c2-4257-a95d-9cf8d5490977/image.png",
+          "file": "/assets/img/2026-03-10-[기초회로이론]-Chap-02---Circuit-Elements/6-cd431118e9.png"
         }
       ]
     },
@@ -2009,6 +2009,6 @@
       "images": []
     }
   },
-  "last_run": "2026-03-11T12:33:28.444Z",
+  "last_run": "2026-03-11T12:34:00.873Z",
   "__full_rebuild_done": true
 }

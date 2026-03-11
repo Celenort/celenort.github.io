@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "[기초회로이론] Chap 01 - Electric Circuit Variables"
-date: 2023-12-09
+date: 2026-03-05
 draft: false
 published: true
 pin: false
 image:
-  path: "/assets/img/2023-12-09-[기초회로이론]-Chap-01---Electric-Circuit-Variables/0-c2ca448d93.png"
+  path: "/assets/img/2026-03-05-[기초회로이론]-Chap-01---Electric-Circuit-Variables/0-c2ca448d93.png"
   alt: "[기초회로이론] Chap 01 - Electric Circuit Variables"
 description: ""
 tags: []
@@ -66,7 +66,7 @@ $$
 - if the direction of current and direction of (+  to - terminal which we assigned previously), is the power **received** by the element.
 - Conversely, it is the power **supplied** by the element
 
-![](/assets/img/2023-12-09-[기초회로이론]-Chap-01---Electric-Circuit-Variables/0-c2ca448d93.png)
+![](/assets/img/2026-03-05-[기초회로이론]-Chap-01---Electric-Circuit-Variables/0-c2ca448d93.png)
 
 
 <script>

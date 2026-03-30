@@ -2014,11 +2014,48 @@
       "images": []
     },
     "332ca610-d234-80d6-a97f-f90fb1ee495c": {
-      "last_edited_time": "2026-03-29T15:10:00.000Z",
-      "outfile": "_posts/2026-03-29-[C++]-Chap-02---Flow-of-Control.md",
+      "last_edited_time": "2026-03-30T11:52:00.000Z",
+      "outfile": "_posts/2026-03-30-[C++]-Chap-03---Functions.md",
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/3191e681-28cb-4b90-b243-eb791feb65ee/image.png",
+          "file": "/assets/img/2026-03-30-[C++]-Chap-03---Functions/0-d38eb38ad3.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/494ede1c-e4f1-40f5-ab2d-d2a83e6c74ba/image.png",
+          "file": "/assets/img/2026-03-30-[C++]-Chap-03---Functions/1-6b2f979da2.png"
+        }
+      ]
+    },
+    "333ca610-d234-803f-8582-f0f0be19f29c": {
+      "last_edited_time": "2026-03-30T13:50:00.000Z",
+      "outfile": "_posts/2026-03-30-[C++]-Chap-06---Structures-and-Classes.md",
+      "images": []
+    },
+    "333ca610-d234-804c-867a-ed853456054c": {
+      "last_edited_time": "2026-03-30T12:28:00.000Z",
+      "outfile": "_posts/2026-03-30-[C++]-Chap-04---Parameters-and-Overloading.md",
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/3615824d-e1ff-4577-b7f4-6cde077938ac/image.png",
+          "file": "/assets/img/2026-03-30-[C++]-Chap-04---Parameters-and-Overloading/0-cb6a0269fd.png"
+        }
+      ]
+    },
+    "333ca610-d234-80b0-8579-fea598c09d7b": {
+      "last_edited_time": "2026-03-30T13:06:00.000Z",
+      "outfile": "_posts/2026-03-30-[C++]-Chap-05---Arrays.md",
+      "images": []
+    },
+    "333ca610-d234-80dd-bcfb-e33983b824a0": {
+      "last_edited_time": "2026-03-30T10:47:00.000Z",
+      "outfile": "_posts/2026-03-29-[C++]-Chap-02---Flow-of-Control-(1).md",
       "images": []
     }
   },
-  "last_run": "2026-03-29T15:11:10.090Z",
+  "last_run": "2026-03-30T13:51:37.683Z",
   "__full_rebuild_done": true
 }

@@ -182,9 +182,28 @@ today.output();
 - We do not need to know how the data type is implemented
 - ADT(Abstract Data Types) : collection of data values + set of operations for the values → Classes are programmer-defined ADTs
 - a.k.a. Encapsulation / Information hiding / data abstraction
+- Data and function access is encouraged to be only through the (public) member functions (interface)
+- Hdie the implementation details of the data and functions (private)
 
-33/51
+### Private and Public members
 
+- Public
+	- “user-accessible”
+	- Usually member functions
+- Private
+	- Not directly accessible to users
+	- Allow manipulation only via member functions
+
+### Accessor / Mutator function
+
+- Do something with its private data
+- Accessor : Read data, called “get member functions”. Simple retrieval of member data
+- Mutator : object to change data. “set member functions”. Manipulated based on application
+
+### Structure vs Class
+
+- Structure can also have private/public members/functions
+- Default is public for structure, default is private for class
 
 <script>
   window.MathJax = {

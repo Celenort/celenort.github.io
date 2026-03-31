@@ -164,6 +164,7 @@ today.output();
 ### Class Member functions
 
 - Must define or “implement” class member functions
+	- Doesn’t mean that only declaration of member function is required in definition of class
 - Can be after main()
 - Must specify class with scope resolution operator(::)
 	- Item befor :: is called type qualifier

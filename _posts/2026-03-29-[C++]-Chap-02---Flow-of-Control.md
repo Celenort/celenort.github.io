@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[C++] Chap 02 - Flow of Control (1)"
+title: "[C++] Chap 02 - Flow of Control"
 date: 2026-03-29
 draft: false
 published: true
@@ -30,8 +30,8 @@ else
 
 - Use brackets for compound statements
 - Logical Operators
-	- Logical AND ( && )
-	- Logical OR ( || )
+	- Logical AND ( `&&` )
+	- Logical OR (`||`)
 - Boolean Expression
 	- any nonzero number → true, 0 → false
 
@@ -81,22 +81,17 @@ bool result = (!0*x); // 1
 int result = (!0*x); // 3
 bool result = (x<5) ||(x/r); //1, short circuit evaluation
 bool result = (x&&y) + (!z); // 1. bool 1 + bool 1 = bool 1
-
-
-cout<<result<<endl;
 ```
 {% endraw %}
 
 
-- &&Precedence of Operators
+- Precedence of Operators
 
-	Postfix → Prefix → Comparison Operators → Equal, Not equal → AND OR → Assign
+	Postfix/Prefix → `+,-,*,/`,→ Comparison Operators → Equal, Not equal → AND OR → Assign
 
-
-`x + 1 > 2 || x + 1 < -3` 
-
+- `x + 1 > 2 || x + 1 < -3`
 - Roughly, arithmetic done before comparison & logical
-- + → > → ||
+- `+` → `>` → `||`
 - evaluating assignment expression is the Rvalue.
 
 
@@ -120,18 +115,18 @@ if (12=x) //error
 {% raw %}
 ```c++
 switch (Controlling_Expression) {
-    case Constant_1:
-	      Statement_seq1
-	      break;
-	  case Constant_2:
-			  Statement_seq2
-			  break;
-		case Constant_3:
-		case Constant_4:
-				Statement_seq3
-				break;
-		default:
-			  Default_Statement_sequence
+	case Constant_1:
+		Statement_seq1
+		break;
+	case Constant_2:
+		Statement_seq2
+		break;
+	case Constant_3:
+	case Constant_4:
+		Statement_seq3
+		break;
+	default:
+		Default_Statement_sequence
 }
 ```
 {% endraw %}
@@ -198,8 +193,8 @@ cin>>n; //enter number of integers to be inputted
 t=0;
 cnt=1;
 while (cnt++<=n) { // Boolean expression executed before executing body
-		cin>>one;
-		t+=one;
+	cin>>one;
+	t+=one;
 }
 cout<<t<<endl; // prints total number of inputted values
 cout<<cnt<<endl; // if n==4, cnt is 6.
@@ -220,7 +215,7 @@ cnt=5 <=4 blocked, but cnt++, cnt=6
 ```c++
 for (Initialization_Action; Boolean_Expression;Update_Action) // No semicolon
 {
-		Body
+	Body
 }
 ```
 {% endraw %}
@@ -234,15 +229,15 @@ for (Initialization_Action; Boolean_Expression;Update_Action) // No semicolon
 sum=0;
 int n;
 for (n=1;n<=10;n++)
-		sum = sum + n;
+	sum = sum + n;
 
 for (sum=0, n=1;n<=10;n++)
-		sum = sum + n;
-**for (sum=0, n=1;n<=10;) // Update Action omitted 
+	sum = sum + n;
+for (sum=0, n=1;n<=10;) // Update Action omitted 
 {
-		sum+=n;
-		n++;
-}**
+	sum+=n;
+	n++;
+}
 
 for (sum=0;n=1;n<=10;sum+=n, n++); //Semicolon needed.
 ```
@@ -251,7 +246,7 @@ for (sum=0;n=1;n<=10;sum+=n, n++); //Semicolon needed.
 
 - Two semicolons are required inside the Expressions.
 - Initialization → {check condition → loop body → update action} → and so on …
-- Common pitfalls : misplaced ;
+- Common pitfalls : misplaced `;`
 
 
 {% raw %}
@@ -289,7 +284,7 @@ for (int cnt = 1;cnt<=10;cnt++);
 {% endraw %}
 
 
-- Reading a string is done UP  TO a whitespace character( “ “, “\t”, “\n”)
+- Reading a string is done UP  TO a whitespace character( `" "`, `“\t”`, `“\n”`)
 - When done, close the file with .close();
 - `ifstream` : input only, `ofstream` : output only, `fstream` both I/O
 
@@ -304,7 +299,7 @@ fstream iS;
 iS.open("player.txt");
 while (iS >> text)  // Performs two actions : Read, check boolean result 
 {
-		cout<<text<<endl; //not line by line.
+	cout<<text<<endl; //not line by line.
 }
 ```
 {% endraw %}

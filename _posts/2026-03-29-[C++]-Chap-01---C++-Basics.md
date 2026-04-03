@@ -21,7 +21,7 @@ math: true
 	- Must declare first
 - Escape Sequences
 	- “Extend” the character set
-	- Uses Backslash (\)
+	- Uses Backslash (`\`)
 
 ### Assignment rules / Compatibility
 
@@ -30,7 +30,8 @@ math: true
 {% raw %}
 ```c++
 int variable;
-intvariable = 2.99; // Type mismatch, but only integer part is stored.
+intvariable = 2.99; 
+// Type mismatch, but only integer part is stored.
 ```
 {% endraw %}
 
@@ -56,7 +57,8 @@ doublevar = 2;
 
 {% raw %}
 ```c++
-double x = 1/2/3.0/4; // Calculations are done "one-by-one" 1/2=0, 0/3.0=0.0, 0.0/4=0.0
+double x = 1/2/3.0/4; 
+// Calculations are done "one-by-one" 1/2=0, 0/3.0=0.0, 0.0/4=0.0
 ```
 {% endraw %}
 
@@ -103,7 +105,7 @@ using namespace std;
 
 
 - cout
-	- New lines in output : ‘\n’ or <<endl
+	- New lines in output : ‘\n’ or `<<`endl
 	- Cascading is allowed : `<<a << b`
 - cin
 	- Extraction Operator `>>`

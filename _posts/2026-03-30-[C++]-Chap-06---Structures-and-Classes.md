@@ -25,9 +25,9 @@ math: true
 ```c++
 struct CDAccountV1
 {
-		double bal;
-		double interestRate;
-		int term;
+	double bal;
+	double interestRate;
+	int term;
 }; // don't forget the semicolon!
 ```
 {% endraw %}
@@ -40,8 +40,8 @@ struct CDAccountV1
 ```c++
 struct WeatherData
 {
-		double temp;
-		double windV;
+	double temp;
+	double windV;
 } dataPoint1, dataPoint2;
 
 // also same as structure definition +
@@ -88,15 +88,15 @@ apples = oranges;
 ```c++
 struct Date
 {
-		int month;
-		int day;
-		int year;
+	int month;
+	int day;
+	int year;
 };
 struct PersonInfo
 {
-		double height;
-		double weight;
-		Date birthday;
+	double height;
+	double weight;
+	Date birthday;
 };
 PersonInfo person1;
 cout<<person1.birthday.year;
@@ -118,8 +118,8 @@ PersonInfor person2 = {3.0, 4.0, 5, 6, 7};
 ```c++
 struct Date
 {
-		int month;
-		double blabla;
+	int month;
+	double blabla;
 };
 Date dueDate = {12, 31.0}; //dueDate.month=12, dueDate.blabla=31.0;
 Date dueDate = {12}; //12, 0.0
@@ -140,10 +140,10 @@ Date dueDate = {12}; //12, 0.0
 ```c++
 class DayOfYear
 {
-		public:
-		void output();
-		int month;
-		int day;
+	public:
+	void output();
+	int month;
+	int day;
 }; // Also don't forget to put semicolon!
 ```
 {% endraw %}
@@ -170,9 +170,9 @@ today.output();
 
 - Must define or “implement” class member functions
 	- Doesn’t mean that only declaration of member function is required in definition of class
-- Can be after main()
-- Must specify class with scope resolution operator(::)
-	- Item befor :: is called type qualifier
+- Can be after `main()`
+- Must specify class with scope resolution operator(`::`)
+	- Item before `::` is called type qualifier
 - When the class function refers to member data of the class, No need to use the dot operator
 
 ### Class’s Place
@@ -204,7 +204,7 @@ today.output();
 
 - Do something with its private data
 - Accessor : Read data, called “get member functions”. Simple retrieval of member data
-	- reserves the data, use const tag after declaring/defining the function
+	- reserves the data, use `const` tag after declaring/defining the function
 - Mutator : object to change data. “set member functions”. Manipulated based on application
 
 ### Structure vs Class

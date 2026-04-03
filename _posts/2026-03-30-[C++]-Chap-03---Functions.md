@@ -17,13 +17,13 @@ math: true
 ## Functions
 
 - A function can have any finite number of arguments of varying data types / No function has more than one value returned (One or zero)
-- Predefined functions : `#import <cmath>`, sqrt(x), pow(x, i), fabs(x), floor(x), ceil(x), round(x)
+- Predefined functions : `#import <cmath>`, `sqrt(x)`, `pow(x, i)`, `fabs(x)`, `floor(x)`, `ceil(x)`, `round(x)`
 
 ### Random number generator
 
-- rand() : takes no arguments, returns a uniform random integer btw 0 & RAND_MAX
+- `rand()` : takes no arguments, returns a uniform random integer btw 0 & RAND_MAX
 - `#includ <cstdlib>`
-- srand() : seed
+- `srand()` : seed
 
 ### Time
 
@@ -42,7 +42,7 @@ math: true
 
 {% raw %}
 ```c++
-<return_type> FcnName(<formal-parameter-list>);
+<rtn_type> FcnName(<formal-param-list>);
 double totalCost(int num, double price);
 // or
 double totalCost(int, double);
@@ -50,7 +50,7 @@ double totalCost(int, double);
 {% endraw %}
 
 
-- Designates the type of the “return val”, “name of func”, “number of arguments”, “type of formal parameters”
+- Designates the type of the `“return val”`, `“name of func”`, `“number of arguments”`, `“type of formal parameters”`
 - Placed before any calls to the function (above the main)
 - Formal parameter names are not needed : can only present data types of params.
 
@@ -69,7 +69,7 @@ double totalCost(int, double);
 ### Function call
 
 - Arguments at function call : actual arguments
-- Can be literals, variables, expressions, or their combination
+- Function arguments can be literals, variables, expressions, or their combination
 
 ### Simple example : multiple cpp files and header
 
@@ -85,14 +85,14 @@ double totalCost(int, double);
 
 ### Return statement
 
-- return is optional statement for void function ( Closing bracket } implicitly return control from void function)
-- Return type other than void MUST have return statement.
+- return is optional statement for void function ( Closing bracket `}` implicitly return control from void function)
+- Return type other than void MUST have return statement. (except for `main()`)
 
 ### Main
 
 - Operating system calls main()
 - should return int or void
-- omitting return in main() is possible
+- omitting return in `main()`is possible
 
 ### Scope rules
 

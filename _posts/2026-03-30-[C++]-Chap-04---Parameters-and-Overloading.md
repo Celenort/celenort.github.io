@@ -27,7 +27,7 @@ math: true
 
 - Argument MUST be a variable, not a constant
 - A “reference” (memory location, address) is passed in.
-- Specified by ampersand, &, after type in formal param list
+- Specified by ampersand, `&`, after type in formal param list
 
 
 {% raw %}
@@ -38,7 +38,7 @@ void swap(int& a, int b) {
 		int temp = a; //address of a
 		a=b; // now value of a is b
 		b=temp; // b
-}
+} // b, b
 ```
 {% endraw %}
 
@@ -151,7 +151,7 @@ void showVol(int length, int width=1, int height=1);
 {% endraw %}
 
 
-- A default argument should not be given a second time (at implementation
+- A default argument should not be given a second time (at implementation)
 - Default parameters are filled up from the right side : cannot leave out the middle parameter to default
 
 

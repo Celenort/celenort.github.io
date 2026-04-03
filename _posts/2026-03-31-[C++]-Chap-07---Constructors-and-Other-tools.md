@@ -143,8 +143,35 @@ void foo(const BankAccount& ba)
 
 ### Inline Member functions
 
-- Function definition can be define in the class definition
+- Function definition can be defined in the class definition
 - Efficient for short definitions
+- Can only be called in the same file as the one in which it is defined
+
+# Maybe not included..
+
+
+### Static member variables
+
+- All object of class share only one copy.
+- On object changes it, all can see the change
+- Similar to global var. But only for the objects of the class
+
+### Static member functions
+
+- Cannot access the object’s non-static variable data
+- Only access static data/function of class
+- Nonstatic member function can also access static variables of the class
+
+
+{% raw %}
+```c++
+Server::getTurn(); // Class::func(); format
+```
+{% endraw %}
+
+
+- Every static variable must be initialized outside the class function : only once!
+- 
 
 <script>
   window.MathJax = {

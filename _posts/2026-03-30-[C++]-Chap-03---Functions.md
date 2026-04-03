@@ -17,10 +17,18 @@ math: true
 ## Functions
 
 - A function can have any finite number of arguments of varying data types / No function has more than one value returned (One or zero)
+- Predefined functions : `#import <cmath>`, sqrt(x), pow(x, i), fabs(x), floor(x), ceil(x), round(x)
 
 ### Random number generator
 
 - rand() : takes no arguments, returns a uniform random integer btw 0 & RAND_MAX
+- `#includ <cstdlib>`
+- srand() : seed
+
+### Time
+
+- `#include <ctime>`
+- to return current time (elapsed in seconds since 1970.01.01) : `time(NULL)`
 
 ### Components of Function Use
 
@@ -78,12 +86,13 @@ double totalCost(int, double);
 ### Return statement
 
 - return is optional statement for void function ( Closing bracket } implicitly return control from void function)
-- Return type other than void MUSt have return statement.
+- Return type other than void MUST have return statement.
 
 ### Main
 
 - Operating system calls main()
 - should return int or void
+- omitting return in main() is possible
 
 ### Scope rules
 

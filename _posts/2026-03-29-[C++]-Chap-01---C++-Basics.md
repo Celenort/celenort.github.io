@@ -69,9 +69,24 @@ double x = 1/2/3.0/4; // Calculations are done "one-by-one" 1/2=0, 0/3.0=0.0, 0.
 - Explicit type casting
 	- (double)17/5.5
 
+
+{% raw %}
+```c++
+double a;
+a=((double)9/5);
+a=(9/(double)5);
+a=(double)(9/5); // X
+a=(9.0/5);
+```
+{% endraw %}
+
+
+
 ### Increment, Decrement Operators
 
 - Post / Pre Increment / Decrement
+- Postfix : RValue, Increase value after line
+- Prefix : Lvalue, Increase before execution
 
 ### Console Input/Output
 
@@ -117,6 +132,7 @@ cout.precision(2); // shows two digits under decimal point
 ### Namespaces
 
 - Collection of name definitions
+- `using namespace std;`
 
 <script>
   window.MathJax = {

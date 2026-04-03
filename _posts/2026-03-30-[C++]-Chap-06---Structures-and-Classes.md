@@ -100,6 +100,10 @@ struct PersonInfo
 };
 PersonInfo person1;
 cout<<person1.birthday.year;
+Date person1date = {1, 2, 3}
+PersonInfo person1 = {1.0, 2.0, person1date};
+PersonInfor person2 = {3.0, 4.0, 5, 6, 7}; 
+// Also possible to declare hierarchical structure in one bracket
 ```
 {% endraw %}
 
@@ -118,6 +122,7 @@ struct Date
 		double blabla;
 };
 Date dueDate = {12, 31.0}; //dueDate.month=12, dueDate.blabla=31.0;
+Date dueDate = {12}; //12, 0.0
 ```
 {% endraw %}
 
@@ -199,12 +204,41 @@ today.output();
 
 - Do something with its private data
 - Accessor : Read data, called “get member functions”. Simple retrieval of member data
+	- reserves the data, use const tag after declaring/defining the function
 - Mutator : object to change data. “set member functions”. Manipulated based on application
 
 ### Structure vs Class
 
 - Structure can also have private/public members/functions
 - Default is public for structure, default is private for class
+
+### Initialize class object
+
+
+
+{% raw %}
+```c++
+class foo {
+	public:
+	int a;
+	int b;
+}
+
+foo f{1, 2};
+foo f={1, 2}; // works same (strictly copying the param list)
+
+class bar {
+	private:
+	int c;
+	int d;
+}
+bar b = {3, 4}; //ILLEGAL
+
+// but there's an constructor, it is legal.
+```
+{% endraw %}
+
+
 
 <script>
   window.MathJax = {

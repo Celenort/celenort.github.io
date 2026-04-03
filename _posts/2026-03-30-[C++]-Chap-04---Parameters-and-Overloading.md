@@ -46,6 +46,54 @@ void swap(int& a, int b) {
 - To “protect” data and still pass by reference, use `const` keyword. → makes read-only functions
 	- Pros : can reduce copying time
 
+
+{% raw %}
+```c++
+int num = 1;
+int& num2 = num; //must be initiailized with parameter
+//alias
+int* adr = &num2; //same as &num
+//&var : returns address of the variable
+```
+{% endraw %}
+
+
+
+
+{% raw %}
+```c++
+int returnVal(int& num){num++;return num;}
+int& returnRef(int& num){num++;return num;}
+int* rtnAddress(int& num) {return &num;}
+
+int main(void){
+    int num_1(1), num_2(1), num_3(1), num_4(1);
+    int new_num_1 = returnVal(num_1);
+    //new_num=2(new add), num_1=2
+    int& new_num_2 = returnVal(num_2); //ILLEGAL
+    //can't assign literal to reference type variable
+    int new_num_3 = returnRef(num_3);
+    //copies value of returned ref to new_num_3
+    //new_num3=2(new add); num_3=2;
+    int& new_num_4 = returnRef(num_4);
+    //new_num_4 = num4(2); num_4 = 2;
+    int* add = rtnAddress(num_4);
+    cout<<add <<endl;
+    cout<<*add<<endl;
+
+    new_num_1++; //new_num1=3; num_1=2;
+    new_num_3++; //new_num3=3; num_3=2;
+    new_num_4++; //new_num4=num_4; num_4=3;
+
+    cout <<  new_num_1 << new_num_3 << new_num_4 
+         << num_1 << num_3 << num_4 << endl;
+         //333223
+}
+```
+{% endraw %}
+
+
+
 ## Function Overloading
 
 - Same function name, but different param lists
@@ -111,6 +159,20 @@ void showVol(int length, int width=1, int height=1);
 ```c++
 showVol(5, default, 4); //impossible
 showVol(5, 4); // height = 1
+```
+{% endraw %}
+
+
+
+
+{% raw %}
+```c++
+void foo(int a);
+void foo(int a, int b=2);
+
+int main() {
+	foo(1); //ambiguous call : overloading resolution error
+}
 ```
 {% endraw %}
 

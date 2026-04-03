@@ -34,6 +34,16 @@ else
 	- Logical OR ( || )
 - Boolean Expression
 	- any nonzero number → true, 0 → false
+
+
+{% raw %}
+```c++
+bool result = (1<2);
+cout<<result<<endl; // 1
+```
+{% endraw %}
+
+
 - Short-circuit evaluation
 	- Evaluation stops when the result is already decided
 
@@ -48,7 +58,37 @@ cout<<y;
 {% endraw %}
 
 
-- Precedence of Operators
+- Do not use (x<y<z)!
+
+
+{% raw %}
+```c++
+int x(1), y(2), z(2);
+cout<<(x<y<z) <<endl; // 1
+cout<<(x<y && y<z) <<endl; // 0
+```
+{% endraw %}
+
+
+- Consider
+
+
+{% raw %}
+```c++
+int x(3), y(4), z(5), r(0);
+bool result = !x; //0
+bool result = (!0*x); // 1
+int result = (!0*x); // 3
+bool result = (x<5) ||(x/r); //1, short circuit evaluation
+bool result = (x&&y) + (!z); // 1. bool 1 + bool 1 = bool 1
+
+
+cout<<result<<endl;
+```
+{% endraw %}
+
+
+- &&Precedence of Operators
 
 	Postfix → Prefix → Comparison Operators → Equal, Not equal → AND OR → Assign
 
@@ -64,6 +104,9 @@ cout<<y;
 ```c++
 if (x=12)  // (x=12) = 12 -> true
     Do_Something
+    
+if (12==x) // works same with x==12
+if (12=x) //error
 ```
 {% endraw %}
 
@@ -240,7 +283,7 @@ for (int cnt = 1;cnt<=10;cnt++);
  
  ifstream is;
  is.open("filename.txt"); // the file is the same directory as the code
- is>>var; 
+ is>>var1 >> var2; // by spacing. if 1 2, var1=1, var2=2 
  is.close();
 ```
 {% endraw %}
@@ -259,9 +302,9 @@ for (int cnt = 1;cnt<=10;cnt++);
 string text;
 fstream iS;
 iS.open("player.txt");
-while (iS >> text)  // Performs two actions : Read, check boolean result
+while (iS >> text)  // Performs two actions : Read, check boolean result 
 {
-		cout<<text<<endl;
+		cout<<text<<endl; //not line by line.
 }
 ```
 {% endraw %}

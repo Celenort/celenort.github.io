@@ -74,7 +74,9 @@ score[1] : Indexed or subscriped var, element
 ```c++
 void fillUp(int a[], int size);
 //formal array parameter : not a call-by-reference parameter
-//but similar in some sense;
+//but similar in some sense
+// declaring with int a[4] is same as int a[] 
+// actually int* a
 int main() {
 		int a[3] = {1, 2, 3}
 		fillup(a, 3); //No bracket!

@@ -2081,11 +2081,22 @@
       "images": []
     },
     "342ca610-d234-80f7-9fa4-dcf6e7c8c7fc": {
-      "last_edited_time": "2026-04-15T04:44:00.000Z",
-      "outfile": "_posts/2026-04-14-[컴선설]-Lec-01.md",
+      "last_edited_time": "2026-04-15T08:47:00.000Z",
+      "outfile": "_posts/2026-04-14-[컴선설]-Lec-01-Linear-Algebra.md",
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/0792cf16-7ff6-4f80-a600-0cb80ff0f216/image.png",
+          "file": "/assets/img/2026-04-14-[컴선설]-Lec-01-Linear-Algebra/0-930af378dc.png"
+        }
+      ]
+    },
+    "343ca610-d234-8032-b273-d42939bea67f": {
+      "last_edited_time": "2026-04-15T08:51:00.000Z",
+      "outfile": "_posts/2026-04-15-[컴선설]-Lec-02-Spline.md",
       "images": []
     }
   },
-  "last_run": "2026-04-15T04:48:16.163Z",
+  "last_run": "2026-04-15T08:52:01.356Z",
   "__full_rebuild_done": true
 }

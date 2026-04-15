@@ -166,10 +166,10 @@ $$
 
 ### Residual vs error
 
-- error : $|| \hat x - x||$
-- residual : $|| A\hat x - b ||$
+- error : $\vert\vert \hat x - x\vert\vert$
+- residual : $\vert\vert A\hat x - b \vert\vert$
 - if error is zero ($x=\hat x$) → $A\hat x = b$ (sufficient)
-- if residual ($||A\hat x -b || = 0$) → $A\hat x = b$ (not always true, necessary)
+- if residual ($\vert\vert A\hat x -b \vert\vert = 0$) → $A\hat x = b$ (not always true, necessary)
 
 # 6. Tangent vector
 

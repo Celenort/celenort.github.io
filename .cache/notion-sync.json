@@ -2081,7 +2081,7 @@
       "images": []
     },
     "342ca610-d234-80f7-9fa4-dcf6e7c8c7fc": {
-      "last_edited_time": "2026-04-15T08:47:00.000Z",
+      "last_edited_time": "2026-04-15T13:38:00.000Z",
       "outfile": "_posts/2026-04-14-[컴선설]-Lec-01-Linear-Algebra.md",
       "images": [
         {
@@ -2113,7 +2113,7 @@
       ]
     },
     "343ca610-d234-80a6-951c-c4184d362a3a": {
-      "last_edited_time": "2026-04-15T13:19:00.000Z",
+      "last_edited_time": "2026-04-15T13:36:00.000Z",
       "outfile": "_posts/2026-04-15-[컴선설]-Lec-04-Bezier-Surfaces.md",
       "images": [
         {
@@ -2150,6 +2150,6 @@
       ]
     }
   },
-  "last_run": "2026-04-15T13:22:57.809Z",
+  "last_run": "2026-04-15T13:39:29.536Z",
   "__full_rebuild_done": true
 }

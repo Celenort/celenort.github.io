@@ -199,10 +199,10 @@ where
 
 ### Geometry of SVD
 
-1. Start in $\R^n$ (or $\Complex^n$)
+1. Start in $\R^n$ (or $\mathbb{C}^n$)
 2. Matrix $V^T$ rotates or reflects into coordinate system aligned with the “principal axes” of $A$
 3. Diagonal matrix $\Sigma$ then scales these directions by the singular values of $\sigma_i$
-4. The matrix $U$ then maps those scaled vector into $\R^m$ (or $\Complex^m$)
+4. The matrix $U$ then maps those scaled vector into $\R^m$ (or $\mathbb{C}^m$)
 
 ![](/assets/img/2026-04-14-[컴선설]-Lec-01-Linear-Algebra/0-930af378dc.png)
 
@@ -230,9 +230,9 @@ where
 - $A^TA$ : forward → backward  - $\R^n \rightarrow \R^n$
 - $AA^T$ : backward → forward - $\R^m \rightarrow \R^m$
 
-### Eigenvalues of $A^TA$ and the Right singular vectors $V$
+### Eigenvalues of $A^TA$ and the Right singular vectors $V$.
 
-- Using positive-definiteness,  ${\bf x}^T(A^TA){\bf x} = ||A{\bf x}||^2 \geq 0$ : all eigenvalues of $A^TA$ are positive or zero
+- Using positive-definiteness,  ${\bf x}^T(A^TA){\bf x} = \vert\vert A{\bf x} \vert\vert ^2 \geq 0$ : all eigenvalues of $A^TA$ are positive or zero
 - Because eigenvectors are orthonormal, $V^TV = I_{m\times m}$
 
 ### Singular Values and the Diagonal matrix $\Sigma$

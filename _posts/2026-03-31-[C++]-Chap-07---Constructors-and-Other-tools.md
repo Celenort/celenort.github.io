@@ -58,6 +58,30 @@ DayOfYear::DayOfYear(int monthValue, int dayValue) : month(monthValue), day(dayV
 - Constructers can also be overloaded.
 	- Constructor which doesn’t have any parameter, is called default constructor
 
+
+{% raw %}
+```c++
+class DayOfYear {
+public :
+	DayOfYear(int monthValue, int dayValue);
+private :
+	const int month;
+	const int day;
+};
+
+DayOfYear::DayOfYear(int monthValue, int dayValue) {
+{
+	month = monthValue;
+	day = dayValue;
+}
+// since month and day are const member variables, 
+// cannot declare like month = monthValue; 
+// because the 'month' should be initialized when created
+```
+{% endraw %}
+
+
+
 ### Explicit Constructor Calls
 
 

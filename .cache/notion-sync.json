@@ -2092,11 +2092,64 @@
       ]
     },
     "343ca610-d234-8032-b273-d42939bea67f": {
-      "last_edited_time": "2026-04-15T08:51:00.000Z",
+      "last_edited_time": "2026-04-15T09:23:00.000Z",
       "outfile": "_posts/2026-04-15-[컴선설]-Lec-02-Spline.md",
-      "images": []
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/92b91d63-c54d-4a95-98a5-cdb0fb49c112/image.png",
+          "file": "/assets/img/2026-04-15-[컴선설]-Lec-02-Spline/0-90ba6d7f57.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/66c66ecb-cc6a-49de-9a20-960d8875d870/image.png",
+          "file": "/assets/img/2026-04-15-[컴선설]-Lec-02-Spline/1-862be6e478.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/c0c03973-4fde-48dd-a353-b3757be80a7d/image.png",
+          "file": "/assets/img/2026-04-15-[컴선설]-Lec-02-Spline/2-144245a92f.png"
+        }
+      ]
+    },
+    "343ca610-d234-80a6-951c-c4184d362a3a": {
+      "last_edited_time": "2026-04-15T13:19:00.000Z",
+      "outfile": "_posts/2026-04-15-[컴선설]-Lec-04-Bezier-Surfaces.md",
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/330fcb02-764b-4fc9-b18b-61bc617e85eb/image.png",
+          "file": "/assets/img/2026-04-15-[컴선설]-Lec-04-Bezier-Surfaces/0-dc21e5148a.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/4fcf1871-038f-4e3d-9d51-f07414f35c83/image.png",
+          "file": "/assets/img/2026-04-15-[컴선설]-Lec-04-Bezier-Surfaces/1-c80fd78209.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/1e270efe-fc9a-43e0-8030-13538e90b528/image.png",
+          "file": "/assets/img/2026-04-15-[컴선설]-Lec-04-Bezier-Surfaces/2-7e67e56bdd.png"
+        }
+      ]
+    },
+    "343ca610-d234-80fd-aea5-f881bfb06953": {
+      "last_edited_time": "2026-04-15T11:10:00.000Z",
+      "outfile": "_posts/2026-04-15-[컴선설]-Lec-03-Bezier-Curve.md",
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/49f0471e-0255-46d1-a838-85eb7e79b561/image.png",
+          "file": "/assets/img/2026-04-15-[컴선설]-Lec-03-Bezier-Curve/0-af37199608.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/04eeebd8-70ed-4233-a1b2-d2faed7f97ae/image.png",
+          "file": "/assets/img/2026-04-15-[컴선설]-Lec-03-Bezier-Curve/1-3d31bb271d.png"
+        }
+      ]
     }
   },
-  "last_run": "2026-04-15T08:52:01.356Z",
+  "last_run": "2026-04-15T13:22:57.809Z",
   "__full_rebuild_done": true
 }

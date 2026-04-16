@@ -92,6 +92,27 @@ math: true
 
 - RREF (Reduced Row Echelon Form) - Every pivot must be 1, pivot row must be zero except for the pivot
 
+
+{% raw %}
+```text
+Gauss Jordan :
+1. Make RREF
+for column c:
+  swap nonzero pivot row to c
+  Multiply elementary matrix to remove value below pivot
+  make pivot value 1
+  make non-pivot value of the column zero
+2. Solve nullspace solution
+Solve RREF with Ax=0
+remove pivot column value by substitution
+3. Solve particular solution
+solve for Ax=0
+set non-pivot value 0
+```
+{% endraw %}
+
+
+
 # 8. LU Decompositon
 
 - Multiplying Elementry matrix on the left side of A makes it Upper triangular matrix
@@ -100,6 +121,36 @@ math: true
 - $A=LU, LUx= b$
 - $L{\bf y} = \bf b$ → Forward substitution
 - $U{\bf x} = {\bf y}$ → Backward substitution
+
+
+{% raw %}
+```text
+<LUdecomposition>
+Procedure : 
+set pivot[i] = i
+for column k :
+  find value in column k
+  swap
+  factor <- Aik / Akk
+  Aik <- factor
+  for row j=k+1 :
+    Aij -= factor * Akj
+ <LUsolve>
+ for row i:
+   sum = b[i]
+   for column j=i+1 :
+     sum -= Aij * x[j]
+   x[i] = sum
+ for row i=n-1 decreasing :
+   sum = x[i]
+   for column j=i+1 :
+     sum-=Aij * x[j]
+   x[i]=sum/Aii
+ return x[i]
+```
+{% endraw %}
+
+
 
 # 9. Four fundamental Subspace
 
@@ -111,6 +162,8 @@ math: true
 - $\text{dim}N(A^T) = \text{nullity}(A^T) = m-r$ (# of row - rank)
 - Rank-nullity theorem : $\dim C(A) + \dim N(A) = \dim V$ : dimension of domain
 - Also $\dim C(A^T) + \dim N(A^T) = \dim W$ : dimension of codomain
+- $C(A) \perp N(A^T)$
+- $C(A^T) \perp N(A)$
 
 # 10. Rank 1 matrix
 
@@ -145,7 +198,7 @@ math: true
 - Numerical stability : preserves length and angles
 - Easy to apply on Iterative Methods
 
-### Classical Gram-shimidt
+### Classical Gram-schmidt
 
 1. Takes columns of $A$, say $\bf a_1,a_2, \cdots, a_n$
 2. Orthogonalize them step by step
@@ -162,12 +215,26 @@ $$
 - To handle numerical stability and to solve ill-conditioned matrix, use Householder matrix
 - Provides stable way to work with systems without forming normal equations $A^TA$
 
+
+{% raw %}
+```text
+Gram schmidt (Or QR Factorization)
+1. Take columns of A, say a1, a2, ..., an
+2. let q1 = a1 / |a1|, r11 = |a1|
+3. let q2 = a2-(q1*a2)q1 / | a2-(q1*a2)q1 |, 
+   r12 = q1*a2, r22 = | a2-(q1*a2)q1 |
+4. let q3 = a3-(q1*a3)q1-(q2*a3)q2 / | a3-(q1*a3)q1-(q2*a3)q2 |
+   r13 = q1*a3, r23 = q2*a3, r33 = | a3-(q1*a3)q1-(q2*a3)q2 |
+```
+{% endraw %}
+
+
+
 ### Shapes and Dimensions of QR
 
 - $A (m\times n) = Q(m \times m)R(m\times n)$ : Full decomposition
 - $A(m\times n) = Q_{reduced}(m\times n) R_{top}(n\times n)$ :  economy-sized decomposition
 - Example!
-- Code example!
 
 # 14. Singular Value Decomposition (SVD)
 

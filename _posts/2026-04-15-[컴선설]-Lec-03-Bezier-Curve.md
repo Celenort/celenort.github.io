@@ -82,7 +82,6 @@ $$
 
 # 3. Bezier curve
 
-- Example!
 - To draw bezier curve with control points
 - Each coefficient is control point on the plane
 
@@ -100,7 +99,18 @@ $$
 ![](/assets/img/2026-04-15-[컴선설]-Lec-03-Bezier-Curve/1-3d31bb271d.png)
 
 - For computing with given points, must perform $(1-t)P_{\text{left}} + tP_{\text{right}}$
-- Code example!
+
+
+{% raw %}
+```text
+<decas>
+for r = 1 < n :
+  for i=0 < n-r :
+    coeff[i] = (1-t) coeff[i] + t coeff[i+1]
+```
+{% endraw %}
+
+
 
 ### Convex hull property
 

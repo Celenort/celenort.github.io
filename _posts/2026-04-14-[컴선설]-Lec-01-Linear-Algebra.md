@@ -193,7 +193,7 @@ for column k :
 
 ### Application
 
-- Find least squares problem $\min_x || A{\bf x} - {\bf b} || $ can be solved using QR factorization
+- Find least squares problem $\min_x \vert\vert A{\bf x} - {\bf b} \vert\vert $ can be solved using QR factorization
 - $QRx \approx b$,  $Q^TQRx = Rx=Q^Tb$
 - Numerical stability : preserves length and angles
 - Easy to apply on Iterative Methods
@@ -300,7 +300,7 @@ where
 ### Eigenvalues of $A^TA$ and the Right singular vectors $V$.
 
 - Using positive-definiteness,  ${\bf x}^T(A^TA){\bf x} = \vert\vert A{\bf x} \vert\vert ^2 \geq 0$ : all eigenvalues of $A^TA$ are positive or zero
-- Because eigenvectors are orthonormal, $V^TV = I_{m\times m}$
+	- Because eigenvectors are orthonormal, $V^TV = I_{n\times n}$
 
 ### Singular Values and the Diagonal matrix $\Sigma$
 

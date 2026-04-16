@@ -2081,7 +2081,7 @@
       "images": []
     },
     "342ca610-d234-80f7-9fa4-dcf6e7c8c7fc": {
-      "last_edited_time": "2026-04-16T05:32:00.000Z",
+      "last_edited_time": "2026-04-16T07:43:00.000Z",
       "outfile": "_posts/2026-04-14-[컴선설]-Lec-01-Linear-Algebra.md",
       "images": [
         {
@@ -2148,8 +2148,29 @@
           "file": "/assets/img/2026-04-15-[컴선설]-Lec-03-Bezier-Curve/1-3d31bb271d.png"
         }
       ]
+    },
+    "344ca610-d234-80ed-9267-fc744dae7a22": {
+      "last_edited_time": "2026-04-16T09:00:00.000Z",
+      "outfile": "_posts/2026-04-16-[컴선설]-Lec-04-2-Least-Square-solution.md",
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/b6069943-3ec3-43c1-a158-42f964dc3316/image.png",
+          "file": "/assets/img/2026-04-16-[컴선설]-Lec-04-2-Least-Square-solution/0-6445c1625b.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/33db3fbd-fcab-4b16-b2d5-2adde1ce3124/image.png",
+          "file": "/assets/img/2026-04-16-[컴선설]-Lec-04-2-Least-Square-solution/1-8c509e783c.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/45e20453-6b67-40c9-82bc-eed9c5d59f11/image.png",
+          "file": "/assets/img/2026-04-16-[컴선설]-Lec-04-2-Least-Square-solution/2-29c8fabda0.png"
+        }
+      ]
     }
   },
-  "last_run": "2026-04-16T07:30:41.913Z",
+  "last_run": "2026-04-16T09:00:34.372Z",
   "__full_rebuild_done": true
 }

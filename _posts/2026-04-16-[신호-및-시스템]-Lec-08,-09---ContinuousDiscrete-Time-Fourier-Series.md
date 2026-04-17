@@ -105,8 +105,8 @@ $$
 
 ### Dirichlet conditions for pointwise convergence
 
-- There is no energy in the difference $\int_T |e(t)|^2 dt = 0$ where $e(t) = x(t) - \sum_{k=-\infty}^{\infty} a_k e^{j k \frac{2\pi}{T} t}$
-- if $\int_T |x(t)|^2 dt < \infty$ ($x(t)$ has finite energy per period)
+- There is no energy in the difference $\int_T \vert e(t)\vert^2 dt = 0$ where $e(t) = x(t) - \sum_{k=-\infty}^{\infty} a_k e^{j k \frac{2\pi}{T} t}$
+- if $\int_T \vert x(t)\vert^2 dt < \infty$ ($x(t)$ has finite energy per period)
 - Condition 1 : $x(t)$ is absolutely integrable over one period, i.e.
 - Condition 2 : In a finite time interval, $x(t)$ has a finite number of maxima and minima.
 	- $x(t) = \sin (2\pi /t)$ : Violates condition 2
@@ -545,7 +545,13 @@ $$
 
 <script>
   window.MathJax = {
+    loader: {
+      load: ['[tex]/ams', '[tex]/extpfeil']
+    },
     tex: {
+      packages: {
+        '[+]': ['ams', 'extpfeil']
+      },
       macros: {
         R: "\\mathbb{R}",
         N: "\\mathbb{N}",
@@ -557,17 +563,25 @@ $$
         im: "\\operatorname{im}",
         dom: "\\operatorname{dom}",
         codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
+        argmax: "\\operatorname*{arg\\,max}",
+        argmin: "\\operatorname*{arg\\,min}",
+        "\\{": "\\lbrace",
+        "\\}": "\\rbrace",
         sub: "\\subset",
         sup: "\\supset",
         sube: "\\subseteq",
-        supe: "\\supseteq"
+        supe: "\\supseteq",
+
+        // === extensible arrows (통일 정의) ===
+        xleftarrow: "\\Newextarrow{\\xleftarrow}{5,5}{0x2190}",
+        xrightarrow: "\\Newextarrow{\\xrightarrow}{5,5}{0x2192}",
+        xLeftarrow: "\\Newextarrow{\\xLeftarrow}{5,5}{0x21D0}",
+        xRightarrow: "\\Newextarrow{\\xRightarrow}{5,5}{0x21D2}",
+        xleftrightarrow: "\\Newextarrow{\\xleftrightarrow}{5,5}{0x2194}",
+        xLeftrightarrow: "\\Newextarrow{\\xLeftrightarrow}{5,5}{0x27FA}"
       },
       tags: "ams",
-      strict: false, 
+      strict: false,
       inlineMath: [["$", "$"], ["\\(", "\\)"]],
       displayMath: [["$$", "$$"], ["\\[", "\\]"]]
     },

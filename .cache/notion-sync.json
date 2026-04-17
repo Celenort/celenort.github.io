@@ -2171,18 +2171,28 @@
       ]
     },
     "344ca610-d234-8027-9766-d35838f52ec2": {
-      "last_edited_time": "2026-04-17T01:03:00.000Z",
-      "outfile": "_posts/2026-04-16-[신호-및-시스템]-Lec-08---Continuous-Time-Fourier-Series.md",
+      "last_edited_time": "2026-04-17T05:32:00.000Z",
+      "outfile": "_posts/2026-04-16-[신호-및-시스템]-Lec-08,-09---ContinuousDiscrete-Time-Fourier-Series.md",
       "images": [
         {
           "kind": "local",
           "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/94fa78fd-93f8-4bd0-8aec-c494644621f5/image.png",
-          "file": "/assets/img/2026-04-16-[신호-및-시스템]-Lec-08---Continuous-Time-Fourier-Series/0-cdcc306578.png"
+          "file": "/assets/img/2026-04-16-[신호-및-시스템]-Lec-08,-09---ContinuousDiscrete-Time-Fourier-Series/0-cdcc306578.png"
         },
         {
           "kind": "local",
           "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/d3e9a6db-221e-4d4c-b23f-4486b4c12fab/image.png",
-          "file": "/assets/img/2026-04-16-[신호-및-시스템]-Lec-08---Continuous-Time-Fourier-Series/1-852cfeea80.png"
+          "file": "/assets/img/2026-04-16-[신호-및-시스템]-Lec-08,-09---ContinuousDiscrete-Time-Fourier-Series/1-852cfeea80.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/110000c9-11f4-4ad4-af7f-396b5c714920/image.png",
+          "file": "/assets/img/2026-04-16-[신호-및-시스템]-Lec-08,-09---ContinuousDiscrete-Time-Fourier-Series/2-feb7c18c7e.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/9795b3b7-b33b-4734-af97-37f97e9529a5/image.png",
+          "file": "/assets/img/2026-04-16-[신호-및-시스템]-Lec-08,-09---ContinuousDiscrete-Time-Fourier-Series/3-a2a79b6383.png"
         }
       ]
     },
@@ -2238,8 +2248,13 @@
           "file": "/assets/img/2026-04-16-[신호-및-시스템]-Lec-02---Properties-of-signal/1-7f17fbea3e.png"
         }
       ]
+    },
+    "345ca610-d234-8029-9827-d86099d54c90": {
+      "last_edited_time": "2026-04-17T07:10:00.000Z",
+      "outfile": "_posts/2026-04-17-[신호-및-시스템]-Lec-10,-11---CT-Fourier-transform,-Property.md",
+      "images": []
     }
   },
-  "last_run": "2026-04-17T02:59:52.800Z",
+  "last_run": "2026-04-17T07:16:14.557Z",
   "__full_rebuild_done": true
 }

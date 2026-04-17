@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "[신호 및 시스템] Lec 08 - Continuous Time Fourier Series"
+title: "[신호 및 시스템] Lec 08, 09 - Continuous/Discrete Time Fourier Series"
 date: 2026-04-16
 draft: false
 published: true
 pin: false
 image:
-  path: "/assets/img/2026-04-16-[신호-및-시스템]-Lec-08---Continuous-Time-Fourier-Series/0-cdcc306578.png"
-  alt: "[신호 및 시스템] Lec 08 - Continuous Time Fourier Series"
+  path: "/assets/img/2026-04-16-[신호-및-시스템]-Lec-08,-09---ContinuousDiscrete-Time-Fourier-Series/0-cdcc306578.png"
+  alt: "[신호 및 시스템] Lec 08, 09 - Continuous/Discrete Time Fourier Series"
 description: ""
 tags: ["Signal", "System"]
 categories: ["Lecture", "신호 및 시스템"]
@@ -82,7 +82,7 @@ $$
 
 
 
-## Fourier Series
+## CT Fourier Series
 
 - Analysis
 
@@ -223,7 +223,7 @@ $$
 - $jk\omega_0$ omits.
 - Geometrical Interpretation : Higher-order harmonics are amplified
 
-![](/assets/img/2026-04-16-[신호-및-시스템]-Lec-08---Continuous-Time-Fourier-Series/0-cdcc306578.png)
+![](/assets/img/2026-04-16-[신호-및-시스템]-Lec-08,-09---ContinuousDiscrete-Time-Fourier-Series/0-cdcc306578.png)
 
 - Integration
 
@@ -245,7 +245,7 @@ $$
 - $1/jk\omega_0$ omits.
 - Geometrical interpretation : Higher-order harmonics are suppresed
 
-![](/assets/img/2026-04-16-[신호-및-시스템]-Lec-08---Continuous-Time-Fourier-Series/1-852cfeea80.png)
+![](/assets/img/2026-04-16-[신호-및-시스템]-Lec-08,-09---ContinuousDiscrete-Time-Fourier-Series/1-852cfeea80.png)
 
 
 ### Flip
@@ -295,8 +295,252 @@ $$
 
 
 - For coefficient $\alpha$ affects the frequency, not the coefficient directly
+- for $\alpha>1$, shrinking the original function works as multiplication of same factor to frequency
 
 ### Conjugate symmetric
+
+- If $x(t)$ is real, then $a_{-k} = a_k^*$ and $a_k = a_{-k}^*$
+
+{% raw %}
+$$
+\begin{aligned} x(t) &= \sum_{k=-\infty}^{\infty} a_k e^{j k \omega_0 t}= x^*(t)= \sum_{k=-\infty}^{\infty} a_k^* e^{-j k \omega_0 t}  \\ &= \sum_{l=-\infty}^{\infty} a_{-l}^* e^{j l \omega_0 t} = \sum_{k=-\infty}^{\infty} a_{-k}^* e^{j k \omega_0 t}\end{aligned}
+$$
+{% endraw %}
+
+
+
+{% raw %}
+$$
+\therefore a_{-k}^* = a_k
+$$
+{% endraw %}
+
+
+- Which means, the real part of $a_k$ of real function is even, while odd part of $a_k $ is odd.
+
+![](/assets/img/2026-04-16-[신호-및-시스템]-Lec-08,-09---ContinuousDiscrete-Time-Fourier-Series/2-feb7c18c7e.png)
+
+- Interpretation as a complex exponential function,  in terms of magnitude → even function, phase → odd function
+
+![](/assets/img/2026-04-16-[신호-및-시스템]-Lec-08,-09---ContinuousDiscrete-Time-Fourier-Series/3-a2a79b6383.png)
+
+
+### Complex conjugate : Conclusion
+
+- $x(t)$ is real, even → $a_k$ are conjugate even and even → $a_k $ are real, even.
+- $x(t)$ is real, odd → $a_k$ are conjugate even and odd → $a_k$ are pure imaginary, odd
+
+### Multiplication
+
+
+$\tilde{x}_T(t)\xLeftrightarrow{\mathrm{FS}}a_k,\tilde{y}_T(t)\xLeftrightarrow{\mathrm{FS}}b_k$
+
+
+{% raw %}
+$$
+\tilde{x}_T(t)\tilde{y}_T(t)\xLeftrightarrow{\mathrm{FS}}\sum_{m=-\infty}^{\infty} a_m b_{k-m}
+$$
+{% endraw %}
+
+
+- Multiplication → convolution
+
+{% raw %}
+$$
+\begin{aligned}\tilde{x}_T(t)\tilde{y}_T(t)&= \left(\sum_{m=-\infty}^{\infty} a_m e^{j m \omega_0 t}\right)   \left(\sum_{n=-\infty}^{\infty} b_n e^{j n \omega_0 t}\right) \\&= \sum_{m=-\infty}^{\infty} \sum_{n=-\infty}^{\infty} a_m b_n e^{j (m+n)\omega_0 t} \\&= \sum_{m=-\infty}^{\infty} \sum_{k=-\infty}^{\infty} a_m b_{k-m} e^{j k \omega_0 t} \\&= \sum_{k=-\infty}^{\infty} \left(\sum_{m=-\infty}^{\infty} a_m b_{k-m}\right) e^{j k \omega_0 t}\end{aligned}
+$$
+{% endraw %}
+
+
+
+### Convolution
+
+
+$\tilde{x}_T(t)\xLeftrightarrow{\mathrm{FS}}a_k, \tilde{y}_T(t)\xLeftrightarrow{\mathrm{FS}}b_k$
+
+
+{% raw %}
+$$
+\tilde{x}_T(t) * \tilde{y}_T(t)\xLeftrightarrow{\mathrm{FS}}T a_k b_k
+$$
+{% endraw %}
+
+
+
+{% raw %}
+$$
+\begin{aligned}
+\tilde{x}_T(t) * \tilde{y}_T(t)
+&= \int_0^T \left[\sum_{m=-\infty}^{\infty} a_m e^{j m \omega_0 \tau}
+\sum_{n=-\infty}^{\infty} b_n e^{j n \omega_0 (t-\tau)}\right] d\tau \\
+&= \sum_{m=-\infty}^{\infty} \sum_{n=-\infty}^{\infty} a_m b_n
+\left(\int_0^T e^{j (m-n)\omega_0 \tau} d\tau\right) e^{j n \omega_0 t} \\
+&= \sum_{m=-\infty}^{\infty} \sum_{n=-\infty}^{\infty} a_m b_n (T\delta_{mn}) e^{j n \omega_0 t} \\
+&= \sum_{n=-\infty}^{\infty} T a_n b_n e^{j n \omega_0 t}
+\end{aligned}
+$$
+{% endraw %}
+
+
+- by the property of Fourier series (intergrate over one period) → $T$ omits
+
+### Parseval’s relation
+
+
+{% raw %}
+$$
+\frac{1}{T}\int_T |\tilde{x}_T(t)|^2 dt=\sum_{k=-\infty}^{\infty} |a_k|^2
+$$
+{% endraw %}
+
+
+- Average power over one period = Total squared sum of fourier series coefficient
+
+{% raw %}
+$$
+\frac{1}{T}\int_T |\tilde{x}_T(t)|^2 dt= \sum_{k=-\infty}^{\infty} \frac{1}{T}\int_T |a_k e^{j k \omega_0 t}|^2 dt = \sum_{k=-\infty}^{\infty} |a_k|^2
+$$
+{% endraw %}
+
+
+
+### Example : periodic rectangular function
+
+
+$\mathrm{rect}(t) =\begin{cases}1, & |t| \le 0.5 \\0, & |t| > 0.5\end{cases}$
+
+
+{% raw %}
+$$
+\begin{aligned}a_k&= \frac{1}{T}\int_{-L/2}^{L/2} e^{-j k \omega_0 t}\,dt \\&= -\frac{1}{j k \omega_0 T} \left[ e^{-j k \omega_0 t} \right]_{-L/2}^{L/2} \\&= -\frac{1}{j k \omega_0 T} \left( e^{-j k \omega_0 \frac{L}{2}} - e^{j k \omega_0 \frac{L}{2}} \right) \\&= -\frac{1}{j k \omega_0 T} \left( -2j \sin\left(\frac{k \omega_0 L}{2}\right) \right) \\&= \frac{1}{k\pi} \sin\left(\frac{k\pi L}{T}\right) \\&= \frac{L}{T} \frac{\sin\left(\frac{k\pi L}{T}\right)}{\frac{k\pi L}{T}} = {L\over T}\text{sinc}({k\pi L \over T})\end{aligned}
+$$
+{% endraw %}
+
+
+
+## DT Fourier Series
+
+- Analysis
+
+{% raw %}
+$$
+a_k = {1\over N} \sum_{<N>} x[n] e^{-j{2\pi k n \over N}}
+$$
+{% endraw %}
+
+
+- Synthesis
+
+{% raw %}
+$$
+x[n] = \sum_{k=<N>} a_ke^{j{2\pi k n \over N}}
+$$
+{% endraw %}
+
+
+
+### Linearity, time-frequency shift
+
+- Time shift
+
+{% raw %}
+$$
+\tilde x_N[n-n_0] \xLeftrightarrow{\mathrm{FS}} a_k e^{-jk{2\pi \over N} n_0}
+$$
+{% endraw %}
+
+
+- Frequency shift
+
+{% raw %}
+$$
+\tilde x_N[n] e^{jk_0 {2\pi\over n} n} \xLeftrightarrow{\mathrm{FS}} a_{k-k_0}
+$$
+{% endraw %}
+
+
+
+### Convolution, multiplication
+
+- (Periodic) Convolution
+
+$\tilde{x}_1[n]\xLeftrightarrow{\mathrm{FS}}a_k,\tilde{x}_2[n]\xLeftrightarrow{\mathrm{FS}}b_k$
+
+
+{% raw %}
+$$
+\tilde{z}_N[n]= \sum_{k=\langle N \rangle} \tilde{x}_N[k]\tilde{y}_N[n-k]\xLeftrightarrow{\mathrm{FS}}c_k = N a_k b_k
+$$
+{% endraw %}
+
+
+
+{% raw %}
+$$
+\tilde{z}_N[n]= \tilde{x}_N[n]\tilde{y}_N[n]\xLeftrightarrow{\mathrm{FS}}c_k = \sum_{l=\langle N \rangle} a_l b_{k-l}
+$$
+{% endraw %}
+
+
+- In case of convolution, $N$ omits
+
+### Difference, running sum
+
+- Difference
+
+{% raw %}
+$$
+\tilde{x}_N[n] - \tilde{x}_N[n-1]\xLeftrightarrow{\mathrm{FS}}\left(1 - e^{-j k \frac{2\pi}{N}}\right)a_k
+$$
+{% endraw %}
+
+
+- Just summation of original FS + time shift FS
+- Running sum
+
+{% raw %}
+$$
+\sum_{k=-\infty}^{n} \tilde{x}_N[k]\xLeftrightarrow{\mathrm{FS}}\frac{1}{1 - e^{-j k \frac{2\pi}{N}}} a_k
+$$
+{% endraw %}
+
+
+- Work as infitnite sum of series with $r = e^{-jk\Omega_0}$
+
+### Time-scaling
+
+
+{% raw %}
+$$
+\tilde{x}_{mN}[n] =\begin{cases}\tilde{x}_N[n/m], & \text{if } n/m \text{ is integer} \\0, & \text{otherwise}\end{cases}\xLeftrightarrow{\mathrm{FS}}\frac{1}{m} a_k
+$$
+{% endraw %}
+
+
+- Works conversely : for CT $x(t) \rightarrow x(\alpha t)$ but in case of DT $x_N[n] \rightarrow x_{mN}[n]=x_N[n/m]$
+- for $m>1$, stretches the signal, and fills the hole with zero
+
+### Conjugate symmetric
+
+- If $x_N[n]$ is real, then $a_{-k} = a_k^*$ and $a_k = a_{-k}^*$
+
+{% raw %}
+$$
+\tilde x_N[n]^*  \xLeftrightarrow{\mathrm{FS}} a_{-k}^*
+$$
+{% endraw %}
+
+
+
+### Parseval’s relation
+
+
+{% raw %}
+$$
+\frac{1}{N} \sum_{k=\langle N \rangle} |\tilde{x}_N[n]|^2=\sum_{k=\langle N \rangle} |a_k|^2
+$$
+{% endraw %}
+
 
 
 <script>

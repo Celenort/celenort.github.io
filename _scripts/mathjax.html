@@ -1,36 +1,26 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.css">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/contrib/auto-render.min.js"></script>
-
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    renderMathInElement(document.body, {
-      delimiters: [
-        { left: "$$", right: "$$", display: true },
-        { left: "\\[", right: "\\]", display: true },
-        { left: "$", right: "$", display: false },
-        { left: "\\(", right: "\\)", display: false }
-      ],
-      ignoredTags: ["script", "noscript", "style", "textarea", "pre"],
-      throwOnError: false,
-      macros: {
-        "\\R": "\\mathbb{R}",
-        "\\N": "\\mathbb{N}",
-        "\\Z": "\\mathbb{Z}",
-        "\\Q": "\\mathbb{Q}",
-        "\\C": "\\mathbb{C}",
-        "\\proj": "\\operatorname{proj}",
-        "\\rank": "\\operatorname{rank}",
-        "\\im": "\\operatorname{im}",
-        "\\dom": "\\operatorname{dom}",
-        "\\codom": "\\operatorname{codom}",
-        "\\argmax": "\\operatorname*{arg\\,max}",
-        "\\argmin": "\\operatorname*{arg\\,min}",
-        "\\sub": "\\subset",
-        "\\sup": "\\supset",
-        "\\sube": "\\subseteq",
-        "\\supe": "\\supseteq"
-      }
-    });
-  });
+window.MathJax = {
+  tex: {
+    macros: {
+      R: "\\mathbb{R}",
+      N: "\\mathbb{N}",
+      Z: "\\mathbb{Z}",
+      Q: "\\mathbb{Q}",
+      C: "\\mathbb{C}",
+
+      xLeftarrow: ["\\mathrel{\\underset{#2}{\\overset{#1}{\\Longleftarrow}}}", 2],
+      xRightarrow: ["\\mathrel{\\underset{#2}{\\overset{#1}{\\Longrightarrow}}}", 2],
+      xleftrightarrow: ["\\mathrel{\\underset{#2}{\\overset{#1}{\\longleftrightarrow}}}", 2],
+      xLeftrightarrow: ["\\mathrel{\\underset{#2}{\\overset{#1}{\\Longleftrightarrow}}}", 2]
+    },
+    tags: "ams",
+    strict: false,
+    inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+  },
+  options: {
+    skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]
+  }
+};
 </script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

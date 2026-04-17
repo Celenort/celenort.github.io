@@ -1,48 +1,36 @@
-<script>
-  window.MathJax = {
-    loader: {
-      load: ['[tex]/ams', '[tex]/extpfeil']
-    },
-    tex: {
-      packages: {
-        '[+]': ['ams', 'extpfeil']
-      },
-      macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\\,max}",
-        argmin: "\\operatorname*{arg\\,min}",
-        "\\{": "\\lbrace",
-        "\\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq",
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/contrib/auto-render.min.js"></script>
 
-        // === extensible arrows (통일 정의) ===
-        xleftarrow: "\\Newextarrow{\\xleftarrow}{5,5}{0x2190}",
-        xrightarrow: "\\Newextarrow{\\xrightarrow}{5,5}{0x2192}",
-        xLeftarrow: "\\Newextarrow{\\xLeftarrow}{5,5}{0x21D0}",
-        xRightarrow: "\\Newextarrow{\\xRightarrow}{5,5}{0x21D2}",
-        xleftrightarrow: "\\Newextarrow{\\xleftrightarrow}{5,5}{0x2194}",
-        xLeftrightarrow: "\\Newextarrow{\\xLeftrightarrow}{5,5}{0x27FA}"
-      },
-      tags: "ams",
-      strict: false,
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
-    },
-    options: {
-      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]
-    }
-  };
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "\\[", right: "\\]", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false }
+      ],
+      ignoredTags: ["script", "noscript", "style", "textarea", "pre"],
+      throwOnError: false,
+      macros: {
+        "\\R": "\\mathbb{R}",
+        "\\N": "\\mathbb{N}",
+        "\\Z": "\\mathbb{Z}",
+        "\\Q": "\\mathbb{Q}",
+        "\\C": "\\mathbb{C}",
+        "\\proj": "\\operatorname{proj}",
+        "\\rank": "\\operatorname{rank}",
+        "\\im": "\\operatorname{im}",
+        "\\dom": "\\operatorname{dom}",
+        "\\codom": "\\operatorname{codom}",
+        "\\argmax": "\\operatorname*{arg\\,max}",
+        "\\argmin": "\\operatorname*{arg\\,min}",
+        "\\sub": "\\subset",
+        "\\sup": "\\supset",
+        "\\sube": "\\subseteq",
+        "\\supe": "\\supseteq"
+      }
+    });
+  });
 </script>
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

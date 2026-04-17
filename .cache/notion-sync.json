@@ -2169,8 +2169,77 @@
           "file": "/assets/img/2026-04-16-[컴선설]-Lec-04-2-Least-Square-solution/2-29c8fabda0.png"
         }
       ]
+    },
+    "344ca610-d234-8027-9766-d35838f52ec2": {
+      "last_edited_time": "2026-04-17T01:03:00.000Z",
+      "outfile": "_posts/2026-04-16-[신호-및-시스템]-Lec-08---Continuous-Time-Fourier-Series.md",
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/94fa78fd-93f8-4bd0-8aec-c494644621f5/image.png",
+          "file": "/assets/img/2026-04-16-[신호-및-시스템]-Lec-08---Continuous-Time-Fourier-Series/0-cdcc306578.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/d3e9a6db-221e-4d4c-b23f-4486b4c12fab/image.png",
+          "file": "/assets/img/2026-04-16-[신호-및-시스템]-Lec-08---Continuous-Time-Fourier-Series/1-852cfeea80.png"
+        }
+      ]
+    },
+    "344ca610-d234-8073-b9f6-c29ce99a198c": {
+      "last_edited_time": "2026-04-16T13:40:00.000Z",
+      "outfile": "_posts/2026-04-16-[신호-및-시스템]-Lec-06,-07---Properties-of-LTI-system,-Eigenfunction.md",
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/8d5a2d8b-30e0-40df-aff3-69946f9bdfdd/image.png",
+          "file": "/assets/img/2026-04-16-[신호-및-시스템]-Lec-06,-07---Properties-of-LTI-system,-Eigenfunction/0-0046315fba.png"
+        }
+      ]
+    },
+    "344ca610-d234-8077-bd67-d0756463697e": {
+      "last_edited_time": "2026-04-16T13:09:00.000Z",
+      "outfile": "_posts/2026-04-16-[신호-및-시스템]-Lec-04,-05---Convolution,-Impulse-response.md",
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/0809a9d2-2c71-4521-a587-7eb91814c56f/image.png",
+          "file": "/assets/img/2026-04-16-[신호-및-시스템]-Lec-04,-05---Convolution,-Impulse-response/0-4345ca79ce.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/fb36114b-5633-4fe8-a5b0-fa17aecb43a8/image.png",
+          "file": "/assets/img/2026-04-16-[신호-및-시스템]-Lec-04,-05---Convolution,-Impulse-response/1-b0795d211d.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/684f3fac-3dc4-4495-ab38-4bc6dfe3055c/image.png",
+          "file": "/assets/img/2026-04-16-[신호-및-시스템]-Lec-04,-05---Convolution,-Impulse-response/2-86fe7b28cd.png"
+        }
+      ]
+    },
+    "344ca610-d234-8044-bc79-d60085de2ed5": {
+      "last_edited_time": "2026-04-16T11:44:00.000Z",
+      "outfile": "_posts/2026-04-16-[신호-및-시스템]-Lec-03---Properties-of-Systems.md",
+      "images": []
+    },
+    "344ca610-d234-80ff-9f55-f16ca9dfcc60": {
+      "last_edited_time": "2026-04-16T11:21:00.000Z",
+      "outfile": "_posts/2026-04-16-[신호-및-시스템]-Lec-02---Properties-of-signal.md",
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/0ead5dd8-748a-4fff-8111-f7ebf79ec2da/image.png",
+          "file": "/assets/img/2026-04-16-[신호-및-시스템]-Lec-02---Properties-of-signal/0-288a4b583b.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/538b9c19-b8f4-437a-b1b7-6309fa493112/image.png",
+          "file": "/assets/img/2026-04-16-[신호-및-시스템]-Lec-02---Properties-of-signal/1-7f17fbea3e.png"
+        }
+      ]
     }
   },
-  "last_run": "2026-04-16T09:00:34.372Z",
+  "last_run": "2026-04-17T02:59:52.800Z",
   "__full_rebuild_done": true
 }

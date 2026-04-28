@@ -171,14 +171,38 @@ void foo(const BankAccount& ba)
 - Efficient for short definitions
 - Can only be called in the same file as the one in which it is defined
 
-# Maybe not included..
-
-
 ### Static member variables
 
 - All object of class share only one copy.
 - On object changes it, all can see the change
 - Similar to global var. But only for the objects of the class
+- Every static variable must be initialized **outside** the class function : only once!
+
+
+{% raw %}
+```c++
+class foo {
+public:
+    static int bar() ;
+    int bar2() { num++;return num;}
+private:
+static int num;
+};
+
+int foo::num=0; //initialization happens only ONCE! 
+//outside the class definition
+int foo::bar() {return num;}
+int main() {
+    foo a, b, c;
+    cout<<foo::bar();
+    cout<<a.bar();
+    cout<<a.bar2();
+//    cout<<foo::bar2();
+}
+```
+{% endraw %}
+
+
 
 ### Static member functions
 
@@ -194,40 +218,67 @@ Server::getTurn(); // Class::func(); format
 {% endraw %}
 
 
-- Every static variable must be initialized outside the class function : only once!
-- 
+- static function can also be called via class objects (i.e. `myObject.getTurn()` )
+
+### Vectors
+
+- Arrays that can grow and shrink (during program execution)
+- Formed from STL (Standard Template Library)
+- Has base type (can also be class type)
+- Declaration : `vector<Base_Type>`
+
+
+{% raw %}
+```c++
+vector<int> v;
+// Calls the class default constructor
+// Where empty vector object is created
+vector<int> u(10); // creates int vector of size 10
+//initialized with default class constructor (i.e. zero)
+```
+{% endraw %}
+
+
+- Restriction : `v[i]` notation is used to change the value that has already been given some value
+- `v.push_back()` : Add new elements at the back
+- `v.size()` : returns the current number of elements
 
 <script>
-  window.MathJax = {
-    tex: {
-      macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
-      },
-      tags: "ams",
-      strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+window.MathJax = {
+  tex: {
+    macros: {
+      R: "\\mathbb{R}",
+      N: "\\mathbb{N}",
+      Z: "\\mathbb{Z}",
+      Q: "\\mathbb{Q}",
+      C: "\\mathbb{C}",
+      proj: "\\operatorname{proj}",
+      rank: "\\operatorname{rank}",
+      im: "\\operatorname{im}",
+      dom: "\\operatorname{dom}",
+      codom: "\\operatorname{codom}",
+      argmax: "\\operatorname*{arg\\,max}",
+      argmin: "\\operatorname*{arg\\,min}",
+      "\\{": "\\lbrace",
+      "\\}": "\\rbrace",
+      sub: "\\subset",
+      sup: "\\supset",
+      sube: "\\subseteq",
+      supe: "\\supseteq",
+
+      xLeftarrow: ["\\mathrel{\\overset{#1}{\\Longleftarrow}}", 1],
+      xRightarrow: ["\\mathrel{\\overset{#1}{\\Longrightarrow}}", 1],
+      xleftrightarrow: ["\\mathrel{\\overset{#1}{\\longleftrightarrow}}", 1],
+      xLeftrightarrow: ["\\mathrel{\\overset{#1}{\\Longleftrightarrow}}", 1]
     },
-    options: {
-      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]
-    }
-  };
+    tags: "ams",
+    strict: false,
+    inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+  },
+  options: {
+    skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]
+  }
+};
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

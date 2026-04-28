@@ -2056,7 +2056,7 @@
       "images": []
     },
     "334ca610-d234-804c-b7d5-c4a2948a2ade": {
-      "last_edited_time": "2026-04-07T02:02:00.000Z",
+      "last_edited_time": "2026-04-27T03:10:00.000Z",
       "outfile": "_posts/2026-03-31-[C++]-Chap-07---Constructors-and-Other-tools.md",
       "images": []
     },
@@ -2253,8 +2253,13 @@
       "last_edited_time": "2026-04-17T07:10:00.000Z",
       "outfile": "_posts/2026-04-17-[신호-및-시스템]-Lec-10,-11---CT-Fourier-transform,-Property.md",
       "images": []
+    },
+    "34fca610-d234-80ef-992a-fea77bef22f3": {
+      "last_edited_time": "2026-04-28T15:59:00.000Z",
+      "outfile": "_posts/2026-04-27-[C++]-Chap-08---Operator-Overloading,-Friends,-and-Refrernces.md",
+      "images": []
     }
   },
-  "last_run": "2026-04-17T08:49:41.840Z",
+  "last_run": "2026-04-28T16:01:20.867Z",
   "__full_rebuild_done": true
 }

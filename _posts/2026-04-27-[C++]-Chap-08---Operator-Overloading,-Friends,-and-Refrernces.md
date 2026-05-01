@@ -103,9 +103,8 @@ const Money Money::operator -() const {
 Other overloads
 
 - Function call opeartor `()`
-- 
-- Must be overloaded as a member function
-- Can overload for any number of arguments
+	- Must be overloaded as a member function
+	- Can overload for any number of arguments
 - `&&, ||` operator : recall short-circuit evaluation.
 - `anObject(42)` can be thought of as `anObject.()(42)`
 
@@ -228,7 +227,7 @@ private:
 };
 
 int main() {
-	Emploee joe;
+	Employee joe;
 	joe.getSalery().input();
 	//can access and manipulate private member variable
 	joe.getSaleryNew().input(); //illegal
@@ -328,6 +327,13 @@ public:
 char& CharPair::operator[] (int index)
 {
 ...
+}
+
+int main() {
+	CharPair a;
+	a[1]= 'A';
+	//For l-value, output must be reference
+	cout<<a[1];
 }
 ```
 {% endraw %}

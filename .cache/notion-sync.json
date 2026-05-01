@@ -2255,11 +2255,37 @@
       "images": []
     },
     "34fca610-d234-80ef-992a-fea77bef22f3": {
-      "last_edited_time": "2026-04-28T15:59:00.000Z",
+      "last_edited_time": "2026-05-01T10:50:00.000Z",
       "outfile": "_posts/2026-04-27-[C++]-Chap-08---Operator-Overloading,-Friends,-and-Refrernces.md",
+      "images": []
+    },
+    "353ca610-d234-807e-b5d1-d8ac54a4bde3": {
+      "last_edited_time": "2026-05-01T11:50:00.000Z",
+      "outfile": "_posts/2026-05-01-[C++]-Chap-10---Pointers-and-Dynamic-Arrays.md",
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/345ae097-9f0e-4c09-86e5-a65325ddd3b8/image.png",
+          "file": "/assets/img/2026-05-01-[C++]-Chap-10---Pointers-and-Dynamic-Arrays/0-a20614df85.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/29d64a25-ddef-4d42-9712-248aae677b59/image.png",
+          "file": "/assets/img/2026-05-01-[C++]-Chap-10---Pointers-and-Dynamic-Arrays/1-8757cb4ec7.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/550d8b43-afe3-4ff6-9a23-918c9df2d795/image.png",
+          "file": "/assets/img/2026-05-01-[C++]-Chap-10---Pointers-and-Dynamic-Arrays/2-ce3e641e36.png"
+        }
+      ]
+    },
+    "353ca610-d234-808a-af8a-fcb5e2fd7d91": {
+      "last_edited_time": "2026-05-01T06:44:00.000Z",
+      "outfile": "_posts/2026-05-01-[C++]-Chap-09---Strings.md",
       "images": []
     }
   },
-  "last_run": "2026-04-28T16:01:20.867Z",
+  "last_run": "2026-05-01T11:51:04.027Z",
   "__full_rebuild_done": true
 }

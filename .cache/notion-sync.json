@@ -2289,8 +2289,108 @@
       "last_edited_time": "2026-05-03T11:12:00.000Z",
       "outfile": "_posts/2026-05-01-[C++]-Lab2---STL.md",
       "images": []
+    },
+    "355ca610-d234-808f-85d2-d38b86095830": {
+      "last_edited_time": "2026-05-03T13:44:00.000Z",
+      "outfile": "_posts/2026-05-03-[유체]-Chap-10.-Stream-Function-&-Complex-Potential.md",
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/807fe1d3-1d5a-487c-bc30-013fcfbf58be/image.png",
+          "file": "/assets/img/2026-05-03-[유체]-Chap-10.-Stream-Function-&-Complex-Potential/0-1774cdd7bd.png"
+        }
+      ]
+    },
+    "355ca610-d234-804f-9098-d3a146d46f6b": {
+      "last_edited_time": "2026-05-03T13:38:00.000Z",
+      "outfile": "_posts/2026-05-03-[유체]-Chap-9.-Force-&-Energy-on-a-body.md",
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/35dacb39-60f2-4de0-ab8e-2322e7a2acc2/image.png",
+          "file": "/assets/img/2026-05-03-[유체]-Chap-9.-Force-&-Energy-on-a-body/0-396c6aed01.png"
+        }
+      ]
+    },
+    "355ca610-d234-80f5-b320-f7f70e4add5c": {
+      "last_edited_time": "2026-05-03T13:09:00.000Z",
+      "outfile": "_posts/2026-05-03-[유체]-Chap-8.-Flows-Around-Singularities.md",
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/c489a79a-a6c5-43bf-9fe4-317e491ef36b/image.png",
+          "file": "/assets/img/2026-05-03-[유체]-Chap-8.-Flows-Around-Singularities/0-730cd5a359.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/5d518f69-d700-4d15-b883-18e8d5c05740/image.png",
+          "file": "/assets/img/2026-05-03-[유체]-Chap-8.-Flows-Around-Singularities/1-a9329fe669.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/ebeca67e-e048-4b48-818a-6329017e2aa1/image.png",
+          "file": "/assets/img/2026-05-03-[유체]-Chap-8.-Flows-Around-Singularities/2-97fde38aa7.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/a8d83cb6-f51b-4e4f-8046-3cbb1c60e332/image.png",
+          "file": "/assets/img/2026-05-03-[유체]-Chap-8.-Flows-Around-Singularities/3-3256c7797b.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/7b5e9c45-81fe-40d1-a5ae-0fc9d6ce79c8/image.png",
+          "file": "/assets/img/2026-05-03-[유체]-Chap-8.-Flows-Around-Singularities/4-749c8d9c45.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/fd3d1ed9-911a-45b6-bb1f-0e5839f6e0b1/image.png",
+          "file": "/assets/img/2026-05-03-[유체]-Chap-8.-Flows-Around-Singularities/5-92f7fc07f0.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/3d9484d5-5f26-4368-96f7-e4ad1a12ac36/image.png",
+          "file": "/assets/img/2026-05-03-[유체]-Chap-8.-Flows-Around-Singularities/6-e32198a7ea.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/bff147d1-e089-4980-8fe2-83f7820406c8/image.png",
+          "file": "/assets/img/2026-05-03-[유체]-Chap-8.-Flows-Around-Singularities/7-f76353f582.png"
+        }
+      ]
+    },
+    "355ca610-d234-80b2-a868-e1c7838a3201": {
+      "last_edited_time": "2026-05-03T12:28:00.000Z",
+      "outfile": "_posts/2026-05-03-[유체]-Chap-7.-Simple-Potential-Flow-&-Singularities.md",
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/6d6fadd1-cf46-463d-b4cc-9d2ec6bda934/image.png",
+          "file": "/assets/img/2026-05-03-[유체]-Chap-7.-Simple-Potential-Flow-&-Singularities/0-b5623c2ae6.png"
+        },
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/9fa02a4e-6122-4eb5-8fb8-acd916168753/image.png",
+          "file": "/assets/img/2026-05-03-[유체]-Chap-7.-Simple-Potential-Flow-&-Singularities/1-18c0966041.png"
+        }
+      ]
+    },
+    "355ca610-d234-80bf-bbe1-f21cdb4dccb9": {
+      "last_edited_time": "2026-05-03T12:10:00.000Z",
+      "outfile": "_posts/2026-05-03-[유체]-Chap-6.-Energy-in-Potential-Flow.md",
+      "images": []
+    },
+    "355ca610-d234-8083-9969-c9345c35790a": {
+      "last_edited_time": "2026-05-03T11:42:00.000Z",
+      "outfile": "_posts/2026-05-03-[유체]-Chap-5.-Basics-of-Ideal-Flow.md",
+      "images": [
+        {
+          "kind": "local",
+          "norm": "prod-files-secure.s3.us-west-2.amazonaws.com/1d2b537a-1f9d-43f5-b6c6-0181a099b924/bd0bcde3-fc7f-40db-9de0-eccc3b5e9b4c/image.png",
+          "file": "/assets/img/2026-05-03-[유체]-Chap-5.-Basics-of-Ideal-Flow/0-8f82154103.png"
+        }
+      ]
     }
   },
-  "last_run": "2026-05-03T11:13:59.742Z",
+  "last_run": "2026-05-03T13:45:28.135Z",
   "__full_rebuild_done": true
 }

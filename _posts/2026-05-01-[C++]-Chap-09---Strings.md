@@ -92,7 +92,7 @@ cout<<strcmp(shortString, anotherString); //0
 
 - `strncpy(a, b, s);` copies at most s characters of b into a
 - `strncat(a, b, s);` concats at most s characters of b right back to a
-- `strncmp(a,, b, s);` compares at most s characters of b with a
+- `strncmp(a, b, s);` compares at most s characters of b with a
 
 ### C-string Input, Output
 
@@ -138,6 +138,7 @@ cout<<b<<"END OF OUTPUT\n";
 
 
 - The reading ends when the line ends, even thought the resulting C-string may be shorter than the second argument
+- Detects `\n`  or reads until given size and substitute `\n`  to `\0`
 - To directly manipulate C-strings, use `get`
 
 
@@ -196,6 +197,7 @@ cout<<symbol;
 
 - Library `<cctype>` contains the tools
 - `toupper` , `tolower`, `isupper`, `islower` , `isdigit`, `isalnum`, `isspace`, `ispunct`(punctuation mark), `isprint`(printing letter including space), `isgraph`(wo space), `isctrl` (control character)
+- Not a member function. Workes independently
 
 ## String
 
@@ -253,9 +255,9 @@ int main() {
 
 
 - To access each character of string
-	- lastName[i] : does not check for the illegal index
-	- lastName.at(i) : checks and omits error if out of range
-- `length()` function returns the length of the string object
+	- `lastName[i]` : does not check for the illegal index
+	- `lastName.at(i)` : checks and omits error if out of range
+- `str.length()` function returns the length of the string object
 
 ### Member functions of the standard class string
 
@@ -275,7 +277,7 @@ int main() {
 	- `==, !=` : bool
 	- `<, >, <=, >=` : compare with lexicographical order
 	- `str.find(str1)` : find index of first occurrence of str1 in str
-	- `str.find_first_of(str1, pos)`: find index of first instance of str1 in str (”Hello world”, “abcde” → 1)
+	- `str.find_first_of(str1, pos)`: find index of first instance of str1 in str (”Hello world”, “abcde”); → 1
 
 ### Conversion between string and c-string
 

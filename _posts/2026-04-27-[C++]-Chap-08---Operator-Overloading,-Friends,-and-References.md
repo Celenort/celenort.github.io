@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[C++] Chap 08 -  Operator Overloading, Friends, and Refrernces"
+title: "[C++] Chap 08 -  Operator Overloading, Friends, and References"
 date: 2026-04-27
 draft: false
 published: true
@@ -86,11 +86,18 @@ const Money operatror -(const Money& amount);
 
 {% raw %}
 ```c++
+class Money{
+public:
+	const Money operator +(const Money& amount2) const;
+	const Money operator -() const;
+};
+
 const Money Money::operator +(const Money& amount2) const {
 	int allCents1 = cents + dollors * 100; 
 	//private member variables of the calling objects are accessed
 	int allCents2 = amount2.cents + amount2.dollars * 100;
 	//also private member variables of any object of the same class can be also accessed
+	...
 }
 const Money Money::operator -() const {
 	return Money(-dollars, -cents);
@@ -105,6 +112,21 @@ Other overloads
 - Function call opeartor `()`
 	- Must be overloaded as a member function
 	- Can overload for any number of arguments
+
+
+{% raw %}
+```c++
+class Money {
+public:
+	const Money operator ()(int a) const;
+};
+
+const Money Money::operator ()(int a) {
+}
+```
+{% endraw %}
+
+
 - `&&, ||` operator : recall short-circuit evaluation.
 - `anObject(42)` can be thought of as `anObject.()(42)`
 
@@ -127,6 +149,8 @@ Money::Money(int theDollars) : dollars(theDollars), cents(0) {}
 
 
 - To make `25+baseAmount` possible, must define as non-member function. (since member function regards first argument as the class object itself (calling obj).)
+- `Money+Money` operator overloaded + `Money(int)` constructor overloaded = `Money+int` possible
+- But typically `int+Money` is impossible for overloading via member function
 
 ### 3. Via non-member, friend of a class
 
@@ -149,13 +173,22 @@ Money::Money(int theDollars) : dollars(theDollars), cents(0) {}
 
 {% raw %}
 ```c++
+// 1. Non-member, 3. Friend
 const Money operator +(const Money& amount1, const Money& amount2);
 
-const Money operator +(const Money& amount2) const;
-// inside the class definition
+// 2. Member
+class Money{
+public:
+	const Money operator +(const Money& amount2) const;
 
-friend const Money operator +(const Money& amount1, const Money& amount2);
-// also inside the class definition but not considered as a member function
+	// 3. Friend
+	friend const Money operator +(const Money&, const Money&);
+	// also inside the class definition 
+	//but not considered as a member function
+};
+
+const Money Money::operator + (const Money& amount2) const {
+}
 ```
 {% endraw %}
 
@@ -218,24 +251,24 @@ L-Value and R-Value
 ```c++
 class Employee {
 public:
-	Money& getSalery()  {return salery;}
-	const Money& getSaleryNew() {return salery;}
+	Money& getSalary()  {return salary;}
+	const Money& getSalaryNew() {return salary;}
 	...
 private:
-	Money salery;
+	Money salary;
 	...
 };
 
 int main() {
 	Employee joe;
-	joe.getSalery().input();
+	joe.getSalary().input();
 	//can access and manipulate private member variable
-	joe.getSaleryNew().input(); //illegal
+	joe.getSalaryNew().input(); //illegal
 ```
 {% endraw %}
 
 
-- Returning a class-type can be efficient when return by value
+- Returning a class-type can be efficient when return by reference
 - But private member can be easily manipulated
 - `const` can protect this from happening
 
@@ -286,7 +319,7 @@ const int& foo(); //returns reference but cannot be modified via this function
 
 
 - Returning a local variable by reference is problematic
-- `const T`  and `const T&` ar very similar : the `const` modifier
+- `const T`  and `const T&` are very similar : the `const` modifier
 - But using `const T` is more preferred : because of hazard of dangling reference (local parameter returned by reference)
 
 Assignment operator `=`

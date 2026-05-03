@@ -249,7 +249,7 @@ cout<<p[4]; //same as cout<<v[4];
 
 {% raw %}
 ```c++
-int *d;
+double *d;
 d = new double[10];
 delete[] d; //delete dynamic array
 d=nullptr;
@@ -359,8 +359,8 @@ void Sample::showStuff() const {
 ### Assignment Operator 
 
 - Assignment operator returns reference
-	- Assignment ‘chains’ are possible (a=b=c;)
-	- Can call (a=b).f()
+	- Assignment ‘chains’ are possible (`a=b=c;`)
+	- Can call `(a=b).f()`
 - Operator must return same type as its left-hand side.
 	- This makes operators to allow chains to work
 - Cannot be overloaded via friend function (to not modify a constant)
@@ -479,6 +479,7 @@ Myclass::~Myclass()
 		sample.addElement(6.6);
 		showPFArrayD(sample); //this destroys the pointer
 		cout<<sample[0]; //error
+		//It happens when the destructer is properly coded
 ```
 {% endraw %}
 

@@ -485,10 +485,12 @@ Myclass::~Myclass()
 
 
 
-		![](/assets/img/2026-05-01-[C++]-Chap-10---Pointers-and-Dynamic-Arrays/2-ce3e641e36.png)
+	![](/assets/img/2026-05-01-[C++]-Chap-10---Pointers-and-Dynamic-Arrays/2-ce3e641e36.png)
 
-		- Also causes the “double free” problem when dislocating sample.a
-	3. When a function returns a value of the class type
+
+	Also causes the “double free” problem when dislocating sample.a
+
+	1. When a function returns a value of the class type
 
 		
 {% raw %}

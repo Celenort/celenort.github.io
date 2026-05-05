@@ -6,7 +6,7 @@ draft: false
 published: true
 pin: false
 image:
-  path: "/assets/img/2023-12-09-[제어공학개론]-Lec-17---PID-control/0-c2ca448d93.png"
+  path: "/assets/img/2023-12-09-[제어공학개론]-Lec-17---PID-control/0-df3d5c5c54.png"
   alt: "[제어공학개론] Lec 17 - PID control"
 description: "PID 제어에 대한 강의에서는 P, D, I 제어의 특성과 효과를 설명하며, P 제어는 안정적인 상태 오차 감소와 응답 속도 향상에 기여하고, D 제어는 오버슈트를 줄이는 데 효과적이며, I 제어는 상태 오차를 제거하는 데 사용됩니다. 또한, 시스템의 물리적 및 사이버 경계, 포화 문제, 그리고 안티-윈드업 기법에 대해서도 논의합니다."
 tags: ["Control", "System", "PID control", "Saturation", "Anti-windup"]
@@ -249,7 +249,7 @@ $$
 Physical, Cyber system의 경계는 어디인가
 
 
-![](/assets/img/2023-12-09-[제어공학개론]-Lec-17---PID-control/0-c2ca448d93.png)
+![](/assets/img/2023-12-09-[제어공학개론]-Lec-17---PID-control/0-df3d5c5c54.png)
 
 
 Block diagram에는 반영되지 않았지만, $P(s)$ 앞에 전기 신호를 실제 물리적 힘 등으로 바꾸어 주는 Actuator가 존재. 반대로 $P(s)$에서 나온 결괏값 $y(t)$ 또한 sensor를 통해 sensing 되어 $C(s)$로 Feedback 되어 들어감. 이 때 Actuator, sensor를 우측에 포함하도록 잘랐을 때 우측 부분이 실제 Physical world, 좌측 부분이 Cyber world(컴퓨터 등으로 계산되는) 이라고 할 수 있음.
@@ -300,36 +300,41 @@ $k_a$ : Anti-windup gain
 
 
 <script>
-  window.MathJax = {
-    tex: {
-      macros: {
-        R: "\\mathbb{R}",
-        N: "\\mathbb{N}",
-        Z: "\\mathbb{Z}",
-        Q: "\\mathbb{Q}",
-        C: "\\mathbb{C}",
-        proj: "\\operatorname{proj}",
-        rank: "\\operatorname{rank}",
-        im: "\\operatorname{im}",
-        dom: "\\operatorname{dom}",
-        codom: "\\operatorname{codom}",
-        argmax: "\\operatorname*{arg\,max}",
-        argmin: "\\operatorname*{arg\,min}",
-        "\{": "\\lbrace",
-        "\}": "\\rbrace",
-        sub: "\\subset",
-        sup: "\\supset",
-        sube: "\\subseteq",
-        supe: "\\supseteq"
-      },
-      tags: "ams",
-      strict: false, 
-      inlineMath: [["$", "$"], ["\\(", "\\)"]],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+window.MathJax = {
+  tex: {
+    macros: {
+      R: "\\mathbb{R}",
+      N: "\\mathbb{N}",
+      Z: "\\mathbb{Z}",
+      Q: "\\mathbb{Q}",
+      C: "\\mathbb{C}",
+      proj: "\\operatorname{proj}",
+      rank: "\\operatorname{rank}",
+      im: "\\operatorname{im}",
+      dom: "\\operatorname{dom}",
+      codom: "\\operatorname{codom}",
+      argmax: "\\operatorname*{arg\\,max}",
+      argmin: "\\operatorname*{arg\\,min}",
+      "\\{": "\\lbrace",
+      "\\}": "\\rbrace",
+      sub: "\\subset",
+      sup: "\\supset",
+      sube: "\\subseteq",
+      supe: "\\supseteq",
+
+      xLeftarrow: ["\\mathrel{\\overset{#1}{\\Longleftarrow}}", 1],
+      xRightarrow: ["\\mathrel{\\overset{#1}{\\Longrightarrow}}", 1],
+      xleftrightarrow: ["\\mathrel{\\overset{#1}{\\longleftrightarrow}}", 1],
+      xLeftrightarrow: ["\\mathrel{\\overset{#1}{\\Longleftrightarrow}}", 1]
     },
-    options: {
-      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]
-    }
-  };
+    tags: "ams",
+    strict: false,
+    inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+  },
+  options: {
+    skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"]
+  }
+};
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

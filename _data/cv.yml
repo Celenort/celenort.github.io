@@ -1,0 +1,59 @@
+cv:
+  name: Celenort
+  label: Researcher
+  email: celenort@snu.ac.kr
+  location: Seoul, Republic of Korea
+  image: ""
+  summary: Researcher and engineer interested in computational methods, signal processing, and machine learning.
+
+  social_networks:
+    - network: GitHub
+      username: Celenort
+
+  sections:
+    Education:
+      - institution: Seoul National University
+        location: Seoul, Republic of Korea
+        area: ""
+        studyType: ""
+        start_date: ""
+        end_date: ""
+        highlights:
+          - Add degree, department, advisor, and thesis information here.
+
+    Research Interests:
+      - name: Computational methods
+        highlights:
+          - Signal processing
+          - Machine learning
+          - Scientific computing
+
+    Experience:
+      - company: ""
+        position: ""
+        location: ""
+        start_date: ""
+        end_date: ""
+        highlights:
+          - Add research, teaching, internship, or industry experience here.
+
+    Publications:
+      - title: Add publications in _bibliography/papers.bib
+        authors:
+          - Celenort
+        publisher: ""
+        releaseDate: ""
+        url: ""
+        summary: Publications added to the BibTeX file can be rendered automatically by al-folio.
+
+    Skills:
+      - name: Programming
+        keywords:
+          - Python
+          - C++
+          - JavaScript
+      - name: Research Tooling
+        keywords:
+          - Jekyll
+          - Git
+          - Notion
